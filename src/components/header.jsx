@@ -3,6 +3,7 @@ import { LuInfo } from "react-icons/lu";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { GoProjectRoadmap } from "react-icons/go";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -11,13 +12,15 @@ const Header = () => {
         <h2 className="font-bold text-purple-800">campos.dev</h2>
       </div>
       <div className="flex flex-row text-lg gap-10">
-        <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
-          <FaRegCircleUser
-            size={20}
-            className="text-gray-300 group-hover:text-purple-700 group-hover:-translate-y-0.5 transition-all duration-300"
-          />
-          Sobre
-        </h2>
+        <Link to="about" smooth={true} duration={500}>
+          <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
+            <FaRegCircleUser
+              size={20}
+              className="text-gray-300 group-hover:text-purple-700 group-hover:-translate-y-0.5 transition-all duration-300"
+            />
+            Sobre
+          </h2>
+        </Link>
         <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
           <MdOutlineWorkOutline
             size={20}

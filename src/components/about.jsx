@@ -10,7 +10,10 @@ const About = () => {
   };
 
   return (
-    <div className="flex flex-row bg-[#01020a] py-32 justify-center gap-32 px-20 ">
+    <div
+      id="about"
+      className="flex flex-row bg-[#01020a] py-32 justify-center gap-32 px-20 "
+    >
       <div className="flex flex-col w-6/12 text-start gap-8">
         <h1 className="text-gray-200 text-4xl font-bold">Sobre</h1>
         <p className="text-gray-200 text-lg">
