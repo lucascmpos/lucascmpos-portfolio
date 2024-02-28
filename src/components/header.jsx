@@ -6,7 +6,7 @@ import { GoProjectRoadmap } from "react-icons/go";
 
 const Header = () => {
   return (
-    <header className="fixed bg-opacity-85 flex flex-row text-lg justify-around  bg-[#020216] text-gray-300 font-semibold w-full p-6">
+    <header className="fixed bg-opacity-80 flex flex-row text-lg justify-around  bg-[#020216] text-gray-300 font-semibold w-full p-6 z-10">
       <div>
         <h2 className="font-bold text-purple-800">campos.dev</h2>
       </div>
