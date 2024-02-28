@@ -37,11 +37,14 @@ const Home = () => {
   ];
 
   return (
-    <main className="flex flex-col justify-center items-center gap-20 bg-[#020211]">
+    <main
+      id="home"
+      className="flex flex-col justify-center items-center gap-20 bg-[#020211]"
+    >
       <div className="flex flex-col justify-center items-center gap-16 pt-96">
         <h1 className="font-extrabold text-7xl text-gray-200">
-          Lucas Campos.{" "}
-          <span className="text-purple-800">Front-End Developer</span>
+          Lucas Campos
+          <span className="text-purple-800">. Front-End Developer</span>.
         </h1>
         <h4
           className="font-semibold cursor-pointer text-gray-300 hover:bg-purple-950 transition all duration-300 rounded-lg p-2"
