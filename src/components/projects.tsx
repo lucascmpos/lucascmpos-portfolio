@@ -291,7 +291,7 @@ const Projects = () => {
     threshold: 0,
   });
 
-  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1440 });
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -343,7 +343,7 @@ const Projects = () => {
               right: "auto",
               bottom: "auto",
               transform: "translate(-50%, -50%)",
-              width: "55%",
+              width: "80%",
               backgroundColor: "#020216",
               border: "none",
               borderRadius: "20px",
@@ -375,8 +375,18 @@ const Projects = () => {
                   <h2 className="text-2xl font-bold text-gray-200">
                     {selectedProject.title}
                   </h2>
-                  <p className="text-gray-300">{selectedProject.description}</p>
-                  <div className="mt-4 flex gap-2 flex-wrap">
+                  <p
+                    className={`text-gray-300 ${
+                      isLargeScreen ? "" : "text-sm"
+                    } mt-2`}
+                  >
+                    {selectedProject.description}
+                  </p>
+                  <div
+                    className={`mt-4 flex gap-2 flex-wrap ${
+                      isLargeScreen ? "" : "text-sm"
+                    }`}
+                  >
                     {selectedProject.tech &&
                       selectedProject.tech.map((technology, index) => (
                         <TechnologyCard key={index} technology={technology} />

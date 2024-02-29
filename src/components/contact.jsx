@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 const Contact = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0,
   });
   return (
     <div
@@ -22,7 +22,7 @@ const Contact = () => {
         }`}
       >
         <h1 className="text-gray-200 text-4xl mb-24 font-bold">Contatos</h1>
-        <div className="flex flex-row gap-32">
+        <div className="flex md:flex-row flex-col gap-32">
           <a href="mailto:lucasoliveiracampos81@gmail.com" target="_blank">
             <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
               <MdOutlineEmail
