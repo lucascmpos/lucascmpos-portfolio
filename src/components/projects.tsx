@@ -358,28 +358,30 @@ const Projects = () => {
         >
           {selectedProject && (
             <div className="flex flex-col h-full">
-              {isLargeScreen && (
-                <video
-                  controls
-                  autoPlay
-                  loop
-                  muted
-                  src={selectedProject.video}
-                  alt={selectedProject.title}
-                  type="video/mp4"
-                  className="w-1/2 object-cover rounded-md"
-                ></video>
-              )}
-              <div className="flex-grow pl-4">
-                <h2 className="text-2xl font-bold text-gray-200">
-                  {selectedProject.title}
-                </h2>
-                <p className="text-gray-300">{selectedProject.description}</p>
-                <div className="mt-4 flex gap-2 flex-wrap">
-                  {selectedProject.tech &&
-                    selectedProject.tech.map((technology, index) => (
-                      <TechnologyCard key={index} technology={technology} />
-                    ))}
+              <div className="flex-grow flex justify-start p-4">
+                {isLargeScreen && (
+                  <video
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    src={selectedProject.video}
+                    alt={selectedProject.title}
+                    type="video/mp4"
+                    className="w-1/2 object-cover rounded-md"
+                  />
+                )}
+                <div className="flex-grow pl-4">
+                  <h2 className="text-2xl font-bold text-gray-200">
+                    {selectedProject.title}
+                  </h2>
+                  <p className="text-gray-300">{selectedProject.description}</p>
+                  <div className="mt-4 flex gap-2 flex-wrap">
+                    {selectedProject.tech &&
+                      selectedProject.tech.map((technology, index) => (
+                        <TechnologyCard key={index} technology={technology} />
+                      ))}
+                  </div>
                 </div>
               </div>
               <div className="flex justify-start ml-4 mb-4">
