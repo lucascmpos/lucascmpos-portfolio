@@ -9,13 +9,13 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 18px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #0c0333;
+  background-color: rgb(206, 206, 206);
   border-radius: 0px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #03031a;
+  background-color: #01020a;
 }

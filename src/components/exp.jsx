@@ -1,8 +1,14 @@
 import React from "react";
 import compassLogo from "../assets/compass.png";
 import webbyLogo from "../assets/webby.png";
+import { useInView } from "react-intersection-observer";
 
 const Experience = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   const experiencias = [
     {
       id: 1,
@@ -32,39 +38,50 @@ const Experience = () => {
       id="exp"
       className="bg-[#020211] flex flex-col p-48 pt-32 justify-center gap-20 items-center"
     >
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-gray-200 text-4xl font-bold">Experiência</h1>
-      </div>
-      {experiencias.map((experiencia) => (
-        <div
-          key={experiencia.id}
-          className="flex flex-col bg-[#01020a] hover:bg-[#030307] transition-all duration-300 gap-10 py-20 px-32 rounded-3xl items-center justify-center"
-        >
-          <a href={experiencia.link} target="_blank" rel="noopener noreferrer">
-            <div className="flex flex-row w-80 items-center justify-center gap-5 group ">
-              <img
-                src={experiencia.logo}
-                className="size-24 max-w-full h-auto group-hover:scale-110 transition-all"
-                alt="Company Logo"
-              />
-              <h1 className="font-semibold text-2xl text-gray-400 group-hover:text-gray-600 transition-all">
-                {experiencia.subtitulo}
-              </h1>
-            </div>
-          </a>
-          <div className="flex flex-col justify-between items-center gap-10">
-            <h2 className="font-bold text-4xl text-gray-300">
-              {experiencia.titulo}
-            </h2>
-            <h2 className="font-semibold text-xl text-purple-900">
-              {experiencia.data}
-            </h2>
-          </div>
-          <p className="w-3/4 text-gray-300 text-lg text-justify">
-            {experiencia.descricao}
-          </p>
+      <div
+        ref={ref}
+        className={`flex gap-10 flex-col transition-opacity ease-in-out duration-1000 ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-gray-200 text-4xl font-bold">Experiência</h1>
         </div>
-      ))}
+        {experiencias.map((experiencia) => (
+          <div
+            key={experiencia.id}
+            className="flex flex-col bg-[#01020a] hover:bg-[#030307] transition-all duration-300 gap-10 py-20 px-32 rounded-3xl items-center justify-center"
+          >
+            <a
+              href={experiencia.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex flex-row w-80 items-center justify-center gap-5 group ">
+                <img
+                  src={experiencia.logo}
+                  className="size-24 max-w-full h-auto group-hover:scale-110 transition-all"
+                  alt="Company Logo"
+                />
+                <h1 className="font-semibold text-2xl text-gray-400 group-hover:text-gray-600 transition-all">
+                  {experiencia.subtitulo}
+                </h1>
+              </div>
+            </a>
+            <div className="flex flex-col justify-between items-center gap-10">
+              <h2 className="font-bold text-4xl text-gray-300">
+                {experiencia.titulo}
+              </h2>
+              <h2 className="font-semibold text-xl text-purple-900">
+                {experiencia.data}
+              </h2>
+            </div>
+            <p className="w-3/4 text-gray-300 text-lg text-justify">
+              {experiencia.descricao}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -12,13 +12,18 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import pairBankVideo from "../assets/pairbankvideo.mp4";
+import sharpcutVideo from "../assets/sharpcutvideo.mp4";
+import periwareVideo from "../assets/periwarevideo.mp4";
+import monfiVideo from "../assets/monfivideo.mp4";
+
+import { useInView } from "react-intersection-observer";
 
 const projectsData = [
   {
     id: 1,
     title: "SharpCut Barbers",
     image: sharpCut,
-    video: "",
+    video: sharpcutVideo,
     description: (
       <>
         Este projeto consiste em uma aplicação feita para ter diversas
@@ -35,16 +40,23 @@ const projectsData = [
         <br />- Integração com banco de dados SQL.
       </>
     ),
-    site: "https://lc-barber.vercel.app/",
-    github: "https://github.com/lucascmpos/LC-Barber",
+    site: "https://sharpcut-barbers.vercel.app/",
+    github: "https://github.com/lucascmpos/SharpCut-Barbers",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos-b26a3b204_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-WbGi?utm_source=share&utm_medium=member_desktop",
-    tech: ["Next.js", "Tailwindcss", "ShadcnUI", "Prisma", "PostgreSQL"],
+    tech: [
+      "Next.js",
+      "Tailwindcss",
+      "ShadcnUI",
+      "Figma",
+      "Prisma",
+      "PostgreSQL",
+    ],
   },
   {
     id: 2,
     title: "PeriWare Store",
-    video: "",
+    video: periwareVideo,
     image: periWare,
     description: (
       <>
@@ -63,11 +75,18 @@ const projectsData = [
         <br />- Pagamentos com Stripe
       </>
     ),
-    site: "https://lc-tech-store.vercel.app/",
-    github: "https://github.com/lucascmpos/LCTech-Store",
+    site: "https://periware-store.vercel.app/",
+    github: "https://github.com/lucascmpos/PeriWare-Store",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos-b26a3b204_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-cmq6?utm_source=share&utm_medium=member_desktop",
-    tech: ["Next.js", "Tailwindcss", "ShadcnUI", "Prisma", "PostgreSQL"],
+    tech: [
+      "Next.js",
+      "Tailwindcss",
+      "ShadcnUI",
+      "Figma",
+      "Prisma",
+      "PostgreSQL",
+    ],
   },
   {
     id: 3,
@@ -99,6 +118,7 @@ const projectsData = [
       "React.js",
       "Tailwindcss",
       "ShadcnUI",
+      "Figma",
       "Node.js",
       "Prisma",
       "PostgreSQL",
@@ -147,7 +167,7 @@ const projectsData = [
   {
     id: 6,
     title: "Monfi",
-    video: "",
+    video: monfiVideo,
     image: monFi,
     description: (
       <>
@@ -166,7 +186,7 @@ const projectsData = [
     site: "https://monfi.netlify.app/",
     github: "https://github.com/lucascmpos/MonFi",
     linkedin: "",
-    tech: ["React.js", "SASS", "Figma", "The Movie Database API"],
+    tech: ["React.js", "SASS", "The Movie Database API"],
   },
 ];
 
@@ -238,6 +258,11 @@ const Projects = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
   const openModal = (project) => {
     setSelectedProject(project);
     setModalIsOpen(true);
@@ -255,108 +280,119 @@ const Projects = () => {
   );
   return (
     <div id="projects" className="p-44 bg-[#01020a]">
-      <div className="flex flex-col items-start pb-20 justify-center">
-        <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
-      </div>
-      <div className="grid grid-cols-3 gap-10">
-        {projectsData.map((project) => (
-          <ProjectCard key={project.id} project={project} onClick={openModal} />
-        ))}
-      </div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={{
-          content: {
-            top: "50%",
-            left: "50%",
-            right: "auto",
-            bottom: "auto",
-            transform: "translate(-50%, -50%)",
-            width: "55%",
-            backgroundColor: "#020216",
-            border: "none",
-            borderRadius: "20px",
-            display: "flex",
-          },
-        }}
-        overlayClassName={{
-          base: "fixed inset-0 overflow-y-auto",
-          afterOpen: "bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-md",
-          beforeClose: "",
-        }}
+      <div
+        ref={ref}
+        className={`transition-opacity ease-in-out duration-1000 ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
       >
-        {selectedProject && (
-          <div className="flex flex-col h-full">
-            <div className="flex-grow flex  justify-start p-4">
-              <video
-                controls
-                autoPlay
-                loop
-                muted
-                src={selectedProject.video}
-                alt={selectedProject.title}
-                type="video/mp4"
-                className="w-1/2 object-cover rounded-md"
-              ></video>
-              <div className="flex-grow pl-4">
-                <h2 className="text-2xl font-bold text-gray-200">
-                  {selectedProject.title}
-                </h2>
-                <p className="text-gray-300">{selectedProject.description}</p>
-                <div className="mt-4 flex gap-2 flex-wrap">
-                  {selectedProject.tech &&
-                    selectedProject.tech.map((technology, index) => (
-                      <TechnologyCard key={index} technology={technology} />
-                    ))}
+        <div className="flex flex-col items-start pb-20 justify-center">
+          <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
+        </div>
+        <div className="grid grid-cols-3 gap-10">
+          {projectsData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onClick={openModal}
+            />
+          ))}
+        </div>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={{
+            content: {
+              top: "50%",
+              left: "50%",
+              right: "auto",
+              bottom: "auto",
+              transform: "translate(-50%, -50%)",
+              width: "55%",
+              backgroundColor: "#020216",
+              border: "none",
+              borderRadius: "20px",
+              display: "flex",
+            },
+          }}
+          overlayClassName={{
+            base: "fixed inset-0 overflow-y-auto",
+            afterOpen: "bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-md",
+            beforeClose: "",
+          }}
+        >
+          {selectedProject && (
+            <div className="flex flex-col h-full">
+              <div className="flex-grow flex  justify-start p-4">
+                <video
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  src={selectedProject.video}
+                  alt={selectedProject.title}
+                  type="video/mp4"
+                  className="w-1/2 object-cover rounded-md"
+                ></video>
+                <div className="flex-grow pl-4">
+                  <h2 className="text-2xl font-bold text-gray-200">
+                    {selectedProject.title}
+                  </h2>
+                  <p className="text-gray-300">{selectedProject.description}</p>
+                  <div className="mt-4 flex gap-2 flex-wrap">
+                    {selectedProject.tech &&
+                      selectedProject.tech.map((technology, index) => (
+                        <TechnologyCard key={index} technology={technology} />
+                      ))}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-start ml-4 mb-4">
-              <button
-                className="bg-[#01020a] font-semibold w-24 items-center justify-center gap-2 group flex flex-row text-white px-4 py-2 rounded-md mr-2"
-                onClick={() => window.open(selectedProject.site, "_blank")}
-              >
-                Site
-                <FaExternalLinkAlt
-                  className="group-hover:scale-125 transition-all"
-                  size={15}
-                />
-              </button>
-              <button
-                className="bg-[#01020a] font-semibold group w-32 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
-                onClick={() => window.open(selectedProject.github, "_blank")}
-              >
-                GitHub
-                <FaGithub
-                  className="group-hover:scale-125 transition-all"
-                  size={20}
-                />
-              </button>
-              {selectedProject.linkedin && (
+              <div className="flex justify-start ml-4 mb-4">
                 <button
-                  className="bg-[#01020a] font-semibold group w-52 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
-                  onClick={() =>
-                    window.open(selectedProject.linkedin, "_blank")
-                  }
+                  className="bg-[#01020a] font-semibold w-24 items-center justify-center gap-2 group flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                  onClick={() => window.open(selectedProject.site, "_blank")}
                 >
-                  Publicação do{" "}
-                  <FaLinkedinIn
+                  Site
+                  <FaExternalLinkAlt
                     className="group-hover:scale-125 transition-all"
-                    size={18}
+                    size={15}
                   />
                 </button>
-              )}
+                <button
+                  className="bg-[#01020a] font-semibold group w-32 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                  onClick={() => window.open(selectedProject.github, "_blank")}
+                >
+                  GitHub
+                  <FaGithub
+                    className="group-hover:scale-125 transition-all"
+                    size={20}
+                  />
+                </button>
+                {selectedProject.linkedin && (
+                  <button
+                    className="bg-[#01020a] font-semibold group w-52 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                    onClick={() =>
+                      window.open(selectedProject.linkedin, "_blank")
+                    }
+                  >
+                    Publicação do{" "}
+                    <FaLinkedinIn
+                      className="group-hover:scale-125 transition-all"
+                      size={18}
+                    />
+                  </button>
+                )}
+              </div>
+              <button
+                onClick={closeModal}
+                className="absolute top-0 right-0 p-4 cursor-pointer text-purple-900 hover:text-gray-200"
+              >
+                <FaRegWindowClose size={25} />
+              </button>
             </div>
-            <button
-              onClick={closeModal}
-              className="absolute top-0 right-0 p-4 cursor-pointer text-purple-900 hover:text-gray-200"
-            >
-              <FaRegWindowClose size={25} />
-            </button>
-          </div>
-        )}
-      </Modal>
+          )}
+        </Modal>
+      </div>
     </div>
   );
 };

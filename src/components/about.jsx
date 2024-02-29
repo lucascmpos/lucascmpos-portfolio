@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { Img } from "react-image";
 import Photo from "../assets/me.jpg";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
   const [showMore, setShowMore] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
 
   const handleToggleShowMore = () => {
     setShowMore(!showMore);
@@ -12,9 +17,14 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-row bg-[#01020a] py-40 justify-center gap-32 px-20 "
+      className="flex flex-row bg-[#01020a] py-40 justify-center gap-32 px-20"
     >
-      <div className="flex flex-col w-6/12 text-start gap-8">
+      <div
+        className={`flex flex-col w-6/12 text-start gap-8 transition-opacity ease-in-out duration-1000 ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
+        ref={ref}
+      >
         <h1 className="text-gray-200 text-4xl font-bold">Sobre</h1>
         <p className="text-gray-200 text-lg">
           Oi! sou o Lucas. Desenvolvedor Frontend e graduado em Segurança da

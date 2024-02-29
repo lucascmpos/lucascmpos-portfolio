@@ -43,13 +43,15 @@ const Header = () => {
             Projetos
           </h2>
         </Link>
-        <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
-          <LuInfo
-            size={20}
-            className="text-gray-300 group-hover:text-purple-800 group-hover:-translate-y-0.5 transition-all duration-300"
-          />
-          Contato
-        </h2>
+        <Link to="contact" smooth={true} duration={500}>
+          <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
+            <LuInfo
+              size={20}
+              className="text-gray-300 group-hover:text-purple-800 group-hover:-translate-y-0.5 transition-all duration-300"
+            />
+            Contato
+          </h2>
+        </Link>
       </div>
     </header>
   );
