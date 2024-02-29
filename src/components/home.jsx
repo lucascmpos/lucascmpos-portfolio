@@ -69,7 +69,7 @@ const Home = () => {
           className="font-bold cursor-pointer text-gray-300 hover:bg-purple-950 transition all duration-300 rounded-lg p-2"
           onClick={() => window.open(curriculo, "_blank")}
         >
-          Visualize meu currículo
+          Veja meu currículo
         </h4>
       </div>
       <section className="flex flex-row gap-10 pb-80">

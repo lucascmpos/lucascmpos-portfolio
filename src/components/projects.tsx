@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import sharpCut from "../assets/sharpcut.png";
 import periWare from "../assets/periwarestore.png";
@@ -17,6 +17,7 @@ import periwareVideo from "../assets/periwarevideo.mp4";
 import monfiVideo from "../assets/monfivideo.mp4";
 
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "react-responsive";
 
 const projectsData = [
   {
@@ -192,6 +193,23 @@ const projectsData = [
 
 const ProjectCard = ({ project, onClick }) => {
   const [hovered, setHovered] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Atualize o estado com base na largura da tela
+      setIsLargeScreen(window.innerWidth > 1024);
+    };
+
+    // Adicione um event listener para lidar com alterações de tamanho da tela
+    window.addEventListener("resize", handleResize);
+
+    // Execute a função de limpeza ao desmontar o componente
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Certifique-se de passar um array vazio como segundo argumento para useEffect
+
   const titleSpring = useSpring({
     opacity: hovered ? 0 : 1,
     config: { tension: 500, friction: 30 },
@@ -208,11 +226,17 @@ const ProjectCard = ({ project, onClick }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="border-b-4 border-purple-800 relative">
+      <div
+        className={`border-b-4 border-purple-800 relative ${
+          isLargeScreen ? "w-full" : "w-64"
+        }`}
+      >
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-64 object-cover rounded-sm transition-transform transform group-hover:scale-105 transition-all duration-300"
+          className={`w-full object-cover rounded-sm transition-transform transform group-hover:scale-105 transition-all duration-300 ${
+            isLargeScreen ? "h-52" : "" // Defina a altura para h-52 se a tela for maior que lg
+          }`}
         />
         <animated.div
           style={{
@@ -224,7 +248,7 @@ const ProjectCard = ({ project, onClick }) => {
             textAlign: "center",
             padding: "8px",
           }}
-          className="w-full h-64 absolute top-0 left-0 bg-black rounded-sm"
+          className="w-full h-full absolute top-0 left-0 bg-black rounded-sm"
         ></animated.div>
         <animated.div
           style={{
@@ -236,7 +260,9 @@ const ProjectCard = ({ project, onClick }) => {
             textAlign: "center",
             padding: "8px",
           }}
-          className="text-gray-200 font-bold text-xl"
+          className={`text-gray-200 font-bold text-xl ${
+            isLargeScreen ? "bottom-1" : "bottom-4"
+          }`}
         >
           {project.title}
         </animated.div>
@@ -245,7 +271,9 @@ const ProjectCard = ({ project, onClick }) => {
         style={{
           opacity: titleSpring.opacity.interpolate((opacity) => 1 - opacity),
         }}
-        className="absolute font-semibold bottom-1 left-0 w-full bg-purple-900 text-gray-300 p-2 text-center rounded-md cursor-pointer hover:bg-purple-950 transition-all duration-300"
+        className={`absolute font-semibold ${
+          isLargeScreen ? "bottom-1" : "bottom-4"
+        } left-0 w-full bg-purple-900 text-gray-300 p-2 text-center rounded-md cursor-pointer hover:bg-purple-950 transition-all duration-300`}
         onClick={() => onClick(project)}
       >
         Clique aqui para saber mais
@@ -260,8 +288,10 @@ const Projects = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0,
   });
+
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -278,6 +308,7 @@ const Projects = () => {
       {technology}
     </div>
   );
+
   return (
     <div id="projects" className="p-44 bg-[#01020a]">
       <div
@@ -286,10 +317,14 @@ const Projects = () => {
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="flex flex-col items-start pb-20 justify-center">
+        <div className="flex flex-col md:items-start items-center pb-20 justify-center">
           <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
         </div>
-        <div className="grid grid-cols-3 gap-10">
+        <div
+          className={`grid ${
+            isLargeScreen ? "grid-cols-3" : "flex-col"
+          } md:gap-32 gap-10 flex justify-center items-center`}
+        >
           {projectsData.map((project) => (
             <ProjectCard
               key={project.id}
@@ -323,7 +358,7 @@ const Projects = () => {
         >
           {selectedProject && (
             <div className="flex flex-col h-full">
-              <div className="flex-grow flex  justify-start p-4">
+              {isLargeScreen && (
                 <video
                   controls
                   autoPlay
@@ -334,17 +369,17 @@ const Projects = () => {
                   type="video/mp4"
                   className="w-1/2 object-cover rounded-md"
                 ></video>
-                <div className="flex-grow pl-4">
-                  <h2 className="text-2xl font-bold text-gray-200">
-                    {selectedProject.title}
-                  </h2>
-                  <p className="text-gray-300">{selectedProject.description}</p>
-                  <div className="mt-4 flex gap-2 flex-wrap">
-                    {selectedProject.tech &&
-                      selectedProject.tech.map((technology, index) => (
-                        <TechnologyCard key={index} technology={technology} />
-                      ))}
-                  </div>
+              )}
+              <div className="flex-grow pl-4">
+                <h2 className="text-2xl font-bold text-gray-200">
+                  {selectedProject.title}
+                </h2>
+                <p className="text-gray-300">{selectedProject.description}</p>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  {selectedProject.tech &&
+                    selectedProject.tech.map((technology, index) => (
+                      <TechnologyCard key={index} technology={technology} />
+                    ))}
                 </div>
               </div>
               <div className="flex justify-start ml-4 mb-4">
