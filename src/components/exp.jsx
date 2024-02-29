@@ -36,7 +36,7 @@ const Experience = () => {
   return (
     <div
       id="exp"
-      className="bg-[#020211] flex flex-col p-48 pt-32 justify-center gap-20 items-center"
+      className="bg-[#020211] flex flex-col md:p-48 pt-32 justify-center gap-20 items-center"
     >
       <div
         ref={ref}
@@ -50,12 +50,10 @@ const Experience = () => {
         {experiencias.map((experiencia) => (
           <div
             key={experiencia.id}
-            className={`flex flex-col bg-[#01020a] hover:bg-[#030307]  md:w-auto w-72 transition-all duration-300 gap-10 md:py-20 md:px-32 p-3 mr-auto  rounded-3xl items-center justify-center ${
-              window.innerWidth < 1440 ? "w-screen" : ""
-            }`}
+            className={`flex flex-col bg-[#01020a] hover:bg-[#030307]  md:w-auto w-auto transition-all duration-300 gap-10 md:py-20 md:px-32 pb-3 mr-auto  rounded-3xl items-center justify-center`}
           >
             <a href={experiencia.link} target="_blank">
-              <div className="flex flex-row w-80 items-center justify-center gap-5 group ">
+              <div className="flex flex-row w-80 items-center justify-center mt-5 gap-5 group ">
                 <img
                   src={experiencia.logo}
                   className="size-24 max-w-full h-auto group-hover:scale-110 transition-all"

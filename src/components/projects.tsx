@@ -197,18 +197,15 @@ const ProjectCard = ({ project, onClick }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      // Atualize o estado com base na largura da tela
       setIsLargeScreen(window.innerWidth > 1024);
     };
 
-    // Adicione um event listener para lidar com alterações de tamanho da tela
     window.addEventListener("resize", handleResize);
 
-    // Execute a função de limpeza ao desmontar o componente
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Certifique-se de passar um array vazio como segundo argumento para useEffect
+  }, []);
 
   const titleSpring = useSpring({
     opacity: hovered ? 0 : 1,
@@ -228,14 +225,14 @@ const ProjectCard = ({ project, onClick }) => {
     >
       <div
         className={`border-b-4 border-purple-800 relative ${
-          isLargeScreen ? "w-full" : "w-64"
+          isLargeScreen ? " " : ""
         }`}
       >
         <img
           src={project.image}
           alt={project.title}
           className={`w-full object-cover rounded-sm transition-transform transform group-hover:scale-105 transition-all duration-300 ${
-            isLargeScreen ? "h-52" : "" // Defina a altura para h-52 se a tela for maior que lg
+            isLargeScreen ? "h-56" : "h-60"
           }`}
         />
         <animated.div
@@ -266,18 +263,18 @@ const ProjectCard = ({ project, onClick }) => {
         >
           {project.title}
         </animated.div>
+        <animated.div
+          style={{
+            opacity: titleSpring.opacity.interpolate((opacity) => 1 - opacity),
+          }}
+          className={`absolute font-semibold ${
+            isLargeScreen ? "bottom-1" : "bottom-4"
+          } left-0 w-full bg-purple-900 text-gray-300 p-2 text-center rounded-md cursor-pointer hover:bg-purple-950 transition-all duration-300`}
+          onClick={() => onClick(project)}
+        >
+          Clique aqui para saber mais
+        </animated.div>
       </div>
-      <animated.div
-        style={{
-          opacity: titleSpring.opacity.interpolate((opacity) => 1 - opacity),
-        }}
-        className={`absolute font-semibold ${
-          isLargeScreen ? "bottom-1" : "bottom-4"
-        } left-0 w-full bg-purple-900 text-gray-300 p-2 text-center rounded-md cursor-pointer hover:bg-purple-950 transition-all duration-300`}
-        onClick={() => onClick(project)}
-      >
-        Clique aqui para saber mais
-      </animated.div>
     </div>
   );
 };
@@ -310,7 +307,7 @@ const Projects = () => {
   );
 
   return (
-    <div id="projects" className="p-44 bg-[#01020a]">
+    <div id="projects" className="md:p-44 py-44 md:py-0  bg-[#01020a]">
       <div
         ref={ref}
         className={`transition-opacity ease-in-out duration-1000 ${
@@ -323,7 +320,7 @@ const Projects = () => {
         <div
           className={`grid ${
             isLargeScreen ? "grid-cols-3" : "flex-col"
-          } md:gap-32 gap-10 flex justify-center items-center`}
+          } md:gap-32 gap-10 p-3 flex justify-center items-center`}
         >
           {projectsData.map((project) => (
             <ProjectCard

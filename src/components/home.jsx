@@ -52,7 +52,7 @@ const Home = () => {
       id="home"
       className="flex flex-col justify-center items-center gap-20 bg-[#020211]"
     >
-      <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72">
+      <div className="flex flex-col justify-center items-center gap-16 pt-96">
         <div className="flex md:flex-row lg:w-auto flex-col gap-1">
           <h1 className="font-extrabold lg:text-6xl text-3xl   text-gray-200">
             Lucas Campos
