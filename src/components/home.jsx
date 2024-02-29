@@ -1,9 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
-import Typical from "react-typical";
+
 import curriculo from "../assets/curriculod.pdf";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Home = () => {
+  const [typeEffect] = useTypewriter({
+    words: ["Frontend Developer", "Web developer", "Software engineer"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 50,
+  });
+
   const socialNetworks = [
     {
       name: "linkedin",
@@ -48,11 +56,10 @@ const Home = () => {
             Lucas Campos
             <span className="font-extrabold text-7xl text-purple-900">.</span>
           </h1>
-          <Typical
-            loop={Infinity}
-            steps={["Frontend Developer", 5000, "Web Developer", 5000]}
-            className="font-extrabold text-7xl text-purple-900"
-          />
+          <span className="font-extrabold text-7xl text-purple-900">
+            {typeEffect}
+            <Cursor />
+          </span>
         </div>
         <h4
           className="font-bold cursor-pointer text-gray-300 hover:bg-purple-950 transition all duration-300 rounded-lg p-2"

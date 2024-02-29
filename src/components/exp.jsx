@@ -44,7 +44,7 @@ const Experience = () => {
             <div className="flex flex-row w-80 items-center justify-center gap-5 group ">
               <img
                 src={experiencia.logo}
-                className="size-24 max-w-full h-auto group-hover:-translate-y-1 transition-all"
+                className="size-24 max-w-full h-auto group-hover:scale-110 transition-all"
                 alt="Company Logo"
               />
               <h1 className="font-semibold text-2xl text-gray-400 group-hover:text-gray-600 transition-all">

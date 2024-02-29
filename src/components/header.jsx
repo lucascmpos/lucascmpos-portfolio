@@ -11,7 +11,7 @@ const Header = () => {
       <Link to="home" smooth={true} duration={500}>
         <div>
           <h2 className="cursor-pointer font-bold text-purple-800">
-            campos.dev
+            campos<span className="text-gray-100">.</span>dev
           </h2>
         </div>
       </Link>
@@ -29,18 +29,20 @@ const Header = () => {
           <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
             <MdOutlineWorkOutline
               size={20}
-              className="text-gray-300 group-hover:text-purple-700 group-hover:-translate-y-0.5 transition-all duration-300"
+              className="text-gray-300 group-hover:text-purple-800 group-hover:-translate-y-0.5 transition-all duration-300"
             />
             Experiência
           </h2>
         </Link>
-        <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
-          <GoProjectRoadmap
-            size={20}
-            className="text-gray-300 group-hover:text-purple-700 group-hover:-translate-y-0.5 transition-all duration-300"
-          />
-          Projetos
-        </h2>
+        <Link to="projects" smooth={true} duration={500}>
+          <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
+            <GoProjectRoadmap
+              size={20}
+              className="text-gray-300 group-hover:text-purple-800 group-hover:-translate-y-0.5 transition-all duration-300"
+            />
+            Projetos
+          </h2>
+        </Link>
         <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center group">
           <LuInfo
             size={20}

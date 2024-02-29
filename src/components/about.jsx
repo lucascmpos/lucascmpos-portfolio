@@ -59,7 +59,7 @@ const About = () => {
 
       <div className="flex items-center w-3/12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-[#010008] via-transparent to-transparent rounded-lg"></div>
-        <Img src={Photo} alt="Foto de Lucas Campos" className="rounded-lg" />
+        <Img src={Photo} alt="Foto de Lucas Campos" className="rounded-lg " />
       </div>
     </div>
   );
