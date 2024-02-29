@@ -50,7 +50,9 @@ const Experience = () => {
         {experiencias.map((experiencia) => (
           <div
             key={experiencia.id}
-            className="flex flex-col bg-[#01020a] hover:bg-[#030307]  md:w-auto w-72 transition-all duration-300 gap-10 md:py-20 md:px-32 p-3 mr-auto  rounded-3xl items-center justify-center"
+            className={`flex flex-col bg-[#01020a] hover:bg-[#030307]  md:w-auto w-72 transition-all duration-300 gap-10 md:py-20 md:px-32 p-3 mr-auto  rounded-3xl items-center justify-center ${
+              window.innerWidth < 1440 ? "w-screen" : ""
+            }`}
           >
             <a href={experiencia.link} target="_blank">
               <div className="flex flex-row w-80 items-center justify-center gap-5 group ">

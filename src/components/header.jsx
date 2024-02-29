@@ -25,7 +25,7 @@ const MobileMenu = ({ isOpen, toggleMenu, menuItems }) => {
               &#10006;
             </button>
           </div>
-          <div className="flex flex-col text-3xl gap-24 items-center pt-10">
+          <div className="flex flex-col text-2xl gap-16 items-center pt-10">
             <Link
               to="home"
               smooth={true}

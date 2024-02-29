@@ -291,7 +291,7 @@ const Projects = () => {
     threshold: 0,
   });
 
-  const isLargeScreen = useMediaQuery({ minWidth: 1440 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1350 });
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -343,7 +343,9 @@ const Projects = () => {
               right: "auto",
               bottom: "auto",
               transform: "translate(-50%, -50%)",
-              width: "80%",
+              width: isLargeScreen ? "70%" : "100%",
+              maxWidth: isLargeScreen ? "none" : "100%",
+              height: isLargeScreen ? "70%" : "100%",
               backgroundColor: "#020216",
               border: "none",
               borderRadius: "20px",
@@ -352,7 +354,8 @@ const Projects = () => {
           }}
           overlayClassName={{
             base: "fixed inset-0 overflow-y-auto",
-            afterOpen: "bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-md",
+            afterOpen:
+              "bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-md z-20",
             beforeClose: "",
           }}
         >
@@ -394,9 +397,9 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-start ml-4 mb-4">
+              <div className="flex md:flex-row flex-col justify-start ml-4 mb-4">
                 <button
-                  className="bg-[#01020a] font-semibold w-24 items-center justify-center gap-2 group flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                  className="bg-[#01020a] font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-white px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.site, "_blank")}
                 >
                   Site
@@ -406,7 +409,7 @@ const Projects = () => {
                   />
                 </button>
                 <button
-                  className="bg-[#01020a] font-semibold group w-32 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                  className="bg-[#01020a] font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
@@ -417,7 +420,7 @@ const Projects = () => {
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className="bg-[#01020a] font-semibold group w-52 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                    className="bg-[#01020a] font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }
@@ -432,7 +435,7 @@ const Projects = () => {
               </div>
               <button
                 onClick={closeModal}
-                className="absolute top-0 right-0 p-4 cursor-pointer text-purple-900 hover:text-gray-200"
+                className="absolute top-0 right-0 p-4 cursor-pointer text-purple-900 hover:text-gray-200 "
               >
                 <FaRegWindowClose size={25} />
               </button>
