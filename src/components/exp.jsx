@@ -40,7 +40,7 @@ const Experience = () => {
     >
       <div
         ref={ref}
-        className={`flex gap-10 flex-col transition-opacity ease-in-out duration-1000 ${
+        className={`flex gap-10 flex-col transition-opacity  justify-center items-center ease-in-out duration-1000 ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -50,7 +50,7 @@ const Experience = () => {
         {experiencias.map((experiencia) => (
           <div
             key={experiencia.id}
-            className="flex flex-col bg-[#01020a] hover:bg-[#030307] transition-all duration-300 gap-10 md:py-20 md:px-32 p-16 rounded-3xl items-center justify-center"
+            className="flex flex-col bg-[#01020a] hover:bg-[#030307]  md:w-auto w-72 transition-all duration-300 gap-10 md:py-20 md:px-32 p-3 mr-auto  rounded-3xl items-center justify-center"
           >
             <a href={experiencia.link} target="_blank">
               <div className="flex flex-row w-80 items-center justify-center gap-5 group ">
@@ -59,20 +59,20 @@ const Experience = () => {
                   className="size-24 max-w-full h-auto group-hover:scale-110 transition-all"
                   alt="Company Logo"
                 />
-                <h1 className="font-semibold flex text-2xl text-gray-400 group-hover:text-gray-600 transition-all">
+                <h1 className="font-semibold flex text-xl text-gray-400 group-hover:text-gray-600 transition-all">
                   {experiencia.subtitulo}
                 </h1>
               </div>
             </a>
             <div className="flex flex-col justify-between items-center gap-10 w-80 md:w-auto">
-              <h2 className="font-bold md:text-4xl text-2xl text-gray-300">
+              <h2 className="font-bold md:text-4xl text-xl text-gray-300">
                 {experiencia.titulo}
               </h2>
               <h2 className="font-semibold md:text-xl text-lg text-purple-900">
                 {experiencia.data}
               </h2>
             </div>
-            <p className="md:w-3/4 w-6/6 text-gray-300 md:text-lg text-md text-justify">
+            <p className="md:w-3/4 w-5/6 text-gray-300 md:text-lg text-sm text-justify">
               {experiencia.descricao}
             </p>
           </div>
