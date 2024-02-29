@@ -1,5 +1,7 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
+import { VscGithub } from "react-icons/vsc";
+import { FiLinkedin } from "react-icons/fi";
 
 import curriculo from "../assets/curriculod.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -16,7 +18,7 @@ const Home = () => {
     {
       name: "linkedin",
       icon: (
-        <FaLinkedinIn
+        <FiLinkedin
           size={40}
           className=" hover:text-blue-800 transition-all duration-300"
         />
@@ -26,7 +28,7 @@ const Home = () => {
     {
       name: "github",
       icon: (
-        <FaGithub
+        <VscGithub
           size={40}
           className=" hover:text-gray-500 transition-all duration-300"
         />
