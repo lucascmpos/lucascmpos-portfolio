@@ -345,7 +345,7 @@ const Projects = () => {
               height: isLargeScreen ? "70%" : "100%",
               backgroundColor: "#020216",
               border: "none",
-              borderRadius: "20px",
+              borderRadius: isLargeScreen ? "20px" : "0px",
               display: "flex",
             },
           }}
