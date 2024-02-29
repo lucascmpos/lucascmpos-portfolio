@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import Typical from "react-typical";
 import curriculo from "../assets/curriculod.pdf";
 
 const Home = () => {
@@ -42,12 +43,19 @@ const Home = () => {
       className="flex flex-col justify-center items-center gap-20 bg-[#020211]"
     >
       <div className="flex flex-col justify-center items-center gap-16 pt-96">
-        <h1 className="font-extrabold text-7xl text-gray-200">
-          Lucas Campos
-          <span className="text-purple-800">. Front-End Developer</span>.
-        </h1>
+        <div className="flex flex-row gap-1">
+          <h1 className="font-extrabold text-7xl text-gray-200">
+            Lucas Campos
+            <span className="font-extrabold text-7xl text-purple-900">.</span>
+          </h1>
+          <Typical
+            loop={Infinity}
+            steps={["Frontend Developer", 5000, "Web Developer", 5000]}
+            className="font-extrabold text-7xl text-purple-900"
+          />
+        </div>
         <h4
-          className="font-semibold cursor-pointer text-gray-300 hover:bg-purple-950 transition all duration-300 rounded-lg p-2"
+          className="font-bold cursor-pointer text-gray-300 hover:bg-purple-950 transition all duration-300 rounded-lg p-2"
           onClick={() => window.open(curriculo, "_blank")}
         >
           Visualize meu currículo

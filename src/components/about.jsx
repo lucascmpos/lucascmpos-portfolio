@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-row bg-[#01020a] py-32 justify-center gap-32 px-20 "
+      className="flex flex-row bg-[#01020a] py-40 justify-center gap-32 px-20 "
     >
       <div className="flex flex-col w-6/12 text-start gap-8">
         <h1 className="text-gray-200 text-4xl font-bold">Sobre</h1>
@@ -29,10 +29,10 @@ const About = () => {
           Node.js e PostgreSQL.
         </p>
         <button
-          className="text-gray-300 font-bold rounded-sm bg-purple-900 w-60 cursor-pointer hover:bg-purple-950"
+          className="text-gray-300 font-bold rounded-sm bg-purple-900 w-60 cursor-pointer hover:bg-purple-950 transition-all duration-500"
           onClick={handleToggleShowMore}
         >
-          {showMore ? "Esconda esse texto de volta!" : "Saiba mais sobre"}
+          {showMore ? "Esconda esse texto de volta!" : "Saiba mais sobre..."}
         </button>
         <p
           className={`text-gray-200 text-start text-lg transition-opacity ease-in-out duration-500 ${
@@ -43,12 +43,9 @@ const About = () => {
           atualmente estou imerso no ecossistema JavaScript e TypeScript,
           utilizando tecnologias como React.js/Next.js para criar experiências
           envolventes no Front-End e explorando as possibilidades do Node.js
-          para fortalecer o Back-End. Além dos meus estudos e práticas sobre
-          desenvolvimento, me graduei em Segurança da Informação. Essa
-          combinação de conhecimento prático e teórico me permite abordar os
-          desafios de desenvolvimento de maneira abrangente. <br />
-          Minha bagagem com essa graduação inclui experiência prática em
-          tecnologias como AWS Cloud, bancos de dados SQL e Docker,
+          para fortalecer o Back-End. <br />
+          Minha bagagem com minha recente graduação inclui experiência prática
+          em tecnologias como AWS Cloud, bancos de dados SQL e Docker,
           proporcionando uma base sólida para enfrentar os desafios
           contemporâneos. Sempre busco ir além das expectativas, garantindo que
           as soluções que entrego sejam não apenas funcionais, mas também
