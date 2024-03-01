@@ -47,7 +47,9 @@ const MobileMenu = ({ isOpen, toggleMenu, menuItems }) => {
                 onClick={() => toggleMenu(false)}
               >
                 <h2 className="flex flex-row cursor-pointer gap-5 justify-center items-center">
-                  {item.icon}
+                  <div className="hover:-translate-y-1 hover:text-purple-800">
+                    {item.icon}
+                  </div>
                   {item.text}
                 </h2>
               </Link>
@@ -78,7 +80,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed bg-opacity-80 flex flex-row text-lg justify-between items-center bg-[#020216] text-gray-300 font-semibold w-full p-6 z-10">
+    <header className="fixed bg-opacity-95  flex flex-row text-lg md:justify-around justify-between items-center bg-[#020216] text-gray-300 font-semibold w-full p-5 z-10">
       <Link to="home" smooth={true} duration={500}>
         <div>
           <h2 className="cursor-pointer font-bold text-purple-800">
@@ -90,8 +92,10 @@ const Header = () => {
       <div className="md:flex hidden flex-row text-lg gap-10">
         {menuItems.map((item) => (
           <Link key={item.id} to={item.id} smooth={true} duration={500}>
-            <h2 className="flex flex-row cursor-pointer gap-2 justify-center items-center">
-              {item.icon}
+            <h2 className="group flex flex-row cursor-pointer gap-2 justify-center items-center">
+              <div className="group-hover:-translate-y-1 group-hover:text-purple-800 transition-all duration-200">
+                {item.icon}
+              </div>
               {item.text}
             </h2>
           </Link>

@@ -219,9 +219,10 @@ const ProjectCard = ({ project, onClick }) => {
   return (
     <div
       key={project.id}
-      className="relative group"
+      className="relative group cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => onClick(project)}
     >
       <div
         className={`border-b-4 border-purple-800 relative ${
@@ -267,12 +268,11 @@ const ProjectCard = ({ project, onClick }) => {
           style={{
             opacity: titleSpring.opacity.interpolate((opacity) => 1 - opacity),
           }}
-          className={`absolute font-semibold ${
+          className={`absolute flex justify-center items-center text-xl font-semibold right-[50%]  ${
             isLargeScreen ? "bottom-1" : "bottom-4"
           } left-0 w-full bg-purple-900 text-gray-300 p-2 text-center rounded-md cursor-pointer hover:bg-purple-950 transition-all duration-300`}
-          onClick={() => onClick(project)}
         >
-          Clique aqui para saber mais
+          Ver mais
         </animated.div>
       </div>
     </div>
@@ -285,7 +285,7 @@ const Projects = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0,
+    threshold: 0.1,
   });
 
   const isLargeScreen = useMediaQuery({ minWidth: 1350 });
@@ -307,20 +307,20 @@ const Projects = () => {
   );
 
   return (
-    <div id="projects" className="md:p-44 py-44 md:py-0  bg-[#01020a]">
+    <div id="projects" className="md:p-44 py-32 md:py-32  bg-[#01020a]">
+      <div className="flex flex-col md:items-start items-center pb-20 justify-center">
+        <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
+      </div>
       <div
         ref={ref}
         className={`transition-opacity ease-in-out duration-1000 ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="flex flex-col md:items-start items-center pb-20 justify-center">
-          <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
-        </div>
         <div
           className={`grid ${
             isLargeScreen ? "grid-cols-3" : "flex-col"
-          } md:gap-32 gap-10 p-3 flex justify-center items-center`}
+          }  gap-10 p-3 flex justify-center items-center`}
         >
           {projectsData.map((project) => (
             <ProjectCard
@@ -343,7 +343,7 @@ const Projects = () => {
               width: isLargeScreen ? "70%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "70%" : "100%",
-              backgroundColor: "#020216",
+              backgroundColor: "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
               display: "flex",
@@ -396,7 +396,7 @@ const Projects = () => {
               </div>
               <div className="flex md:flex-row flex-col justify-start ml-4 mb-4">
                 <button
-                  className="bg-[#01020a] font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                  className="bg-gray-200 font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-black px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.site, "_blank")}
                 >
                   Site
@@ -406,7 +406,7 @@ const Projects = () => {
                   />
                 </button>
                 <button
-                  className="bg-[#01020a] font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                  className="bg-gray-200 font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
@@ -417,7 +417,7 @@ const Projects = () => {
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className="bg-[#01020a] font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-white px-4 py-2 rounded-md mr-2"
+                    className="bg-gray-200 font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }

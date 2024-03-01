@@ -1,80 +1,189 @@
 import React from "react";
-import compassLogo from "../assets/compass.png";
-import webbyLogo from "../assets/webby.png";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { IoSchoolOutline } from "react-icons/io5";
+
 import { useInView } from "react-intersection-observer";
 
 const Experience = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   const experiencias = [
     {
       id: 1,
-      logo: compassLogo,
-      titulo: "Desenvolvedor Front-End ",
-      subtitulo: "Compass.UOL",
-      descricao:
-        "Durante um período de cinco meses, imerso em um ambiente dinâmico e educacional, participei de uma série de cursos abrangentes que abordaram desenvolvimento de software, metodologias ágeis e AWS Cloud. O programa foi caracterizado pela integração prática, envolvendo projetos reais e avaliações rigorosas, proporcionando uma experiência enriquecedora e desafiadora. Após concluir o programa de bolsas, tive a oportunidade de ser efetivado na equipe da Compass, atuando em parceria com a renomada Livelo. Durante essa fase, mergulhei nas práticas ágeis, incorporando métodos como Scrum e Kanban no meu cotidiano profissional. Contribuí ativamente para o desenvolvimento e aprimoramento do Storybook do Livelo App, tanto para plataformas web quanto mobile, utilizando uma variedade de tecnologias avançadas, incluindo React.js, React Native, Styled Components, SASS, Storybook e Figma.",
-
-      data: "28/11/2022 - 02/09/2023 ",
-      link: "https://compass.uol/pt/home/",
+      titulo: "Developer",
+      subtitulo: "Freelancer",
+      descricao: (
+        <span>
+          De forma independente, atuo com o desenvolvimento de software de ponta
+          a ponta, desde o levantamento de requisitos com as partes envolvidas
+          no projeto, prototipação, codificação no lado do cliente e servidor,
+          testes, documentação, implementação, até a apresentação para o cliente
+          final, utilizando linguagens fortes no mercado, sempre atualizado e a
+          nível de exigência internacional, trabalhando com metodologias ágeis.
+          <br />
+          <br />
+          <strong className="text-gray-400">
+            Stacks: React.js, Next.js, Node.js, Tailwind.css, CSS, SASS, Prisma,
+            PostgreSQL, Styled Components, Figma.{" "}
+          </strong>
+        </span>
+      ),
+      data: "09/2023 - Presente ",
+      link: "",
     },
     {
       id: 2,
-      logo: webbyLogo,
-      titulo: "Auxiliar de Help Desk",
-      subtitulo: "Webby Internet",
-      descricao:
-        "Como auxiliar em um provedor de internet, desempenhei um papel crucial ao atender as necessidades do público, fornecendo suporte tanto interno quanto externo por meio de um sistema ERP. Minhas responsabilidades incluíram a configuração detalhada de redes de internet, abrangendo aspectos como IPV4/IPV6, DNS e MTU, tanto em roteadores quanto em modens. Nesse contexto, destaquei-me ao oferecer soluções técnicas rápidas e eficazes para uma variedade de desafios relacionados à infraestrutura de hardware, rede e segurança. Além disso, aprimorei minhas habilidades ao lidar com questões práticas no ambiente de trabalho, desenvolvendo uma compreensão aprofundada das operações diárias e contribuindo para o sucesso contínuo da equipe.",
-      data: "05/06/2021 - 05/12/2021 ",
-      link: "https://www.webbyinternet.com.br/",
+      titulo: "Frontend Developer ",
+      subtitulo: "Compass.UOL",
+      descricao: (
+        <span>
+          Participei de cursos intensivos que cobriram desenvolvimento de
+          software, metodologias ágeis e AWS Cloud. <br />
+          Atuei ativamente na implementação do desenvolvimento e testes
+          integrados de componentes do Storybook do Livelo App, e também
+          participando de práticas ágeis, com Scrum e Kanban. <br />
+          Essa experiência ampliou minhas habilidades e consolidou meu
+          comprometimento com a excelência no desenvolvimento de software.
+          <br />
+          <br />
+          <strong className="text-gray-400">
+            Stacks: React.js, SASS, Styled Components, Storybook, Figma, AWS
+            Cloud, Scrum, Kanban.{" "}
+          </strong>
+        </span>
+      ),
+      data: "11/2022 - 09/2023 ",
+      link: "https://compass.uol/pt/home/",
+    },
+  ];
+
+  const formacoes = [
+    {
+      id: 1,
+      titulo: "FATEC Ourinhos",
+      subtitulo: "Técnologo em Segurança da Informação",
+      descricao: (
+        <span>
+          Segurança de redes, Criptografia, Gestão de riscos, Forense digital,
+          Segurança de aplicações.
+          <br /> Programação Orientada a Objetos (Java, Python), Banco de dados
+          (Docker e MySQL), Linux e Debian. <br />
+          Habilidades para proteger sistemas, dados e redes contra ameaças
+          cibernéticas, aplicando práticas de segurança, gerenciamento de riscos
+          e conformidade com regulamentações.
+        </span>
+      ),
+      data: "02/2021 - 12/2023 ",
+      link: "",
+    },
+    {
+      id: 2,
+      titulo: "ETEC Jacinto Ferreira de Sá ",
+      subtitulo: "Técnico em Informática para a Internet",
+      descricao: (
+        <span>
+          Linguagens de Programação (C++, Java, Python, PHP)
+          <br /> Programação Orientada a Objetos (Java, PHP) <br />
+          Linguagens Web (HTML5, CSS3, Javascript), Banco de dados (MySQL),
+          Fundamentos de Hardware e de Redes, Inglês Técnico.
+        </span>
+      ),
+      data: "02/2018 - 12/2020 ",
+      link: "https://compass.uol/pt/home/",
     },
   ];
 
   return (
     <div
       id="exp"
-      className="bg-[#020211] flex flex-col md:p-48 pt-32 justify-center gap-20 items-center"
+      className="bg-[#020211] flex flex-col md:p-48 py-28 justify-center gap-20 items-center"
     >
+      <div className="flex flex-col items-center justify-center w-full">
+        <h1 className="text-gray-200 text-4xl font-bold">Qualificações</h1>
+      </div>
       <div
         ref={ref}
-        className={`flex gap-10 flex-col transition-opacity  justify-center items-center ease-in-out duration-1000 ${
+        className={`flex gap-16 flex-col transition-opacity justify-center items-center ease-in-out duration-1000 ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-gray-200 text-4xl font-bold">Experiência</h1>
+        <div className="flex flex-col items-center w-full ">
+          <h2 className="text-gray-400 md:text-3xl text-2xl font-bold">
+            Experiência profissional
+          </h2>
         </div>
         {experiencias.map((experiencia) => (
           <div
             key={experiencia.id}
-            className={`flex flex-col bg-[#01020a] hover:bg-[#030307]  md:w-auto w-auto transition-all duration-300 gap-10 md:py-20 md:px-32 pb-3 mr-auto  rounded-3xl items-center justify-center`}
+            className={`flex 2xl:flex-row flex-col group  transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
           >
-            <a href={experiencia.link} target="_blank">
-              <div className="flex flex-row w-80 items-center justify-center mt-5 gap-5 group ">
-                <img
-                  src={experiencia.logo}
-                  className="size-24 max-w-full h-auto group-hover:scale-110 transition-all"
-                  alt="Company Logo"
-                />
-                <h1 className="font-semibold flex text-xl text-gray-400 group-hover:text-gray-600 transition-all">
-                  {experiencia.subtitulo}
-                </h1>
-              </div>
-            </a>
-            <div className="flex flex-col justify-between items-center gap-10 w-80 md:w-auto">
-              <h2 className="font-bold md:text-4xl text-xl text-gray-300">
+            <div className="flex flex-col   items-center justify-start w-full">
+              <h2 className="font-bold ml-10 md:text-3xl text-xl text-gray-300 ">
                 {experiencia.titulo}
               </h2>
-              <h2 className="font-semibold md:text-xl text-lg text-purple-900">
+              <h3 className="font-semibold md:text-xl text-lg text-purple-900">
                 {experiencia.data}
-              </h2>
+              </h3>
             </div>
-            <p className="md:w-3/4 w-5/6 text-gray-300 md:text-lg text-sm text-justify">
-              {experiencia.descricao}
-            </p>
+            <div className="flex flex-col 2xl:items-start items-center justify-start w-full">
+              <div className="flex flex-col w-4/6 md:w-auto items-start ">
+                <h3 className="font-semibold md:text-xl text-lg  text-gray-400  transition-all">
+                  {experiencia.subtitulo}
+                </h3>
+              </div>
+              <p className="lg:w-10/12 w-8/12 text-gray-300 md:text-lg text-sm md:text-justify text-left 2xl:w-full">
+                {experiencia.descricao}
+              </p>
+            </div>
+            <div className="line-vertical absolute bg-gray-200 md:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
+              <MdOutlineWorkOutline
+                size={45}
+                className="text-purple-800  bg-gray-200 rounded-xl p-2  "
+                style={{ transform: "translateX(-50%)" }}
+              />
+            </div>
+          </div>
+        ))}
+        <hr className="my-8 border-t border-gray-300 w-3/4" />
+        <div className="flex flex-col items-center w-full ">
+          <h2 className="text-gray-400 md:text-3xl text-2xl font-bold">
+            Educação
+          </h2>
+        </div>
+        {formacoes.map((formacoes) => (
+          <div
+            key={formacoes.id}
+            className={`flex 2xl:flex-row flex-col group transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
+          >
+            <div className="flex flex-col   items-center justify-start w-full">
+              <h2 className="font-bold mx-10 md:w-auto w-36 md:text-3xl text-xl text-gray-300">
+                {formacoes.titulo}
+              </h2>
+              <h3 className="font-semibold md:text-xl text-lg text-purple-900">
+                {formacoes.data}
+              </h3>
+            </div>
+            <div className="flex flex-col 2xl:items-start items-center justify-start w-full">
+              <div className="flex flex-col w-4/6 md:w-auto items-start">
+                <h3 className="font-semibold md:text-xl text-lg lg:w-auto w-60 md:mb-0 mb-2 md:text-justify text-left text-gray-400  transition-all">
+                  {formacoes.subtitulo}
+                </h3>
+              </div>
+              <p className="lg:w-10/12 md:w-9/12  w-8/12 text-gray-300 md:text-lg text-sm md:text-justify text-left 2xl:w-full">
+                {formacoes.descricao}
+              </p>
+            </div>
+
+            <div className="line-vertical absolute bg-gray-200 md:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
+              <IoSchoolOutline
+                size={45}
+                className="text-purple-800 bg-gray-200 rounded-xl p-2 "
+                style={{ transform: "translateX(-50%)" }}
+              />
+            </div>
           </div>
         ))}
       </div>

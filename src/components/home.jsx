@@ -2,6 +2,7 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { VscGithub } from "react-icons/vsc";
 import { FiLinkedin } from "react-icons/fi";
+import { PiDownloadSimpleBold } from "react-icons/pi";
 
 import curriculo from "../assets/curriculod.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -52,7 +53,7 @@ const Home = () => {
       id="home"
       className="flex flex-col justify-center items-center gap-20 bg-[#020211]"
     >
-      <div className="flex flex-col justify-center items-center gap-16 pt-72">
+      <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72">
         <div className="flex md:flex-row lg:w-auto flex-col gap-1">
           <h1 className="font-extrabold lg:text-6xl text-3xl   text-gray-200">
             Lucas Campos
@@ -66,10 +67,14 @@ const Home = () => {
           </span>
         </div>
         <h4
-          className="font-bold cursor-pointer text-gray-300 hover:bg-purple-950 transition all duration-300 rounded-lg p-2"
+          className="flex flex-row gap-3 justify-center bg-gray-200 items-center font-bold cursor-pointer text-black group transition all duration-300 rounded-lg p-2"
           onClick={() => window.open(curriculo, "_blank")}
         >
-          Veja meu currículo
+          Download do currículo
+          <PiDownloadSimpleBold
+            className="group-hover:scale-125 transition-all duration-200"
+            size={25}
+          />
         </h4>
       </div>
       <section className="flex flex-row gap-10 pb-80">
