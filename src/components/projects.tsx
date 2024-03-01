@@ -307,7 +307,7 @@ const Projects = () => {
   );
 
   return (
-    <div id="projects" className="md:p-44 py-32 md:py-32  bg-[#01020a]">
+    <div id="projects" className="md:p-44 md:py-52  bg-[#01020a]">
       <div className="flex flex-col md:items-start items-center pb-20 justify-center">
         <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
       </div>

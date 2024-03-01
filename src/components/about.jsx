@@ -51,12 +51,12 @@ const About = () => {
       </div>
       <div ref={firstTextRef}></div>
       <div
-        className={`flex flex-col w-full md:w-6/12 lg:w-10/12  text-start gap-5 justify-center items-center transition-opacity ease-in-out duration-1000 ${
+        className={`flex flex-col w-full md:w-6/12 lg:w-10/12  text-start gap-5 justify-center items-start px-5 transition-opacity ease-in-out duration-1000 ${
           inView ? "opacity-100" : "opacity-0"
         }`}
         ref={ref}
       >
-        <h1 className="text-gray-200 text-4xl font-bold">Sobre</h1>
+        <h1 className="text-gray-200 text-4xl font-bold flex">Sobre</h1>
         <p
           className={`text-gray-200 md:text-lg   md:p-0 p-2 text-left md:text-start text-md md:w-auto w-80 transition-opacity ease-in-out duration-500 ${
             showMore ? "" : ""
@@ -68,9 +68,9 @@ const About = () => {
           ref={secondTextRef}
         >
           Oi! sou o Lucas. Desenvolvedor Frontend e graduado em Segurança da
-          Informação. Minha paixão é desenvolvimento web e experiência do
-          usuário, juntando as duas coisas, consigo formar ótimas experiências
-          em forma de aplicações. <br />
+          Informação. Minha paixão por desenvolvimento começou quando consegui
+          juntar programação e experiência do usuário, com isso, consigo formar
+          ótimas experiências em forma de aplicações. <br />
           Me considero uma pessoa que aprende rapidamente, capaz de apreender
           novos conceitos com facilidade e excelente capacidade de demonstrá-los
           na prática. <br />
