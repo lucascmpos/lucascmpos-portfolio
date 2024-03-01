@@ -83,7 +83,7 @@ const About = () => {
 
         {!showMore && (
           <button
-            className="text-black font-bold md:mt-0 mt-10 p-3 rounded-lg bg-gray-200 w-60 cursor-pointer hover:bg-purple-950 hover:text-gray-200 transition-all duration-500"
+            className="text-black font-bold md:mt-0 mt-10 p-3 rounded-lg bg-gray-200 w-60 cursor-pointer hover:bg-zinc-950 hover:text-gray-200 transition-all duration-500"
             onClick={handleToggleShowMore}
           >
             Saiba mais...
@@ -119,7 +119,7 @@ const About = () => {
 
         {showMore && (
           <button
-            className="text-black font-bold md:mt-0 mt-5 p-3 rounded-lg bg-gray-200 w-60 cursor-pointer hover:bg-purple-950 hover:text-gray-200 transition-all duration-500"
+            className="text-black font-bold md:mt-0 mt-5 p-3 rounded-lg bg-gray-200 w-60 cursor-pointer hover:bg-zinc-950 hover:text-gray-200 transition-all duration-500"
             onClick={handleToggleShowMore}
           >
             Esconde esse texto!
