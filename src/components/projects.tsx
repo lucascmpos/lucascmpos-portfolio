@@ -340,9 +340,9 @@ const Projects = () => {
               right: "auto",
               bottom: "auto",
               transform: "translate(-50%, -50%)",
-              width: isLargeScreen ? "70%" : "100%",
+              width: isLargeScreen ? "90%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
-              height: isLargeScreen ? "70%" : "100%",
+              height: isLargeScreen ? "60%" : "100%",
               backgroundColor: "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
@@ -358,7 +358,7 @@ const Projects = () => {
         >
           {selectedProject && (
             <div className="flex flex-col h-full">
-              <div className="flex-grow flex justify-start p-4">
+              <div className="flex-grow flex justify-start p-2">
                 {isLargeScreen && (
                   <video
                     controls
@@ -368,7 +368,7 @@ const Projects = () => {
                     src={selectedProject.video}
                     alt={selectedProject.title}
                     type="video/mp4"
-                    className="w-1/2 object-cover rounded-md"
+                    className="w-1/2 h-fill object-cover rounded-md"
                   />
                 )}
                 <div className="flex-grow pl-4">
