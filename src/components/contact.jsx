@@ -13,16 +13,22 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col justify-center items-center py-44 bg-[#020211]"
+      className="flex flex-col justify-center  items-center py-20 bg-[#01020a]"
     >
       <div
         ref={ref}
-        className={`flex flex-col justify-center items-center transition-opacity ease-in-out duration-1000 ${
+        className={`flex flex-col  justify-center mb-16 items-center transition-opacity ease-in-out duration-1000 ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h1 className="text-gray-200 text-4xl mb-24 font-bold">Contatos</h1>
-        <div className="flex md:flex-row flex-col gap-32">
+        <div className="mb-36 gap-5 flex flex-col justify-center items-center">
+          <h1 className="text-gray-200 text-4xl font-bold">Contato</h1>
+          <p className="text-gray-400 font-semibold md:text-md text-sm">
+            Gostou do meu trabalho? entre em contato
+          </p>
+        </div>
+
+        <div className="flex lg:flex-row flex-col  gap-32">
           <a href="mailto:lucasoliveiracampos81@gmail.com" target="_blank">
             <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
               <MdOutlineEmail
