@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LuInfo } from "react-icons/lu";
 import { FaRegCircleUser } from "react-icons/fa6";
@@ -15,7 +15,7 @@ const MobileMenu = ({ isOpen, toggleMenu, menuItems }) => {
           animate={{ x: "0%" }}
           exit={{ x: "100%" }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="fixed top-0 right-0 h-full w-full bg-[#020216] text-gray-300 z-20 transition-transform duration-300"
+          className="fixed top-0 right-0 h-full w-full bg-[#07071a] text-gray-300 z-20 transition-transform duration-300"
         >
           <div className="flex justify-end p-4">
             <button
@@ -79,8 +79,16 @@ const Header = () => {
     { id: "contact", text: "Contato", icon: <LuInfo size={20} /> },
   ];
 
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isMenuOpen);
+
+    return () => {
+      document.body.classList.remove("menu-open");
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#020216] text-gray-300 font-semibold w-full p-5 z-10">
+    <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#09091b] text-gray-300 font-semibold w-full p-5 z-10">
       <Link to="home" smooth={true} duration={500}>
         <div>
           <h2 className="cursor-pointer font-bold text-purple-800">

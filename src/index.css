@@ -8,6 +8,14 @@ body {
   scrollbar-color: #000007;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
+.menu-open {
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar {
   width: 18px;
 }

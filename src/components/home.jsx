@@ -55,13 +55,13 @@ const Home = () => {
     >
       <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72">
         <div className="flex md:flex-row lg:w-auto flex-col gap-1">
-          <h1 className="font-extrabold lg:text-6xl text-3xl   text-gray-200">
+          <h1 className="font-extrabold lg:text-6xl xl:text-7xl text-3xl   text-gray-200">
             Lucas Campos
-            <span className="font-extrabold lg:text-6xl  text-3xl text-purple-900">
+            <span className="font-extrabold lg:text-6xl xl:text-7xl text-3xl text-purple-900">
               .
             </span>
           </h1>
-          <span className="font-extrabold lg:text-6xl  text-3xl md:w-auto  text-purple-900">
+          <span className="font-extrabold lg:text-6xl xl:text-7xl text-3xl md:w-auto  text-purple-900">
             {typeEffect}
             <Cursor />
           </span>

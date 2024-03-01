@@ -120,7 +120,7 @@ const Experience = () => {
             className={`flex 2xl:flex-row flex-col group  transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
           >
             <div className="flex flex-col   items-center justify-start w-full">
-              <h2 className="font-bold ml-10 md:text-3xl text-xl text-gray-300 ">
+              <h2 className="font-bold  md:text-3xl text-xl text-gray-300 ">
                 {experiencia.titulo}
               </h2>
               <h3 className="font-semibold md:text-xl text-lg text-purple-900">
@@ -137,7 +137,7 @@ const Experience = () => {
                 {experiencia.descricao}
               </p>
             </div>
-            <div className="line-vertical absolute bg-gray-200 md:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
+            <div className="line-vertical absolute bg-gray-200 lg:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
               <MdOutlineWorkOutline
                 size={45}
                 className="text-purple-800  bg-gray-200 rounded-xl p-2  "
@@ -155,31 +155,30 @@ const Experience = () => {
         {formacoes.map((formacoes) => (
           <div
             key={formacoes.id}
-            className={`flex 2xl:flex-row flex-col  group transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
+            className={`flex 2xl:flex-row flex-col group  transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
           >
             <div className="flex flex-col   items-center justify-start w-full">
-              <h2 className="font-bold mx-10 md:w-auto w-36 md:text-3xl text-xl text-gray-300">
+              <h2 className="font-bold md:w-48 w-36 xl:w-auto md:text-3xl text-xl text-gray-300 ">
                 {formacoes.titulo}
               </h2>
               <h3 className="font-semibold md:text-xl text-lg text-purple-900">
                 {formacoes.data}
               </h3>
             </div>
-            <div className="flex flex-col 2xl:items-start items-center justify-start w-full">
-              <div className="flex flex-col w-4/6 md:w-auto items-start">
-                <h3 className="font-semibold md:text-xl text-lg lg:w-auto w-60 md:mb-0 mb-2 md:text-justify text-left text-gray-400  transition-all">
+            <div className="flex flex-col 2xl:items-start md:mx-2 items-center justify-start w-full">
+              <div className="flex flex-col w-4/6 lg:w-auto items-start">
+                <h3 className="font-semibold md:text-xl text-lg  text-gray-400  transition-all">
                   {formacoes.subtitulo}
                 </h3>
               </div>
-              <p className="lg:w-10/12 md:w-9/12  w-8/12 text-gray-300 md:text-lg text-sm md:text-justify text-left 2xl:w-full">
+              <p className="lg:w-10/12 w-8/12 text-gray-300 md:text-lg text-sm md:text-justify text-left 2xl:w-full">
                 {formacoes.descricao}
               </p>
             </div>
-
-            <div className="line-vertical absolute bg-gray-200 md:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
-              <IoSchoolOutline
+            <div className="line-vertical absolute bg-gray-200 lg:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
+              <MdOutlineWorkOutline
                 size={45}
-                className="text-purple-800 bg-gray-200 rounded-xl p-2 "
+                className="text-purple-800  bg-gray-200 rounded-xl p-2  "
                 style={{ transform: "translateX(-50%)" }}
               />
             </div>

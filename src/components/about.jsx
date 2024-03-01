@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 
 const About = () => {
   const [showMore, setShowMore] = useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: -0,
@@ -15,12 +16,8 @@ const About = () => {
   const firstTextRef = useRef(null);
   const secondTextRef = useRef(null);
 
-  const handleToggleShowMore = () => {
-    setShowMore(!showMore);
-  };
-
   useEffect(() => {
-    if (!isXLScreen && inView) {
+    if (!isXLScreen && inView && buttonClicked) {
       if (showMore) {
         window.scrollTo({
           top:
@@ -34,7 +31,12 @@ const About = () => {
         });
       }
     }
-  }, [showMore, isXLScreen, inView]);
+  }, [showMore, isXLScreen, inView, buttonClicked]);
+
+  const handleToggleShowMore = () => {
+    setShowMore(!showMore);
+    setButtonClicked(true);
+  };
 
   return (
     <div

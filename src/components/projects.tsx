@@ -283,6 +283,14 @@ const Projects = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
+  useEffect(() => {
+    document.body.classList.toggle("modal-open", modalIsOpen);
+
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
+  }, [modalIsOpen]);
+
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -307,7 +315,7 @@ const Projects = () => {
   );
 
   return (
-    <div id="projects" className="md:p-44 md:py-52  bg-[#01020a]">
+    <div id="projects" className="md:p-44 md:py-52 py-24  bg-[#01020a]">
       <div className="flex flex-col md:items-start items-center pb-20 justify-center">
         <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
       </div>
@@ -343,7 +351,7 @@ const Projects = () => {
               width: isLargeScreen ? "90%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "60%" : "100%",
-              backgroundColor: "#01020a",
+              backgroundColor: "#161617",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
               display: "flex",
@@ -394,7 +402,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex md:flex-row flex-col justify-start ml-4 mb-4">
+              <div className="flex md:flex-row flex-col gap-3 justify-start ml-4 my-4">
                 <button
                   className="bg-gray-200 font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-black px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.site, "_blank")}
