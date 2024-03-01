@@ -45,7 +45,7 @@ const About = () => {
     >
       <div
         className={`flex items-center w-64 md:w-4/12 lg:w-6/12 relative overflow-hidden md:order-first transition-opacity ease-in-out duration-1000 ${
-          inView ? "opacity-100" : "opacity-0"
+          inView ? "opacity-100" : "opacity-80"
         }`}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-[#01020a] via-transparent to-transparent rounded-lg"></div>

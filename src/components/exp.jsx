@@ -176,7 +176,7 @@ const Experience = () => {
               </p>
             </div>
             <div className="line-vertical absolute bg-gray-200 lg:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
-              <MdOutlineWorkOutline
+              <IoSchoolOutline
                 size={45}
                 className="text-purple-800  bg-gray-200 rounded-xl p-2  "
                 style={{ transform: "translateX(-50%)" }}

@@ -72,7 +72,7 @@ const Header = () => {
     { id: "about", text: "Sobre", icon: <FaRegCircleUser size={20} /> },
     {
       id: "exp",
-      text: "Experiência",
+      text: "Qualificações",
       icon: <MdOutlineWorkOutline size={20} />,
     },
     { id: "projects", text: "Projetos", icon: <GoProjectRoadmap size={20} /> },
@@ -88,7 +88,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#09091b] text-gray-300 font-semibold w-full p-5 z-10">
+    <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#07081b] text-gray-300 font-semibold w-full p-5 z-10 shadow-md">
       <Link to="home" smooth={true} duration={500}>
         <div>
           <h2 className="cursor-pointer font-bold text-purple-800">
