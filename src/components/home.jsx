@@ -1,7 +1,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { VscGithub } from "react-icons/vsc";
-import { FiLinkedin } from "react-icons/fi";
+import { SlSocialLinkedin } from "react-icons/sl";
 import { PiDownloadSimpleBold } from "react-icons/pi";
 
 import curriculo from "../assets/curriculod.pdf";
@@ -19,9 +19,9 @@ const Home = () => {
     {
       name: "linkedin",
       icon: (
-        <FiLinkedin
-          size={40}
-          className=" hover:text-blue-800 transition-all duration-300"
+        <SlSocialLinkedin
+          size={39}
+          className=" hover:text-blue-900 transition-all duration-300"
         />
       ),
       href: "https://www.linkedin.com/in/lucas-campos-b26a3b204/",
