@@ -44,7 +44,7 @@ const projectsData = [
     site: "https://sharpcut-barbers.vercel.app/",
     github: "https://github.com/lucascmpos/SharpCut-Barbers",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos-b26a3b204_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-WbGi?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-AsNe?utm_source=share&utm_medium=member_desktop",
     tech: [
       "Next.js",
       "Tailwindcss",
@@ -79,7 +79,7 @@ const projectsData = [
     site: "https://periware-store.vercel.app/",
     github: "https://github.com/lucascmpos/PeriWare-Store",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos-b26a3b204_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-cmq6?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
     tech: [
       "Next.js",
       "Tailwindcss",
@@ -114,7 +114,7 @@ const projectsData = [
     site: "https://uploadai.netlify.app/",
     github: "https://github.com/lucascmpos/NLW-IA",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos-b26a3b204_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ZSO1?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
     tech: [
       "React.js",
       "Tailwindcss",
@@ -140,7 +140,7 @@ const projectsData = [
     site: "https://pair-bank.vercel.app/",
     github: "https://github.com/lucascmpos/pair_bank",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos-b26a3b204_eai-pessoal-estou-aqui-hoje-para-divulgar-activity-7168397456626454528-hCe1?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_eai-pessoal-estou-aqui-hoje-para-divulgar-activity-7168397456626454528-668H?utm_source=share&utm_medium=member_desktop",
     tech: ["React.js", "Tailwindcss", "Figma"],
   },
   {
@@ -162,7 +162,7 @@ const projectsData = [
     site: "https://weekly-planner-uol.vercel.app",
     github: "https://github.com/lucascmpos/Projeto-Compass-VIII",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos-b26a3b204_react-javascript-html-activity-7024386144108699648-jiCs?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_react-javascript-html-activity-7024386144108699648-yl2F?utm_source=share&utm_medium=member_desktop",
     tech: ["React.js", "CSS", "Figma", "WeatherAPI", "SwaggerAPI"],
   },
   {
@@ -298,14 +298,33 @@ const Projects = () => {
 
   const isLargeScreen = useMediaQuery({ minWidth: 1350 });
 
+  const [modalAnimation, setModalAnimation] = useState({
+    opacity: 0,
+    transform: "translate(-50%, -50%) scale(0.8)",
+  });
+
   const openModal = (project) => {
     setSelectedProject(project);
-    setModalIsOpen(true);
+    setModalAnimation({
+      opacity: 1,
+      transform: "translate(-50%, -50%) scale(1)",
+    });
+
+    setTimeout(() => {
+      setModalIsOpen(true);
+    }, 0);
   };
 
   const closeModal = () => {
-    setModalIsOpen(false);
-    setSelectedProject(null);
+    setModalAnimation({
+      opacity: 0,
+      transform: "translate(-50%, -50%) scale(0.8)",
+    });
+
+    setTimeout(() => {
+      setModalIsOpen(false);
+      setSelectedProject(null);
+    }, 300);
   };
 
   const TechnologyCard = ({ technology }) => (
@@ -347,14 +366,15 @@ const Projects = () => {
               left: "50%",
               right: "auto",
               bottom: "auto",
-              transform: "translate(-50%, -50%)",
+              transform: modalAnimation.transform,
+              opacity: modalAnimation.opacity,
               width: isLargeScreen ? "90%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "60%" : "100%",
               backgroundColor: "#161617",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
-              display: "flex",
+              transition: "opacity 0.3s, transform 0.3s ",
             },
           }}
           overlayClassName={{

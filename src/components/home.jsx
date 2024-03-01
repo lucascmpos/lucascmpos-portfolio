@@ -24,7 +24,7 @@ const Home = () => {
           className=" hover:text-blue-900 transition-all duration-300"
         />
       ),
-      href: "https://www.linkedin.com/in/lucas-campos-b26a3b204/",
+      href: "https://www.linkedin.com/in/lucas-campos81/",
     },
     {
       name: "github",
