@@ -80,7 +80,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed bg-opacity-95  flex flex-row text-lg md:justify-around justify-between items-center bg-[#020216] text-gray-300 font-semibold w-full p-5 z-10">
+    <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#020216] text-gray-300 font-semibold w-full p-5 z-10">
       <Link to="home" smooth={true} duration={500}>
         <div>
           <h2 className="cursor-pointer font-bold text-purple-800">

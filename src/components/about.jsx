@@ -20,7 +20,7 @@ const About = () => {
   };
 
   useEffect(() => {
-    if (!isXLScreen) {
+    if (!isXLScreen && inView) {
       if (showMore) {
         window.scrollTo({
           top:
@@ -34,7 +34,7 @@ const About = () => {
         });
       }
     }
-  }, [showMore, isXLScreen]);
+  }, [showMore, isXLScreen, inView]);
 
   return (
     <div
