@@ -1,7 +1,8 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa6";
-import { VscGithub } from "react-icons/vsc";
-import { SlSocialLinkedin } from "react-icons/sl";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
+
+import { ImLinkedin } from "react-icons/im";
 import { PiDownloadSimpleBold } from "react-icons/pi";
 
 import curriculo from "../assets/curriculod.pdf";
@@ -19,9 +20,9 @@ const Home = () => {
     {
       name: "linkedin",
       icon: (
-        <SlSocialLinkedin
+        <ImLinkedin
           size={39}
-          className=" hover:text-blue-900 transition-all duration-300"
+          className=" hover:text-purple-800 transition-all duration-300"
         />
       ),
       href: "https://www.linkedin.com/in/lucas-campos81/",
@@ -29,9 +30,9 @@ const Home = () => {
     {
       name: "github",
       icon: (
-        <VscGithub
+        <FaGithub
           size={40}
-          className=" hover:text-gray-500 transition-all duration-300"
+          className=" hover:text-purple-800 transition-all duration-300"
         />
       ),
       href: "https://github.com/lucascmpos",
@@ -39,9 +40,9 @@ const Home = () => {
     {
       name: "whatsapp",
       icon: (
-        <FaWhatsapp
+        <IoLogoWhatsapp
           size={40}
-          className=" hover:text-green-500 transition-all duration-300"
+          className=" hover:text-purple-800 transition-all duration-300"
         />
       ),
       href: "https://wa.me/5514998718530",
@@ -67,12 +68,12 @@ const Home = () => {
           </span>
         </div>
         <h4
-          className="flex flex-row gap-3 justify-center bg-gray-200 items-center font-bold cursor-pointer text-black group transition all duration-300 rounded-lg p-2"
+          className="flex flex-row gap-3 justify-center  hover:bg-zinc-950 hover:text-gray-200 bg-gray-200 items-center font-bold cursor-pointer text-black group transition all duration-300 rounded-lg p-2"
           onClick={() => window.open(curriculo, "_blank")}
         >
           Download do currículo
           <PiDownloadSimpleBold
-            className="group-hover:scale-125 transition-all duration-200"
+            className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
             size={25}
           />
         </h4>

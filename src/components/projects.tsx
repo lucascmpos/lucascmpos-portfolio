@@ -424,35 +424,35 @@ const Projects = () => {
               </div>
               <div className="flex md:flex-row flex-col gap-3 justify-start ml-4 my-4">
                 <button
-                  className="bg-gray-200 font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                  className="bg-gray-200 hover:bg-zinc-950 hover:text-gray-200 duration-300 font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-black px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.site, "_blank")}
                 >
                   Site
                   <FaExternalLinkAlt
-                    className="group-hover:scale-125 transition-all"
+                    className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
                     size={15}
                   />
                 </button>
                 <button
-                  className="bg-gray-200 font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                  className="bg-gray-200 hover:bg-zinc-950 hover:text-gray-200 duration-300 font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
                   <FaGithub
-                    className="group-hover:scale-125 transition-all"
+                    className="group-hover:scale-125 group-hover:text-gray-200 transition-all"
                     size={20}
                   />
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className="bg-gray-200 font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                    className="bg-gray-200 hover:bg-zinc-950 hover:text-gray-200 duration-300 font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }
                   >
                     Publicação do{" "}
                     <FaLinkedinIn
-                      className="group-hover:scale-125 transition-all"
+                      className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
                       size={18}
                     />
                   </button>
