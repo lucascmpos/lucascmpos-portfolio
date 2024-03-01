@@ -56,7 +56,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "PeriWare Store",
+    title: "Periware Store",
     video: periwareVideo,
     image: periWare,
     description: (
@@ -127,7 +127,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "PairBank",
+    title: "Pairbank",
     video: pairBankVideo,
     image: pairBank,
     description: (
@@ -167,7 +167,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Monfi",
+    title: "MonFi",
     video: monfiVideo,
     image: monFi,
     description: (
@@ -213,7 +213,7 @@ const ProjectCard = ({ project, onClick }) => {
   });
 
   const overlaySpring = useSpring({
-    opacity: hovered ? 0 : 0.6,
+    opacity: hovered ? 0 : 0.7,
   });
 
   return (
@@ -232,7 +232,7 @@ const ProjectCard = ({ project, onClick }) => {
         <img
           src={project.image}
           alt={project.title}
-          className={`w-full object-cover rounded-sm transition-transform transform group-hover:scale-105 transition-all duration-300 ${
+          className={`w-full object-cover rounded-sm transform group-hover:scale-105  duration-100 ${
             isLargeScreen ? "h-56" : "h-60"
           }`}
         />
@@ -244,9 +244,8 @@ const ProjectCard = ({ project, onClick }) => {
             left: 0,
             right: 0,
             textAlign: "center",
-            transition: "0s",
           }}
-          className="w-full h-full transition-all absolute top-0 left-0 bg-black rounded-sm"
+          className="w-full h-full  transform absolute top-0 left-0 bg-[#01020a] group-hover:scale-110 duration-100 rounded-sm"
         ></animated.div>
         <animated.div
           style={{
@@ -258,7 +257,7 @@ const ProjectCard = ({ project, onClick }) => {
             textAlign: "center",
             padding: "8px",
           }}
-          className={`text-gray-200 font-bold text-xl ${
+          className={`text-gray-300 font-bold text-xl ${
             isLargeScreen ? "bottom-1" : "bottom-4"
           }`}
         >
@@ -269,8 +268,8 @@ const ProjectCard = ({ project, onClick }) => {
             opacity: titleSpring.opacity.interpolate((opacity) => 1 - opacity),
           }}
           className={`absolute flex justify-center items-center text-xl font-semibold right-[50%]  ${
-            isLargeScreen ? "bottom-1" : "bottom-4"
-          } left-0 w-full bg-purple-900 text-gray-300 p-2 text-center rounded-md cursor-pointer hover:bg-purple-950 transition-all duration-300`}
+            isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
+          } left-0 w-full bg-purple-900 group-hover:scale-105  text-gray-300 p-2 text-center rounded-sm cursor-pointer hover:bg-purple-950 transition-all transform duration-100`}
         >
           Ver mais
         </animated.div>
@@ -424,35 +423,35 @@ const Projects = () => {
               </div>
               <div className="flex md:flex-row flex-col gap-3 justify-start ml-4 my-4">
                 <button
-                  className="bg-gray-200 hover:bg-zinc-950 hover:text-gray-200 duration-300 font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                  className="bg-gray-200 font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-black px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.site, "_blank")}
                 >
                   Site
                   <FaExternalLinkAlt
-                    className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
+                    className="group-hover:scale-125 transition-all"
                     size={15}
                   />
                 </button>
                 <button
-                  className="bg-gray-200 hover:bg-zinc-950 hover:text-gray-200 duration-300 font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                  className="bg-gray-200 font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
                   <FaGithub
-                    className="group-hover:scale-125 group-hover:text-gray-200 transition-all"
+                    className="group-hover:scale-125 transition-all"
                     size={20}
                   />
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className="bg-gray-200 hover:bg-zinc-950 hover:text-gray-200 duration-300 font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                    className="bg-gray-200 font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }
                   >
                     Publicação do{" "}
                     <FaLinkedinIn
-                      className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
+                      className="group-hover:scale-125 transition-all"
                       size={18}
                     />
                   </button>

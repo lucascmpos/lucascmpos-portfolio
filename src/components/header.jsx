@@ -15,7 +15,7 @@ const MobileMenu = ({ isOpen, toggleMenu, menuItems }) => {
           animate={{ x: "0%" }}
           exit={{ x: "100%" }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="fixed top-0 right-0 h-full w-full bg-[#07071a] text-gray-300 z-20 transition-transform duration-300"
+          className="fixed top-0 right-0 h-full w-full bg-[#020211] text-gray-300 z-20 transition-transform duration-300"
         >
           <div className="flex justify-end p-4">
             <button
