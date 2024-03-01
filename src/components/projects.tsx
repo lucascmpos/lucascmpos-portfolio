@@ -209,11 +209,11 @@ const ProjectCard = ({ project, onClick }) => {
 
   const titleSpring = useSpring({
     opacity: hovered ? 0 : 1,
+    config: { tension: 400, friction: 30, duration: 0 },
   });
 
   const overlaySpring = useSpring({
     opacity: hovered ? 0 : 0.6,
-    config: { duration: 0 },
   });
 
   return (
@@ -244,8 +244,9 @@ const ProjectCard = ({ project, onClick }) => {
             left: 0,
             right: 0,
             textAlign: "center",
+            padding: "20px",
           }}
-          className="w-full h-full transition-all absolute top-0 bg-black left-0  "
+          className="w-full h-full transition-all absolute top-0 left-0 bg-black rounded-sm"
         ></animated.div>
         <animated.div
           style={{
