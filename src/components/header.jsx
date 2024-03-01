@@ -88,7 +88,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#07081b] text-gray-300 font-semibold w-full p-5 z-10 shadow-md">
+    <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#020207] text-gray-300 font-semibold w-full p-5 z-10 shadow-md">
       <Link to="home" smooth={true} duration={500}>
         <div>
           <h2 className="cursor-pointer font-bold text-purple-800">
