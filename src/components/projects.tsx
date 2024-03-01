@@ -244,7 +244,7 @@ const ProjectCard = ({ project, onClick }) => {
             left: 0,
             right: 0,
             textAlign: "center",
-            padding: "20px",
+            transition: "0s",
           }}
           className="w-full h-full transition-all absolute top-0 left-0 bg-black rounded-sm"
         ></animated.div>
