@@ -13,7 +13,7 @@ const Experience = () => {
   const experiencias = [
     {
       id: 1,
-      titulo: "Developer",
+      titulo: "Web Developer",
       subtitulo: "Freelancer",
       descricao: (
         <span>
