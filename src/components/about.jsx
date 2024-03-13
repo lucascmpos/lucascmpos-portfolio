@@ -73,9 +73,6 @@ const About = () => {
           Informação. Minha paixão por desenvolvimento começou quando consegui
           juntar programação e experiência do usuário, com isso, consigo formar
           ótimas experiências em forma de aplicações. <br />
-          Me considero uma pessoa que aprende rapidamente, capaz de apreender
-          novos conceitos com facilidade e excelente capacidade de demonstrá-los
-          na prática. <br />
           De forma resumida, essas são as tecnologias que uso diariamente:
           JavaScript, TypeScript, React.js, Next.js, Tailwindcss, Node.js e
           PostgreSQL.
