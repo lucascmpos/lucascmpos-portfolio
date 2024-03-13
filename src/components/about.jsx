@@ -53,7 +53,7 @@ const About = () => {
       </div>
       <div ref={firstTextRef}></div>
       <div
-        className={`flex flex-col w-full md:w-6/12 lg:w-10/12  text-start gap-5 justify-center items-start px-5 transition-opacity ease-in-out duration-1000 ${
+        className={`flex flex-col w-full md:w-6/12 lg:w-10/12  text-start gap-5 justify-center items-center lg:items-start px-5 transition-opacity ease-in-out duration-1000 ${
           inView ? "opacity-100" : "opacity-0"
         }`}
         ref={ref}
