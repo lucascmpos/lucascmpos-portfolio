@@ -67,11 +67,11 @@ const MobileMenu = ({
           </div>
           <div className="absolute bottom-10 right-10">
             <button
-              className="hover:scale-105 flex flex-row gap-3 hover:text-purple-800 transition-all duration-300"
+              className="hover:scale-105 flex flex-row items-center justify-center gap-3 hover:text-purple-800 transition-all duration-300"
               onClick={toggleLanguage}
             >
               {language === "pt" ? "EN" : "PT-BR"}
-              <IoLanguage size={30} />
+              <IoLanguage size={23} />
             </button>
           </div>
         </motion.div>
@@ -155,11 +155,11 @@ const Header = ({ onChangeLanguage }) => {
 
       {!isMobile && (
         <button
-          className="hover:scale-105 flex flex-row gap-3 hover:text-purple-800 transition-all duration-300"
+          className="hover:scale-105 flex justify-center items-center flex-row gap-3 hover:text-purple-800 transition-all duration-300"
           onClick={toggleLanguage}
         >
           {language === "pt" ? "EN" : "PT-BR"}
-          <IoLanguage size={30} />
+          <IoLanguage size={23} />
         </button>
       )}
 

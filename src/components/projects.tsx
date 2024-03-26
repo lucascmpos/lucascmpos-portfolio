@@ -367,7 +367,10 @@ const ProjectCard = ({ project, onClick }) => {
             isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
           } left-0 w-full bg-purple-900 group group-hover:scale-105  text-gray-300 p-2 text-center rounded-sm cursor-pointer hover:bg-purple-950 transition-all transform duration-100`}
         >
-          <MdOutlineArrowCircleUp className="hover:scale-105" size={24} />
+          <MdOutlineArrowCircleUp
+            className=" group-hover:scale-110 transition-all"
+            size={30}
+          />
         </animated.div>
       </div>
     </div>
