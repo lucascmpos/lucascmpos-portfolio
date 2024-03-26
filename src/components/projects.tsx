@@ -9,6 +9,7 @@ import monFi from "../assets/monfi.jpeg";
 import { useSpring, animated } from "react-spring";
 import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { MdOutlineArrowCircleUp } from "react-icons/md";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import pairBankVideo from "../assets/pairbankvideo.mp4";
@@ -25,22 +26,40 @@ const projectsData = [
     title: "SharpCut Barbers",
     image: sharpCut,
     video: sharpcutVideo,
-    description: (
-      <>
-        Este projeto consiste em uma aplicação feita para ter diversas
-        barbearias, onde o usuário pode logar com o Google e agendar um serviço
-        da barbearia desejada, assim como cancelar um serviço e também ver seus
-        serviços agendados futuros e anteriores.
-        <br />
-        <br />
-        Funcionalidades:
-        <br />
-        - Login com o Google
-        <br />
-        - Responsividade
-        <br />- Integração com banco de dados SQL.
-      </>
-    ),
+    description: {
+      pt: (
+        <>
+          Este projeto consiste em uma aplicação feita para ter diversas
+          barbearias, onde o usuário pode logar com o Google e agendar um
+          serviço da barbearia desejada, assim como cancelar um serviço e também
+          ver seus serviços agendados futuros e anteriores.
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Login com o Google
+          <br />
+          - Responsividade
+          <br />- Integração com banco de dados SQL.
+        </>
+      ),
+      en: (
+        <>
+          This project consists of an application made for multiple barbershops,
+          where the user can log in with Google and schedule a service from the
+          desired barbershop, as well as cancel a service and also view their
+          scheduled services in the future and past.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Google login
+          <br />
+          - Responsiveness
+          <br />- Integration with SQL database.
+        </>
+      ),
+    },
     site: "https://sharpcut-barbers.vercel.app/",
     github: "https://github.com/lucascmpos/SharpCut-Barbers",
     linkedin:
@@ -59,23 +78,44 @@ const projectsData = [
     title: "Periware Store",
     video: periwareVideo,
     image: periWare,
-    description: (
-      <>
-        Este projeto consiste em uma loja fictícia de periféricos, onde é
-        vendido teclados, mouses, monitores, fones e etc. O usuário pode
-        adicionar e retirar produtos do carrinho, filtrar por categorias e
-        descontos
-        <br />
-        <br />
-        Funcionalidades:
-        <br />
-        - Login com o Google
-        <br />
-        - Responsividade
-        <br />- Integração com banco de dados SQL.
-        <br />- Pagamentos com Stripe
-      </>
-    ),
+    description: {
+      pt: (
+        <>
+          Este projeto consiste em uma loja fictícia de periféricos, onde é
+          vendido teclados, mouses, monitores, fones e etc. O usuário pode
+          adicionar e retirar produtos do carrinho, filtrar por categorias e
+          descontos
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Login com o Google
+          <br />
+          - Responsividade
+          <br />
+          - Integração com banco de dados SQL.
+          <br />- Pagamentos com Stripe
+        </>
+      ),
+      en: (
+        <>
+          This project consists of a fictional peripherals store, where
+          keyboards, mice, monitors, headphones, etc. are sold. The user can add
+          and remove products from the shopping cart, filter by categories and
+          discounts.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Google login
+          <br />
+          - Responsiveness
+          <br />
+          - Integration with SQL database.
+          <br />- Stripe payments
+        </>
+      ),
+    },
     site: "https://periware-store.vercel.app/",
     github: "https://github.com/lucascmpos/PeriWare-Store",
     linkedin:
@@ -94,23 +134,42 @@ const projectsData = [
     title: "Upload.ai",
     video: uploadAiVideo,
     image: uploadAi,
-    description: (
-      <>
-        Projeto de integrações de vídeos com inteligência artificial para
-        melhorar conteúdo e ajudar usuários. O usuário sobe um vídeo para a
-        plataforma, e pode mudar a temperatura (criatividade da inteligência
-        artificial), e escreve em um prompt o que ele deseja que a IA faça com o
-        aúdio do vídeo, podendo gerar diversos resultados.
-        <br />
-        <br />
-        Funcionalidades:
-        <br />
-        - Integração com ChatGPT 3.5
-        <br />
-        - Responsividade
-        <br />- Transcrição de audio em texto
-      </>
-    ),
+    description: {
+      pt: (
+        <>
+          Projeto de integrações de vídeos com inteligência artificial para
+          melhorar conteúdo e ajudar usuários. O usuário sobe um vídeo para a
+          plataforma, e pode mudar a temperatura (criatividade da inteligência
+          artificial), e escreve em um prompt o que ele deseja que a IA faça com
+          o aúdio do vídeo, podendo gerar diversos resultados.
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Integração com ChatGPT 3.5
+          <br />
+          - Responsividade
+          <br />- Transcrição de audio em texto
+        </>
+      ),
+      en: (
+        <>
+          Project of video integrations with artificial intelligence to improve
+          content and help users. The user uploads a video to the platform, and
+          can change the temperature (creativity of artificial intelligence),
+          and writes in a prompt what he wants the AI to do with the video's
+          audio, being able to generate various results.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Integration with ChatGPT 3.5
+          <br />
+          - Responsiveness
+          <br />- Audio transcription to text
+        </>
+      ),
+    },
     site: "https://uploadai.netlify.app/",
     github: "https://github.com/lucascmpos/NLW-IA",
     linkedin:
@@ -130,13 +189,21 @@ const projectsData = [
     title: "Pairbank",
     video: pairBankVideo,
     image: pairBank,
-    description: (
-      <>
-        Esta landing page representa um banco fictício, servindo como uma
-        plataforma de teste para avaliar a qualidade do meu design e
-        responsividade.
-      </>
-    ),
+    description: {
+      pt: (
+        <>
+          Esta landing page representa um banco fictício, servindo como uma
+          plataforma de teste para avaliar a qualidade do meu design e
+          responsividade.
+        </>
+      ),
+      en: (
+        <>
+          This landing page represents a fictional bank, serving as a test
+          platform to assess the quality of my design and responsiveness.
+        </>
+      ),
+    },
     site: "https://pair-bank.vercel.app/",
     github: "https://github.com/lucascmpos/pair_bank",
     linkedin:
@@ -148,17 +215,31 @@ const projectsData = [
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
-    description: (
-      <>
-        To-Do-List apresentando funcionalidades de cadastro CRUD, integradas a
-        uma autenticação de usuário validada. Além disso, incorpora a WeatherAPI
-        para fornecer informações climáticas da cidade correspondente. É
-        relevante mencionar que o projeto foi originalmente construído com o
-        suporte de um banco de dados Compass UOL durante meu estágio, o qual foi
-        excluído posteriormente. No entanto, para oferecer uma visão do
-        funcionamento, disponibilizei um deploy com validação local.
-      </>
-    ),
+    description: {
+      pt: (
+        <>
+          To-Do-List apresentando funcionalidades de cadastro CRUD, integradas a
+          uma autenticação de usuário validada. Além disso, incorpora a
+          WeatherAPI para fornecer informações climáticas da cidade
+          correspondente. É relevante mencionar que o projeto foi originalmente
+          construído com o suporte de um banco de dados Compass UOL durante meu
+          estágio, o qual foi excluído posteriormente. No entanto, para oferecer
+          uma visão do funcionamento, disponibilizei um deploy com validação
+          local.
+        </>
+      ),
+      en: (
+        <>
+          To-Do-List featuring CRUD registration functionalities, integrated
+          with validated user authentication. Additionally, it incorporates the
+          WeatherAPI to provide weather information for the corresponding city.
+          It is worth mentioning that the project was originally built with the
+          support of a Compass UOL database during my internship, which was
+          later deleted. However, to provide an insight into the operation, I
+          deployed it with local validation.
+        </>
+      ),
+    },
     site: "https://weekly-planner-uol.vercel.app",
     github: "https://github.com/lucascmpos/Projeto-Compass-VIII",
     linkedin:
@@ -170,27 +251,42 @@ const projectsData = [
     title: "MonFi",
     video: monfiVideo,
     image: monFi,
-    description: (
-      <>
-        Consiste em um site onde o usuário pode consultar qualquer filme que
-        quiser, podendo ver sua nota, orçamento, receita, duração e descrição do
-        filme selecionado.
-        <br />
-        Funcionalidades:
-        <br />
-        - Integração com The Movie Database (TMDB)
-        <br />
-        - Pesquisas
-        <br />- Responsividade
-      </>
-    ),
+    description: {
+      pt: (
+        <>
+          Consiste em um site onde o usuário pode consultar qualquer filme que
+          quiser, podendo ver sua nota, orçamento, receita, duração e descrição
+          do filme selecionado.
+          <br />
+          Funcionalidades:
+          <br />
+          - Integração com The Movie Database (TMDB)
+          <br />
+          - Pesquisas
+          <br />- Responsividade
+        </>
+      ),
+      en: (
+        <>
+          It consists of a website where the user can look up any movie they
+          want, being able to see its rating, budget, revenue, duration, and
+          description of the selected movie.
+          <br />
+          Features:
+          <br />
+          - Integration with The Movie Database (TMDB)
+          <br />
+          - Searches
+          <br />- Responsiveness
+        </>
+      ),
+    },
     site: "https://monfi.netlify.app/",
     github: "https://github.com/lucascmpos/MonFi",
     linkedin: "",
     tech: ["React.js", "SASS", "The Movie Database API"],
   },
 ];
-
 const ProjectCard = ({ project, onClick }) => {
   const [hovered, setHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -269,16 +365,16 @@ const ProjectCard = ({ project, onClick }) => {
           }}
           className={`absolute flex justify-center items-center text-xl font-semibold right-[50%]  ${
             isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
-          } left-0 w-full bg-purple-900 group-hover:scale-105  text-gray-300 p-2 text-center rounded-sm cursor-pointer hover:bg-purple-950 transition-all transform duration-100`}
+          } left-0 w-full bg-purple-900 group group-hover:scale-105  text-gray-300 p-2 text-center rounded-sm cursor-pointer hover:bg-purple-950 transition-all transform duration-100`}
         >
-          Ver mais
+          <MdOutlineArrowCircleUp className="hover:scale-105" size={24} />
         </animated.div>
       </div>
     </div>
   );
 };
 
-const Projects = () => {
+const Projects = ({ onChangeLanguage, language }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -289,6 +385,14 @@ const Projects = () => {
       document.body.classList.remove("modal-open");
     };
   }, [modalIsOpen]);
+
+  const toggleLanguage = () => {
+    const newLanguage = language === "pt" ? "en" : "pt";
+    setLanguage(newLanguage);
+    onChangeLanguage(newLanguage);
+  };
+
+  const getText = (texts) => (language === "pt" ? texts.pt : texts.en);
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -335,7 +439,9 @@ const Projects = () => {
   return (
     <div id="projects" className="md:p-44 md:py-52 py-24  bg-[#01020a]">
       <div className="flex flex-col md:items-start items-center pb-20 justify-center">
-        <h1 className="text-gray-200 text-4xl font-bold">Projetos</h1>
+        <h1 className="text-gray-200 text-4xl font-bold">
+          {language === "pt" ? "Projetos" : "Projects"}
+        </h1>
       </div>
       <div
         ref={ref}
@@ -351,7 +457,10 @@ const Projects = () => {
           {projectsData.map((project) => (
             <ProjectCard
               key={project.id}
-              project={project}
+              project={{
+                ...project,
+                description: project.description,
+              }}
               onClick={openModal}
             />
           ))}
@@ -407,7 +516,7 @@ const Projects = () => {
                       isLargeScreen ? "" : "text-sm"
                     } mt-2`}
                   >
-                    {selectedProject.description}
+                    {selectedProject.description[language]}
                   </p>
                   <div
                     className={`mt-4 flex gap-2 flex-wrap ${
@@ -449,7 +558,7 @@ const Projects = () => {
                       window.open(selectedProject.linkedin, "_blank")
                     }
                   >
-                    Publicação do{" "}
+                    {language === "pt" ? "Publicação do" : "LinkedIn post"}
                     <FaLinkedinIn
                       className="group-hover:scale-125 transition-all"
                       size={18}
@@ -457,6 +566,7 @@ const Projects = () => {
                   </button>
                 )}
               </div>
+
               <button
                 onClick={closeModal}
                 className="absolute top-0 right-0 p-4 cursor-pointer text-purple-900 hover:text-gray-200 "
