@@ -3,7 +3,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
 import { ImLinkedin } from "react-icons/im";
-import { PiDownloadSimpleBold } from "react-icons/pi";
+import { MdOutlineSimCardDownload } from "react-icons/md";
 
 import curriculo from "../assets/curriculod.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -78,7 +78,7 @@ const Home = ({ language, onChangeLanguage }) => {
           onClick={() => window.open(curriculo, "_blank")}
         >
           {language === "pt" ? "Download do currículo" : "Download resume"}
-          <PiDownloadSimpleBold
+          <MdOutlineSimCardDownload
             className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
             size={25}
           />
