@@ -28,8 +28,8 @@ const Experience = ({ language, onChangeLanguage }) => {
             <br />
             <br />
             <strong className="text-gray-400">
-              Stacks: React.js, Next.js, Node.js, Tailwind.css, CSS, SASS,
-              Prisma, PostgreSQL, Styled Components, Figma.{" "}
+              Stacks: React.js, React Native, Next.js, Node.js, Tailwind.css,
+              CSS, SASS, Prisma, PostgreSQL, Styled Components, Figma.{" "}
             </strong>
           </span>
         ),
@@ -52,8 +52,8 @@ const Experience = ({ language, onChangeLanguage }) => {
             <br />
             <br />
             <strong className="text-gray-400">
-              Stacks: React.js, SASS, Styled Components, Storybook, Figma, AWS
-              Cloud, Scrum, Kanban.{" "}
+              Stacks: React.js, React Native, SASS, Styled Components,
+              Storybook, Figma, AWS Cloud, Scrum, Kanban.{" "}
             </strong>
           </span>
         ),
@@ -77,8 +77,8 @@ const Experience = ({ language, onChangeLanguage }) => {
             <br />
             <br />
             <strong className="text-gray-400">
-              Stacks: React.js, Next.js, Node.js, Tailwind.css, CSS, SASS,
-              Prisma, PostgreSQL, Styled Components, Figma.{" "}
+              Stacks: React.js, React Native, Next.js, Node.js, Tailwind.css,
+              CSS, SASS, Prisma, PostgreSQL, Styled Components, Figma.{" "}
             </strong>
           </span>
         ),
@@ -101,8 +101,8 @@ const Experience = ({ language, onChangeLanguage }) => {
             <br />
             <br />
             <strong className="text-gray-400">
-              Stacks: React.js, SASS, Styled Components, Storybook, Figma, AWS
-              Cloud, Scrum, Kanban.{" "}
+              Stacks: React.js, React Native, SASS, Styled Components,
+              Storybook, Figma, AWS Cloud, Scrum, Kanban.{" "}
             </strong>
           </span>
         ),
