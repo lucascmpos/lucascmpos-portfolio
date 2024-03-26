@@ -5,8 +5,17 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { GoProjectRoadmap } from "react-icons/go";
 import { Link } from "react-scroll";
+import { GiBrazilFlag } from "react-icons/gi";
+import { GiUsaFlag } from "react-icons/gi";
+import { useMediaQuery } from "react-responsive";
 
-const MobileMenu = ({ isOpen, toggleMenu, menuItems }) => {
+const MobileMenu = ({
+  isOpen,
+  toggleMenu,
+  menuItems,
+  language,
+  toggleLanguage,
+}) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -50,10 +59,22 @@ const MobileMenu = ({ isOpen, toggleMenu, menuItems }) => {
                   <div className="hover:-translate-y-1 hover:text-purple-800">
                     {item.icon}
                   </div>
-                  {item.text}
+                  {language === "pt" ? item.text_pt : item.text_en}
                 </h2>
               </Link>
             ))}
+          </div>
+          <div className="absolute bottom-10 right-10">
+            <button
+              className="hover:scale-105 hover:text-purple-800 transition-all duration-300"
+              onClick={toggleLanguage}
+            >
+              {language === "pt" ? (
+                <GiUsaFlag size={30} />
+              ) : (
+                <GiBrazilFlag size={30} />
+              )}
+            </button>
           </div>
         </motion.div>
       )}
@@ -61,31 +82,55 @@ const MobileMenu = ({ isOpen, toggleMenu, menuItems }) => {
   );
 };
 
-const Header = () => {
+const Header = ({ onChangeLanguage }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [language, setLanguage] = useState("pt");
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-  const menuItems = [
-    { id: "about", text: "Sobre", icon: <FaRegCircleUser size={20} /> },
-    {
-      id: "exp",
-      text: "Qualificações",
-      icon: <MdOutlineWorkOutline size={20} />,
-    },
-    { id: "projects", text: "Projetos", icon: <GoProjectRoadmap size={20} /> },
-    { id: "contact", text: "Contato", icon: <LuInfo size={20} /> },
-  ];
+  const toggleLanguage = () => {
+    const newLanguage = language === "pt" ? "en" : "pt";
+    setLanguage(newLanguage);
+    onChangeLanguage(newLanguage);
+  };
 
   useEffect(() => {
-    document.body.classList.toggle("menu-open", isMenuOpen);
-
-    return () => {
-      document.body.classList.remove("menu-open");
-    };
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   }, [isMenuOpen]);
+
+  const menuItems = [
+    {
+      id: "about",
+      text_pt: "Sobre",
+      text_en: "About",
+      icon: <FaRegCircleUser size={20} />,
+    },
+    {
+      id: "exp",
+      text_pt: "Experiência",
+      text_en: "Experience",
+      icon: <MdOutlineWorkOutline size={20} />,
+    },
+    {
+      id: "projects",
+      text_pt: "Projetos",
+      text_en: "Projects",
+      icon: <GoProjectRoadmap size={20} />,
+    },
+    {
+      id: "contact",
+      text_pt: "Contato",
+      text_en: "Contact",
+      icon: <LuInfo size={20} />,
+    },
+  ];
 
   return (
     <header className="fixed  flex flex-row text-lg md:justify-around justify-between items-center bg-[#020211] text-gray-300 font-semibold w-full p-5 z-10 shadow-md">
@@ -104,11 +149,24 @@ const Header = () => {
               <div className="group-hover:-translate-y-1 group-hover:text-purple-800 transition-all duration-200">
                 {item.icon}
               </div>
-              {item.text}
+              {language === "pt" ? item.text_pt : item.text_en}
             </h2>
           </Link>
         ))}
       </div>
+
+      {!isMobile && (
+        <button
+          className="hover:scale-105 hover:text-purple-800 transition-all duration-300"
+          onClick={toggleLanguage}
+        >
+          {language === "pt" ? (
+            <GiUsaFlag size={30} />
+          ) : (
+            <GiBrazilFlag size={30} />
+          )}
+        </button>
+      )}
 
       <button
         onClick={toggleMenu}
@@ -121,6 +179,8 @@ const Header = () => {
         isOpen={isMenuOpen}
         toggleMenu={toggleMenu}
         menuItems={menuItems}
+        language={language}
+        toggleLanguage={toggleLanguage}
       />
     </header>
   );

@@ -8,7 +8,13 @@ import { PiDownloadSimpleBold } from "react-icons/pi";
 import curriculo from "../assets/curriculod.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-const Home = () => {
+const Home = ({ language, onChangeLanguage }) => {
+  const toggleLanguage = () => {
+    const newLanguage = language === "pt" ? "en" : "pt";
+    setLanguage(newLanguage);
+    onChangeLanguage(newLanguage);
+  };
+
   const [typeEffect] = useTypewriter({
     words: ["Frontend Developer", "Web developer", "Software engineer"],
     loop: {},
@@ -71,7 +77,7 @@ const Home = () => {
           className="flex flex-row gap-3 justify-center  hover:bg-zinc-950 hover:text-gray-200 bg-gray-200 items-center font-bold cursor-pointer text-black group transition all duration-300 rounded-lg p-2"
           onClick={() => window.open(curriculo, "_blank")}
         >
-          Download do currículo
+          {language === "pt" ? "Download do currículo" : "Download resume"}
           <PiDownloadSimpleBold
             className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
             size={25}

@@ -5,7 +5,12 @@ import { FiGithub } from "react-icons/fi";
 
 import { useInView } from "react-intersection-observer";
 
-const Contact = () => {
+const Contact = ({ language, onChangeLanguage }) => {
+  const toggleLanguage = () => {
+    const newLanguage = language === "pt" ? "en" : "pt";
+    setLanguage(newLanguage);
+    onChangeLanguage(newLanguage);
+  };
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0,
@@ -22,9 +27,14 @@ const Contact = () => {
         }`}
       >
         <div className="mb-36 gap-5 flex flex-col justify-center items-center">
-          <h1 className="text-gray-200 text-4xl font-bold">Contato</h1>
+          <h1 className="text-gray-200 text-4xl font-bold">
+            {" "}
+            {language === "pt" ? "Contato" : "Contact"}
+          </h1>
           <p className="text-gray-400 font-semibold md:text-md text-sm">
-            Gostou do meu trabalho? entre em contato
+            {language === "pt"
+              ? "Gostou do meu trabalho? entre em contato"
+              : "Like my work? get in touch"}
           </p>
         </div>
 
@@ -48,9 +58,11 @@ const Contact = () => {
                 className="text-purple-800 bg-zinc-800 rounded-xl p-3"
               />
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
-                Telefone
+                {language === "pt" ? "Telefone" : "Phone"}
               </h2>
-              <p className="text-gray-400">(14) 99871-8530</p>
+              <p className="text-gray-400">
+                {language === "pt" ? "(14) 99871-8530" : "+55 14 99871-8530"}
+              </p>
             </div>
           </a>
           <a href="https://www.linkedin.com/in/lucas-campos81/" target="_blank">
@@ -62,7 +74,7 @@ const Contact = () => {
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 LinkedIn
               </h2>
-              <p className="text-gray-400">@lucascampos81</p>
+              <p className="text-gray-400">in/lucas-campos81</p>
             </div>
           </a>
           <a href="https://github.com/lucascmpos" target="_blank">
