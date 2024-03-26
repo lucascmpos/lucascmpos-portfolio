@@ -8,6 +8,7 @@ import { Link } from "react-scroll";
 import { GiBrazilFlag } from "react-icons/gi";
 import { GiUsaFlag } from "react-icons/gi";
 import { useMediaQuery } from "react-responsive";
+import { IoLanguage } from "react-icons/io5";
 
 const MobileMenu = ({
   isOpen,
@@ -66,14 +67,11 @@ const MobileMenu = ({
           </div>
           <div className="absolute bottom-10 right-10">
             <button
-              className="hover:scale-105 hover:text-purple-800 transition-all duration-300"
+              className="hover:scale-105 flex flex-row gap-3 hover:text-purple-800 transition-all duration-300"
               onClick={toggleLanguage}
             >
-              {language === "pt" ? (
-                <GiUsaFlag size={30} />
-              ) : (
-                <GiBrazilFlag size={30} />
-              )}
+              {language === "pt" ? "EN" : "PT-BR"}
+              <IoLanguage size={30} />
             </button>
           </div>
         </motion.div>
@@ -157,14 +155,11 @@ const Header = ({ onChangeLanguage }) => {
 
       {!isMobile && (
         <button
-          className="hover:scale-105 hover:text-purple-800 transition-all duration-300"
+          className="hover:scale-105 flex flex-row gap-3 hover:text-purple-800 transition-all duration-300"
           onClick={toggleLanguage}
         >
-          {language === "pt" ? (
-            <GiUsaFlag size={30} />
-          ) : (
-            <GiBrazilFlag size={30} />
-          )}
+          {language === "pt" ? "EN" : "PT-BR"}
+          <IoLanguage size={30} />
         </button>
       )}
 
