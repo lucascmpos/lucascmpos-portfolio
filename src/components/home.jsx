@@ -5,7 +5,8 @@ import { FaGithub } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
 import { MdOutlineSimCardDownload } from "react-icons/md";
 
-import curriculo from "../assets/curriculod.pdf";
+import curriculo from "../assets/curriculo.pdf";
+import resume from "../assets/resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Home = ({ language, onChangeLanguage }) => {
@@ -78,16 +79,17 @@ const Home = ({ language, onChangeLanguage }) => {
             <Cursor />
           </span>
         </div>
-        <h4
+        <a
           className="flex flex-row gap-3 justify-center  hover:bg-zinc-950 hover:text-gray-200 bg-gray-200 items-center font-bold cursor-pointer text-black group transition all duration-300 rounded-lg p-2"
-          onClick={() => window.open(curriculo, "_blank")}
+          href="https://drive.google.com/drive/folders/1rTJt1CyNoLVnAj--UsbffZgiLdSKG_Pn?usp=drive_link"
+          target="_blank"
         >
           {language === "pt" ? "Download do currículo" : "Download resume"}
           <MdOutlineSimCardDownload
             className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
             size={25}
           />
-        </h4>
+        </a>
       </div>
       <section className="flex flex-row gap-10 pb-80">
         {socialNetworks.map((network) => (
