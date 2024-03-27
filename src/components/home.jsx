@@ -1,10 +1,8 @@
 import React from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
-
 import { ImLinkedin } from "react-icons/im";
 import { MdOutlineSimCardDownload } from "react-icons/md";
-
 import curriculo from "../assets/curriculo.pdf";
 import resume from "../assets/resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -12,16 +10,14 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 const Home = ({ language, onChangeLanguage }) => {
   const toggleLanguage = () => {
     const newLanguage = language === "pt" ? "en" : "pt";
-    setLanguage(newLanguage);
     onChangeLanguage(newLanguage);
   };
 
   const [typeEffect] = useTypewriter({
     words: [
-      "Front End Developer",
-      "React Developer",
-      "Web Developer",
-      "Software engineer",
+      language === "pt" ? "Desenvolvedor Front End" : "Front End Developer",
+      language === "pt" ? "Desenvolvedor React" : "React Developer",
+      language === "pt" ? "Desenvolvedor Web" : "Web Developer",
     ],
     loop: {},
     typeSpeed: 100,
@@ -74,14 +70,14 @@ const Home = ({ language, onChangeLanguage }) => {
               .
             </span>
           </h1>
-          <span className="font-extrabold lg:text-6xl xl:text-7xl text-3xl md:w-auto  text-purple-900">
+          <span className="font-extrabold  lg:text-6xl xl:text-7xl text-3xl md:w-auto w-60  text-purple-900">
             {typeEffect}
             <Cursor />
           </span>
         </div>
         <a
           className="flex flex-row gap-3 justify-center  hover:bg-zinc-950 hover:text-gray-200 bg-gray-200 items-center font-bold cursor-pointer text-black group transition all duration-300 rounded-lg p-2"
-          href="https://drive.google.com/drive/folders/1rTJt1CyNoLVnAj--UsbffZgiLdSKG_Pn?usp=drive_link"
+          href={language === "pt" ? curriculo : resume}
           target="_blank"
         >
           {language === "pt" ? "Download do currículo" : "Download resume"}
