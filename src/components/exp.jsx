@@ -14,7 +14,7 @@ const Experience = ({ language, onChangeLanguage }) => {
     pt: [
       {
         id: 1,
-        titulo: "Desenvolvedor Web",
+        titulo: "Desenvolvedor Front End",
         subtitulo: "Freelancer",
         descricao: (
           <span>
@@ -38,7 +38,7 @@ const Experience = ({ language, onChangeLanguage }) => {
       },
       {
         id: 2,
-        titulo: "Desenvolvedor Frontend",
+        titulo: "Desenvolvedor Front End",
         subtitulo: "Compass.UOL",
         descricao: (
           <span>
@@ -64,7 +64,7 @@ const Experience = ({ language, onChangeLanguage }) => {
     en: [
       {
         id: 1,
-        titulo: "Web Developer",
+        titulo: "Front End Developer",
         subtitulo: "Freelancer",
         descricao: (
           <span>
@@ -87,7 +87,7 @@ const Experience = ({ language, onChangeLanguage }) => {
       },
       {
         id: 2,
-        titulo: "Frontend Developer",
+        titulo: "Front End Developer",
         subtitulo: "Compass.UOL",
         descricao: (
           <span>
