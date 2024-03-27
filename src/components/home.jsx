@@ -16,7 +16,12 @@ const Home = ({ language, onChangeLanguage }) => {
   };
 
   const [typeEffect] = useTypewriter({
-    words: ["Frontend Developer", "Web developer", "Software engineer"],
+    words: [
+      "Front End Developer",
+      "React Developer",
+      "Web Developer",
+      "Software engineer",
+    ],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 50,
