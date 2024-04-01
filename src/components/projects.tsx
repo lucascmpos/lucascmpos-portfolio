@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import sharpCut from "../assets/sharpcut.png";
 import periWare from "../assets/periwarestore.png";
 import uploadAi from "../assets/uploadai.jpeg";
+import natuFlora from "../assets/natuflora.png";
 import pairBank from "../assets/pairbank.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
 import monFi from "../assets/monfi.jpeg";
@@ -12,6 +13,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { MdOutlineArrowCircleUp } from "react-icons/md";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
+import natuFloraVideo from "../assets/natufloravideo.mp4";
 import pairBankVideo from "../assets/pairbankvideo.mp4";
 import sharpcutVideo from "../assets/sharpcutvideo.mp4";
 import periwareVideo from "../assets/periwarevideo.mp4";
@@ -186,6 +188,47 @@ const projectsData = [
   },
   {
     id: 4,
+    title: "Natu Flora",
+    video: natuFloraVideo,
+    image: natuFlora,
+    description: {
+      pt: (
+        <>
+          Esta landing page estilo vitrine representa uma loja fictícia que
+          também pode ser expandida para um e-commerce caso a loja deseje.
+          <br />
+          <br />
+          Funcionalidades: <br />
+          -Design limpo e responsivo
+          <br />
+          -Animações
+          <br />
+          -Menu lateral para dispositivos mobile
+        </>
+      ),
+      en: (
+        <>
+          This storefront-style landing page represents a fictional store that
+          It can also be expanded to e-commerce if the store wishes.
+          <br />
+          <br />
+          Features: <br />
+          -Clean and responsive design
+          <br />
+          -Animations
+          <br />
+          -Side menu for mobile devices
+        </>
+      ),
+    },
+    site: "https://natuflora.vercel.app/",
+    github: "https://github.com/lucascmpos/natuflora",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_react-landingpage-tailwind-activity-7180590037623848960-WLB7?utm_source=share&utm_medium=member_desktop",
+    tech: ["React.js", "Tailwindcss", "Figma"],
+  },
+  {
+    id: 5,
     title: "Pairbank",
     video: pairBankVideo,
     image: pairBank,
@@ -211,7 +254,7 @@ const projectsData = [
     tech: ["React.js", "Tailwindcss", "Figma"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
@@ -247,7 +290,7 @@ const projectsData = [
     tech: ["React.js", "CSS", "Figma", "WeatherAPI", "SwaggerAPI"],
   },
   {
-    id: 6,
+    id: 7,
     title: "MonFi",
     video: monfiVideo,
     image: monFi,
@@ -467,6 +510,11 @@ const Projects = ({ onChangeLanguage, language }) => {
               onClick={openModal}
             />
           ))}
+          <h1 className="text-xl lg:mt-52 text-gray-200 font-semibold">
+            {language === "pt"
+              ? "Mais projetos em andamento..."
+              : "More soon..."}
+          </h1>
         </div>
         <Modal
           isOpen={modalIsOpen}
