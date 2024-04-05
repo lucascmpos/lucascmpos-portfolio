@@ -4,7 +4,7 @@ import { IoSchoolOutline } from "react-icons/io5";
 
 import { useInView } from "react-intersection-observer";
 
-const Experience = ({ language, onChangeLanguage }) => {
+const Experience = ({ language, theme }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -189,10 +189,16 @@ const Experience = ({ language, onChangeLanguage }) => {
   return (
     <div
       id="exp"
-      className="bg-[#020211] flex flex-col md:p-48 py-28 justify-center gap-20 items-center"
+      className={`flex flex-col md:p-48 py-28 justify-center gap-20 items-center ${
+        theme === "light" ? "bg-gray-300" : "bg-[#020211]"
+      }`}
     >
       <div className="flex flex-col items-center justify-center w-full">
-        <h1 className="text-gray-200 text-4xl font-bold">
+        <h1
+          className={`text-4xl font-bold ${
+            theme === "light" ? "text-black" : "text-gray-200"
+          }`}
+        >
           {language === "pt" ? "Experiência" : "Experience"}
         </h1>
       </div>
@@ -215,7 +221,7 @@ const Experience = ({ language, onChangeLanguage }) => {
             className={`flex 2xl:flex-row flex-col group  transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
           >
             <div className="flex flex-col   items-center justify-start w-full">
-              <h2 className="font-bold  md:text-3xl text-xl text-gray-300 ">
+              <h2 className="font-bold  md:text-3xl w-36 text-xl text-gray-300 ">
                 {experiencia.titulo}
               </h2>
               <h3 className="font-semibold md:text-xl text-lg text-purple-900">
@@ -234,7 +240,7 @@ const Experience = ({ language, onChangeLanguage }) => {
             </div>
             <div className="line-vertical absolute bg-gray-200 lg:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
               <MdOutlineWorkOutline
-                size={45}
+                size={40}
                 className="text-purple-800  bg-gray-200 rounded-xl p-2  "
                 style={{ transform: "translateX(-50%)" }}
               />
@@ -272,7 +278,7 @@ const Experience = ({ language, onChangeLanguage }) => {
             </div>
             <div className="line-vertical absolute bg-gray-200 lg:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
               <IoSchoolOutline
-                size={45}
+                size={40}
                 className="text-purple-800  bg-gray-200 rounded-xl p-2  "
                 style={{ transform: "translateX(-50%)" }}
               />
