@@ -27,7 +27,7 @@ const Experience = ({ language, theme }) => {
             com metodologias ágeis.
             <br />
             <br />
-            <strong className="text-gray-400">
+            <strong className="text-gray-500">
               Stacks: React.js, React Native, Next.js, Node.js, Tailwind.css,
               CSS, SASS, Prisma, PostgreSQL, Styled Components, Figma.{" "}
             </strong>
@@ -209,7 +209,11 @@ const Experience = ({ language, theme }) => {
         }`}
       >
         <div className="flex flex-col items-center w-full ">
-          <h2 className="text-gray-400 md:text-3xl text-2xl font-bold">
+          <h2
+            className={` md:text-3xl text-2xl font-bold ${
+              theme === "light" ? "text-gray-700" : "text-gray-200"
+            }`}
+          >
             {language === "pt"
               ? "Experiência profissional"
               : "Professional Experience"}
@@ -221,7 +225,11 @@ const Experience = ({ language, theme }) => {
             className={`flex 2xl:flex-row flex-col group  transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
           >
             <div className="flex flex-col   items-center justify-start w-full">
-              <h2 className="font-bold  md:text-3xl w-36 text-xl text-gray-300 ">
+              <h2
+                className={`font-bold  md:text-3xl w-36 text-xl ${
+                  theme === "light" ? "text-gray-800" : "text-gray-300"
+                } `}
+              >
                 {experiencia.titulo}
               </h2>
               <h3 className="font-semibold md:text-xl text-lg text-purple-900">
@@ -230,11 +238,19 @@ const Experience = ({ language, theme }) => {
             </div>
             <div className="flex flex-col 2xl:items-start items-center justify-start w-full">
               <div className="flex flex-col w-4/6 md:w-auto items-start ">
-                <h3 className="font-semibold md:text-xl text-lg  text-gray-400  transition-all">
+                <h3
+                  className={`font-semibold md:text-xl text-lg  text-gray-400  transition-all ${
+                    theme === "light" ? "text-gray-700" : "text-gray-400"
+                  }`}
+                >
                   {experiencia.subtitulo}
                 </h3>
               </div>
-              <p className="lg:w-10/12 w-8/12 text-gray-300 md:text-lg text-sm md:text-justify text-left 2xl:w-full">
+              <p
+                className={`lg:w-10/12 w-8/12  md:text-lg text-sm md:text-justify text-left 2xl:w-full ${
+                  theme === "light" ? "text-black" : "text-gray-300"
+                }`}
+              >
                 {experiencia.descricao}
               </p>
             </div>
