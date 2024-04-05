@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 
 function App() {
   const [language, setLanguage] = useState("pt");
+  const [theme, setTheme] = useState("off");
 
   const switchToEnglish = () => {
     setLanguage("en");
@@ -22,19 +23,34 @@ function App() {
     setLanguage(newLanguage);
   };
 
+  const switchToDark = () => {
+    setLanguage("dark");
+  };
+
+  const switchToLight = () => {
+    setLanguage("light");
+  };
+
+  const handleChangeTheme = (newTheme) => {
+    setTheme(newTheme);
+  };
+
   return (
     <div className="overflow-x-hidden">
       <Header
         onSwitchToEnglish={switchToEnglish}
         onSwitchToPortuguese={switchToPortuguese}
         onChangeLanguage={handleChangeLanguage}
+        onSwitchToDark={switchToDark}
+        onSwitchToLight={switchToLight}
+        onChangeTheme={handleChangeTheme}
       />
-      <Home language={language} />
-      <About language={language} />
-      <Experience language={language} />
-      <Projects language={language} />
-      <Contact language={language} />
-      <Footer language={language} />
+      <Home theme={theme} language={language} />
+      <About theme={theme} language={language} />
+      <Experience theme={theme} language={language} />
+      <Projects theme={theme} language={language} />
+      <Contact theme={theme} language={language} />
+      <Footer theme={theme} language={language} />
     </div>
   );
 }
