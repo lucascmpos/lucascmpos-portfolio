@@ -4,7 +4,7 @@ import Photo from "../assets/me.jpg";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
 
-const About = ({ language }) => {
+const About = ({ language, theme }) => {
   const [showMore, setShowMore] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [ref, inView] = useInView({
@@ -63,7 +63,9 @@ const About = ({ language }) => {
   return (
     <div
       id="about"
-      className="flex flex-col xl:flex-row bg-[#01020a] md:py-20 py-10 justify-center md:gap-32 gap-10 md:px-20 items-center"
+      className={`flex flex-col xl:flex-row  md:py-20 py-10 justify-center md:gap-32 gap-10 md:px-20 items-center ${
+        theme === "light" ? "bg-white" : "bg-[#01020a]"
+      }`}
     >
       <div
         className={`flex items-center w-64 md:w-4/12 lg:w-6/12 relative overflow-hidden md:order-first transition-opacity ease-in-out duration-1000 ${
@@ -80,11 +82,17 @@ const About = ({ language }) => {
         }`}
         ref={ref}
       >
-        <h1 className="text-gray-200 text-4xl font-bold flex">{title}</h1>
-        <p
-          className={`text-gray-200 md:text-lg   md:p-0 p-2 text-left md:text-start text-md md:w-auto w-80 transition-opacity ease-in-out duration-500 ${
-            showMore ? "" : ""
+        <h1
+          className={` text-4xl font-bold flex ${
+            theme === "light" ? "text-black" : "text-gray-200"
           }`}
+        >
+          {title}
+        </h1>
+        <p
+          className={`font-semibold  md:text-lg   md:p-0 p-2 text-left md:text-start text-md md:w-auto w-80 transition-opacity ease-in-out duration-500 ${
+            showMore ? "" : ""
+          } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
             maxHeight: showMore ? "" : "500px",
             overflow: "hidden",
@@ -96,7 +104,11 @@ const About = ({ language }) => {
 
         {!showMore && (
           <button
-            className="text-black font-bold md:mt-0 mt-10 p-3 rounded-lg bg-gray-200 w-60 cursor-pointer hover:bg-zinc-950 hover:text-gray-200 transition-all duration-500"
+            className={`flex flex-row gap-3 justify-center   items-center font-bold cursor-pointer text-black group transition-all duration-300 rounded-lg p-2 ${
+              theme === "light"
+                ? "bg-black hover:bg-gray-200 hover:text-black text-gray-200"
+                : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
+            }`}
             onClick={handleToggleShowMore}
           >
             {language === "pt" ? "Saiba mais..." : "See more..."}
@@ -104,9 +116,9 @@ const About = ({ language }) => {
         )}
 
         <p
-          className={`text-gray-200  md:text-lg text-left md:text-start md:p-0 p-2 text-md md:w-auto w-80 transition-opacity ease-in-out duration-500 ${
+          className={`text-gray-200 font-semibold  md:text-lg text-left md:text-start md:p-0 p-2 text-md md:w-auto w-80 transition-opacity ease-in-out duration-500 ${
             showMore ? "opacity-100" : "opacity-0"
-          }`}
+          } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
             maxHeight: showMore ? "none" : "0px",
             overflow: "hidden",
@@ -117,7 +129,11 @@ const About = ({ language }) => {
 
         {showMore && (
           <button
-            className="text-black font-bold md:mt-0 mt-5 p-3 rounded-lg bg-gray-200 w-60 cursor-pointer hover:bg-zinc-950 hover:text-gray-200 transition-all duration-500"
+            className={`font-bold md:mt-0 mt-5 p-3 rounded-lg  w-60 cursor-pointer transition-all duration-500 ${
+              theme === "light"
+                ? "bg-black hover:bg-gray-200 hover:text-black text-gray-200"
+                : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
+            }`}
             onClick={handleToggleShowMore}
           >
             {language === "pt" ? "Esconder texto!" : "Hide this text!"}

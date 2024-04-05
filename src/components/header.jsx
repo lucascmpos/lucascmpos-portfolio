@@ -86,7 +86,7 @@ const MobileMenu = ({
 const Header = ({ onChangeLanguage, onChangeTheme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [language, setLanguage] = useState("pt");
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const toggleMenu = () => {
