@@ -7,10 +7,15 @@ import curriculo from "../assets/curriculo.pdf";
 import resume from "../assets/resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-const Home = ({ language, onChangeLanguage }) => {
+const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
   const toggleLanguage = () => {
     const newLanguage = language === "pt" ? "en" : "pt";
     onChangeLanguage(newLanguage);
+  };
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    onChangeTheme(newTheme);
   };
 
   const [typeEffect] = useTypewriter({
@@ -60,11 +65,17 @@ const Home = ({ language, onChangeLanguage }) => {
   return (
     <main
       id="home"
-      className="flex flex-col justify-center items-center gap-20 bg-[#020211]"
+      className={`flex flex-col justify-center items-center gap-20 ${
+        theme === "light" ? "bg-gray-200" : "bg-[#020211]"
+      }`}
     >
       <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72">
         <div className="flex md:flex-row lg:w-auto flex-col gap-1">
-          <h1 className="font-extrabold lg:text-6xl xl:text-7xl text-3xl   text-gray-200">
+          <h1
+            className={`font-extrabold lg:text-6xl xl:text-7xl text-3xl    ${
+              theme === "light" ? "text-gray-950" : "text-gray-200"
+            }`}
+          >
             Lucas Campos
             <span className="font-extrabold lg:text-6xl xl:text-7xl text-3xl text-purple-900">
               .

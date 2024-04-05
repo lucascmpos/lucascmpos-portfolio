@@ -9,6 +9,7 @@ import { GiBrazilFlag } from "react-icons/gi";
 import { GiUsaFlag } from "react-icons/gi";
 import { useMediaQuery } from "react-responsive";
 import { IoLanguage } from "react-icons/io5";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 const MobileMenu = ({
   isOpen,
@@ -16,6 +17,7 @@ const MobileMenu = ({
   menuItems,
   language,
   toggleLanguage,
+  toggleTheme,
 }) => {
   return (
     <AnimatePresence>
@@ -74,15 +76,25 @@ const MobileMenu = ({
               <IoLanguage size={23} />
             </button>
           </div>
+          <div className="absolute bottom-10 right-10">
+            <button
+              className="hover:scale-105 flex flex-row items-center justify-center gap-3 hover:text-purple-800 transition-all duration-300"
+              onClick={toggleTheme}
+            >
+              {language === "pt" ? "EN" : "PT-BR"}
+              <FiMoon size={23} />
+            </button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
   );
 };
 
-const Header = ({ onChangeLanguage }) => {
+const Header = ({ onChangeLanguage, onChangeTheme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [language, setLanguage] = useState("pt");
+  const [theme, setTheme] = useState("light");
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const toggleMenu = () => {
@@ -93,6 +105,12 @@ const Header = ({ onChangeLanguage }) => {
     const newLanguage = language === "pt" ? "en" : "pt";
     setLanguage(newLanguage);
     onChangeLanguage(newLanguage);
+  };
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    onChangeTheme(newTheme);
   };
 
   useEffect(() => {
@@ -154,13 +172,22 @@ const Header = ({ onChangeLanguage }) => {
       </div>
 
       {!isMobile && (
-        <button
-          className="hover:scale-105 flex justify-center items-center flex-row gap-3 hover:text-purple-800 transition-all duration-300"
-          onClick={toggleLanguage}
-        >
-          {language === "pt" ? "EN" : "PT-BR"}
-          <IoLanguage size={23} />
-        </button>
+        <div className="flex gap-10">
+          <button
+            className="hover:scale-105 flex justify-center items-center flex-row gap-3 hover:text-purple-800 transition-all duration-300"
+            onClick={toggleTheme}
+          >
+            {theme === "light" ? "dark" : "light"}
+            <FiMoon size={23} />
+          </button>
+          <button
+            className="hover:scale-105 flex justify-center items-center flex-row gap-3 hover:text-purple-800 transition-all duration-300"
+            onClick={toggleLanguage}
+          >
+            {language === "pt" ? "EN" : "PT-BR"}
+            <IoLanguage size={23} />
+          </button>
+        </div>
       )}
 
       <button
@@ -173,6 +200,7 @@ const Header = ({ onChangeLanguage }) => {
       <MobileMenu
         isOpen={isMenuOpen}
         toggleMenu={toggleMenu}
+        toggleTheme={toggleTheme}
         menuItems={menuItems}
         language={language}
         toggleLanguage={toggleLanguage}
