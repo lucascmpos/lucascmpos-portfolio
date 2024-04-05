@@ -106,7 +106,7 @@ const About = ({ language, theme }) => {
           <button
             className={`flex flex-row gap-3 justify-center   items-center font-bold cursor-pointer text-black group transition-all duration-300 rounded-lg p-2 ${
               theme === "light"
-                ? "bg-black hover:bg-gray-200 hover:text-black text-gray-200"
+                ? "bg-black hover:bg-purple-500 hover:text-black text-gray-200"
                 : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
             }`}
             onClick={handleToggleShowMore}
@@ -131,7 +131,7 @@ const About = ({ language, theme }) => {
           <button
             className={`font-bold md:mt-0 mt-5 p-3 rounded-lg  w-60 cursor-pointer transition-all duration-500 ${
               theme === "light"
-                ? "bg-black hover:bg-gray-200 hover:text-black text-gray-200"
+                ? "bg-black hover:bg-purple-500 hover:text-black text-gray-200"
                 : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
             }`}
             onClick={handleToggleShowMore}

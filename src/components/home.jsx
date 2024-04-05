@@ -81,7 +81,11 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
               .
             </span>
           </h1>
-          <span className="font-extrabold  lg:text-6xl xl:text-7xl text-3xl md:w-auto w-60  text-purple-900">
+          <span
+            className={`font-extrabold  lg:text-6xl xl:text-7xl text-3xl md:w-auto w-60  ${
+              theme === "light" ? "text-purple-500" : "text-purple-900"
+            }`}
+          >
             {typeEffect}
             <Cursor />
           </span>
@@ -89,7 +93,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
         <a
           className={`flex flex-row gap-3 justify-center   items-center font-bold cursor-pointer text-black group transition-all duration-300 rounded-lg p-2 ${
             theme === "light"
-              ? "bg-black hover:bg-gray-300 hover:text-black text-gray-200"
+              ? "bg-black hover:bg-purple-500 hover:text-black text-gray-200"
               : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
           }`}
           href={language === "pt" ? curriculo : resume}
