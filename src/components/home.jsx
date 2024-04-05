@@ -87,13 +87,21 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
           </span>
         </div>
         <a
-          className="flex flex-row gap-3 justify-center  hover:bg-zinc-950 hover:text-gray-200 bg-gray-200 items-center font-bold cursor-pointer text-black group transition all duration-300 rounded-lg p-2"
+          className={`flex flex-row gap-3 justify-center   items-center font-bold cursor-pointer text-black group transition-all duration-300 rounded-lg p-2 ${
+            theme === "light"
+              ? "bg-black hover:bg-gray-300 hover:text-black text-gray-200"
+              : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
+          }`}
           href={language === "pt" ? curriculo : resume}
           target="_blank"
         >
           {language === "pt" ? "Download do currículo" : "Download resume"}
           <MdOutlineSimCardDownload
-            className="group-hover:scale-125 group-hover:text-gray-200 transition-all duration-300"
+            className={`group-hover:scale-125  transition-all duration-300 ${
+              theme === "light"
+                ? "group-hover:text-black"
+                : "group-hover:text-gray-200"
+            }`}
             size={25}
           />
         </a>
@@ -103,7 +111,9 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
           <a
             href={network.href}
             target="_blank"
-            className="text-gray-200 cursor-pointer hover:-translate-y-1 transition all duration-500"
+            className={`cursor-pointer hover:-translate-y-1 transition all duration-500 ${
+              theme === "light" ? "text-black" : "text-gray-200 "
+            }`}
             id={network.name}
             key={network.name}
           >
