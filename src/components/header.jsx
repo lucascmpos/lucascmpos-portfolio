@@ -76,15 +76,7 @@ const MobileMenu = ({
               <IoLanguage size={23} />
             </button>
           </div>
-          <div className="absolute bottom-10 right-10">
-            <button
-              className="hover:scale-105 flex flex-row items-center justify-center gap-3 hover:text-purple-800 transition-all duration-300"
-              onClick={toggleTheme}
-            >
-              {language === "pt" ? "EN" : "PT-BR"}
-              <FiMoon size={23} />
-            </button>
-          </div>
+          <div className="absolute bottom-10 right-10"></div>
         </motion.div>
       )}
     </AnimatePresence>
@@ -171,15 +163,30 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
         ))}
       </div>
 
-      {!isMobile && (
-        <div className="flex gap-10">
-          <button
-            className="hover:scale-105 flex justify-center items-center flex-row gap-3 hover:text-purple-800 transition-all duration-300"
-            onClick={toggleTheme}
-          >
-            {theme === "light" ? "dark" : "light"}
-            <FiMoon size={23} />
-          </button>
+      <div className="flex gap-10">
+        <button
+          className="hover:scale-105 flex justify-center items-center flex-row gap-3 hover:text-purple-800 transition-all duration-300"
+          onClick={toggleTheme}
+        >
+          {theme === "light" ? (
+            <>
+              <FiMoon size={23} />
+            </>
+          ) : (
+            <>
+              <FiSun size={23} />
+            </>
+          )}
+        </button>
+
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-2xl text-gray-300 focus:outline-none"
+        >
+          &#9776;
+        </button>
+
+        {!isMobile && (
           <button
             className="hover:scale-105 flex justify-center items-center flex-row gap-3 hover:text-purple-800 transition-all duration-300"
             onClick={toggleLanguage}
@@ -187,15 +194,8 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
             {language === "pt" ? "EN" : "PT-BR"}
             <IoLanguage size={23} />
           </button>
-        </div>
-      )}
-
-      <button
-        onClick={toggleMenu}
-        className="md:hidden text-2xl text-gray-300 focus:outline-none"
-      >
-        &#9776;
-      </button>
+        )}
+      </div>
 
       <MobileMenu
         isOpen={isMenuOpen}
