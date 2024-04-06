@@ -13,7 +13,7 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [language, setLanguage] = useState("pt");
   const [theme, setTheme] = useState("dark");
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [prevScrollPos, setPrevScrollPos] = useState(1);
   const [visible, setVisible] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
@@ -44,13 +44,17 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      const isScrollingDown = currentScrollPos > prevScrollPos;
+
+      const isScrolling = Math.abs(prevScrollPos - currentScrollPos) > 50;
+
+      setVisible(isScrollingDown || !isScrolling || currentScrollPos < 50);
       setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible]);
+  }, [prevScrollPos]);
 
   const menuItems = [
     {
