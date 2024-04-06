@@ -427,6 +427,12 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
   useEffect(() => {
     document.body.classList.toggle("modal-open", modalIsOpen);
 
+    if (modalIsOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
     return () => {
       document.body.classList.remove("modal-open");
     };
