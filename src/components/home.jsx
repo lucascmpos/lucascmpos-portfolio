@@ -66,7 +66,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
     <main
       id="home"
       className={`flex flex-col justify-center items-center gap-20 ${
-        theme === "light" ? "bg-gray-200" : "bg-[#020211]"
+        theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
       <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72">

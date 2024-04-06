@@ -420,7 +420,7 @@ const ProjectCard = ({ project, onClick }) => {
   );
 };
 
-const Projects = ({ onChangeLanguage, language }) => {
+const Projects = ({ onChangeLanguage, language, theme }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -483,9 +483,18 @@ const Projects = ({ onChangeLanguage, language }) => {
   );
 
   return (
-    <div id="projects" className="md:p-44 md:py-52 py-24  bg-[#01020a]">
+    <div
+      id="projects"
+      className={`md:p-44 md:py-52 py-24 ${
+        theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
+      }  `}
+    >
       <div className="flex flex-col md:items-start items-center pb-20 justify-center">
-        <h1 className="text-gray-200 text-4xl font-bold">
+        <h1
+          className={` text-4xl font-bold ${
+            theme === "light" ? "text-black" : "text-gray-200"
+          }`}
+        >
           {language === "pt" ? "Projetos" : "Projects"}
         </h1>
       </div>
@@ -510,7 +519,11 @@ const Projects = ({ onChangeLanguage, language }) => {
               onClick={openModal}
             />
           ))}
-          <h1 className="text-xl lg:mt-52 text-gray-200 font-semibold">
+          <h1
+            className={`text-xl lg:mt-52 text-gray-200 font-semibold ${
+              theme === "light" ? "text-gray-700" : "text-gray-200"
+            }`}
+          >
             {language === "pt"
               ? "Mais projetos em andamento..."
               : "More soon..."}
