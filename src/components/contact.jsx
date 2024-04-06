@@ -49,7 +49,9 @@ const Contact = ({ language, onChangeLanguage, theme }) => {
             <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
               <MdOutlineEmail
                 size={70}
-                className="text-purple-800 bg-zinc-800 rounded-xl p-3"
+                className={`text-purple-800  rounded-xl p-3 ${
+                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                }`}
               />
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 Email
@@ -61,7 +63,9 @@ const Contact = ({ language, onChangeLanguage, theme }) => {
             <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
               <BsTelephone
                 size={70}
-                className="text-purple-800 bg-zinc-800 rounded-xl p-3"
+                className={`text-purple-800  rounded-xl p-3 ${
+                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                }`}
               />
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 {language === "pt" ? "Telefone" : "Phone"}
@@ -75,7 +79,9 @@ const Contact = ({ language, onChangeLanguage, theme }) => {
             <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
               <CiLinkedin
                 size={70}
-                className="text-purple-800 bg-zinc-800 rounded-xl p-3"
+                className={`text-purple-800  rounded-xl p-3 ${
+                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                }`}
               />
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 LinkedIn
@@ -87,7 +93,9 @@ const Contact = ({ language, onChangeLanguage, theme }) => {
             <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
               <FiGithub
                 size={70}
-                className="text-purple-800 bg-zinc-800 rounded-xl p-3"
+                className={`text-purple-800  rounded-xl p-3 ${
+                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                }`}
               />
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 GitHub
