@@ -77,7 +77,11 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
             }`}
           >
             Lucas Campos
-            <span className="font-extrabold lg:text-6xl xl:text-7xl text-3xl text-purple-900">
+            <span
+              className={`font-extrabold lg:text-6xl xl:text-7xl text-3xl ${
+                theme === "light" ? "text-purple-500" : "text-purple-900"
+              }`}
+            >
               .
             </span>
           </h1>

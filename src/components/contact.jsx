@@ -5,7 +5,7 @@ import { FiGithub } from "react-icons/fi";
 
 import { useInView } from "react-intersection-observer";
 
-const Contact = ({ language, onChangeLanguage }) => {
+const Contact = ({ language, onChangeLanguage, theme }) => {
   const toggleLanguage = () => {
     const newLanguage = language === "pt" ? "en" : "pt";
     setLanguage(newLanguage);
@@ -18,7 +18,9 @@ const Contact = ({ language, onChangeLanguage }) => {
   return (
     <div
       id="contact"
-      className="flex flex-col justify-center  items-center py-20 bg-[#01020a]"
+      className={`flex flex-col justify-center  items-center py-20 ${
+        theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
+      }`}
     >
       <div
         ref={ref}
@@ -27,11 +29,15 @@ const Contact = ({ language, onChangeLanguage }) => {
         }`}
       >
         <div className="mb-36 gap-5 flex flex-col justify-center items-center">
-          <h1 className="text-gray-200 text-4xl font-bold">
+          <h1
+            className={` text-4xl font-bold ${
+              theme === "light" ? "text-black" : "text-gray-200"
+            }`}
+          >
             {" "}
             {language === "pt" ? "Contato" : "Contact"}
           </h1>
-          <p className="text-gray-400 font-semibold md:text-md text-sm">
+          <p className="text-gray-500 font-semibold md:text-md text-sm">
             {language === "pt"
               ? "Gostou do meu trabalho? entre em contato"
               : "Like my work? get in touch"}
@@ -48,7 +54,7 @@ const Contact = ({ language, onChangeLanguage }) => {
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 Email
               </h2>
-              <p className="text-gray-400">lucasoliveiracampos81@gmail.com</p>
+              <p className="text-gray-500">lucasoliveiracampos81@gmail.com</p>
             </div>
           </a>
           <a href="https://wa.me/5514998718530" target="_blank">
@@ -60,7 +66,7 @@ const Contact = ({ language, onChangeLanguage }) => {
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 {language === "pt" ? "Telefone" : "Phone"}
               </h2>
-              <p className="text-gray-400">
+              <p className="text-gray-500">
                 {language === "pt" ? "(14) 99871-8530" : "+55 14 99871-8530"}
               </p>
             </div>
@@ -74,7 +80,7 @@ const Contact = ({ language, onChangeLanguage }) => {
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 LinkedIn
               </h2>
-              <p className="text-gray-400">in/lucas-campos81</p>
+              <p className="text-gray-500">in/lucas-campos81</p>
             </div>
           </a>
           <a href="https://github.com/lucascmpos" target="_blank">
@@ -86,7 +92,7 @@ const Contact = ({ language, onChangeLanguage }) => {
               <h2 className="text-xl font-semibold text-gray-200 mt-2">
                 GitHub
               </h2>
-              <p className="text-gray-400">@lucascmpos</p>
+              <p className="text-gray-500">@lucascmpos</p>
             </div>
           </a>
         </div>
