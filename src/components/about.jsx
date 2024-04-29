@@ -90,7 +90,7 @@ const About = ({ language, theme }) => {
           {title}
         </h1>
         <p
-          className={`font-semibold  md:text-lg   md:p-0 p-2 text-left md:text-start text-md md:w-auto w-80 transition-opacity ease-in-out duration-500 ${
+          className={`font-semibold  md:text-lg   lg:p-0 p-4 text-left md:text-start text-md lg:w-auto w-screen transition-opacity ease-in-out duration-500 ${
             showMore ? "" : ""
           } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
@@ -116,7 +116,7 @@ const About = ({ language, theme }) => {
         )}
 
         <p
-          className={`text-gray-200 font-semibold  md:text-lg text-left md:text-start md:p-0 p-2 text-md md:w-auto w-80 transition-opacity ease-in-out duration-500 ${
+          className={`text-gray-200 font-semibold  md:text-lg text-left md:text-start lg:p-0 p-4 text-md lg:w-auto w-screen transition-opacity ease-in-out duration-500 ${
             showMore ? "opacity-100" : "opacity-0"
           } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
