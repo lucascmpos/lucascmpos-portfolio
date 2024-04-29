@@ -13,8 +13,6 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [language, setLanguage] = useState("pt");
   const [theme, setTheme] = useState("dark");
-  const [prevScrollPos, setPrevScrollPos] = useState(1);
-  const [visible, setVisible] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const toggleMenu = () => {
@@ -32,29 +30,6 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
     setTheme(newTheme);
     onChangeTheme(newTheme);
   };
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const isScrollingDown = currentScrollPos > prevScrollPos;
-
-      const isScrolling = Math.abs(prevScrollPos - currentScrollPos) > 50;
-
-      setVisible(isScrollingDown || !isScrolling || currentScrollPos < 50);
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
 
   const menuItems = [
     {
@@ -89,7 +64,6 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
     menuItems,
     language,
     toggleLanguage,
-    toggleTheme,
   }) => {
     return (
       <AnimatePresence>
@@ -173,11 +147,7 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
 
   return (
     <header
-      className={`fixed flex flex-row text-lg md:justify-around justify-between items-center  font-semibold w-full p-5 z-10 shadow-md transition-opacity duration-300 ${
-        !visible
-          ? "opacity-0 pointer-events-none"
-          : "opacity-100 pointer-events-auto"
-      } ${
+      className={`fixed flex flex-row text-lg md:justify-around justify-between items-center  font-semibold w-full p-5 z-10 shadow-md transition-opacity duration-300  ${
         theme === "light"
           ? "bg-gray-300 text-black"
           : "bg-[#020211] text-gray-300"

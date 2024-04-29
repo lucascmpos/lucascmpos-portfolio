@@ -14,8 +14,8 @@ const Experience = ({ language, theme }) => {
     pt: [
       {
         id: 1,
-        titulo: "Desenvolvedor Front End",
-        subtitulo: "Freelancer",
+        titulo: "Freelancer",
+        subtitulo: "Desenvolvedor Front End",
         descricao: (
           <span>
             De forma independente, atuo com o desenvolvimento de software de
@@ -38,8 +38,8 @@ const Experience = ({ language, theme }) => {
       },
       {
         id: 2,
-        titulo: "Desenvolvedor Front End",
-        subtitulo: "Compass.UOL",
+        titulo: "Compass.UOL",
+        subtitulo: "Desenvolvedor Front End",
         descricao: (
           <span>
             Participei de cursos intensivos que cobriram desenvolvimento de
@@ -64,8 +64,8 @@ const Experience = ({ language, theme }) => {
     en: [
       {
         id: 1,
-        titulo: "Front End Developer",
-        subtitulo: "Freelancer",
+        titulo: "Freelancer",
+        subtitulo: "Front End Developer",
         descricao: (
           <span>
             Independently, I work with end-to-end software development, from
@@ -87,8 +87,8 @@ const Experience = ({ language, theme }) => {
       },
       {
         id: 2,
-        titulo: "Front End Developer",
-        subtitulo: "Compass.UOL",
+        titulo: "Compass.UOL",
+        subtitulo: "Front End Developer",
         descricao: (
           <span>
             I actively participated in courses that covered software
@@ -226,28 +226,26 @@ const Experience = ({ language, theme }) => {
           >
             <div className="flex flex-col   items-center justify-start w-full">
               <h2
-                className={`font-bold  md:w-48 w-36 xl:w-auto md:text-3xl text-xl ${
+                className={`font-bold  md:w-48 w-26 xl:w-auto md:text-3xl text-xl ${
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
                 {experiencia.titulo}
               </h2>
-              <h3 className="font-semibold md:text-xl text-lg text-purple-900">
+              <h3 className="font-semibold md:text-xl text-lg text-gray-500">
                 {experiencia.data}
               </h3>
             </div>
             <div className="flex flex-col 2xl:items-start items-center justify-start w-full">
-              <div className="flex flex-col w-4/6 md:w-auto items-start ">
+              <div className="flex flex-col w-4/6 pb-2 md:w-auto items-start ">
                 <h3
-                  className={`font-semibold md:text-xl text-lg  text-gray-400  transition-all ${
-                    theme === "light" ? "text-gray-700" : "text-gray-400"
-                  }`}
+                  className={`font-bold md:text-xl text-lg transition-all text-purple-700`}
                 >
                   {experiencia.subtitulo}
                 </h3>
               </div>
               <p
-                className={`lg:w-10/12 w-8/12  md:text-lg text-sm md:text-justify text-left 2xl:w-full ${
+                className={`lg:w-10/12 w-10/12 text-justify  md:text-lg text-sm md:text-justify  2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
@@ -286,22 +284,20 @@ const Experience = ({ language, theme }) => {
               >
                 {formacao.titulo}
               </h2>
-              <h3 className="font-semibold md:text-xl text-lg text-purple-900">
+              <h3 className="font-semibold md:text-xl text-lg text-gray-500">
                 {formacao.data}
               </h3>
             </div>
             <div className="flex flex-col 2xl:items-start md:mx-2 items-center justify-start w-full">
-              <div className="flex flex-col w-4/6 lg:w-auto items-start">
+              <div className="flex flex-col w-4/6 pb-2 lg:w-auto items-start">
                 <h3
-                  className={`font-semibold md:text-xl text-lg  text-gray-400  transition-all ${
-                    theme === "light" ? "text-gray-700" : "text-gray-400"
-                  }`}
+                  className={`font-semibold md:text-xl text-lg text-center   transition-all text-purple-700`}
                 >
                   {formacao.subtitulo}
                 </h3>
               </div>
               <p
-                className={`lg:w-10/12 w-8/12  md:text-lg text-sm md:text-justify text-left 2xl:w-full ${
+                className={`lg:w-10/12 w-10/12  md:text-lg text-sm md:text-justify text-justify 2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >

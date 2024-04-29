@@ -19,11 +19,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
   };
 
   const [typeEffect] = useTypewriter({
-    words: [
-      language === "pt" ? "Desenvolvedor Front End" : "Front End Developer",
-      language === "pt" ? "Desenvolvedor React" : "React Developer",
-      language === "pt" ? "Desenvolvedor Web" : "Web Developer",
-    ],
+    words: ["Front End Developer", "React Developer", "Web Developer"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -69,8 +65,8 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
-      <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72">
-        <div className="flex md:flex-row lg:w-auto flex-col gap-1">
+      <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72 ">
+        <div className="flex md:flex-row lg:w-auto w-auto justify-center items-center  flex-col gap-1 ">
           <h1
             className={`font-extrabold lg:text-6xl xl:text-7xl text-3xl    ${
               theme === "light" ? "text-gray-950" : "text-gray-200"
@@ -86,7 +82,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
             </span>
           </h1>
           <span
-            className={`font-extrabold  lg:text-6xl xl:text-7xl text-3xl md:w-auto w-60  ${
+            className={`font-extrabold text-center lg:text-6xl xl:text-7xl text-3xl md:w-auto w-auto  ${
               theme === "light" ? "text-purple-500" : "text-purple-900"
             }`}
           >
