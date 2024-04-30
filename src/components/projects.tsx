@@ -7,6 +7,7 @@ import natuFlora from "../assets/natuflora.png";
 import pairBank from "../assets/pairbank.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
 import monFi from "../assets/monfi.jpeg";
+import interroga from "../assets/interroga.jpg";
 import { useSpring, animated } from "react-spring";
 import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -329,6 +330,33 @@ const projectsData = [
     linkedin: "",
     tech: ["React.js", "SASS", "The Movie Database API"],
   },
+  {
+    id: 8,
+    title: "More soon...",
+    image: interroga,
+    description: {
+      pt: (
+        <>
+          Estou em constante estudo e evolução, portanto te garanto que terei
+          mais projetos de sucesso aqui no portfólio!
+          <br />
+          Você pode acompanhar os projetos em andamento no meu GitHub, onde
+          todos meus projetos tem o repositório público, para todos verem.
+        </>
+      ),
+      en: (
+        <>
+          I am constantly studying and evolving, so I guarantee you that I will
+          have more successful projects here in the portfolio!
+          <br />
+          You can follow ongoing projects on my GitHub, where all my projects
+          have a public repository, for everyone to see.
+        </>
+      ),
+    },
+    site: "https://github.com/lucascmpos",
+    github: "https://github.com/lucascmpos",
+  },
 ];
 const ProjectCard = ({ project, onClick }) => {
   const [hovered, setHovered] = useState(false);
@@ -525,15 +553,6 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               onClick={openModal}
             />
           ))}
-          <h1
-            className={`text-xl lg:mt-52 text-gray-200 font-semibold ${
-              theme === "light" ? "text-gray-700" : "text-gray-200"
-            }`}
-          >
-            {language === "pt"
-              ? "Mais projetos em andamento..."
-              : "More soon..."}
-          </h1>
         </div>
         <Modal
           isOpen={modalIsOpen}
