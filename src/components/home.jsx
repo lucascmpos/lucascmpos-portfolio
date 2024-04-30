@@ -66,7 +66,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
       }`}
     >
       <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72 ">
-        <div className="flex md:flex-row lg:w-auto w-auto justify-center items-center  flex-col gap-1 ">
+        <div className="flex lg:w-auto w-auto justify-center items-center flex-col gap-1 ">
           <h1
             className={`font-extrabold lg:text-6xl xl:text-7xl text-3xl    ${
               theme === "light" ? "text-gray-950" : "text-gray-200"
