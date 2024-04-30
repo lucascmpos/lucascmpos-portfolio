@@ -189,11 +189,11 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={`flex flex-col md:p-48 py-28 justify-center gap-20 items-center ${
+      className={`flex flex-col items-center justify-center gap-20 py-28 md:p-48 ${
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
-      <div className="flex flex-col items-center justify-center w-full">
+      <div className="flex w-full flex-col items-center justify-center">
         <h1
           className={`text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
@@ -204,13 +204,13 @@ const Experience = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`flex gap-16 flex-col transition-opacity justify-center items-center ease-in-out duration-1000 ${
+        className={`flex flex-col items-center justify-center gap-16 transition-opacity duration-1000 ease-in-out ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="flex flex-col items-center w-full ">
+        <div className="flex w-full flex-col items-center ">
           <h2
-            className={` md:text-3xl text-2xl font-bold ${
+            className={` text-2xl font-bold md:text-3xl ${
               theme === "light" ? "text-gray-700" : "text-gray-200"
             }`}
           >
@@ -222,47 +222,47 @@ const Experience = ({ language, theme }) => {
         {currentExperiences.map((experiencia) => (
           <div
             key={experiencia.id}
-            className={`flex 2xl:flex-row flex-col group  transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
+            className={`group mr-auto flex flex-col  items-start gap-5 rounded-3xl  pb-3 transition-all duration-300 2xl:flex-row`}
           >
-            <div className="flex flex-col   items-center justify-start w-full">
+            <div className="flex w-full   flex-col items-center justify-start">
               <h2
-                className={`font-bold  md:w-auto w-26 xl:w-auto md:text-3xl text-xl ${
+                className={`w-26  text-xl font-bold md:w-auto md:text-3xl xl:w-auto ${
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
                 {experiencia.titulo}
               </h2>
-              <h3 className="font-semibold md:text-xl text-lg text-gray-500">
+              <h3 className="text-lg font-semibold text-gray-500 md:text-xl">
                 {experiencia.data}
               </h3>
             </div>
-            <div className="flex flex-col 2xl:items-start items-center justify-start w-full">
-              <div className="flex flex-col w-4/6 pb-2 md:w-auto items-center  ">
+            <div className="flex w-full flex-col items-center justify-start 2xl:items-start">
+              <div className="flex w-4/6 flex-col items-center pb-2 md:w-auto  ">
                 <h3
-                  className={`font-bold md:text-xl text-lg transition-all text-purple-700`}
+                  className={`text-lg font-bold text-purple-700 transition-all md:text-xl`}
                 >
                   {experiencia.subtitulo}
                 </h3>
               </div>
               <p
-                className={`lg:w-10/12 w-10/12 text-left  md:text-lg text-sm   2xl:w-full ${
+                className={`w-10/12 text-left text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
                 {experiencia.descricao}
               </p>
             </div>
-            <div className="line-vertical absolute bg-gray-200 lg:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
+            <div className="line-vertical left-2/2  group absolute mx-9 mt-2  h-2/6 w-0 gap-20 bg-gray-200 lg:w-0.5 2xl:right-1/2  2xl:mt-0 2xl:h-1/6 ">
               <MdOutlineWorkOutline
                 size={40}
-                className="text-purple-800  bg-gray-200 rounded-xl p-2  "
+                className="rounded-xl bg-gray-200 p-2  text-purple-800 transition-all hover:scale-105  "
                 style={{ transform: "translateX(-50%)" }}
               />
             </div>
           </div>
         ))}
-        <hr className="my-8 border-t border-gray-00 w-3/4" />
-        <div className="flex flex-col items-center w-full ">
+        <hr className="border-gray-00 my-8 w-3/4 border-t" />
+        <div className="flex w-full flex-col items-center ">
           <h2
             className={`text-4xl font-bold ${
               theme === "light" ? "text-black" : "text-gray-200"
@@ -274,40 +274,40 @@ const Experience = ({ language, theme }) => {
         {formacoes[language].map((formacao) => (
           <div
             key={formacao.id}
-            className={`flex 2xl:flex-row flex-col group  transition-all duration-300 gap-5  pb-3 mr-auto rounded-3xl items-start`}
+            className={`group mr-auto flex flex-col  items-start gap-5 rounded-3xl  pb-3 transition-all duration-300 2xl:flex-row`}
           >
-            <div className="flex flex-col   items-center justify-center w-full">
+            <div className="flex w-full   flex-col items-center justify-center">
               <h2
-                className={`font-bold  md:w-auto w-36 xl:w-auto md:text-3xl text-xl ${
+                className={`w-36  text-xl font-bold md:w-auto md:text-3xl xl:w-auto ${
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
                 {formacao.titulo}
               </h2>
-              <h3 className="font-semibold md:text-xl text-lg text-gray-500">
+              <h3 className="text-lg font-semibold text-gray-500 md:text-xl">
                 {formacao.data}
               </h3>
             </div>
-            <div className="flex flex-col 2xl:items-start md:mx-2 items-center justify-start w-full">
-              <div className="flex flex-col w-4/6 pb-2 lg:w-auto items-center">
+            <div className="flex w-full flex-col items-center justify-start md:mx-2 2xl:items-start">
+              <div className="flex w-4/6 flex-col items-center pb-2 lg:w-auto">
                 <h3
-                  className={`font-semibold md:text-xl text-lg text-center   transition-all text-purple-700`}
+                  className={`text-center text-lg font-semibold text-purple-700   transition-all md:text-xl`}
                 >
                   {formacao.subtitulo}
                 </h3>
               </div>
               <p
-                className={`lg:w-10/12 w-10/12 text-left  md:text-lg text-sm   2xl:w-full ${
+                className={`w-10/12 text-left text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
                 {formacao.descricao}
               </p>
             </div>
-            <div className="line-vertical absolute bg-gray-200 lg:w-0.5 w-0  gap-20 2xl:mt-0 mt-2 mx-9 2xl:h-1/6 h-2/6  2xl:right-1/2 left-2/2 ">
+            <div className="line-vertical left-2/2 absolute mx-9 mt-2  h-2/6 w-0 gap-20 bg-gray-200 lg:w-0.5 2xl:right-1/2  2xl:mt-0 2xl:h-1/6 ">
               <IoSchoolOutline
                 size={40}
-                className="text-purple-800  bg-gray-200 rounded-xl p-2  "
+                className="rounded-xl  bg-gray-200 p-2 text-purple-800  "
                 style={{ transform: "translateX(-50%)" }}
               />
             </div>
