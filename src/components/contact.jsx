@@ -5,12 +5,7 @@ import { FiGithub } from "react-icons/fi";
 
 import { useInView } from "react-intersection-observer";
 
-const Contact = ({ language, onChangeLanguage, theme }) => {
-  const toggleLanguage = () => {
-    const newLanguage = language === "pt" ? "en" : "pt";
-    setLanguage(newLanguage);
-    onChangeLanguage(newLanguage);
-  };
+const Contact = ({ language, theme }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0,
@@ -18,17 +13,17 @@ const Contact = ({ language, onChangeLanguage, theme }) => {
   return (
     <div
       id="contact"
-      className={`flex flex-col justify-center  items-center py-20 ${
+      className={`flex flex-col items-center  justify-center py-20 ${
         theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
       }`}
     >
       <div
         ref={ref}
-        className={`flex flex-col  justify-center mb-16 items-center transition-opacity ease-in-out duration-1000 ${
+        className={`mb-16 flex  flex-col items-center justify-center transition-opacity duration-1000 ease-in-out ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="mb-36 gap-5 flex flex-col justify-center items-center">
+        <div className="mb-36 flex flex-col items-center justify-center gap-5">
           <h1
             className={` text-4xl font-bold ${
               theme === "light" ? "text-black" : "text-gray-200"
@@ -37,37 +32,37 @@ const Contact = ({ language, onChangeLanguage, theme }) => {
             {" "}
             {language === "pt" ? "Contato" : "Contact"}
           </h1>
-          <p className="text-gray-500 font-semibold md:text-md text-sm">
+          <p className="md:text-md text-sm font-semibold text-gray-500">
             {language === "pt"
               ? "Gostou do meu trabalho? entre em contato"
               : "Like my work? get in touch"}
           </p>
         </div>
 
-        <div className="flex lg:flex-row flex-col  gap-32">
+        <div className="flex flex-col gap-32  lg:flex-row">
           <a href="mailto:lucasoliveiracampos81@gmail.com" target="_blank">
-            <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <MdOutlineEmail
                 size={70}
-                className={`text-purple-800  rounded-xl p-3 ${
+                className={`rounded-xl  p-3 text-purple-800 ${
                   theme === "light" ? "bg-white" : "bg-zinc-800"
                 }`}
               />
-              <h2 className="text-xl font-semibold text-gray-200 mt-2">
+              <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 Email
               </h2>
               <p className="text-gray-500">lucasoliveiracampos81@gmail.com</p>
             </div>
           </a>
           <a href="https://wa.me/5514998718530" target="_blank">
-            <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <BsTelephone
                 size={70}
-                className={`text-purple-800  rounded-xl p-3 ${
+                className={`rounded-xl  p-3 text-purple-800 ${
                   theme === "light" ? "bg-white" : "bg-zinc-800"
                 }`}
               />
-              <h2 className="text-xl font-semibold text-gray-200 mt-2">
+              <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 {language === "pt" ? "Telefone" : "Phone"}
               </h2>
               <p className="text-gray-500">
@@ -76,28 +71,28 @@ const Contact = ({ language, onChangeLanguage, theme }) => {
             </div>
           </a>
           <a href="https://www.linkedin.com/in/lucas-campos81/" target="_blank">
-            <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <CiLinkedin
                 size={70}
-                className={`text-purple-800  rounded-xl p-3 ${
+                className={`rounded-xl  p-3 text-purple-800 ${
                   theme === "light" ? "bg-white" : "bg-zinc-800"
                 }`}
               />
-              <h2 className="text-xl font-semibold text-gray-200 mt-2">
+              <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 LinkedIn
               </h2>
               <p className="text-gray-500">in/lucas-campos81</p>
             </div>
           </a>
           <a href="https://github.com/lucascmpos" target="_blank">
-            <div className="flex flex-col gap-2 justify-center items-center cursor-pointer hover:scale-125 transition-all duration-500">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <FiGithub
                 size={70}
-                className={`text-purple-800  rounded-xl p-3 ${
+                className={`rounded-xl  p-3 text-purple-800 ${
                   theme === "light" ? "bg-white" : "bg-zinc-800"
                 }`}
               />
-              <h2 className="text-xl font-semibold text-gray-200 mt-2">
+              <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 GitHub
               </h2>
               <p className="text-gray-500">@lucascmpos</p>

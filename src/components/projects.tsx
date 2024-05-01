@@ -386,20 +386,20 @@ const ProjectCard = ({ project, onClick }) => {
   return (
     <div
       key={project.id}
-      className="relative group cursor-pointer"
+      className="group relative cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={() => onClick(project)}
     >
       <div
-        className={`border-b-4 border-purple-800 relative ${
+        className={`relative border-b-4 border-purple-800 ${
           isLargeScreen ? " " : ""
         }`}
       >
         <img
           src={project.image}
           alt={project.title}
-          className={`w-full object-cover rounded-sm transform group-hover:scale-105  duration-100 ${
+          className={`w-full transform rounded-sm object-cover duration-100  group-hover:scale-105 ${
             isLargeScreen ? "h-56" : "h-60"
           }`}
         />
@@ -412,7 +412,7 @@ const ProjectCard = ({ project, onClick }) => {
             right: 0,
             textAlign: "center",
           }}
-          className="w-full h-full  transform absolute top-0 left-0 bg-[#01020a] group-hover:scale-110 duration-100 rounded-sm"
+          className="absolute left-0  top-0 h-full w-full transform rounded-sm bg-[#01020a] duration-100 group-hover:scale-110"
         ></animated.div>
         <animated.div
           style={{
@@ -424,7 +424,7 @@ const ProjectCard = ({ project, onClick }) => {
             textAlign: "center",
             padding: "8px",
           }}
-          className={`text-gray-300 font-bold text-xl ${
+          className={`text-xl font-bold text-gray-300 ${
             isLargeScreen ? "bottom-1" : "bottom-4"
           }`}
         >
@@ -434,12 +434,12 @@ const ProjectCard = ({ project, onClick }) => {
           style={{
             opacity: titleSpring.opacity.interpolate((opacity) => 1 - opacity),
           }}
-          className={`absolute flex justify-center items-center text-xl font-semibold right-[50%]  ${
+          className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${
             isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
-          } left-0 w-full bg-purple-900 group group-hover:scale-105  text-gray-300 p-2 text-center rounded-sm cursor-pointer hover:bg-purple-950 transition-all transform duration-100`}
+          } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-100 hover:bg-purple-950 group-hover:scale-105`}
         >
           <MdOutlineArrowCircleUp
-            className=" group-hover:scale-110 transition-all"
+            className=" transition-all group-hover:scale-110"
             size={30}
           />
         </animated.div>
@@ -511,7 +511,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
   };
 
   const TechnologyCard = ({ technology }) => (
-    <div className="bg-purple-900 font-bold  text-white p-2 m-1 rounded-2xl text-sm hover:scale-105 transition-all">
+    <div className="m-1 rounded-2xl  bg-purple-900 p-2 text-sm font-bold text-white transition-all hover:scale-105">
       {technology}
     </div>
   );
@@ -519,11 +519,11 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
   return (
     <div
       id="projects"
-      className={`md:p-44 md:py-52 py-24 ${
+      className={`py-24 md:p-44 md:py-52 ${
         theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
       }  `}
     >
-      <div className="flex flex-col md:items-start items-center pb-20 justify-center">
+      <div className="flex flex-col items-center justify-center pb-20 md:items-start">
         <h1
           className={` text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
@@ -534,14 +534,14 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`transition-opacity ease-in-out duration-1000 ${
+        className={`transition-opacity duration-1000 ease-in-out ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
         <div
           className={`grid ${
             isLargeScreen ? "grid-cols-3" : "flex-col"
-          }  gap-10 p-3 flex justify-center items-center`}
+          }  flex items-center justify-center gap-10 p-3`}
         >
           {projectsData.map((project) => (
             <ProjectCard
@@ -568,7 +568,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               width: isLargeScreen ? "90%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "60%" : "100%",
-              backgroundColor: "#161617",
+              backgroundColor: "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
               transition: "opacity 0.3s, transform 0.3s ",
@@ -582,8 +582,8 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
           }}
         >
           {selectedProject && (
-            <div className="flex flex-col h-full">
-              <div className="flex-grow flex justify-start p-2">
+            <div className="flex h-full flex-col">
+              <div className="flex flex-grow justify-start p-2">
                 {isLargeScreen && (
                   <video
                     controls
@@ -593,7 +593,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                     src={selectedProject.video}
                     alt={selectedProject.title}
                     type="video/mp4"
-                    className="w-1/2 h-fill object-cover rounded-md"
+                    className="h-fill w-1/2 rounded-md object-cover"
                   />
                 )}
                 <div className="flex-grow pl-4">
@@ -608,7 +608,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                     {selectedProject.description[language]}
                   </p>
                   <div
-                    className={`mt-4 flex gap-2 flex-wrap ${
+                    className={`mt-4 flex flex-wrap gap-2 ${
                       isLargeScreen ? "" : "text-sm"
                     }`}
                   >
@@ -619,37 +619,37 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                   </div>
                 </div>
               </div>
-              <div className="flex md:flex-row flex-col gap-3 justify-start ml-4 my-4">
+              <div className="my-4 ml-4 flex flex-col justify-start gap-3 md:flex-row">
                 <button
-                  className="bg-gray-200 font-semibold mb-2 w-24 items-center justify-center gap-2 group flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                  className="group mb-2 mr-2 flex w-24 flex-row items-center justify-center gap-2 rounded-md bg-gray-200 px-4 py-2 font-semibold text-black"
                   onClick={() => window.open(selectedProject.site, "_blank")}
                 >
                   Site
                   <FaExternalLinkAlt
-                    className="group-hover:scale-125 transition-all"
+                    className="transition-all group-hover:scale-125"
                     size={15}
                   />
                 </button>
                 <button
-                  className="bg-gray-200 font-semibold group mb-2  w-32 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                  className="group mb-2 mr-2 flex  w-32 flex-row items-center justify-center gap-2 rounded-md bg-gray-200 px-4 py-2 font-semibold text-black"
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
                   <FaGithub
-                    className="group-hover:scale-125 transition-all"
+                    className="transition-all group-hover:scale-125"
                     size={20}
                   />
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className="bg-gray-200 font-semibold group mb-2  w-52 items-center justify-center gap-2 flex flex-row text-black px-4 py-2 rounded-md mr-2"
+                    className="group mb-2 mr-2 flex  w-52 flex-row items-center justify-center gap-2 rounded-md bg-gray-200 px-4 py-2 font-semibold text-black"
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }
                   >
                     {language === "pt" ? "Publicação do" : "LinkedIn post"}
                     <FaLinkedinIn
-                      className="group-hover:scale-125 transition-all"
+                      className="transition-all group-hover:scale-125"
                       size={18}
                     />
                   </button>
@@ -658,7 +658,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
 
               <button
                 onClick={closeModal}
-                className="absolute top-0 right-0 p-4 cursor-pointer text-purple-900 hover:text-gray-200 "
+                className="absolute right-0 top-0 cursor-pointer p-4 text-purple-900 hover:text-gray-200 "
               >
                 <FaRegWindowClose size={25} />
               </button>
