@@ -189,7 +189,7 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={`flex flex-col items-center justify-center gap-20 py-28 md:p-48 ${
+      className={`flex flex-col items-center justify-center gap-20 pb-28 md:p-48 ${
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >

@@ -6,6 +6,7 @@ import Experience from "./components/exp";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import Services from "./components/services";
 
 function App() {
   const [language, setLanguage] = useState("pt");
@@ -47,6 +48,7 @@ function App() {
       />
       <Home theme={theme} language={language} />
       <About theme={theme} language={language} />
+      <Services theme={theme} language={language} />
       <Experience theme={theme} language={language} />
       <Projects theme={theme} language={language} />
       <Contact theme={theme} language={language} />

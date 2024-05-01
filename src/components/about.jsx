@@ -63,34 +63,34 @@ const About = ({ language, theme }) => {
   return (
     <div
       id="about"
-      className={`flex flex-col xl:flex-row  md:py-20 py-10 justify-center md:gap-32 gap-10 md:px-20 items-center ${
+      className={`flex flex-col items-center  justify-center gap-10 py-10 md:gap-32 md:px-20 md:py-20 xl:flex-row ${
         theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
       }`}
     >
       <div
-        className={`flex items-center w-64 md:w-4/12 lg:w-6/12 relative overflow-hidden md:order-first transition-opacity ease-in-out duration-1000 ${
+        className={`relative flex w-64 items-center overflow-hidden transition-opacity duration-1000 ease-in-out md:order-first md:w-4/12 lg:w-6/12 ${
           inView ? "opacity-100" : "opacity-80"
         }`}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-[#01020a] via-transparent to-transparent rounded-lg"></div>
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-[#01020a] via-transparent to-transparent"></div>
         <Img src={Photo} alt="Foto de Lucas Campos" className="rounded-lg" />
       </div>
       <div ref={firstTextRef}></div>
       <div
-        className={`flex flex-col w-full md:w-6/12 lg:w-10/12  text-start gap-5 justify-center items-center lg:items-start px-5 transition-opacity ease-in-out duration-1000 ${
+        className={`flex w-full flex-col items-center justify-center  gap-5 px-5 text-start transition-opacity duration-1000 ease-in-out md:w-6/12 lg:w-10/12 lg:items-start ${
           inView ? "opacity-100" : "opacity-0"
         }`}
         ref={ref}
       >
         <h1
-          className={` text-4xl font-bold flex ${
+          className={` flex text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
           {title}
         </h1>
         <p
-          className={`font-semibold  md:text-lg   lg:p-0 p-4 text-left md:text-start text-md lg:w-auto w-screen transition-opacity ease-in-out duration-500 ${
+          className={`text-md  w-screen   p-4 text-left font-semibold transition-opacity duration-500 ease-in-out md:text-start md:text-lg lg:w-auto lg:p-0 ${
             showMore ? "" : ""
           } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
@@ -104,10 +104,10 @@ const About = ({ language, theme }) => {
 
         {!showMore && (
           <button
-            className={`flex flex-row gap-3 justify-center   items-center font-bold cursor-pointer text-black group transition-all duration-300 rounded-lg p-2 ${
+            className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
               theme === "light"
-                ? "bg-black hover:bg-purple-500 hover:text-black text-gray-200"
-                : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
+                ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
             }`}
             onClick={handleToggleShowMore}
           >
@@ -116,7 +116,7 @@ const About = ({ language, theme }) => {
         )}
 
         <p
-          className={`text-gray-200 font-semibold  md:text-lg text-left md:text-start lg:p-0 p-4 text-md lg:w-auto w-screen transition-opacity ease-in-out duration-500 ${
+          className={`text-md w-screen  p-4 text-left font-semibold text-gray-200 transition-opacity duration-500 ease-in-out md:text-start md:text-lg lg:w-auto lg:p-0 ${
             showMore ? "opacity-100" : "opacity-0"
           } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
@@ -129,10 +129,10 @@ const About = ({ language, theme }) => {
 
         {showMore && (
           <button
-            className={`font-bold md:mt-0 mt-5 p-3 rounded-lg  w-60 cursor-pointer transition-all duration-500 ${
+            className={`mt-5 w-60 cursor-pointer rounded-lg p-3  font-bold transition-all duration-500 md:mt-0 ${
               theme === "light"
-                ? "bg-black hover:bg-purple-500 hover:text-black text-gray-200"
-                : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
+                ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
             }`}
             onClick={handleToggleShowMore}
           >
