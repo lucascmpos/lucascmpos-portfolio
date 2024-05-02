@@ -58,8 +58,8 @@ const Tech = ({ language, theme }) => {
         }`}
       >
         {language === "pt"
-          ? "Essas são minhas principais tecnologias! Passe o cursor ou clique em cima do ícone!"
-          : "These are my main technologies! Hover the cursor or click on the icon!"}
+          ? "Essas são minhas principais tecnologias! Passe o cursor ou clique em cima do ícone para saber mais..."
+          : "These are my main technologies! Hover the cursor or click on the icon..."}
       </span>
       <div className="mt-2 grid   grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-20 bg-[#020211] p-10 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6">
         {icons.map((item, index) => (
