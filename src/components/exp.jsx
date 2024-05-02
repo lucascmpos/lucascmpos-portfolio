@@ -272,7 +272,7 @@ const Experience = ({ language, theme }) => {
               </p>
             </div>
             <h3 className="font-semibold text-gray-500">Tecnologias usadas:</h3>
-            <div className=" flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap text-center   md:gap-4 lg:grid lg:grid-cols-6 [&::-webkit-scrollbar]:hidden">
+            <div className=" flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap text-center   md:gap-4 lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
               {experiencia.tech &&
                 experiencia.tech.map((technology, index) => (
                   <TechnologyCard
