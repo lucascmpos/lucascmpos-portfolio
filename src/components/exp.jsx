@@ -3,6 +3,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { IoSchoolOutline } from "react-icons/io5";
 
 import { useInView } from "react-intersection-observer";
+import TechnologyCard from "./tech-tag";
 
 const Experience = ({ language, theme }) => {
   const [ref, inView] = useInView({
@@ -30,6 +31,20 @@ const Experience = ({ language, theme }) => {
           </span>
         ),
         data: "09/2023 - Presente ",
+        tech: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React.js",
+          "React Native",
+          "Next.js",
+          "Node.js",
+          "Express",
+          "Tailwind",
+          "Figma",
+          "Sass",
+        ],
         link: "",
       },
       {
@@ -38,17 +53,27 @@ const Experience = ({ language, theme }) => {
         subtitulo: "Desenvolvedor Front End",
         descricao: (
           <span>
-            Participei de cursos intensivos que cobriram desenvolvimento de
-            software, metodologias ágeis e AWS Cloud. <br />
-            Atuei ativamente na implementação do desenvolvimento e testes
-            integrados de componentes do Storybook do Livelo App, e também
+            Atuei ativamente na implementação do desenvolvimento e de testes
+            integrados de componentes do Storybook do cliente, e também
             participando de práticas ágeis, com Scrum e Kanban. Essa experiência
             ampliou minhas habilidades e consolidou meu comprometimento com a
-            excelência no desenvolvimento de software.
+            excelência no desenvolvimento de software. <br />
+            Participei de mais de 20 cursos intensivos que cobriram
+            desenvolvimento de software, metodologias ágeis e AWS Cloud.
             <br />
             <br />
           </span>
         ),
+        tech: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React.js",
+          "React Native",
+          "Sass",
+          "Storybook",
+        ],
         data: "11/2022 - 09/2023 ",
         link: "https://compass.uol/pt/home/",
       },
@@ -71,6 +96,16 @@ const Experience = ({ language, theme }) => {
           </span>
         ),
         data: "09/2023 - Present ",
+        tech: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React.js",
+          "React Native",
+          "Sass",
+          "Storybook",
+        ],
         link: "https://www.linkedin.com/in/lucas-campos81/",
       },
       {
@@ -90,6 +125,16 @@ const Experience = ({ language, theme }) => {
             <br />
           </span>
         ),
+        tech: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React.js",
+          "React Native",
+          "Sass",
+          "Storybook",
+        ],
         data: "11/2022 - 09/2023 ",
         link: "https://compass.uol/pt/home/",
       },
@@ -173,7 +218,7 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={`flex flex-col items-center justify-center pb-28 pt-20 md:pt-28 ${
+      className={`flex flex-col items-center justify-center px-3 pb-28 pt-20 md:pt-28 ${
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
@@ -219,12 +264,23 @@ const Experience = ({ language, theme }) => {
                 </h3>
               </div>
               <p
-                className={`w-full px-2 text-justify text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
+                className={`w-full px-3 text-justify text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
                 {experiencia.descricao}
               </p>
+            </div>
+            <h3 className="font-semibold text-gray-400">Tecnologias usadas:</h3>
+            <div className=" flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap text-center   md:gap-4 lg:grid lg:grid-cols-6 [&::-webkit-scrollbar]:hidden">
+              {experiencia.tech &&
+                experiencia.tech.map((technology, index) => (
+                  <TechnologyCard
+                    key={index}
+                    technology={technology}
+                    style={{ width: "auto", height: "35px" }}
+                  />
+                ))}
             </div>
           </div>
         ))}
@@ -264,7 +320,7 @@ const Experience = ({ language, theme }) => {
                 </h3>
               </div>
               <p
-                className={`w-full px-2 text-justify text-sm   md:text-lg lg:w-10/12   2xl:w-full ${
+                className={`w-full px-3 text-justify text-sm   md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >

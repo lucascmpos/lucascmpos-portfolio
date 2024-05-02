@@ -22,6 +22,7 @@ import monfiVideo from "../assets/monfivideo.mp4";
 
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
+import TechnologyCard from "./tech-tag";
 
 const projectsData = [
   {
@@ -479,7 +480,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
     threshold: 0.1,
   });
 
-  const isLargeScreen = useMediaQuery({ minWidth: 1350 });
+  const isLargeScreen = useMediaQuery({ minWidth: 767 });
 
   const [modalAnimation, setModalAnimation] = useState({
     opacity: 0,
@@ -509,12 +510,6 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
       setSelectedProject(null);
     }, 300);
   };
-
-  const TechnologyCard = ({ technology }) => (
-    <div className="m-1 rounded-2xl  bg-purple-900 p-2 text-sm font-bold text-white transition-all hover:scale-105">
-      {technology}
-    </div>
-  );
 
   return (
     <div
