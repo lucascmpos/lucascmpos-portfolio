@@ -39,12 +39,7 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
       text_en: "About",
       icon: <FaRegCircleUser size={20} />,
     },
-    {
-      id: "services",
-      text_pt: "Serviços",
-      text_en: "Services",
-      icon: <List size={20} />,
-    },
+
     {
       id: "exp",
       text_pt: "Experiência",
