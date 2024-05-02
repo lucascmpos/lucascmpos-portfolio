@@ -222,7 +222,7 @@ const Experience = ({ language, theme }) => {
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
-      <div className="mb-10 flex w-full flex-col items-center justify-center">
+      <div className="mb-10 flex w-full flex-col items-center justify-center  text-center">
         <h1
           className={`text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
@@ -273,7 +273,7 @@ const Experience = ({ language, theme }) => {
                 {experiencia.descricao}
               </p>
             </div>
-            <span className="font-semibold text-gray-400">
+            <span className=" text-center font-semibold text-gray-400">
               {language === "pt" ? "Tecnologias usadas:" : "Used technologies:"}
             </span>
             <div className=" flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap text-center   md:gap-4 lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
@@ -290,7 +290,7 @@ const Experience = ({ language, theme }) => {
         ))}
         <div className="flex w-full flex-col items-center ">
           <h2
-            className={`text-4xl font-bold ${
+            className={`text-center text-4xl font-bold ${
               theme === "light" ? "text-black" : "text-gray-200"
             }`}
           >
