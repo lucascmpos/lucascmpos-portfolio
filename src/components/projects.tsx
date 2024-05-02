@@ -480,7 +480,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
     threshold: 0.1,
   });
 
-  const isLargeScreen = useMediaQuery({ minWidth: 767 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1350 });
 
   const [modalAnimation, setModalAnimation] = useState({
     opacity: 0,

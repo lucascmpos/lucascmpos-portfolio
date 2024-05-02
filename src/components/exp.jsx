@@ -253,7 +253,7 @@ const Experience = ({ language, theme }) => {
                 {experiencia.titulo}
               </h2>
 
-              <h3 className="text-gray-400">{experiencia.data}</h3>
+              <h3 className="text-gray-500">{experiencia.data}</h3>
             </div>
             <div className="flex w-full flex-col items-center justify-start ">
               <div className="flex flex-col items-center justify-center pb-2 md:w-auto  ">
@@ -271,7 +271,7 @@ const Experience = ({ language, theme }) => {
                 {experiencia.descricao}
               </p>
             </div>
-            <h3 className="font-semibold text-gray-400">Tecnologias usadas:</h3>
+            <h3 className="font-semibold text-gray-500">Tecnologias usadas:</h3>
             <div className=" flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap text-center   md:gap-4 lg:grid lg:grid-cols-6 [&::-webkit-scrollbar]:hidden">
               {experiencia.tech &&
                 experiencia.tech.map((technology, index) => (
@@ -295,7 +295,7 @@ const Experience = ({ language, theme }) => {
         </div>
         {formacoes[language].map((formacao) => (
           <div
-            className=" relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10 bg-[#01020a] py-8  md:w-[600px] md:px-16 lg:w-[900px]"
+            className={`relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10  py-8  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
             key={formacao.id}
           >
             <div className="flex flex-col items-center justify-center">
@@ -309,7 +309,7 @@ const Experience = ({ language, theme }) => {
                 {formacao.titulo}
               </h2>
 
-              <h3 className="text-gray-400">{formacao.data}</h3>
+              <h3 className="text-gray-500">{formacao.data}</h3>
             </div>
             <div className="flex w-full flex-col items-center justify-start ">
               <div className="flex flex-col items-center justify-center pb-2 md:w-auto  ">
