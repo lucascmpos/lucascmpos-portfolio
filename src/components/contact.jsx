@@ -32,7 +32,7 @@ const Contact = ({ language, theme }) => {
             {" "}
             {language === "pt" ? "Contato" : "Contact"}
           </h1>
-          <p className="md:text-md text-sm font-semibold text-gray-500">
+          <p className="md:text-md text-sm font-semibold text-gray-500 lg:text-lg">
             {language === "pt"
               ? "Gostou do meu trabalho? entre em contato"
               : "Like my work? get in touch"}
@@ -45,13 +45,15 @@ const Contact = ({ language, theme }) => {
               <MdOutlineEmail
                 size={70}
                 className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                  theme === "light" ? "bg-white" : "bg-[#383838]"
                 }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 Email
               </h2>
-              <p className="text-gray-500">lucasoliveiracampos81@gmail.com</p>
+              <p className="font-semibold text-gray-500">
+                lucasoliveiracampos81@gmail.com
+              </p>
             </div>
           </a>
           <a href="https://wa.me/5514998718530" target="_blank">
@@ -59,13 +61,13 @@ const Contact = ({ language, theme }) => {
               <BsTelephone
                 size={70}
                 className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                  theme === "light" ? "bg-white" : "bg-[#383838]"
                 }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 {language === "pt" ? "Telefone" : "Phone"}
               </h2>
-              <p className="text-gray-500">
+              <p className="font-semibold text-gray-500">
                 {language === "pt" ? "(14) 99871-8530" : "+55 14 99871-8530"}
               </p>
             </div>
@@ -75,13 +77,13 @@ const Contact = ({ language, theme }) => {
               <CiLinkedin
                 size={70}
                 className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                  theme === "light" ? "bg-white" : "bg-[#383838]"
                 }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 LinkedIn
               </h2>
-              <p className="text-gray-500">in/lucas-campos81</p>
+              <p className="font-semibold text-gray-500">in/lucas-campos81</p>
             </div>
           </a>
           <a href="https://github.com/lucascmpos" target="_blank">
@@ -89,13 +91,13 @@ const Contact = ({ language, theme }) => {
               <FiGithub
                 size={70}
                 className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-zinc-800"
+                  theme === "light" ? "bg-white" : "bg-[#383838]"
                 }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-gray-200">
                 GitHub
               </h2>
-              <p className="text-gray-500">@lucascmpos</p>
+              <p className="font-semibold text-gray-500">@lucascmpos</p>
             </div>
           </a>
         </div>

@@ -527,6 +527,15 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
         >
           {language === "pt" ? "Projetos" : "Projects"}
         </h1>
+        <p
+          className={` mt-5 text-center text-lg lg:mt-10 lg:text-start ${
+            theme === "light" ? "text-black" : "text-gray-300"
+          }`}
+        >
+          {language === "pt"
+            ? "Meus maiores projetos! clique em qual desejar para saber mais..."
+            : "My biggest projects! click on which one you want to find out more..."}
+        </p>
       </div>
       <div
         ref={ref}

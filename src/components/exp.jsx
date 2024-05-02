@@ -292,6 +292,7 @@ const Experience = ({ language, theme }) => {
             </div>
           </div>
         ))}
+
         <div className="flex w-full flex-col items-center ">
           <h2
             className={`text-center text-4xl font-bold ${
