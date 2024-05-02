@@ -239,7 +239,7 @@ const Experience = ({ language, theme }) => {
       >
         {currentExperiences.map((experiencia) => (
           <div
-            className=" relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10 bg-[#01020a] py-8  md:w-[600px] md:px-16 lg:w-[900px]"
+            className={`relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10  py-8  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
             key={experiencia.id}
           >
             <div className="flex flex-col items-center justify-center">

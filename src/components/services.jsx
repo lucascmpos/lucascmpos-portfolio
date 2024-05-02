@@ -155,7 +155,7 @@ const Services = ({ language, theme }) => {
     <div
       id="services"
       className={`flex flex-col items-center  py-10 ${
-        theme === "light" ? "bg-gray-100" : "bg-[#01020a]"
+        theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
       }`}
     >
       <div className="flex items-start">
