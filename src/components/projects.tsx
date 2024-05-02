@@ -70,6 +70,10 @@ const projectsData = [
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-AsNe?utm_source=share&utm_medium=member_desktop",
     tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
       "Next.js",
       "Tailwindcss",
       "ShadcnUI",
@@ -126,6 +130,10 @@ const projectsData = [
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
     tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
       "Next.js",
       "Tailwindcss",
       "ShadcnUI",
@@ -180,6 +188,9 @@ const projectsData = [
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
     tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
       "React.js",
       "Tailwindcss",
       "ShadcnUI",
@@ -228,7 +239,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/natuflora",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_react-landingpage-tailwind-activity-7180590037623848960-WLB7?utm_source=share&utm_medium=member_desktop",
-    tech: ["React.js", "Tailwindcss", "Figma"],
+    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
   {
     id: 5,
@@ -254,7 +265,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/pair_bank",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_eai-pessoal-estou-aqui-hoje-para-divulgar-activity-7168397456626454528-668H?utm_source=share&utm_medium=member_desktop",
-    tech: ["React.js", "Tailwindcss", "Figma"],
+    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
   {
     id: 6,
@@ -290,7 +301,15 @@ const projectsData = [
     github: "https://github.com/lucascmpos/Projeto-Compass-VIII",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_react-javascript-html-activity-7024386144108699648-yl2F?utm_source=share&utm_medium=member_desktop",
-    tech: ["React.js", "CSS", "Figma", "WeatherAPI", "SwaggerAPI"],
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Figma",
+      "WeatherAPI",
+      "SwaggerAPI",
+    ],
   },
   {
     id: 7,
@@ -330,7 +349,14 @@ const projectsData = [
     site: "https://monfi.netlify.app/",
     github: "https://github.com/lucascmpos/MonFi",
     linkedin: "",
-    tech: ["React.js", "SASS", "The Movie Database API"],
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "SASS",
+      "The Movie Database API",
+    ],
   },
   {
     id: 8,
@@ -570,9 +596,9 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               bottom: "auto",
               transform: modalAnimation.transform,
               opacity: modalAnimation.opacity,
-              width: isLargeScreen ? "90%" : "100%",
+              width: isLargeScreen ? "80%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
-              height: isLargeScreen ? "90%" : "100%",
+              height: isLargeScreen ? "85%" : "100%",
               backgroundColor: "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
@@ -583,13 +609,13 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
           overlayClassName={{
             base: "fixed inset-0 overflow-y-auto",
             afterOpen:
-              "bg-[rgba(0,0,0,0.4)] backdrop-filter backdrop-blur-md z-20",
+              "bg-[rgba(0,0,0,0.4)] backdrop-filter flex  items-center justify-center backdrop-blur-md z-20",
             beforeClose: "",
           }}
         >
           {selectedProject && (
-            <div className="flex flex-col gap-5 lg:items-center lg:justify-center ">
-              <div className="">
+            <div className="flex flex-col items-center justify-center gap-5 overscroll-y-none ">
+              <div className="flex flex-col items-center justify-center">
                 <h2 className="text-2xl font-bold text-gray-200">
                   {selectedProject.title}
                 </h2>
@@ -602,7 +628,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                     src={selectedProject.video}
                     alt={selectedProject.title}
                     type="video/mp4"
-                    className="my-4 flex h-[300px] w-[500px] items-center justify-center rounded-md object-cover"
+                    className="my-4 flex h-[300px] w-[700px]  rounded-md object-cover"
                   />
                 ) : (
                   <img
@@ -629,7 +655,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                     ))}
                 </div>
               </div>
-              <div className="my-4 ml-4 flex flex-col justify-start gap-3 md:flex-row">
+              <div className="my-4  flex flex-col items-center justify-center gap-3 md:flex-row ">
                 <button
                   className="group mb-2 mr-2 flex w-24 flex-row items-center justify-center gap-2 rounded-md bg-gray-200 px-4 py-2 font-semibold text-black"
                   onClick={() => window.open(selectedProject.site, "_blank")}
