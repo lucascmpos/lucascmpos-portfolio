@@ -173,11 +173,11 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={`flex flex-col items-center justify-center gap-20 pb-28 md:pt-28 ${
+      className={`flex flex-col items-center justify-center pb-28 pt-20 md:pt-28 ${
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
-      <div className="flex w-full flex-col items-center justify-center">
+      <div className="mb-10 flex w-full flex-col items-center justify-center">
         <h1
           className={`text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
@@ -188,41 +188,38 @@ const Experience = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`flex flex-col items-center justify-center gap-16 transition-opacity duration-1000 ease-in-out ${
+        className={`flex flex-col items-center justify-center gap-16 px-2 transition-opacity duration-1000 ease-in-out ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="flex w-full flex-col items-center "></div>
         {currentExperiences.map((experiencia) => (
           <div
-            className="lg: relative w-[900px] rounded-lg border-4 border-white bg-[#01020a] px-16 py-8"
+            className=" relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10 bg-[#01020a] py-8  md:w-[600px] md:px-16 lg:w-[900px]"
             key={experiencia.id}
           >
-            <div className="line-vertical top-15 absolute left-[30px]  h-[270px] w-1  bg-gray-200  " />
-
-            <div>
+            <div className="flex flex-col items-center justify-center">
               <h2
-                className={`w-26 relative flex flex-row items-center gap-2 text-xl font-bold md:w-auto md:text-3xl xl:w-auto ${
+                className={`w-26 relative flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-2xl xl:w-auto ${
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
-                <MdOutlineWorkOutline className="absolute -left-14 -top-1 h-12 w-12 rounded-full bg-white p-2 text-purple-700" />
+                <MdOutlineWorkOutline className=" h-12 w-12   text-purple-700" />
 
                 {experiencia.titulo}
               </h2>
 
               <h3 className="text-gray-400">{experiencia.data}</h3>
             </div>
-            <div className="flex w-full flex-col items-center justify-start 2xl:items-start">
-              <div className="flex w-4/6 flex-col items-center pb-2 md:w-auto  ">
+            <div className="flex w-full flex-col items-center justify-start ">
+              <div className="flex flex-col items-center justify-center pb-2 md:w-auto  ">
                 <h3
-                  className={`text-lg font-bold text-purple-700 transition-all md:text-xl`}
+                  className={`text-nowrap text-center text-lg   font-bold text-purple-700 transition-all md:text-3xl`}
                 >
                   {experiencia.subtitulo}
                 </h3>
               </div>
               <p
-                className={`w-10/12 text-left text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
+                className={`w-full px-2 text-justify text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
@@ -231,7 +228,6 @@ const Experience = ({ language, theme }) => {
             </div>
           </div>
         ))}
-        <hr className="border-gray-00 my-8 w-3/4 border-t" />
         <div className="flex w-full flex-col items-center ">
           <h2
             className={`text-4xl font-bold ${
@@ -243,34 +239,32 @@ const Experience = ({ language, theme }) => {
         </div>
         {formacoes[language].map((formacao) => (
           <div
-            className="relative w-[900px] rounded-lg border-4 border-white bg-[#01020a] px-16 py-8"
+            className=" relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10 bg-[#01020a] py-8  md:w-[600px] md:px-16 lg:w-[900px]"
             key={formacao.id}
           >
-            <div className="line-vertical top-15 absolute left-[30px]  h-[280px] w-1  bg-gray-200  " />
-
-            <div>
+            <div className="flex flex-col items-center justify-center">
               <h2
-                className={`w-26 relative flex flex-row items-center gap-2 text-xl font-bold md:w-auto md:text-3xl xl:w-auto ${
+                className={`w-26 relative flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-3xl xl:w-auto ${
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
-                <IoSchoolOutline className="absolute -left-14 -top-1 h-12 w-12 rounded-full bg-white p-2 text-purple-700" />
+                <IoSchoolOutline className=" h-12 w-12   text-purple-700" />
 
                 {formacao.titulo}
               </h2>
 
               <h3 className="text-gray-400">{formacao.data}</h3>
             </div>
-            <div className="flex w-full flex-col items-center justify-start 2xl:items-start">
-              <div className="flex w-4/6 flex-col items-center pb-2 md:w-auto  ">
+            <div className="flex w-full flex-col items-center justify-start ">
+              <div className="flex flex-col items-center justify-center pb-2 md:w-auto  ">
                 <h3
-                  className={`text-lg font-bold text-purple-700 transition-all md:text-xl`}
+                  className={`text-wrap text-center text-lg font-bold text-purple-700 transition-all md:text-2xl`}
                 >
                   {formacao.subtitulo}
                 </h3>
               </div>
               <p
-                className={`w-10/12 text-left text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
+                className={`w-full px-2 text-justify text-sm   md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
