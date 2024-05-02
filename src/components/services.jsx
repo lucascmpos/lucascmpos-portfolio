@@ -7,8 +7,14 @@ import {
   Workflow,
   Database,
 } from "lucide-react";
+import { useInView } from "react-intersection-observer";
 
 const Services = ({ language, theme }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   const servicesData = [
     {
       id: 1,
@@ -105,7 +111,7 @@ const Services = ({ language, theme }) => {
       },
     },
     {
-      id: 4,
+      id: 5,
       title: {
         pt: "Testes Automatizados",
         en: "Automated Tests",
@@ -128,7 +134,7 @@ const Services = ({ language, theme }) => {
       },
     },
     {
-      id: 5,
+      id: 6,
       title: {
         pt: "Desenvolvimento de CRUDs",
         en: "CRUD development",
@@ -166,7 +172,12 @@ const Services = ({ language, theme }) => {
           {language === "pt" ? "Serviços" : "Services"}
         </h1>
       </div>
-      <div className="mt-10 flex flex-col items-center justify-center gap-10 px-10 py-10 md:mt-20 xl:grid xl:grid-cols-3">
+      <div
+        ref={ref}
+        className={`mt-10 flex flex-col items-center justify-center gap-10 px-10 py-10 transition-all duration-300 md:mt-20 xl:grid xl:grid-cols-3 ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
+      >
         {servicesData.map((service) => (
           <div
             key={service.id}

@@ -16,8 +16,15 @@ import mysqlIcon from "../assets/icons/mysql.svg";
 import postgresqlIcon from "../assets/icons/postgresql.svg";
 import prismaIcon from "../assets/icons/prisma.svg";
 import dockerIcon from "../assets/icons/docker.svg";
+import { useInView } from "react-intersection-observer";
+import TechnologyCard from "./tech-tag";
 
 const Tech = ({ language, theme }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   const icons = [
     { icon: htmlIcon, name: "HTML5" },
     { icon: cssIcon, name: "CSS3" },
@@ -62,7 +69,12 @@ const Tech = ({ language, theme }) => {
           : "These are my main technologies! Hover the cursor or click on the icon..."}
       </span>
       <div
-        className={`mt-2 grid   grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-20  p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"}`}
+        ref={ref}
+        className={`mt-2 grid grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-20 p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6 ${
+          theme === "light" ? "bg-gray-300" : "bg-[#020211]"
+        } ${
+          inView ? "opacity-100" : "opacity-0"
+        } transition-opacity duration-1000 ease-in-out`}
       >
         {icons.map((item, index) => (
           <div

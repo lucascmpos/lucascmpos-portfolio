@@ -23,6 +23,7 @@ import monfiVideo from "../assets/monfivideo.mp4";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
 import TechnologyCard from "./tech-tag";
+import { px } from "framer-motion";
 
 const projectsData = [
   {
@@ -433,7 +434,7 @@ const ProjectCard = ({ project, onClick }) => {
         </animated.div>
         <animated.div
           style={{
-            opacity: titleSpring.opacity.interpolate((opacity) => 1 - opacity),
+            opacity: titleSpring.opacity.to((opacity) => 1 - opacity),
           }}
           className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${
             isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
@@ -569,6 +570,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               transition: "opacity 0.3s, transform 0.3s ",
             },
           }}
+          appElement={document.getElementById("root")}
           overlayClassName={{
             base: "fixed inset-0 overflow-y-auto",
             afterOpen:
@@ -577,41 +579,34 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
           }}
         >
           {selectedProject && (
-            <div className="flex h-full flex-col">
-              <div className="flex flex-grow justify-start p-2">
-                {isLargeScreen && (
-                  <video
-                    controls
-                    autoPlay
-                    loop
-                    muted
-                    src={selectedProject.video}
+            <div className="flex h-full flex-col gap-5">
+              <div className="flex-grow">
+                <h2 className="text-2xl font-bold text-gray-200">
+                  {selectedProject.title}
+                </h2>
+                {!isLargeScreen && (
+                  <img
+                    src={selectedProject.image}
                     alt={selectedProject.title}
-                    type="video/mp4"
-                    className="h-fill w-1/2 rounded-md object-cover"
+                    className="my-4 h-[150px] w-full rounded-md object-contain"
                   />
                 )}
-                <div className="flex-grow pl-4">
-                  <h2 className="text-2xl font-bold text-gray-200">
-                    {selectedProject.title}
-                  </h2>
-                  <p
-                    className={`text-gray-300 ${
-                      isLargeScreen ? "" : "text-sm"
-                    } mt-2`}
-                  >
-                    {selectedProject.description[language]}
-                  </p>
-                  <div
-                    className={`mt-4 flex flex-wrap gap-2 ${
-                      isLargeScreen ? "" : "text-sm"
-                    }`}
-                  >
-                    {selectedProject.tech &&
-                      selectedProject.tech.map((technology, index) => (
-                        <TechnologyCard key={index} technology={technology} />
-                      ))}
-                  </div>
+                <p
+                  className={`text-gray-300 ${
+                    isLargeScreen ? "" : "text-sm"
+                  } mt-2`}
+                >
+                  {selectedProject.description[language]}
+                </p>
+                <div
+                  className={`mt-4 flex flex-wrap gap-2 ${
+                    isLargeScreen ? "" : "text-sm"
+                  }`}
+                >
+                  {selectedProject.tech &&
+                    selectedProject.tech.map((technology, index) => (
+                      <TechnologyCard key={index} technology={technology} />
+                    ))}
                 </div>
               </div>
               <div className="my-4 ml-4 flex flex-col justify-start gap-3 md:flex-row">
@@ -650,7 +645,6 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                   </button>
                 )}
               </div>
-
               <button
                 onClick={closeModal}
                 className="absolute right-0 top-0 cursor-pointer p-4 text-purple-900 hover:text-gray-200 "
