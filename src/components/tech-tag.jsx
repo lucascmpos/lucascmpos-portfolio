@@ -1,6 +1,6 @@
 const TechnologyCard = ({ technology, style }) => (
   <div
-    className="m-1 h-fit w-fit rounded-2xl bg-purple-900 p-2 text-sm font-bold text-white transition-all hover:scale-105"
+    className="text-md m-1 flex h-fit w-fit items-center justify-center rounded-2xl bg-purple-900 px-2 py-1 font-bold text-white transition-all hover:scale-105 "
     style={style}
   >
     {technology}
