@@ -288,7 +288,7 @@ const Experience = ({ language, theme }) => {
                   <TechnologyCard
                     key={index}
                     technology={technology}
-                    style={{ width: "auto", height: "35px" }}
+                    style={{ width: "140px", height: "auto" }}
                   />
                 ))}
             </div>
