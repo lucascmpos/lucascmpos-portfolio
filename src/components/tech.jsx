@@ -86,7 +86,7 @@ const Tech = ({ language, theme }) => {
               alt={`icon-${index}`}
               className="h-full w-full cursor-pointer rounded-xl"
             />
-            <div className="pointer-events-none absolute -top-9 left-1/2 mb-2 -translate-x-1/2 transform rounded-md bg-white px-2 py-1 text-center font-bold text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="pointer-events-none absolute -top-9 left-1/2 mb-2 -translate-x-1/2 transform rounded-md border-none bg-white px-2 py-1 text-center font-bold text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span className="relative">
                 {item.name}
                 <span className="absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 translate-y-4 border-4 border-solid border-white border-x-transparent border-b-transparent group-hover:border-opacity-100"></span>
