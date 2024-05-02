@@ -245,12 +245,12 @@ const Experience = ({ language, theme }) => {
       >
         {currentExperiences.map((experiencia) => (
           <div
-            className={`group relative flex w-full flex-col items-center justify-center gap-4 rounded-lg border-4  border-purple-700 border-opacity-10 py-8 transition-all  hover:border-opacity-50  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
+            className={`group  flex w-full flex-col items-center justify-center gap-4 rounded-lg border-4 border-purple-700  border-opacity-10  py-8 transition-all  hover:border-opacity-50  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
             key={experiencia.id}
           >
             <div className="flex flex-col items-center justify-center">
               <h2
-                className={`w-26 relative flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-2xl xl:w-auto ${
+                className={`w-26  flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-2xl xl:w-auto ${
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
@@ -259,18 +259,20 @@ const Experience = ({ language, theme }) => {
                 {experiencia.titulo}
               </h2>
 
-              <h3 className="text-gray-500">{experiencia.data}</h3>
+              <h3 className="font-semibold text-gray-500">
+                {experiencia.data}
+              </h3>
             </div>
-            <div className="flex w-full flex-col items-center justify-start ">
-              <div className="flex flex-col items-center justify-center pb-2 md:w-auto  ">
+            <div className="flex w-full flex-col  justify-start ">
+              <div className="flex flex-col px-5  pb-2 md:w-auto  ">
                 <h3
-                  className={`text-nowrap text-center text-lg   font-bold text-purple-700 transition-all md:text-3xl`}
+                  className={`text-nowrap text-left text-lg   font-bold text-purple-700 transition-all md:text-3xl`}
                 >
                   {experiencia.subtitulo}
                 </h3>
               </div>
               <p
-                className={`w-full px-3 text-justify text-sm  md:text-lg lg:w-10/12   2xl:w-full ${
+                className={`w-full px-5 text-start text-sm font-semibold  md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
@@ -318,18 +320,18 @@ const Experience = ({ language, theme }) => {
                 {formacao.titulo}
               </h2>
 
-              <h3 className="text-gray-500">{formacao.data}</h3>
+              <h3 className="font-semibold text-gray-500">{formacao.data}</h3>
             </div>
-            <div className="flex w-full flex-col items-center justify-start ">
-              <div className="flex flex-col items-center justify-center pb-2 md:w-auto  ">
+            <div className="flex w-full flex-col  justify-start ">
+              <div className="flex flex-col  justify-center px-5 pb-2 md:w-auto  ">
                 <h3
-                  className={`text-wrap text-center text-lg font-bold text-purple-700 transition-all md:text-2xl`}
+                  className={`text-wrap text-left text-lg font-bold text-purple-700 transition-all md:text-2xl`}
                 >
                   {formacao.subtitulo}
                 </h3>
               </div>
               <p
-                className={`w-full px-3 text-justify text-sm   md:text-lg lg:w-10/12   2xl:w-full ${
+                className={`w-full px-5 text-justify text-start text-sm   md:text-lg lg:w-10/12   2xl:w-full ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
