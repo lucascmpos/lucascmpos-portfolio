@@ -218,7 +218,7 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={`flex flex-col items-center justify-center px-3 pb-28 pt-20 md:pt-28 ${
+      className={` flex flex-col items-center justify-center px-3 pb-28 pt-20 md:pt-28 ${
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
@@ -228,7 +228,9 @@ const Experience = ({ language, theme }) => {
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
-          {language === "pt" ? "Experiência" : "Experience"}
+          {language === "pt"
+            ? "Experiências profissionais"
+            : "Professional experiences"}
         </h1>
       </div>
       <div
@@ -239,7 +241,7 @@ const Experience = ({ language, theme }) => {
       >
         {currentExperiences.map((experiencia) => (
           <div
-            className={`relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10  py-8  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
+            className={`group relative flex w-full flex-col items-center justify-center gap-4 rounded-lg border-4  border-purple-700 border-opacity-10 py-8 transition-all  hover:border-opacity-50  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
             key={experiencia.id}
           >
             <div className="flex flex-col items-center justify-center">
@@ -248,7 +250,7 @@ const Experience = ({ language, theme }) => {
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
-                <MdOutlineWorkOutline className=" h-12 w-12   text-purple-700" />
+                <MdOutlineWorkOutline className=" h-12 w-12 text-purple-700 transition-all    group-hover:scale-125" />
 
                 {experiencia.titulo}
               </h2>
@@ -271,7 +273,9 @@ const Experience = ({ language, theme }) => {
                 {experiencia.descricao}
               </p>
             </div>
-            <h3 className="font-semibold text-gray-500">Tecnologias usadas:</h3>
+            <span className="font-semibold text-gray-400">
+              {language === "pt" ? "Tecnologias usadas:" : "Used technologies:"}
+            </span>
             <div className=" flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap text-center   md:gap-4 lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
               {experiencia.tech &&
                 experiencia.tech.map((technology, index) => (
@@ -290,12 +294,12 @@ const Experience = ({ language, theme }) => {
               theme === "light" ? "text-black" : "text-gray-200"
             }`}
           >
-            {language === "pt" ? "Educação" : "Education"}
+            {language === "pt" ? "Formação acadêmica" : "Academic formation"}
           </h2>
         </div>
         {formacoes[language].map((formacao) => (
           <div
-            className={`relative flex w-full flex-col items-center justify-center gap-4  rounded-lg border-4 border-white border-opacity-10  py-8  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
+            className={`group relative flex w-full flex-col items-center justify-center gap-4 rounded-lg border-4  border-purple-700 border-opacity-10 py-8 transition-all  hover:border-opacity-50  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
             key={formacao.id}
           >
             <div className="flex flex-col items-center justify-center">
@@ -304,7 +308,7 @@ const Experience = ({ language, theme }) => {
                   theme === "light" ? "text-gray-800" : "text-gray-300"
                 } `}
               >
-                <IoSchoolOutline className=" h-12 w-12   text-purple-700" />
+                <IoSchoolOutline className="h-12 w-12 text-purple-700 transition-all   group-hover:scale-125" />
 
                 {formacao.titulo}
               </h2>
