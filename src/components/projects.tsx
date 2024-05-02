@@ -563,7 +563,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               opacity: modalAnimation.opacity,
               width: isLargeScreen ? "90%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
-              height: isLargeScreen ? "60%" : "100%",
+              height: isLargeScreen ? "90%" : "100%",
               backgroundColor: "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
@@ -579,16 +579,27 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
           }}
         >
           {selectedProject && (
-            <div className="flex h-full flex-col gap-5">
-              <div className="flex-grow">
+            <div className="flex flex-col gap-5 lg:items-center lg:justify-center ">
+              <div className="">
                 <h2 className="text-2xl font-bold text-gray-200">
                   {selectedProject.title}
                 </h2>
-                {!isLargeScreen && (
+                {isLargeScreen ? (
+                  <video
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    src={selectedProject.video}
+                    alt={selectedProject.title}
+                    type="video/mp4"
+                    className="my-4 flex h-[300px] w-[500px] items-center justify-center rounded-md object-cover"
+                  />
+                ) : (
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="my-4 h-[150px] w-full rounded-md object-contain"
+                    className="my-4 h-[200px] w-full rounded-md object-contain"
                   />
                 )}
                 <p
