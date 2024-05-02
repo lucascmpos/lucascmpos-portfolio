@@ -31,7 +31,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
       icon: (
         <ImLinkedin
           size={39}
-          className=" hover:text-purple-800 transition-all duration-300"
+          className=" transition-all duration-300 hover:text-purple-800"
         />
       ),
       href: "https://www.linkedin.com/in/lucas-campos81/",
@@ -41,7 +41,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
       icon: (
         <FaGithub
           size={40}
-          className=" hover:text-purple-800 transition-all duration-300"
+          className=" transition-all duration-300 hover:text-purple-800"
         />
       ),
       href: "https://github.com/lucascmpos",
@@ -51,7 +51,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
       icon: (
         <IoLogoWhatsapp
           size={40}
-          className=" hover:text-purple-800 transition-all duration-300"
+          className=" transition-all duration-300 hover:text-purple-800"
         />
       ),
       href: "https://wa.me/5514998718530",
@@ -61,20 +61,20 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
   return (
     <main
       id="home"
-      className={`flex flex-col justify-center items-center gap-20 ${
+      className={`flex flex-col items-center justify-center gap-20 ${
         theme === "light" ? "bg-gray-300" : "bg-[#020211]"
       }`}
     >
-      <div className="flex flex-col justify-center items-center gap-16 md:pt-96 pt-72 ">
-        <div className="flex lg:w-auto w-auto justify-center items-center flex-col gap-1 ">
+      <div className="flex flex-col items-center justify-center gap-16 pt-72 md:pt-96 ">
+        <div className="flex w-auto flex-col items-center justify-center gap-1 lg:w-auto ">
           <h1
-            className={`font-extrabold lg:text-6xl xl:text-7xl text-3xl    ${
+            className={`text-3xl font-extrabold md:text-5xl lg:text-6xl xl:text-7xl    ${
               theme === "light" ? "text-gray-950" : "text-gray-200"
             }`}
           >
             Lucas Campos
             <span
-              className={`font-extrabold lg:text-6xl xl:text-7xl text-3xl ${
+              className={`text-3xl font-extrabold md:text-5xl lg:text-6xl xl:text-7xl ${
                 theme === "light" ? "text-purple-500" : "text-purple-900"
               }`}
             >
@@ -82,7 +82,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
             </span>
           </h1>
           <span
-            className={`font-extrabold text-center lg:text-6xl xl:text-7xl text-3xl md:w-auto w-auto  ${
+            className={`w-auto text-center text-3xl font-extrabold md:w-auto md:text-5xl lg:text-6xl xl:text-7xl  ${
               theme === "light" ? "text-purple-500" : "text-purple-900"
             }`}
           >
@@ -91,17 +91,17 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
           </span>
         </div>
         <a
-          className={`flex flex-row gap-3 justify-center   items-center font-bold cursor-pointer text-black group transition-all duration-300 rounded-lg p-2 ${
+          className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
             theme === "light"
-              ? "bg-black hover:bg-purple-500 hover:text-black text-gray-200"
-              : "bg-white hover:bg-zinc-950 hover:text-gray-200  text-black"
+              ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+              : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
           }`}
           href={language === "pt" ? curriculo : resume}
           target="_blank"
         >
           {language === "pt" ? "Download do currículo" : "Download resume"}
           <MdOutlineSimCardDownload
-            className={`group-hover:scale-125  transition-all duration-300 ${
+            className={`transition-all  duration-300 group-hover:scale-125 ${
               theme === "light"
                 ? "group-hover:text-black"
                 : "group-hover:text-gray-200"
@@ -115,7 +115,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
           <a
             href={network.href}
             target="_blank"
-            className={`cursor-pointer hover:-translate-y-1 transition all duration-500 ${
+            className={`all cursor-pointer transition duration-500 hover:-translate-y-1 ${
               theme === "light" ? "text-black" : "text-gray-200 "
             }`}
             id={network.name}
