@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
+import devFood from "../assets/devfood.png";
 import sharpCut from "../assets/sharpcut.png";
 import periWare from "../assets/periwarestore.png";
 import uploadAi from "../assets/uploadai.jpeg";
@@ -17,17 +18,69 @@ import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import natuFloraVideo from "../assets/natufloravideo.mp4";
 import pairBankVideo from "../assets/pairbankvideo.mp4";
 import sharpcutVideo from "../assets/sharpcutvideo.mp4";
+import devfoodVideo from "../assets/devfoodvideo.mp4";
 import periwareVideo from "../assets/periwarevideo.mp4";
 import monfiVideo from "../assets/monfivideo.mp4";
 
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
 import TechnologyCard from "./tech-tag";
-import { px } from "framer-motion";
 
 const projectsData = [
   {
     id: 1,
+    title: "Dev Food",
+    image: devFood,
+    video: devfoodVideo,
+    description: {
+      pt: (
+        <>
+          Este projeto consiste em uma plataforma de delivery de comida, onde o
+          usuario loga com o Google, faz pedidos, favorita restaurantes,
+          consulta seus pedidos e pode pesquisar por restaurantes.
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Login com o Google
+          <br />
+          - Responsividade
+          <br />- Integração com banco de dados SQL.
+        </>
+      ),
+      en: (
+        <>
+          This project consists of a food delivery platform, where the user logs
+          in with Google, places orders, favorites restaurants, check your
+          orders and search for restaurants.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Google login
+          <br />
+          - Responsiveness
+          <br />- Integration with SQL database.
+        </>
+      ),
+    },
+    site: "https://devfoods.vercel.app/",
+    github: "https://github.com/lucascmpos/dev-food/",
+    tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwindcss",
+      "ShadcnUI",
+      "Figma",
+      "Prisma",
+      "PostgreSQL",
+    ],
+  },
+  {
+    id: 2,
     title: "SharpCut Barbers",
     image: sharpCut,
     video: sharpcutVideo,
@@ -83,7 +136,7 @@ const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Periware Store",
     video: periwareVideo,
     image: periWare,
@@ -143,7 +196,7 @@ const projectsData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Upload.ai",
     video: uploadAiVideo,
     image: uploadAi,
@@ -201,7 +254,7 @@ const projectsData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Natu Flora",
     video: natuFloraVideo,
     image: natuFlora,
@@ -242,7 +295,7 @@ const projectsData = [
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Pairbank",
     video: pairBankVideo,
     image: pairBank,
@@ -268,7 +321,7 @@ const projectsData = [
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
@@ -312,7 +365,7 @@ const projectsData = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "MonFi",
     video: monfiVideo,
     image: monFi,
