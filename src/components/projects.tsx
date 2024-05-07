@@ -66,6 +66,8 @@ const projectsData = [
     },
     site: "https://devfoods.vercel.app/",
     github: "https://github.com/lucascmpos/dev-food/",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_next-react-food-activity-7193210446579908608-yjws?utm_source=share&utm_medium=member_desktop",
     tech: [
       "HTML",
       "CSS",
@@ -412,7 +414,7 @@ const projectsData = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "More soon...",
     image: interroga,
     description: {
@@ -547,14 +549,6 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
     };
   }, [modalIsOpen]);
 
-  const toggleLanguage = () => {
-    const newLanguage = language === "pt" ? "en" : "pt";
-    setLanguage(newLanguage);
-    onChangeLanguage(newLanguage);
-  };
-
-  const getText = (texts) => (language === "pt" ? texts.pt : texts.en);
-
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -598,13 +592,13 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
         theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
       }  `}
     >
-      <div className="flex flex-col items-center justify-center pb-20 md:items-start">
+      <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
         <h1
           className={` text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
-          {language === "pt" ? "Projetos" : "Projects"}
+          {language === "pt" ? "Projetos em destaque" : "Projects highlighted"}
         </h1>
         <p
           className={` mt-5 text-center text-lg lg:mt-10 lg:text-start ${
