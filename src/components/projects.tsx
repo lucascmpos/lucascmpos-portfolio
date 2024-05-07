@@ -531,7 +531,7 @@ const ProjectCard = ({ project, onClick }) => {
   );
 };
 
-const Projects = ({ onChangeLanguage, language, theme }) => {
+const Projects = ({ language, theme }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -646,7 +646,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               width: isLargeScreen ? "80%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "85%" : "100%",
-              backgroundColor: "#01020a",
+              backgroundColor: theme === "light" ? "bg-white" : "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
               transition: "opacity 0.3s, transform 0.3s ",
@@ -663,7 +663,9 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
           {selectedProject && (
             <div className="flex flex-col items-center justify-center gap-5 overscroll-y-none ">
               <div className="flex flex-col items-center justify-center">
-                <h2 className="text-2xl font-bold text-gray-200">
+                <h2
+                  className={`text-2xl font-bold  ${theme === "light" ? "text-black" : "text-gray-200"}`}
+                >
                   {selectedProject.title}
                 </h2>
                 {isLargeScreen ? (
@@ -685,9 +687,9 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                   />
                 )}
                 <p
-                  className={`text-gray-300 ${
+                  className={` font-semibold ${
                     isLargeScreen ? "" : "text-sm"
-                  } mt-2`}
+                  } ${theme === "light" ? "text-gray-700" : "text-gray-300"} mt-2`}
                 >
                   {selectedProject.description[language]}
                 </p>
@@ -704,7 +706,11 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               </div>
               <div className="my-4  flex flex-col items-center justify-center gap-3 md:flex-row ">
                 <button
-                  className="group mb-2 mr-2 flex w-24 flex-row items-center justify-center gap-2 rounded-md bg-gray-200 px-4 py-2 font-semibold text-black"
+                  className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                    theme === "light"
+                      ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                      : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+                  }`}
                   onClick={() => window.open(selectedProject.site, "_blank")}
                 >
                   Site
@@ -714,7 +720,11 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                   />
                 </button>
                 <button
-                  className="group mb-2 mr-2 flex  w-32 flex-row items-center justify-center gap-2 rounded-md bg-gray-200 px-4 py-2 font-semibold text-black"
+                  className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                    theme === "light"
+                      ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                      : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+                  }`}
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
@@ -725,7 +735,11 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className="group mb-2 mr-2 flex  w-52 flex-row items-center justify-center gap-2 rounded-md bg-gray-200 px-4 py-2 font-semibold text-black"
+                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                      theme === "light"
+                        ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                        : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+                    }`}
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }
@@ -740,7 +754,7 @@ const Projects = ({ onChangeLanguage, language, theme }) => {
               </div>
               <button
                 onClick={closeModal}
-                className="absolute right-0 top-0 cursor-pointer p-4 text-purple-900 hover:text-gray-200 "
+                className={`absolute right-0 top-0 cursor-pointer p-4 text-purple-900 ${theme === "light" ? "hover:text-black" : "hover:text-gray-200 "}`}
               >
                 <FaRegWindowClose size={25} />
               </button>

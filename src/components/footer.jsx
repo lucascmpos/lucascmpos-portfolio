@@ -1,14 +1,7 @@
-import React from "react";
-
-const Footer = ({ language, onChangeLanguage }) => {
-  const toggleLanguage = () => {
-    const newLanguage = language === "pt" ? "en" : "pt";
-    setLanguage(newLanguage);
-    onChangeLanguage(newLanguage);
-  };
+const Footer = ({ language }) => {
   return (
-    <footer className="bg-[#020207] flex  justify-center items-center font-semibold text-gray-400 p-6">
-      <div className="flex gap-2 md:flex-row flex-col">
+    <footer className="flex items-center  justify-center bg-[#020207] p-6 font-semibold text-gray-400">
+      <div className="flex flex-col gap-2 md:flex-row">
         <p className="text-semibold">
           <span className="font-extrabold">© 2024</span> Lucas Campos.
         </p>
