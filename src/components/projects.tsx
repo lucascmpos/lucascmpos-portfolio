@@ -594,7 +594,7 @@ const Projects = ({ language, theme }) => {
     >
       <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
         <h1
-          className={` text-4xl font-bold ${
+          className={` text-center text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
