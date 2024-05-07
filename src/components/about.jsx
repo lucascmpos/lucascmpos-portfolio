@@ -43,7 +43,7 @@ const About = ({ language, theme }) => {
       return {
         title: "Sobre",
         text1:
-          "Oi! sou o Lucas. Desenvolvedor Front End e graduado em Segurança da Informação. Minha paixão por desenvolvimento começou quando consegui juntar programação e experiência do usuário, com isso, consigo formar ótimas experiências em forma de aplicações. De forma resumida, essas são as tecnologias que uso diariamente: JavaScript, TypeScript, React.js, Next.js, Tailwindcss, Node.js e PostgreSQL.",
+          "Oi! sou o Lucas. Desenvolvedor Front End e graduado em Segurança da Informação. Minha paixão por desenvolvimento começou quando consegui juntar programação e experiência do usuário, com isso, consigo formar ótimas experiências em forma de aplicações. De forma resumida, essas são as tecnologias que uso diariamente: JavaScript, TypeScript, React.js, Next.js, CSS, Node.js e PostgreSQL.",
         text2:
           "Meu primeiro contato com a programação foi em 2018, com o C++, porém atualmente estou imerso no ecossistema JavaScript e TypeScript, utilizando tecnologias como React.js/Next.js para criar experiências envolventes no Front-End e explorando as possibilidades do Node.js para fortalecer o Back-End. Minha bagagem com minha recente graduação inclui experiência prática em tecnologias como AWS Cloud, bancos de dados SQL e Docker, proporcionando uma base sólida para enfrentar os desafios contemporâneos. Sempre busco ir além das expectativas, garantindo que as soluções que entrego sejam não apenas funcionais, mas também eficientes e seguras. O que mais me motiva é a busca por oferecer aos usuários aplicações que se destacam pela sua limpeza, responsividade e qualidade excepcional. Estou animado com as possibilidades que a programação oferece e ansioso para continuar explorando novos horizontes neste universo.",
       };
@@ -77,20 +77,20 @@ const About = ({ language, theme }) => {
       </div>
       <div ref={firstTextRef}></div>
       <div
-        className={`flex w-full flex-col items-center justify-center  gap-5 px-5 text-start transition-opacity duration-1000 ease-in-out md:w-6/12 lg:w-10/12 lg:items-start ${
+        className={`flex w-full flex-col items-start justify-center gap-5  px-5 transition-opacity duration-1000 ease-in-out md:items-center lg:w-10/12 lg:items-start ${
           inView ? "opacity-100" : "opacity-0"
         }`}
         ref={ref}
       >
         <h1
-          className={` flex text-4xl font-bold ${
+          className={` flex  text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
           {title}
         </h1>
         <p
-          className={`text-md w-screen p-5 text-center font-semibold transition-opacity duration-500 ease-in-out md:text-lg  lg:w-auto lg:p-0 lg:text-start ${
+          className={`text-md w-full text-left font-semibold transition-opacity duration-500 ease-in-out md:text-lg  lg:w-auto lg:p-0 lg:text-start ${
             showMore ? "" : ""
           } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
@@ -116,7 +116,7 @@ const About = ({ language, theme }) => {
         )}
 
         <p
-          className={`text-md w-screen p-5  text-center font-semibold text-gray-200 transition-opacity duration-500 ease-in-out md:text-lg  lg:w-auto lg:p-0 lg:text-start ${
+          className={`text-md w-full   text-left font-semibold text-gray-200 transition-opacity duration-500 ease-in-out md:text-lg   lg:p-0 lg:text-start ${
             showMore ? "opacity-100" : "opacity-0"
           } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
