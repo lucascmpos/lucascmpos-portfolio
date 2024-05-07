@@ -1,4 +1,3 @@
-import React from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
@@ -8,16 +7,6 @@ import resume from "../assets/resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
-  const toggleLanguage = () => {
-    const newLanguage = language === "pt" ? "en" : "pt";
-    onChangeLanguage(newLanguage);
-  };
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    onChangeTheme(newTheme);
-  };
-
   const [typeEffect] = useTypewriter({
     words: ["Front End Developer", "React Developer", "Web Developer"],
     loop: {},

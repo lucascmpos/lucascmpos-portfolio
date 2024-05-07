@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Img } from "react-image";
 import Photo from "../assets/me.jpg";
 import { useInView } from "react-intersection-observer";

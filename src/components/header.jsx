@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LuInfo } from "react-icons/lu";
 import { FaRegCircleUser } from "react-icons/fa6";
@@ -8,7 +8,6 @@ import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
 import { IoLanguage } from "react-icons/io5";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { List } from "lucide-react";
 
 const Header = ({ onChangeLanguage, onChangeTheme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -73,14 +72,14 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: "0%" }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="fixed right-0 top-0 z-20 h-full  w-full text-gray-300 backdrop-blur-3xl backdrop-filter transition-transform duration-300"
+            exit={{ x: "0%" }}
+            transition={{ duration: 0, ease: "easeInOut" }}
+            className="fixed right-0 top-0 z-20 h-full  w-full text-gray-300 backdrop-blur-3xl backdrop-filter transition-transform duration-200"
           >
             <div className="flex justify-end p-4">
               <button
                 onClick={() => toggleMenu(false)}
-                className={`text-2xl  focus:outline-none ${
+                className={`mr-2  text-3xl focus:outline-none ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
