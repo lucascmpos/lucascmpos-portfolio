@@ -1,5 +1,6 @@
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { IoSchoolOutline } from "react-icons/io5";
+import { ChevronsRight } from "lucide-react";
 
 import { useInView } from "react-intersection-observer";
 import TechnologyCard from "./tech-tag";
@@ -278,10 +279,17 @@ const Experience = ({ language, theme }) => {
                 {experiencia.descricao}
               </p>
             </div>
-            <span className=" text-center font-semibold text-gray-400">
-              {language === "pt" ? "Tecnologias usadas:" : "Used technologies:"}
-            </span>
-            <div className=" flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap text-center   md:gap-4 lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
+            <div className="flex w-full flex-row justify-between px-5">
+              <span className=" text-center font-semibold text-gray-400">
+                {language === "pt"
+                  ? "Tecnologias usadas:"
+                  : "Used technologies:"}
+              </span>
+
+              <ChevronsRight className="text-purple-800 lg:hidden" />
+            </div>
+
+            <div className="flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap px-2 text-center   md:gap-4 lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
               {experiencia.tech &&
                 experiencia.tech.map((technology, index) => (
                   <TechnologyCard
