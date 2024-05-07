@@ -193,7 +193,7 @@ const Services = ({ language, theme }) => {
               {service.title[language]}
             </h2>
             <p
-              className={`w-fit text-center font-semibold  lg:w-96 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+              className={`w-fit px-4 text-center font-semibold  lg:w-96 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
             >
               {service.description[language]}
             </p>
