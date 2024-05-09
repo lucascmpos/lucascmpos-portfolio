@@ -26,7 +26,6 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
     onChangeTheme(newTheme);
   };
 
@@ -130,7 +129,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             <div className="absolute bottom-10 right-10">
               <button
                 className={`flex flex-row items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:text-purple-800 ${
-                  theme == "light" ? "text-black" : "text-gray-200"
+                  theme === "light" ? "text-black" : "text-gray-200"
                 }`}
                 onClick={toggleLanguage}
               >
