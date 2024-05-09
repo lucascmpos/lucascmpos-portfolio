@@ -72,6 +72,7 @@ const Experience = ({ language, theme }) => {
           "React.js",
           "React Native",
           "Sass",
+          "Figma",
           "Storybook",
         ],
         data: "11/2022 - 09/2023 ",
@@ -273,7 +274,7 @@ const Experience = ({ language, theme }) => {
               </div>
               <p
                 className={`w-full px-5 text-start text-sm font-semibold  md:text-lg lg:w-10/12   2xl:w-full ${
-                  theme === "light" ? "text-black" : "text-gray-300"
+                  theme === "light" ? "text-black" : "text-gray-400"
                 }`}
               >
                 {experiencia.descricao}
@@ -338,8 +339,8 @@ const Experience = ({ language, theme }) => {
                 </h3>
               </div>
               <p
-                className={`w-full px-5 text-justify text-start text-sm   md:text-lg lg:w-10/12   2xl:w-full ${
-                  theme === "light" ? "text-black" : "text-gray-300"
+                className={`w-full px-5  text-start text-sm font-semibold   md:text-lg lg:w-10/12   2xl:w-full ${
+                  theme === "light" ? "text-black" : "text-gray-400"
                 }`}
               >
                 {formacao.descricao}
