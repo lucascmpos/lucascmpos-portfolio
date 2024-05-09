@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/header";
 import Home from "./components/home";
 import About from "./components/about";
@@ -11,7 +11,16 @@ import Tech from "./components/tech";
 
 function App() {
   const [language, setLanguage] = useState("pt");
-  const [theme, setTheme] = useState("off");
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const prefersDarkMode =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (prefersDarkMode) {
+      setTheme("dark");
+    }
+  }, []);
 
   const switchToEnglish = () => {
     setLanguage("en");
@@ -26,11 +35,11 @@ function App() {
   };
 
   const switchToDark = () => {
-    setLanguage("dark");
+    setTheme("dark");
   };
 
   const switchToLight = () => {
-    setLanguage("light");
+    setTheme("light");
   };
 
   const handleChangeTheme = (newTheme) => {
@@ -38,7 +47,9 @@ function App() {
   };
 
   return (
-    <div className="overflow-x-hidden">
+    <div
+      className={`overflow-x-hidden ${theme === "dark" ? "dark-theme" : ""}`}
+    >
       <Header
         onSwitchToEnglish={switchToEnglish}
         onSwitchToPortuguese={switchToPortuguese}
@@ -46,6 +57,7 @@ function App() {
         onSwitchToDark={switchToDark}
         onSwitchToLight={switchToLight}
         onChangeTheme={handleChangeTheme}
+        theme={theme}
       />
       <Home theme={theme} language={language} />
       <About theme={theme} language={language} />

@@ -9,10 +9,9 @@ import { useMediaQuery } from "react-responsive";
 import { IoLanguage } from "react-icons/io5";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-const Header = ({ onChangeLanguage, onChangeTheme }) => {
+const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [language, setLanguage] = useState("pt");
-  const [theme, setTheme] = useState("dark");
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const toggleMenu = () => {
@@ -74,7 +73,7 @@ const Header = ({ onChangeLanguage, onChangeTheme }) => {
             animate={{ x: "0%" }}
             exit={{ x: "0%" }}
             transition={{ duration: 0, ease: "easeInOut" }}
-            className="fixed right-0 top-0 z-20 h-full  w-full text-gray-300 backdrop-blur-3xl backdrop-filter transition-transform duration-200"
+            className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300 backdrop-blur-3xl backdrop-filter transition-transform duration-200 `}
           >
             <div className="flex justify-end p-4">
               <button
