@@ -12,7 +12,7 @@ import interroga from "../assets/interroga.jpg";
 import { useSpring, animated } from "react-spring";
 import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { MdOutlineArrowCircleUp } from "react-icons/md";
+import { CircleChevronUp } from "lucide-react";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import natuFloraVideo from "../assets/natufloravideo.mp4";
@@ -413,33 +413,6 @@ const projectsData = [
       "The Movie Database API",
     ],
   },
-  {
-    id: 9,
-    title: "More soon...",
-    image: interroga,
-    description: {
-      pt: (
-        <>
-          Estou em constante estudo e evolução, portanto te garanto que terei
-          mais projetos de sucesso aqui no portfólio!
-          <br />
-          Você pode acompanhar os projetos em andamento no meu GitHub, onde
-          todos meus projetos tem o repositório público, para todos verem.
-        </>
-      ),
-      en: (
-        <>
-          I am constantly studying and evolving, so I guarantee you that I will
-          have more successful projects here in the portfolio!
-          <br />
-          You can follow ongoing projects on my GitHub, where all my projects
-          have a public repository, for everyone to see.
-        </>
-      ),
-    },
-    site: "https://github.com/lucascmpos",
-    github: "https://github.com/lucascmpos",
-  },
 ];
 const ProjectCard = ({ project, onClick }) => {
   const [hovered, setHovered] = useState(false);
@@ -475,14 +448,14 @@ const ProjectCard = ({ project, onClick }) => {
       onClick={() => onClick(project)}
     >
       <div
-        className={`relative border-b-4 border-purple-800 ${
+        className={`relative  rounded-t-full border-b-4 border-purple-800 ${
           isLargeScreen ? " " : ""
         }`}
       >
         <img
           src={project.image}
           alt={project.title}
-          className={`w-full transform rounded-sm object-cover duration-100  group-hover:scale-105 ${
+          className={`w-full transform  object-cover duration-100  group-hover:scale-105 ${
             isLargeScreen ? "h-56" : "h-60"
           }`}
         />
@@ -495,7 +468,7 @@ const ProjectCard = ({ project, onClick }) => {
             right: 0,
             textAlign: "center",
           }}
-          className="absolute left-0  top-0 h-full w-full transform rounded-sm bg-[#01020a] duration-100 group-hover:scale-110"
+          className="absolute left-0  top-0 h-full w-full   bg-[#01020a] duration-100 group-hover:scale-105"
         ></animated.div>
         <animated.div
           style={{
@@ -519,11 +492,11 @@ const ProjectCard = ({ project, onClick }) => {
           }}
           className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${
             isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
-          } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-100 hover:bg-purple-950 group-hover:scale-105`}
+          } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-200 hover:bg-purple-950 group-hover:scale-105`}
         >
-          <MdOutlineArrowCircleUp
-            className=" transition-all group-hover:scale-110"
-            size={30}
+          <CircleChevronUp
+            className=" hover: transition-all hover:scale-110"
+            size={26}
           />
         </animated.div>
       </div>
@@ -683,7 +656,7 @@ const Projects = ({ language, theme }) => {
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="my-4 h-[200px] w-full rounded-md object-contain"
+                    className="my-4 h-[200px]  rounded-md object-contain"
                   />
                 )}
                 <p
