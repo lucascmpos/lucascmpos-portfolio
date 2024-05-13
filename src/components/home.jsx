@@ -1,5 +1,6 @@
 import { MdOutlineSimCardDownload } from "react-icons/md";
-import { Linkedin, Github } from "lucide-react";
+import { Github } from "lucide-react";
+import { PiLinkedinLogoBold } from "react-icons/pi";
 import { TbBrandWhatsapp } from "react-icons/tb";
 
 import curriculo from "../assets/curriculo.pdf";
@@ -18,7 +19,7 @@ const Home = ({ language, theme }) => {
     {
       name: "linkedin",
       icon: (
-        <Linkedin
+        <PiLinkedinLogoBold
           size={40}
           className=" transition-all duration-300 hover:text-purple-800"
         />
