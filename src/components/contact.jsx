@@ -1,7 +1,4 @@
-import { MdOutlineEmail } from "react-icons/md";
-import { BsTelephone } from "react-icons/bs";
-import { CiLinkedin } from "react-icons/ci";
-import { FiGithub } from "react-icons/fi";
+import { Mail, Linkedin, Smartphone, Github } from "lucide-react";
 
 import { useInView } from "react-intersection-observer";
 
@@ -26,7 +23,7 @@ const Contact = ({ language, theme }) => {
         <div className="mb-36 flex flex-col items-center justify-center gap-5">
           <h1
             className={` text-4xl font-bold ${
-              theme === "light" ? "text-black" : "text-gray-200"
+              theme === "light" ? "text-black" : "text-purple-900"
             }`}
           >
             {" "}
@@ -42,13 +39,13 @@ const Contact = ({ language, theme }) => {
         <div className="flex flex-col gap-32  lg:flex-row">
           <a href="mailto:lucasoliveiracampos81@gmail.com" target="_blank">
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
-              <MdOutlineEmail
+              <Mail
                 size={70}
-                className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-[#383838]"
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-white" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-gray-200">
+              <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 Email
               </h2>
               <p className="font-semibold text-gray-500">
@@ -58,13 +55,13 @@ const Contact = ({ language, theme }) => {
           </a>
           <a href="https://wa.me/5514998718530" target="_blank">
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
-              <BsTelephone
+              <Smartphone
                 size={70}
-                className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-[#383838]"
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-white" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-gray-200">
+              <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 {language === "pt" ? "Telefone" : "Phone"}
               </h2>
               <p className="font-semibold text-gray-500">
@@ -74,13 +71,13 @@ const Contact = ({ language, theme }) => {
           </a>
           <a href="https://www.linkedin.com/in/lucas-campos81/" target="_blank">
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
-              <CiLinkedin
+              <Linkedin
                 size={70}
-                className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-[#383838]"
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-white" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-gray-200">
+              <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 LinkedIn
               </h2>
               <p className="font-semibold text-gray-500">in/lucas-campos81</p>
@@ -88,13 +85,13 @@ const Contact = ({ language, theme }) => {
           </a>
           <a href="https://github.com/lucascmpos" target="_blank">
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
-              <FiGithub
+              <Github
                 size={70}
-                className={`rounded-xl  p-3 text-purple-800 ${
-                  theme === "light" ? "bg-white" : "bg-[#383838]"
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-white" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-gray-200">
+              <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 GitHub
               </h2>
               <p className="font-semibold text-gray-500">@lucascmpos</p>

@@ -1,12 +1,12 @@
-import { IoLogoWhatsapp } from "react-icons/io";
-import { FaGithub } from "react-icons/fa";
-import { ImLinkedin } from "react-icons/im";
 import { MdOutlineSimCardDownload } from "react-icons/md";
+import { Linkedin, Github } from "lucide-react";
+import { PiWhatsappLogo } from "react-icons/pi";
+
 import curriculo from "../assets/curriculo.pdf";
 import resume from "../assets/resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
+const Home = ({ language, theme }) => {
   const [typeEffect] = useTypewriter({
     words: ["Front End Developer", "React Developer", "Web Developer"],
     loop: {},
@@ -18,8 +18,8 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
     {
       name: "linkedin",
       icon: (
-        <ImLinkedin
-          size={39}
+        <Linkedin
+          size={40}
           className=" transition-all duration-300 hover:text-purple-800"
         />
       ),
@@ -28,7 +28,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
     {
       name: "github",
       icon: (
-        <FaGithub
+        <Github
           size={40}
           className=" transition-all duration-300 hover:text-purple-800"
         />
@@ -38,7 +38,7 @@ const Home = ({ language, onChangeLanguage, theme, onChangeTheme }) => {
     {
       name: "whatsapp",
       icon: (
-        <IoLogoWhatsapp
+        <PiWhatsappLogo
           size={40}
           className=" transition-all duration-300 hover:text-purple-800"
         />
