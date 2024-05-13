@@ -127,7 +127,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             </div>
             <div className="absolute bottom-10 right-10">
               <button
-                className={`flex flex-row items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:text-purple-800 ${
+                className={`flex flex-row items-center justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800 ${
                   theme === "light" ? "text-black" : "text-gray-200"
                 }`}
                 onClick={toggleLanguage}
@@ -211,7 +211,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
         {!isMobile && (
           <button
-            className="flex flex-row items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:text-purple-800"
+            className="flex flex-row items-center justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800"
             onClick={toggleLanguage}
           >
             {language === "pt" ? "EN" : "PTBR"}
