@@ -1,6 +1,6 @@
 import { MdOutlineSimCardDownload } from "react-icons/md";
 import { Linkedin, Github } from "lucide-react";
-import { PiWhatsappLogo } from "react-icons/pi";
+import { TbBrandWhatsapp } from "react-icons/tb";
 
 import curriculo from "../assets/curriculo.pdf";
 import resume from "../assets/resume.pdf";
@@ -38,7 +38,7 @@ const Home = ({ language, theme }) => {
     {
       name: "whatsapp",
       icon: (
-        <PiWhatsappLogo
+        <TbBrandWhatsapp
           size={40}
           className=" transition-all duration-300 hover:text-purple-800"
         />

@@ -6,8 +6,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { GoProjectRoadmap } from "react-icons/go";
 import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
-import { IoLanguage } from "react-icons/io5";
-import { FiMoon, FiSun } from "react-icons/fi";
+import { Moon, Sun, Languages } from "lucide-react";
 
 const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -133,8 +132,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 }`}
                 onClick={toggleLanguage}
               >
-                {language === "pt" ? "EN" : "PT-BR"}
-                <IoLanguage size={23} />
+                {language === "pt" ? "EN" : "PTBR"}
+                <Languages size={23} />
               </button>
             </div>
             <div className="absolute bottom-10 right-10"></div>
@@ -192,11 +191,11 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
         >
           {theme === "light" ? (
             <>
-              <FiMoon size={23} />
+              <Moon size={23} />
             </>
           ) : (
             <>
-              <FiSun size={23} />
+              <Sun size={23} />
             </>
           )}
         </button>
@@ -215,8 +214,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             className="flex flex-row items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:text-purple-800"
             onClick={toggleLanguage}
           >
-            {language === "pt" ? "EN" : "PT-BR"}
-            <IoLanguage size={23} />
+            {language === "pt" ? "EN" : "PTBR"}
+            <Languages size={23} />
           </button>
         )}
       </div>
