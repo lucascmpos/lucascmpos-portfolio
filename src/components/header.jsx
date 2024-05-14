@@ -68,14 +68,13 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
         {isOpen && (
           <motion.div
             initial={{ x: "100%" }}
-            animate={{ x: "0%" }}
-            exit={{ x: "50%" }}
-            transition={{ duration: 0 }}
-            className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300  transition-transform duration-200 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"} `}
+            animate={{ x: isOpen ? "0%" : "100%" }}
+            transition={{ duration: 0.3 }}
+            className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"} `}
           >
             <div className="flex justify-end p-4">
               <button
-                onClick={() => toggleMenu(false)}
+                onClick={toggleMenu}
                 className={`mr-2  text-3xl focus:outline-none ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
@@ -109,7 +108,6 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   key={item.id}
                   to={item.id}
                   smooth={true}
-                  duration={500}
                   onClick={() => toggleMenu(false)}
                 >
                   <h2

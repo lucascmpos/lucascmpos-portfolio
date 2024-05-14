@@ -8,7 +8,6 @@ import natuFlora from "../assets/natuflora.png";
 import pairBank from "../assets/pairbank.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
 import monFi from "../assets/monfi.jpeg";
-import interroga from "../assets/interroga.jpg";
 import { useSpring, animated } from "react-spring";
 import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -555,7 +554,7 @@ const Projects = ({ language, theme }) => {
     setTimeout(() => {
       setModalIsOpen(false);
       setSelectedProject(null);
-    }, 300);
+    }, 200);
   };
 
   return (
@@ -619,7 +618,7 @@ const Projects = ({ language, theme }) => {
               width: isLargeScreen ? "80%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "85%" : "100%",
-              backgroundColor: theme === "light" ? "bg-white" : "#01020a",
+              backgroundColor: theme === "light" ? "#F6F6F6" : "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
               transition: "opacity 0.3s, transform 0.3s ",
