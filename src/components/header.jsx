@@ -69,9 +69,9 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: "0%" }}
-            exit={{ x: "0%" }}
-            transition={{ duration: 0, ease: "easeInOut" }}
-            className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300 backdrop-blur-3xl backdrop-filter transition-transform duration-200 `}
+            exit={{ x: "50%" }}
+            transition={{ duration: 0 }}
+            className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300  transition-transform duration-200 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"} `}
           >
             <div className="flex justify-end p-4">
               <button
