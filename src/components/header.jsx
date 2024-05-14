@@ -6,7 +6,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { GoProjectRoadmap } from "react-icons/go";
 import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
-import { Moon, Sun, Languages } from "lucide-react";
+import { Moon, Sun, Languages, AlignJustify, X } from "lucide-react";
 
 const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -75,11 +75,11 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             <div className="flex justify-end p-4">
               <button
                 onClick={toggleMenu}
-                className={`mr-2  text-3xl focus:outline-none ${
+                className={`mr-2  text-3xl transition-all hover:text-purple-700 focus:outline-none ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
-                &#10006;
+                <X size={30} />
               </button>
             </div>
             <div className="flex flex-col items-center gap-16 pt-10 text-2xl">
@@ -200,11 +200,11 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
         <button
           onClick={toggleMenu}
-          className={`text-2xl focus:outline-none  md:hidden ${
+          className={`text-2xl transition-all hover:text-purple-700 focus:outline-none  md:hidden ${
             theme === "light" ? "text-black" : "text-gray-300"
           }`}
         >
-          &#9776;
+          <AlignJustify size={30} />
         </button>
 
         {!isMobile && (
