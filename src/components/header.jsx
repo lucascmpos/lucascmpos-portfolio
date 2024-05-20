@@ -180,9 +180,9 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             ? "bg-gray-300 text-black"
             : "bg-[#020211] text-gray-300"
         } ${visible ? "" : "hidden"}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: visible ? 1 : 0 }}
-        transition={{ duration: 0.2 }}
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: visible ? 1 : 0 }} 
+        transition={{ duration: 0.3 }} 
       >
         <Link to="home" smooth={true} duration={500}>
           <div>
@@ -262,6 +262,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
           toggleLanguage={toggleLanguage}
         />
       </motion.header>
+      {/* Aqui você pode renderizar o resto do seu conteúdo */}
     </>
   );
 };

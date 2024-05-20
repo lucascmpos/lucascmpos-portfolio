@@ -643,12 +643,12 @@ const Projects = ({ language, theme }) => {
                 {isLargeScreen ? (
                   <video
                     controls
-                    autoPlay
                     loop
                     muted
                     src={selectedProject.video}
                     alt={selectedProject.title}
                     type="video/mp4"
+                    poster={selectedProject.image}
                     className="my-4 flex h-[300px] w-[700px]  rounded-md object-cover"
                   />
                 ) : (
