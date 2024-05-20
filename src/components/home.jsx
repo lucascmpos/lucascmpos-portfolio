@@ -1,15 +1,20 @@
+/* eslint-disable no-unused-vars */
 import { MdOutlineSimCardDownload } from "react-icons/md";
 import { Github } from "lucide-react";
 import { PiLinkedinLogoBold } from "react-icons/pi";
 import { TbBrandWhatsapp } from "react-icons/tb";
 
+// @ts-ignore
 import curriculo from "../assets/curriculo.pdf";
+// @ts-ignore
 import resume from "../assets/resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import React from "react";
 
 const Home = ({ language, theme }) => {
   const [typeEffect] = useTypewriter({
     words: ["Front End Developer", "React Developer", "Web Developer"],
+    // @ts-ignore
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 50,
