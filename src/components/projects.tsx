@@ -4,6 +4,8 @@ import devFood from "../assets/devfood.png";
 import sharpCut from "../assets/sharpcut.png";
 import periWare from "../assets/periwarestore.png";
 import uploadAi from "../assets/uploadai.jpeg";
+import expertNotes from "../assets/expertnotes.png";
+import myLinks from "../assets/mylinks.png";
 import natuFlora from "../assets/natuflora.png";
 import pairBank from "../assets/pairbank.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
@@ -13,6 +15,8 @@ import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CircleChevronUp } from "lucide-react";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
+import expertNotesVideo from "../assets/expertnotesvideo.mp4";
+import myLinksVideo from "../assets/mylinksvideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import natuFloraVideo from "../assets/natufloravideo.mp4";
 import pairBankVideo from "../assets/pairbankvideo.mp4";
@@ -248,6 +252,7 @@ const projectsData = [
       "React.js",
       "Tailwindcss",
       "ShadcnUI",
+      "Open AI API",
       "Figma",
       "Node.js",
       "Prisma",
@@ -256,6 +261,97 @@ const projectsData = [
   },
   {
     id: 5,
+    title: "Expert Notes",
+    video: expertNotesVideo,
+    image: expertNotes,
+    description: {
+      pt: (
+        <>
+          Essa aplicação consiste em um site de notas, onde o o usuário pode
+          adicionar novas notas falando por microfone, ou digitando. Ele também
+          pode pesquisar, editar e deletar novas notas. Todas suas notas ficam
+          salvas no seu navegador. Design limpo e responsivo.
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Integração com a Speech Recognition API
+          <br />
+          - Responsividade
+          <br />- Transcrição de audio em texto
+        </>
+      ),
+      en: (
+        <>
+          This application consists of a notes website, where the user can add
+          new notes by speaking into the microphone, or writing. He too you can
+          search, edit and delete new notes. All your notes stay saved in your
+          browser. Clean and responsive design.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Integration with Speech Recognition API
+          <br />
+          - Responsiveness
+          <br />- Audio transcription to text
+        </>
+      ),
+    },
+    site: "https://expert-dev-notes.vercel.app/",
+    github: "https://github.com/lucascmpos/expert-notes",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
+    tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
+      "Tailwindcss",
+      "Speech Recognition API",
+      "RadixUI",
+      "Figma",
+    ],
+  },
+  {
+    id: 6,
+    title: "My Links",
+    video: myLinksVideo,
+    image: myLinks,
+    description: {
+      pt: (
+        <>
+          Uma página onde estão guardados todos meus links, com tema escuro e
+          claro dependendo do navegador do usuário, design responsivo e moderno.
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Tema claro e escuro
+          <br />- Responsividade
+        </>
+      ),
+      en: (
+        <>
+          A page where all my links are stored, with a dark theme and of course
+          depending on the user's browser, responsive and modern design.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Light and dark theme
+          <br />- Responsiveness
+        </>
+      ),
+    },
+    site: "https://allmylinks-lucascampos.vercel.app/",
+    github: "https://github.com/lucascmpos/allmylinks",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
+    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
+  },
+  {
+    id: 7,
     title: "Natu Flora",
     video: natuFloraVideo,
     image: natuFlora,
@@ -296,7 +392,7 @@ const projectsData = [
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
   {
-    id: 6,
+    id: 8,
     title: "Pairbank",
     video: pairBankVideo,
     image: pairBank,
@@ -322,7 +418,7 @@ const projectsData = [
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
   {
-    id: 7,
+    id: 9,
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
@@ -366,7 +462,7 @@ const projectsData = [
     ],
   },
   {
-    id: 8,
+    id: 10,
     title: "MonFi",
     video: monfiVideo,
     image: monFi,
@@ -685,7 +781,7 @@ const Projects = ({ language, theme }) => {
                   }`}
                   onClick={() => window.open(selectedProject.site, "_blank")}
                 >
-                  Site
+                  {language === "pt" ? "Acessar" : "Acess"}
                   <FaExternalLinkAlt
                     className="transition-all group-hover:scale-125"
                     size={15}
