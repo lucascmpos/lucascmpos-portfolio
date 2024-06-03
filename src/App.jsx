@@ -89,8 +89,8 @@ function App() {
 
       <Link to="home" smooth={true} duration={500}>
         <ArrowUp
-          className={`fixed cursor-pointer text-purple-800 hover:bg-purple-800 hover:text-gray-300 md:right-20 bottom-10 right-5 bg-gray-300 rounded-full w-8 h-8 px-1 transform transition-transform duration-300 ${showArrowUp ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-            }`}
+          className={`fixed cursor-pointer   md:right-20 bottom-10 right-5  rounded-full w-8 h-8 px-1 transform transition-transform duration-300 ${showArrowUp ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+            } ${theme === "light" ? "bg-black text-gray-300 hover:bg-purple-700" : "bg-gray-300 text-black hover:bg-purple-700"}`}
         />
       </Link>
     </div>
