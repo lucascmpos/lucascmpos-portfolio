@@ -180,7 +180,7 @@ const Services = ({ language, theme }) => {
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className={`group flex h-fit w-full flex-col items-center justify-center gap-2 rounded-xl border-4 border-purple-900 border-opacity-20  px-8 py-2 shadow  transition-all duration-200 hover:border-opacity-100 md:h-72 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-20"}`}
+            className={`group flex h-fit w-full flex-col items-center justify-center gap-2 rounded-xl border-4  border-opacity-20  px-8 py-2 shadow  transition-all duration-200 hover:border-opacity-100 md:h-72 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
           >
             <div
               className={` transition-all duration-200 group-hover:scale-110 ${theme === "light" ? "text-black" : "text-white"}`}
