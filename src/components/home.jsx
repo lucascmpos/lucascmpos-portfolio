@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+import React from "react";
+
 import { MdOutlineSimCardDownload } from "react-icons/md";
 import { Github } from "lucide-react";
 import { PiLinkedinLogoBold } from "react-icons/pi";
@@ -9,7 +11,6 @@ import curriculo from "../assets/curriculo.pdf";
 // @ts-ignore
 import resume from "../assets/resume.pdf";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import React from "react";
 
 const Home = ({ language, theme }) => {
   const [typeEffect] = useTypewriter({

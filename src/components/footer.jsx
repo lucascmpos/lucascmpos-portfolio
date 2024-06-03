@@ -1,3 +1,5 @@
+import React from "react";
+
 const Footer = ({ language }) => {
   return (
     <footer className="flex items-center  justify-center bg-[#020207] p-6 font-semibold text-gray-400">
