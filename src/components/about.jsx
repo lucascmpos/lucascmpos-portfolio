@@ -100,8 +100,8 @@ const About = ({ language, theme }) => {
         {!showMore && (
           <button
             className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
-                ? "bg-black text-gray-200 hover:bg-purple-500 "
-                : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+              ? "bg-black text-gray-200 hover:bg-purple-700 "
+              : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
               }`}
             onClick={handleToggleShowMore}
           >
@@ -123,8 +123,8 @@ const About = ({ language, theme }) => {
         {showMore && (
           <button
             className={`mt-5 w-60 cursor-pointer rounded-lg p-3  font-bold transition-all duration-500 md:mt-0 ${theme === "light"
-                ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
-                : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+              ? "bg-black text-gray-200 hover:bg-purple-700 "
+              : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
               }`}
             onClick={handleToggleShowMore}
           >
