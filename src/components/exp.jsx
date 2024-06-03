@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { IoSchoolOutline } from "react-icons/io5";
 import { ChevronsRight } from "lucide-react";
@@ -223,15 +224,13 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={` flex flex-col items-center justify-center px-3 pb-28 pt-20 md:pt-28 ${
-        theme === "light" ? "bg-gray-300" : "bg-[#020211]"
-      }`}
+      className={` flex flex-col items-center justify-center px-3 pb-28 pt-20 md:pt-28 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"
+        }`}
     >
       <div className="mb-10 flex w-full flex-col items-center justify-center  text-center">
         <h1
-          className={`text-4xl font-bold ${
-            theme === "light" ? "text-black" : "text-gray-200"
-          }`}
+          className={`text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
+            }`}
         >
           {language === "pt"
             ? "Experiências profissionais"
@@ -240,9 +239,8 @@ const Experience = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`flex flex-col items-center justify-center gap-16 px-2 transition-opacity duration-1000 ease-in-out ${
-          inView ? "opacity-100" : "opacity-0"
-        }`}
+        className={`flex flex-col items-center justify-center gap-16 px-2 transition-opacity duration-1000 ease-in-out ${inView ? "opacity-100" : "opacity-0"
+          }`}
       >
         {currentExperiences.map((experiencia) => (
           <div
@@ -251,9 +249,8 @@ const Experience = ({ language, theme }) => {
           >
             <div className="flex flex-col items-center justify-center">
               <h2
-                className={`w-26  flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-2xl xl:w-auto ${
-                  theme === "light" ? "text-gray-800" : "text-gray-300"
-                } `}
+                className={`w-26  flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-2xl xl:w-auto ${theme === "light" ? "text-gray-800" : "text-gray-300"
+                  } `}
               >
                 <MdOutlineWorkOutline className=" h-12 w-12 text-purple-700 transition-all    group-hover:scale-125" />
 
@@ -273,9 +270,8 @@ const Experience = ({ language, theme }) => {
                 </h3>
               </div>
               <p
-                className={`w-full px-5 text-start text-sm font-semibold  md:text-lg lg:w-10/12   2xl:w-full ${
-                  theme === "light" ? "text-black" : "text-gray-400"
-                }`}
+                className={`w-full px-5 text-start text-sm font-semibold  md:text-lg lg:w-10/12   2xl:w-full ${theme === "light" ? "text-black" : "text-gray-400"
+                  }`}
               >
                 {experiencia.descricao}
               </p>
@@ -305,9 +301,8 @@ const Experience = ({ language, theme }) => {
 
         <div className="flex w-full flex-col items-center ">
           <h2
-            className={`text-center text-4xl font-bold ${
-              theme === "light" ? "text-black" : "text-gray-200"
-            }`}
+            className={`text-center text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
+              }`}
           >
             {language === "pt" ? "Formação acadêmica" : "Academic education"}
           </h2>
@@ -319,9 +314,8 @@ const Experience = ({ language, theme }) => {
           >
             <div className="flex flex-col items-center justify-center">
               <h2
-                className={`w-26 relative flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-3xl xl:w-auto ${
-                  theme === "light" ? "text-gray-800" : "text-gray-300"
-                } `}
+                className={`w-26 relative flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-3xl xl:w-auto ${theme === "light" ? "text-gray-800" : "text-gray-300"
+                  } `}
               >
                 <IoSchoolOutline className="h-12 w-12 text-purple-700 transition-all   group-hover:scale-125" />
 
@@ -339,9 +333,8 @@ const Experience = ({ language, theme }) => {
                 </h3>
               </div>
               <p
-                className={`w-full px-5  text-start text-sm font-semibold   md:text-lg lg:w-10/12   2xl:w-full ${
-                  theme === "light" ? "text-black" : "text-gray-400"
-                }`}
+                className={`w-full px-5  text-start text-sm font-semibold   md:text-lg lg:w-10/12   2xl:w-full ${theme === "light" ? "text-black" : "text-gray-400"
+                  }`}
               >
                 {formacao.descricao}
               </p>
