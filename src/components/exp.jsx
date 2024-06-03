@@ -15,8 +15,8 @@ const Experience = ({ language, theme }) => {
     pt: [
       {
         id: 1,
-        titulo: "Freelancer",
-        subtitulo: "Desenvolvedor Front End",
+        titulo: "Autônomo",
+        subtitulo: "Desenvolvedor Fullstack",
         descricao: (
           <span>
             De forma independente, atuo com o desenvolvimento de software de
@@ -50,7 +50,7 @@ const Experience = ({ language, theme }) => {
       {
         id: 2,
         titulo: "Compass.UOL",
-        subtitulo: "Desenvolvedor Front End",
+        subtitulo: "Desenvolvedor Frontend",
         descricao: (
           <span>
             Atuei ativamente na implementação do desenvolvimento e de testes
@@ -82,8 +82,8 @@ const Experience = ({ language, theme }) => {
     en: [
       {
         id: 1,
-        titulo: "Freelancer",
-        subtitulo: "Front End Developer",
+        titulo: "Self employed",
+        subtitulo: "Fullstack Developer",
         descricao: (
           <span>
             Independently, I work with end-to-end software development, from
@@ -116,7 +116,7 @@ const Experience = ({ language, theme }) => {
       {
         id: 2,
         titulo: "Compass.UOL",
-        subtitulo: "Front End Developer",
+        subtitulo: "Frontend Developer",
         descricao: (
           <span>
             I actively participated in courses that covered software
@@ -235,7 +235,7 @@ const Experience = ({ language, theme }) => {
         >
           {language === "pt"
             ? "Experiências profissionais"
-            : "Professional experiences"}
+            : "Work history"}
         </h1>
       </div>
       <div
@@ -309,12 +309,12 @@ const Experience = ({ language, theme }) => {
               theme === "light" ? "text-black" : "text-gray-200"
             }`}
           >
-            {language === "pt" ? "Formação acadêmica" : "Academic formation"}
+            {language === "pt" ? "Formação acadêmica" : "Academic education"}
           </h2>
         </div>
         {formacoes[language].map((formacao) => (
           <div
-            className={`group relative flex w-full flex-col items-center justify-center gap-4 rounded-lg border-4  border-purple-700 border-opacity-10 py-8 transition-all  hover:border-opacity-50  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
+            className={`group relative flex w-full flex-col items-center justify-center gap-4 rounded-lg border-4  border-purple-700 border-opacity-10 py-8 transition-all  hover:border-opacity-50   md:w-[600px] md:px-16 lg:w-[900px]  ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"}`}
             key={formacao.id}
           >
             <div className="flex flex-col items-center justify-center">
