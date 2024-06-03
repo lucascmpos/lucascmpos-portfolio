@@ -158,24 +158,21 @@ const Services = ({ language, theme }) => {
 
   return (
     <div
-      className={`flex flex-col items-center  py-10 ${
-        theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
-      }`}
+      className={`flex flex-col items-center  py-10 ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
+        }`}
     >
       <div className="flex items-start">
         <h1
-          className={`text-4xl font-bold ${
-            theme === "light" ? "text-black" : "text-gray-200"
-          }`}
+          className={`text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
+            }`}
         >
           {language === "pt" ? "Serviços" : "Services"}
         </h1>
       </div>
       <div
         ref={ref}
-        className={`mt-10 flex flex-col items-center justify-center gap-10 px-10 py-10 transition-all duration-300 md:mt-20 xl:grid xl:grid-cols-3 ${
-          inView ? "opacity-100" : "opacity-0"
-        }`}
+        className={`mt-10 flex flex-col items-center justify-center gap-10 px-10 py-10 transition-all duration-300 md:mt-20 xl:grid xl:grid-cols-3 ${inView ? "opacity-100" : "opacity-0"
+          }`}
       >
         {servicesData.map((service) => (
           <div

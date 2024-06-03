@@ -315,7 +315,7 @@ const projectsData = [
       "Figma",
     ],
   },
-  
+
   {
     id: 6,
     title: "Natu Flora",
@@ -547,16 +547,14 @@ const ProjectCard = ({ project, onClick }) => {
       onClick={() => onClick(project)}
     >
       <div
-        className={`relative  rounded-t-full border-b-4 border-purple-800 ${
-          isLargeScreen ? " " : ""
-        }`}
+        className={`relative  rounded-t-full border-b-4 border-purple-800 ${isLargeScreen ? " " : ""
+          }`}
       >
         <img
           src={project.image}
           alt={project.title}
-          className={`w-full transform  object-cover duration-100  group-hover:scale-105 ${
-            isLargeScreen ? "h-56" : "h-60"
-          }`}
+          className={`w-full transform  object-cover duration-100  group-hover:scale-105 ${isLargeScreen ? "h-56" : "h-60"
+            }`}
         />
         <animated.div
           style={{
@@ -579,9 +577,8 @@ const ProjectCard = ({ project, onClick }) => {
             textAlign: "center",
             padding: "8px",
           }}
-          className={`text-xl font-bold text-gray-300 ${
-            isLargeScreen ? "bottom-1" : "bottom-4"
-          }`}
+          className={`text-xl font-bold text-gray-300 ${isLargeScreen ? "bottom-1" : "bottom-4"
+            }`}
         >
           {project.title}
         </animated.div>
@@ -589,9 +586,8 @@ const ProjectCard = ({ project, onClick }) => {
           style={{
             opacity: titleSpring.opacity.to((opacity) => 1 - opacity),
           }}
-          className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${
-            isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
-          } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-200 hover:bg-purple-950 group-hover:scale-105`}
+          className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
+            } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-200 hover:bg-purple-950 group-hover:scale-105`}
         >
           <CircleChevronUp
             className=" hover: transition-all hover:scale-110"
@@ -660,22 +656,19 @@ const Projects = ({ language, theme }) => {
   return (
     <div
       id="projects"
-      className={`py-24 md:p-44 md:py-52 ${
-        theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
-      }  `}
+      className={`py-24 md:p-44 md:py-52 ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
+        }  `}
     >
       <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
         <h1
-          className={` text-center text-4xl font-bold ${
-            theme === "light" ? "text-black" : "text-gray-200"
-          }`}
+          className={` text-center text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
+            }`}
         >
           {language === "pt" ? "Projetos em destaque" : "Projects highlighted"}
         </h1>
         <p
-          className={` mt-5 text-center text-lg lg:mt-10 lg:text-start ${
-            theme === "light" ? "text-black" : "text-gray-300"
-          }`}
+          className={` mt-5 text-center text-lg lg:mt-10 lg:text-start ${theme === "light" ? "text-black" : "text-gray-300"
+            }`}
         >
           {language === "pt"
             ? "Meus maiores projetos! clique em qual desejar para saber mais..."
@@ -684,14 +677,12 @@ const Projects = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`transition-opacity duration-1000 ease-in-out ${
-          inView ? "opacity-100" : "opacity-0"
-        }`}
+        className={`transition-opacity duration-1000 ease-in-out ${inView ? "opacity-100" : "opacity-0"
+          }`}
       >
         <div
-          className={`grid ${
-            isLargeScreen ? "grid-cols-3" : "flex-col"
-          }  flex items-center justify-center gap-10 p-3`}
+          className={`grid ${isLargeScreen ? "grid-cols-3" : "flex-col"
+            }  flex items-center justify-center gap-10 p-3`}
         >
           {projectsData.map((project) => (
             <ProjectCard
@@ -759,16 +750,14 @@ const Projects = ({ language, theme }) => {
                   />
                 )}
                 <p
-                  className={` font-semibold ${
-                    isLargeScreen ? "" : "text-sm"
-                  } ${theme === "light" ? "text-gray-700" : "text-gray-300"} mt-2`}
+                  className={` font-semibold ${isLargeScreen ? "" : "text-sm"
+                    } ${theme === "light" ? "text-gray-700" : "text-gray-300"} mt-2`}
                 >
                   {selectedProject.description[language]}
                 </p>
                 <div
-                  className={`mt-4 flex flex-wrap gap-2 ${
-                    isLargeScreen ? "" : "text-sm"
-                  }`}
+                  className={`mt-4 flex flex-wrap gap-2 ${isLargeScreen ? "" : "text-sm"
+                    }`}
                 >
                   {selectedProject.tech &&
                     selectedProject.tech.map((technology, index) => (
@@ -779,11 +768,10 @@ const Projects = ({ language, theme }) => {
               <div className="my-4  flex flex-col items-center justify-center gap-3 md:flex-row ">
                 {selectedProject.site && (
                   <button
-                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
-                      theme === "light"
-                        ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
+                        ? "bg-black text-gray-200 hover:bg-purple-700 "
                         : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-                    }`}
+                      }`}
                     onClick={() => window.open(selectedProject.site, "_blank")}
                   >
                     {language === "pt" ? "Acessar" : "Access"}
@@ -794,11 +782,10 @@ const Projects = ({ language, theme }) => {
                   </button>
                 )}
                 <button
-                  className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
-                    theme === "light"
-                      ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                  className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
+                      ? "bg-black text-gray-200 hover:bg-purple-700 "
                       : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-                  }`}
+                    }`}
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
@@ -809,11 +796,10 @@ const Projects = ({ language, theme }) => {
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
-                      theme === "light"
-                        ? "bg-black text-gray-200 hover:bg-purple-500 hover:text-black"
+                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
+                        ? "bg-black text-gray-200 hover:bg-purple-700 "
                         : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-                    }`}
+                      }`}
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }

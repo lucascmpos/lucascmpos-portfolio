@@ -99,16 +99,14 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             initial={{ x: "100%" }}
             animate={{ x: isOpen ? "0%" : "100%" }}
             transition={{ duration: 0.3 }}
-            className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300 ${
-              theme === "light" ? "bg-gray-300" : "bg-[#020211]"
-            }`}
+            className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300 ${theme === "light" ? "bg-[#dad3e0]" : "bg-[#020211]"
+              }`}
           >
             <div className="flex justify-end p-4">
               <button
                 onClick={toggleMenu}
-                className={`mr-2  text-3xl transition-all hover:text-purple-700 focus:outline-none ${
-                  theme === "light" ? "text-black" : "text-gray-300"
-                }`}
+                className={`mr-2  text-3xl transition-all hover:text-purple-700 focus:outline-none ${theme === "light" ? "text-black" : "text-gray-300"
+                  }`}
               >
                 <X size={30} />
               </button>
@@ -124,9 +122,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   <h2 className="cursor-pointer font-bold text-purple-800">
                     campos
                     <span
-                      className={`${
-                        theme === "light" ? "text-black" : "text-gray-200"
-                      }`}
+                      className={`${theme === "light" ? "text-black" : "text-gray-200"
+                        }`}
                     >
                       .
                     </span>
@@ -142,9 +139,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   onClick={() => toggleMenu(false)}
                 >
                   <h2
-                    className={`flex cursor-pointer flex-row items-center justify-center gap-5 ${
-                      theme === "light" ? "text-black" : "text-gray-200"
-                    }`}
+                    className={`flex cursor-pointer flex-row items-center justify-center gap-5 ${theme === "light" ? "text-black" : "text-gray-200"
+                      }`}
                   >
                     <div className="hover:-translate-y-1 hover:text-purple-800">
                       {item.icon}
@@ -156,9 +152,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             </div>
             <div className="absolute bottom-10 right-10">
               <button
-                className={`flex flex-row items-center justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800 ${
-                  theme === "light" ? "text-black" : "text-gray-200"
-                }`}
+                className={`flex flex-row items-center justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800 ${theme === "light" ? "text-black" : "text-gray-200"
+                  }`}
                 onClick={toggleLanguage}
               >
                 {language === "pt" ? "EN" : "PTBR"}
@@ -175,27 +170,24 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   return (
     <>
       <motion.header
-        className={`fixed z-10 flex w-full flex-row items-center justify-between  p-5 text-lg font-semibold shadow-md transition-opacity duration-300 md:justify-around ${
-          theme === "light"
-            ? "bg-gray-300 text-black"
-            : "bg-[#020211] text-gray-300"
-        } ${visible ? "" : "hidden"}`}
-        initial={{ opacity: 0 }} 
-        animate={{ opacity: visible ? 1 : 0 }} 
-        transition={{ duration: 0.3 }} 
+        className={`fixed z-10 flex w-full flex-row items-center justify-between  p-5 text-lg font-semibold shadow-md transition-opacity duration-300 md:justify-around ${theme === "light"
+          ? "bg-gray-300 text-black"
+          : "bg-[#020211] text-gray-300"
+          } ${visible ? "" : "hidden"}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
       >
         <Link to="home" smooth={true} duration={500}>
           <div>
             <h2
-              className={`cursor-pointer font-bold ${
-                theme === "light" ? "text-purple-600" : "text-purple-800"
-              } `}
+              className={`cursor-pointer font-bold ${theme === "light" ? "text-purple-600" : "text-purple-800"
+                } `}
             >
               campos
               <span
-                className={`${
-                  theme === "light" ? "text-black" : "text-gray-200"
-                }`}
+                className={`${theme === "light" ? "text-black" : "text-gray-200"
+                  }`}
               >
                 .
               </span>
@@ -235,9 +227,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
           <button
             onClick={toggleMenu}
-            className={`text-2xl transition-all hover:text-purple-700 focus:outline-none  md:hidden ${
-              theme === "light" ? "text-black" : "text-gray-300"
-            }`}
+            className={`text-2xl transition-all hover:text-purple-700 focus:outline-none  md:hidden ${theme === "light" ? "text-black" : "text-gray-300"
+              }`}
           >
             <AlignJustify size={30} />
           </button>
