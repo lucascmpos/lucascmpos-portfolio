@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import { Img } from "react-image";
 import Photo from "../assets/me.jpg";

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import Header from "./components/header";
 import Home from "./components/home";
@@ -16,6 +17,7 @@ function App() {
   const [language, setLanguage] = useState("pt");
   const [theme, setTheme] = useState("light");
   const [showArrowUp, setShowArrowUp] = useState(false);
+
 
   useEffect(() => {
     const prefersDarkMode =
