@@ -47,21 +47,18 @@ const Tech = ({ language, theme }) => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-5 px-5 py-10 md:py-28 lg:px-0 ${
-        theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
-      }`}
+      className={`flex flex-col items-center justify-center gap-5 px-5 py-10 md:py-28 lg:px-0 ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
+        }`}
     >
       <h1
-        className={`text-4xl font-bold ${
-          theme === "light" ? "text-black" : "text-gray-200"
-        }`}
+        className={`text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
+          }`}
       >
         {language === "pt" ? "Tecnologias" : "Technologies"}
       </h1>
       <span
-        className={`px-2 text-center text-lg font-semibold ${
-          theme === "light" ? "text-black" : "text-gray-200"
-        }`}
+        className={`px-2 text-center text-lg font-semibold ${theme === "light" ? "text-black" : "text-gray-200"
+          }`}
       >
         {language === "pt"
           ? "Essas são minhas principais tecnologias! Passe o cursor ou clique em cima do ícone para saber mais..."
@@ -69,11 +66,9 @@ const Tech = ({ language, theme }) => {
       </span>
       <div
         ref={ref}
-        className={`mt-2 grid grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-20 p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6 ${
-          theme === "light" ? "bg-gray-300" : "bg-[#020211]"
-        } ${
-          inView ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-1000 ease-in-out`}
+        className={`mt-2 grid grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-20 p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"
+          } ${inView ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-1000 ease-in-out`}
       >
         {icons.map((item, index) => (
           <div
