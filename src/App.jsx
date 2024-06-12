@@ -12,12 +12,11 @@ import Tech from "./components/tech";
 import { ArrowUp } from "lucide-react";
 import { Link } from "react-scroll";
 
-import "./index.css"
+import "./index.css";
 function App() {
   const [language, setLanguage] = useState("pt");
   const [theme, setTheme] = useState("light");
   const [showArrowUp, setShowArrowUp] = useState(false);
-
 
   useEffect(() => {
     const prefersDarkMode =
@@ -68,7 +67,7 @@ function App() {
 
   return (
     <div
-      className={`overflow-x-hidden relative ${theme === "dark" ? "dark-theme" : ""}`}
+      className={`relative overflow-x-hidden ${theme === "dark" ? "dark-theme" : ""}`}
     >
       <Header
         onSwitchToEnglish={switchToEnglish}
@@ -91,8 +90,11 @@ function App() {
 
       <Link to="home" smooth={true} duration={500}>
         <ArrowUp
-          className={`fixed cursor-pointer   md:right-20 bottom-10 right-5  rounded-full w-8 h-8 px-1 transform transition-transform duration-300 ${showArrowUp ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-            } ${theme === "light" ? "bg-black text-gray-300 hover:bg-purple-700" : "bg-gray-300 text-black hover:bg-purple-700"}`}
+          className={`fixed bottom-10   right-5 h-8 w-8  transform cursor-pointer rounded-full px-1 transition-transform duration-300 md:right-20 ${
+            showArrowUp
+              ? "translate-y-0 opacity-100"
+              : "pointer-events-none translate-y-4 opacity-0"
+          } ${theme === "light" ? "bg-black text-gray-300 hover:bg-purple-700" : "bg-gray-300 text-black hover:bg-purple-700"}`}
         />
       </Link>
     </div>

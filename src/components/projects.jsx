@@ -8,7 +8,6 @@ import periWare from "../assets/periwarestore.png";
 import uploadAi from "../assets/uploadai.jpeg";
 import expertNotes from "../assets/expertnotes.png";
 import natuFlora from "../assets/natuflora.png";
-import payment from "../assets/payment.png";
 import pairBank from "../assets/pairbank.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
 import monFi from "../assets/monfi.jpeg";
@@ -20,7 +19,6 @@ import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import expertNotesVideo from "../assets/expertnotesvideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import natuFloraVideo from "../assets/natufloravideo.mp4";
-import paymentVideo from "../assets/paymentvideo.mp4";
 import pairBankVideo from "../assets/pairbankvideo.mp4";
 import sharpcutVideo from "../assets/sharpcutvideo.mp4";
 import devfoodVideo from "../assets/devfoodvideo.mp4";
@@ -357,44 +355,7 @@ const projectsData = [
       "https://www.linkedin.com/posts/lucas-campos81_react-landingpage-tailwind-activity-7180590037623848960-WLB7?utm_source=share&utm_medium=member_desktop",
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
-  {
-    id: 7,
-    title: "Payment Checkout",
-    video: paymentVideo,
-    image: payment,
-    description: {
-      pt: (
-        <>
-          Este projeto consiste em um checkout de pagamento responsivo, com
-          validação dos campos e com QRCode que atualiza a cada 10 minutos, ou a
-          cada reload da página.
-          <br />
-          <br />
-          Funcionalidades:
-          <br />
-          - QR Code gerado a cada 10 minutos
-          <br />- Responsividade
-        </>
-      ),
-      en: (
-        <>
-          This project consists of a responsive payment checkout, with field
-          validation and with QRCode that updates every 10 minutes, or each page
-          reload.
-          <br />
-          <br />
-          Features:
-          <br />
-          - QR Code gerated every 10 minutes
-          <br />- Responsiveness
-        </>
-      ),
-    },
-    github: "https://github.com/lucascmpos/payment-checkout",
-    linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_vue-sass-javascript-activity-7196898466885693442-XzS0?utm_source=share&utm_medium=member_desktop",
-    tech: ["HTML", "CSS", "JavaScript", "Vue", "Sass", "Figma"],
-  },
+
   {
     id: 8,
     title: "Pairbank",
@@ -547,14 +508,16 @@ const ProjectCard = ({ project, onClick }) => {
       onClick={() => onClick(project)}
     >
       <div
-        className={`relative  rounded-t-full border-b-4 border-purple-800 ${isLargeScreen ? " " : ""
-          }`}
+        className={`relative  rounded-t-full border-b-4 border-purple-800 ${
+          isLargeScreen ? " " : ""
+        }`}
       >
         <img
           src={project.image}
           alt={project.title}
-          className={`w-full transform  object-cover duration-100  group-hover:scale-105 ${isLargeScreen ? "h-56" : "h-60"
-            }`}
+          className={`w-full transform  object-cover duration-100  group-hover:scale-105 ${
+            isLargeScreen ? "h-56" : "h-60"
+          }`}
         />
         <animated.div
           style={{
@@ -577,8 +540,9 @@ const ProjectCard = ({ project, onClick }) => {
             textAlign: "center",
             padding: "8px",
           }}
-          className={`text-xl font-bold text-gray-300 ${isLargeScreen ? "bottom-1" : "bottom-4"
-            }`}
+          className={`text-xl font-bold text-gray-300 ${
+            isLargeScreen ? "bottom-1" : "bottom-4"
+          }`}
         >
           {project.title}
         </animated.div>
@@ -586,8 +550,9 @@ const ProjectCard = ({ project, onClick }) => {
           style={{
             opacity: titleSpring.opacity.to((opacity) => 1 - opacity),
           }}
-          className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
-            } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-200 hover:bg-purple-950 group-hover:scale-105`}
+          className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${
+            isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
+          } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-200 hover:bg-purple-950 group-hover:scale-105`}
         >
           <CircleChevronUp
             className=" hover: transition-all hover:scale-110"
@@ -656,19 +621,22 @@ const Projects = ({ language, theme }) => {
   return (
     <div
       id="projects"
-      className={`py-24 md:p-44 md:py-52 ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
-        }  `}
+      className={`py-24 md:p-44 md:py-52 ${
+        theme === "light" ? "bg-white" : "bg-[#01020a]"
+      }  `}
     >
       <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
         <h1
-          className={` text-center text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
-            }`}
+          className={` text-center text-4xl font-bold ${
+            theme === "light" ? "text-black" : "text-gray-200"
+          }`}
         >
           {language === "pt" ? "Projetos em destaque" : "Projects highlighted"}
         </h1>
         <p
-          className={` mt-5 text-center text-lg lg:mt-10 lg:text-start ${theme === "light" ? "text-black" : "text-gray-300"
-            }`}
+          className={` mt-5 text-center text-lg lg:mt-10 lg:text-start ${
+            theme === "light" ? "text-black" : "text-gray-300"
+          }`}
         >
           {language === "pt"
             ? "Meus maiores projetos! clique em qual desejar para saber mais..."
@@ -677,12 +645,14 @@ const Projects = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`transition-opacity duration-1000 ease-in-out ${inView ? "opacity-100" : "opacity-0"
-          }`}
+        className={`transition-opacity duration-1000 ease-in-out ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
       >
         <div
-          className={`grid ${isLargeScreen ? "grid-cols-3" : "flex-col"
-            }  flex items-center justify-center gap-10 p-3`}
+          className={`grid ${
+            isLargeScreen ? "grid-cols-3" : "flex-col"
+          }  flex items-center justify-center gap-10 p-3`}
         >
           {projectsData.map((project) => (
             <ProjectCard
@@ -709,7 +679,7 @@ const Projects = ({ language, theme }) => {
               width: isLargeScreen ? "80%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "85%" : "100%",
-              backgroundColor: theme === "light" ? "#F6F6F6" : "#01020a",
+              backgroundColor: theme === "light" ? "#fdfbff" : "#01020a",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
               transition: "opacity 0.3s, transform 0.3s ",
@@ -750,14 +720,16 @@ const Projects = ({ language, theme }) => {
                   />
                 )}
                 <p
-                  className={` font-semibold ${isLargeScreen ? "" : "text-sm"
-                    } ${theme === "light" ? "text-gray-700" : "text-gray-300"} mt-2`}
+                  className={` font-semibold ${
+                    isLargeScreen ? "" : "text-sm"
+                  } ${theme === "light" ? "text-gray-700" : "text-gray-300"} mt-2`}
                 >
                   {selectedProject.description[language]}
                 </p>
                 <div
-                  className={`mt-4 flex flex-wrap gap-2 ${isLargeScreen ? "" : "text-sm"
-                    }`}
+                  className={`mt-4 flex flex-wrap gap-2 ${
+                    isLargeScreen ? "" : "text-sm"
+                  }`}
                 >
                   {selectedProject.tech &&
                     selectedProject.tech.map((technology, index) => (
@@ -768,10 +740,11 @@ const Projects = ({ language, theme }) => {
               <div className="my-4  flex flex-col items-center justify-center gap-3 md:flex-row ">
                 {selectedProject.site && (
                   <button
-                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
+                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                      theme === "light"
                         ? "bg-black text-gray-200 hover:bg-purple-700 "
                         : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-                      }`}
+                    }`}
                     onClick={() => window.open(selectedProject.site, "_blank")}
                   >
                     {language === "pt" ? "Acessar" : "Access"}
@@ -782,10 +755,11 @@ const Projects = ({ language, theme }) => {
                   </button>
                 )}
                 <button
-                  className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
+                  className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                    theme === "light"
                       ? "bg-black text-gray-200 hover:bg-purple-700 "
                       : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-                    }`}
+                  }`}
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
                   GitHub
@@ -796,10 +770,11 @@ const Projects = ({ language, theme }) => {
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
+                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                      theme === "light"
                         ? "bg-black text-gray-200 hover:bg-purple-700 "
                         : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-                      }`}
+                    }`}
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }

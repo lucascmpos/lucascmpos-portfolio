@@ -159,26 +159,29 @@ const Services = ({ language, theme }) => {
 
   return (
     <div
-      className={`flex flex-col items-center  py-10 ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
-        }`}
+      className={`flex flex-col items-center  py-10 ${
+        theme === "light" ? "bg-[#fdfbff]" : "bg-[#01020a]"
+      }`}
     >
       <div className="flex items-start">
         <h1
-          className={`text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
-            }`}
+          className={`text-4xl font-bold ${
+            theme === "light" ? "text-black" : "text-gray-200"
+          }`}
         >
           {language === "pt" ? "Serviços" : "Services"}
         </h1>
       </div>
       <div
         ref={ref}
-        className={`mt-10 flex flex-col items-center justify-center gap-10 px-10 py-10 transition-all duration-300 md:mt-20 xl:grid xl:grid-cols-3 ${inView ? "opacity-100" : "opacity-0"
-          }`}
+        className={`mt-10 flex flex-col items-center justify-center gap-10 px-10 py-10 transition-all duration-300 md:mt-20 xl:grid xl:grid-cols-3 ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
       >
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className={`group flex h-fit w-full flex-col items-center justify-center gap-2 rounded-xl border-4  border-opacity-20  px-8 py-2 shadow  transition-all duration-200 hover:border-opacity-100 md:h-72 ${theme === "light" ? "bg-gray-300" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
+            className={`group flex h-fit w-full flex-col items-center justify-center gap-2 rounded-xl border-4  border-opacity-20  px-8 py-2   transition-all duration-200 hover:border-opacity-100 md:h-72 ${theme === "light" ? "bg-white" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
           >
             <div
               className={` transition-all duration-200 group-hover:scale-110 ${theme === "light" ? "text-black" : "text-white"}`}
