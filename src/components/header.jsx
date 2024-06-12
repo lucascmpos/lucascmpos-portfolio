@@ -101,20 +101,20 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             animate={{ x: isOpen ? "0%" : "100%" }}
             transition={{ duration: 0.3 }}
             className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300 ${
-              theme === "light" ? "bg-gray-100" : "bg-[#020211]"
+              theme === "light" ? "bg-white" : "bg-[#020211]"
             }`}
           >
             <div className="flex justify-end p-4">
               <button
                 onClick={toggleMenu}
-                className={`mr-2  text-3xl transition-all hover:text-purple-700 focus:outline-none ${
+                className={`mr-3 mt-2  text-3xl transition-all hover:text-purple-700 focus:outline-none ${
                   theme === "light" ? "text-black" : "text-gray-300"
                 }`}
               >
                 <X size={30} />
               </button>
             </div>
-            <div className="flex flex-col items-center gap-16 pt-10 text-2xl">
+            <div className="flex flex-col items-center gap-16 pt-32 text-2xl">
               <Link
                 to="home"
                 smooth={true}
@@ -143,11 +143,11 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   onClick={() => toggleMenu(false)}
                 >
                   <h2
-                    className={`flex cursor-pointer flex-row items-center justify-center gap-5 ${
+                    className={`flex   cursor-pointer flex-row items-center justify-center gap-5  ${
                       theme === "light" ? "text-black" : "text-gray-200"
                     }`}
                   >
-                    <div className="hover:-translate-y-1 hover:text-purple-800">
+                    <div className="hover:-translate-y-1  hover:text-purple-800">
                       {item.icon}
                     </div>
                     {language === "pt" ? item.text_pt : item.text_en}
