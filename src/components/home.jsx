@@ -13,7 +13,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Home = ({ language, theme }) => {
   const [typeEffect] = useTypewriter({
-    words: ["Frontend Developer", "React Developer", "Web Developer"],
+    words: ["Frontend Developer", "Fullstack Developer", "Web Developer"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 50,
