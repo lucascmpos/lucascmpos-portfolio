@@ -6,6 +6,7 @@ import {
   Code,
   Workflow,
   Database,
+  ChevronsRight,
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
@@ -159,7 +160,7 @@ const Services = ({ language, theme }) => {
 
   return (
     <div
-      className={`flex flex-col items-center  py-10 ${
+      className={`flex flex-col items-center   py-24 ${
         theme === "light" ? "bg-[#fdfbff]" : "bg-[#01020a]"
       }`}
     >
@@ -173,28 +174,35 @@ const Services = ({ language, theme }) => {
         </h1>
       </div>
       <div
+        className={`${theme === "light" ? "text-black" : "text-gray-300"} px text-md mt-10 flex w-full items-center justify-between gap-2 px-5 py-1 text-center font-semibold lg:hidden lg:px-2 `}
+      >
+        {language === "pt" ? "Arraste para ver mais" : "Swipe to see more"}
+
+        <ChevronsRight className="text-purple-800" size={40} />
+      </div>
+      <div
         ref={ref}
-        className={`mt-10 flex flex-col items-center justify-center gap-10 px-10 py-10 transition-all duration-300 md:mt-20 xl:grid xl:grid-cols-3 ${
+        className={`mt-10 flex max-w-full flex-row gap-10 overflow-x-auto px-2 py-10 transition-all duration-300 md:mt-20 lg:grid lg:grid-cols-3 lg:px-10 [&::-webkit-scrollbar]:hidden ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className={`group flex h-fit w-full flex-col items-center justify-center gap-2 rounded-xl border-4  border-opacity-20  px-8 py-2   transition-all duration-200 hover:border-opacity-100 md:h-72 ${theme === "light" ? "bg-white" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
+            className={`group flex h-[50vh] flex-col justify-center  gap-2 rounded-xl border-4 border-opacity-20 px-8 transition-all duration-200 hover:border-opacity-100  lg:h-auto lg:items-start lg:py-10 xl:items-center ${theme === "light" ? "bg-white" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
           >
             <div
-              className={` transition-all duration-200 group-hover:scale-110 ${theme === "light" ? "text-black" : "text-white"}`}
+              className={`mb-10 transition-all duration-200 group-hover:scale-105 lg:mb-auto  ${theme === "light" ? "text-black" : "text-white"}`}
             >
               {service.img}
             </div>
             <h2
-              className={`text-center text-lg font-bold  ${theme === "light" ? "text-black" : "text-white"}`}
+              className={`text-nowrap text-lg font-bold lg:text-wrap ${theme === "light" ? "text-black" : "text-white"}`}
             >
               {service.title[language]}
             </h2>
             <p
-              className={`w-fit px-4 text-center font-semibold  lg:w-96 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+              className={`w-[60vw] font-semibold lg:w-[20vw] ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
             >
               {service.description[language]}
             </p>
