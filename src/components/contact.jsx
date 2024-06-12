@@ -11,18 +11,21 @@ const Contact = ({ language, theme }) => {
   return (
     <div
       id="contact"
-      className={`flex flex-col items-center  justify-center py-20 ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
-        }`}
+      className={`flex flex-col items-center  justify-center py-20 ${
+        theme === "light" ? "bg-white" : "bg-[#01020a]"
+      }`}
     >
       <div
         ref={ref}
-        className={`mb-16 flex  flex-col items-center justify-center transition-opacity duration-1000 ease-in-out ${inView ? "opacity-100" : "opacity-0"
-          }`}
+        className={`mb-16 flex  flex-col items-center justify-center transition-opacity duration-1000 ease-in-out ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
       >
         <div className="mb-36 flex flex-col items-center justify-center gap-5">
           <h1
-            className={` text-4xl font-bold ${theme === "light" ? "text-black" : "text-purple-900"
-              }`}
+            className={` text-4xl font-bold ${
+              theme === "light" ? "text-black" : "text-purple-900"
+            }`}
           >
             {" "}
             {language === "pt" ? "Contato" : "Contact"}
@@ -39,8 +42,9 @@ const Contact = ({ language, theme }) => {
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <Mail
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${theme === "light" ? "bg-white" : "bg-gray-300"
-                  }`}
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
+                }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 Email
@@ -54,8 +58,9 @@ const Contact = ({ language, theme }) => {
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <Smartphone
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${theme === "light" ? "bg-white" : "bg-gray-300"
-                  }`}
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
+                }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 {language === "pt" ? "Telefone" : "Phone"}
@@ -69,8 +74,9 @@ const Contact = ({ language, theme }) => {
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <Linkedin
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${theme === "light" ? "bg-white" : "bg-gray-300"
-                  }`}
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
+                }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 LinkedIn
@@ -82,8 +88,9 @@ const Contact = ({ language, theme }) => {
             <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
               <Github
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${theme === "light" ? "bg-white" : "bg-gray-300"
-                  }`}
+                className={`rounded-xl  p-3 text-purple-900 ${
+                  theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
+                }`}
               />
               <h2 className="mt-2 text-xl font-semibold text-purple-900">
                 GitHub

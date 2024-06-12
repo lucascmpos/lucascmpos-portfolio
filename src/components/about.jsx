@@ -4,6 +4,13 @@ import { Img } from "react-image";
 import Photo from "../assets/me.jpg";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
+import AboutTag from "./about-tag";
+import {
+  BriefcaseBusiness,
+  GraduationCap,
+  Laptop,
+  Network,
+} from "lucide-react";
 
 const About = ({ language, theme }) => {
   const [showMore, setShowMore] = useState(false);
@@ -64,31 +71,59 @@ const About = ({ language, theme }) => {
   return (
     <div
       id="about"
-      className={`flex flex-col items-center  justify-center gap-10 py-10 md:gap-32 md:px-20 md:py-20 xl:flex-row ${theme === "light" ? "bg-gray-200" : "bg-[#01020a]"
-        }`}
+      className={`flex flex-col items-center  justify-center gap-10 py-10 md:gap-32 md:px-20 md:py-20 xl:flex-row ${
+        theme === "light" ? "bg-[#fdfbff]" : "bg-[#01020a]"
+      }`}
     >
       <div
-        className={`relative flex w-64 items-center overflow-hidden transition-opacity duration-1000 ease-in-out md:order-first md:w-4/12 lg:w-6/12 ${inView ? "opacity-100" : "opacity-80"
-          }`}
+        className={`relative flex w-96 flex-col items-center gap-2 overflow-hidden transition-opacity duration-1000 ease-in-out md:order-first md:w-4/12 lg:w-4/12 ${
+          inView ? "opacity-100" : "opacity-80"
+        }`}
       >
-        <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-[#01020a] via-transparent to-transparent"></div>
         <Img src={Photo} alt="Foto de Lucas Campos" className="rounded-lg" />
+
+        <div
+          className={`flex w-full gap-2 [&::-webkit-scrollbar]:hidden ${
+            theme === "light" ? "text-black" : "text-gray-300"
+          } ${inView ? "opacity-100" : "opacity-80"}`}
+        >
+          <AboutTag
+            icon={<Laptop />}
+            text={` ${language === "pt" ? "2 anos como desenvolvedor" : "2 years as developer"}`}
+          />
+          <AboutTag
+            icon={<GraduationCap />}
+            text={`${language === "pt" ? "Graduado e técnico" : "Graduated and technician"}`}
+          />
+          <AboutTag
+            icon={<Network />}
+            text={`${language === "pt" ? "Freelancer ativo" : "Active freelancer"}`}
+          />
+          <AboutTag
+            icon={<BriefcaseBusiness />}
+            text={`${language === "pt" ? "Buscando oportunidades" : "Looking for opportunities"}`}
+          />
+        </div>
       </div>
+
       <div ref={firstTextRef}></div>
       <div
-        className={`flex w-full flex-col items-start justify-center gap-5  px-5 transition-opacity duration-1000 ease-in-out md:items-center lg:w-10/12 lg:items-start ${inView ? "opacity-100" : "opacity-0"
-          }`}
+        className={`flex w-full flex-col items-start justify-center gap-5  px-5 transition-opacity duration-1000 ease-in-out md:items-center lg:w-10/12 lg:items-start ${
+          inView ? "opacity-100" : "opacity-0"
+        }`}
         ref={ref}
       >
         <h1
-          className={` flex  text-4xl font-bold ${theme === "light" ? "text-black" : "text-gray-200"
-            }`}
+          className={` flex  text-4xl font-bold ${
+            theme === "light" ? "text-black" : "text-gray-200"
+          }`}
         >
           {title}
         </h1>
         <p
-          className={`text-md w-full text-left font-semibold transition-opacity duration-500 ease-in-out md:text-lg  lg:w-auto lg:p-0 lg:text-start ${showMore ? "" : ""
-            } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
+          className={`text-md w-full text-left font-semibold transition-opacity duration-500 ease-in-out md:text-lg  lg:w-auto lg:p-0 lg:text-start ${
+            showMore ? "" : ""
+          } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
             maxHeight: showMore ? "" : "500px",
             overflow: "hidden",
@@ -100,10 +135,11 @@ const About = ({ language, theme }) => {
 
         {!showMore && (
           <button
-            className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${theme === "light"
-              ? "bg-black text-gray-200 hover:bg-purple-700 "
-              : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-              }`}
+            className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+              theme === "light"
+                ? "bg-black text-gray-200 hover:bg-purple-700 "
+                : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+            }`}
             onClick={handleToggleShowMore}
           >
             {language === "pt" ? "Saiba mais..." : "See more..."}
@@ -111,8 +147,9 @@ const About = ({ language, theme }) => {
         )}
 
         <p
-          className={`text-md w-full   text-left font-semibold text-gray-200 transition-opacity duration-500 ease-in-out md:text-lg   lg:p-0 lg:text-start ${showMore ? "opacity-100" : "opacity-0"
-            } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
+          className={`text-md w-full   text-left font-semibold text-gray-200 transition-opacity duration-500 ease-in-out md:text-lg   lg:p-0 lg:text-start ${
+            showMore ? "opacity-100" : "opacity-0"
+          } ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
           style={{
             maxHeight: showMore ? "none" : "0px",
             overflow: "hidden",
@@ -123,10 +160,11 @@ const About = ({ language, theme }) => {
 
         {showMore && (
           <button
-            className={`mt-5 w-60 cursor-pointer rounded-lg p-3  font-bold transition-all duration-500 md:mt-0 ${theme === "light"
-              ? "bg-black text-gray-200 hover:bg-purple-700 "
-              : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-              }`}
+            className={`mt-5 w-60 cursor-pointer rounded-lg p-3  font-bold transition-all duration-500 md:mt-0 ${
+              theme === "light"
+                ? "bg-black text-gray-200 hover:bg-purple-700 "
+                : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+            }`}
             onClick={handleToggleShowMore}
           >
             {language === "pt" ? "Esconder texto!" : "Hide this text!"}
