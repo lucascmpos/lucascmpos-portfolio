@@ -508,14 +508,14 @@ const ProjectCard = ({ project, onClick }) => {
       onClick={() => onClick(project)}
     >
       <div
-        className={`relative  rounded-t-full border-b-4 border-purple-800 ${
+        className={`relative   border-b-4 border-purple-800 ${
           isLargeScreen ? " " : ""
         }`}
       >
         <img
           src={project.image}
           alt={project.title}
-          className={`w-full transform  object-cover duration-100  group-hover:scale-105 ${
+          className={`w-full transform rounded-t-md  object-cover duration-100  group-hover:scale-105 ${
             isLargeScreen ? "h-56" : "h-60"
           }`}
         />
@@ -528,7 +528,7 @@ const ProjectCard = ({ project, onClick }) => {
             right: 0,
             textAlign: "center",
           }}
-          className="absolute left-0  top-0 h-full w-full   bg-[#01020a] duration-100 group-hover:scale-105"
+          className="absolute left-0  top-0 h-full w-full rounded-t-md   bg-[#01020a] duration-100 group-hover:scale-105"
         ></animated.div>
         <animated.div
           style={{
@@ -587,7 +587,7 @@ const Projects = ({ language, theme }) => {
     threshold: 0.1,
   });
 
-  const isLargeScreen = useMediaQuery({ minWidth: 1350 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
 
   const [modalAnimation, setModalAnimation] = useState({
     opacity: 0,
@@ -631,16 +631,20 @@ const Projects = ({ language, theme }) => {
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
-          {language === "pt" ? "Projetos em destaque" : "Projects highlighted"}
+          {language === "pt" ? "Projetos" : "Projects"}
         </h1>
         <p
-          className={` mt-5 text-center text-lg lg:mt-10 lg:text-start ${
+          className={` mt-5 w-[80vw] text-center text-lg md:w-auto lg:mt-10 lg:text-start ${
             theme === "light" ? "text-black" : "text-gray-300"
           }`}
         >
-          {language === "pt"
-            ? "Meus maiores projetos! clique em qual desejar para saber mais..."
-            : "My biggest projects! click on which one you want to find out more..."}
+          <span
+            className={`${theme === "light" ? "text-black/50" : "text-gray-300/50"}  font-semibold`}
+          >
+            {language === "pt"
+              ? "Meus maiores projetos! clique em qual desejar para saber mais..."
+              : "My biggest projects! click on which one you want to find out more..."}
+          </span>
         </p>
       </div>
       <div

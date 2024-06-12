@@ -89,24 +89,23 @@ const Services = ({ language, theme }) => {
     {
       id: 4,
       title: {
-        pt: "Integração de APIs e Serviços Externos",
-        en: "Integration of APIs and External Services",
+        pt: "Integração de APIs",
+        en: "Integration of APIs",
       },
       img: <Code size={64} />,
       description: {
         pt: (
           <>
-            Integro APIs minhas, de terceiros e serviços externos para adicionar
-            funcionalidades adicionais aos sites e aplicações web, como
-            pagamentos online, mapas interativos, autenticação social, entre
-            outros.
+            Integro APIs minhas, de terceiros para adicionar funcionalidades
+            adicionais aos sites e aplicações web, como pagamentos online,
+            autenticação social, entre outros.
           </>
         ),
         en: (
           <>
-            Integrate third-party APIs and external services to add additional
-            functionalities to websites and web applications, such as online
-            payments, interactive maps, social authentication, among others.
+            Integrate third-party APIs to add additional functionalities to
+            websites and web applications, such as online payments, social
+            authentication, among others.
           </>
         ),
       },
@@ -174,7 +173,7 @@ const Services = ({ language, theme }) => {
         </h1>
       </div>
       <div
-        className={`${theme === "light" ? "text-black" : "text-gray-300"} px text-md mt-10 flex w-full items-center justify-between gap-2 px-5 py-1 text-center font-semibold lg:hidden lg:px-2 `}
+        className={`${theme === "light" ? "text-black/50" : "text-gray-300/50"} px text-md mt-10 flex w-full items-center justify-between gap-2 px-5 py-1 text-center font-semibold lg:hidden lg:px-2 `}
       >
         {language === "pt" ? "Arraste para ver mais" : "Swipe to see more"}
 
@@ -189,7 +188,7 @@ const Services = ({ language, theme }) => {
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className={`group flex h-[50vh] flex-col justify-center  gap-2 rounded-xl border-4 border-opacity-20 px-8 transition-all duration-200 hover:border-opacity-100  lg:h-auto lg:items-start lg:py-10 xl:items-center ${theme === "light" ? "bg-white" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
+            className={`group flex  flex-col justify-center  gap-2 rounded-xl border-4 border-opacity-20 px-8 transition-all duration-200 hover:border-opacity-100  lg:h-auto lg:items-start lg:py-10 xl:items-center ${theme === "light" ? "bg-white" : "bg-[#020211]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
           >
             <div
               className={`mb-10 transition-all duration-200 group-hover:scale-105 lg:mb-auto  ${theme === "light" ? "text-black" : "text-white"}`}
@@ -202,7 +201,7 @@ const Services = ({ language, theme }) => {
               {service.title[language]}
             </h2>
             <p
-              className={`w-[60vw] font-semibold lg:w-[20vw] ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+              className={`w-[50vw] font-semibold md:w-[35vw] lg:w-[20vw] ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
             >
               {service.description[language]}
             </p>

@@ -53,13 +53,14 @@ const Experience = ({ language, theme }) => {
         subtitulo: "Desenvolvedor Frontend",
         descricao: (
           <span>
-            Atuei ativamente na implementação do desenvolvimento e de testes
-            integrados de componentes do Storybook do cliente, e também
-            participando de práticas ágeis, com Scrum e Kanban. Essa experiência
-            ampliou minhas habilidades e consolidou meu comprometimento com a
-            excelência no desenvolvimento de software. <br />
+            Atuei ativamente na implementação do desenvolvimento e testes de
+            componentes e interfaces da aplicação do cliente Livelo web e
+            mobile, e também participando de práticas ágeis, com Scrum e Kanban.{" "}
+            <br />
             Participei de mais de 20 cursos intensivos que cobriram
-            desenvolvimento de software, metodologias ágeis e AWS Cloud.
+            desenvolvimento de software, metodologias ágeis e AWS Cloud. <br />
+            Essa experiência ampliou minhas habilidades e consolidou meu
+            comprometimento com a excelência no desenvolvimento de software.
             <br />
             <br />
           </span>
@@ -161,7 +162,7 @@ const Experience = ({ language, theme }) => {
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
-          {language === "pt" ? "Experiências profissionais" : "Work history"}
+          {language === "pt" ? "Experiências" : "Work history"}
         </h1>
       </div>
       <div
@@ -172,7 +173,7 @@ const Experience = ({ language, theme }) => {
       >
         {currentExperiences.map((experiencia) => (
           <div
-            className={`group  flex w-full flex-col items-center justify-center gap-4 rounded-lg border-4 border-purple-700  border-opacity-30  py-8 transition-all  hover:border-opacity-80  md:w-[600px] md:px-16 lg:w-[900px] ${theme === "light" ? "bg-white" : "bg-[#01020a]"}`}
+            className={`group flex w-[80vw] flex-col items-center justify-center gap-4 rounded-lg border-4 border-purple-700  border-opacity-30  py-8 transition-all  hover:border-opacity-80  md:w-[600px] md:px-16 lg:w-[70vw]  xl:w-[55vw] ${theme === "light" ? "bg-white" : "bg-[#01020a]"}`}
             key={experiencia.id}
           >
             <div className="flex flex-col items-center justify-center">
@@ -207,11 +208,23 @@ const Experience = ({ language, theme }) => {
               </p>
             </div>
             <div className="flex w-full flex-row justify-between px-5">
-              <span className=" text-center font-semibold text-gray-400">
-                {language === "pt"
-                  ? "Tecnologias usadas:"
-                  : "Used technologies:"}
-              </span>
+              <div className="space-x-3">
+                <span
+                  className={`text-center font-semibold ${theme === "light" ? "text-gray-500" : "text-gray-400/80"}`}
+                >
+                  {language === "pt"
+                    ? "Tecnologias usadas:"
+                    : "Used technologies:"}
+                </span>
+
+                <span
+                  className={`text-center text-xs font-semibold ${theme === "light" ? "text-gray-500/70" : "text-gray-400/50"} lg:hidden`}
+                >
+                  {language === "pt"
+                    ? "Arraste para ver mais"
+                    : "Swipe to see more"}
+                </span>
+              </div>
 
               <ChevronsRight className="text-purple-800 lg:hidden" />
             </div>

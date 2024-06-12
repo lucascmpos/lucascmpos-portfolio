@@ -59,18 +59,36 @@ const Tech = ({ language, theme }) => {
       >
         {language === "pt" ? "Tecnologias" : "Technologies"}
       </h1>
-      <span
+      <div
         className={`px-2 text-center text-lg font-semibold ${
           theme === "light" ? "text-black" : "text-gray-200"
         }`}
       >
-        {language === "pt"
-          ? "Essas são minhas principais tecnologias! Passe o cursor ou clique em cima do ícone para saber mais..."
-          : "These are my main technologies! Hover the cursor or click on the icon..."}
-      </span>
+        <p
+          className={`${theme === "light" ? "text-black/80" : "text-gray-200/80"}`}
+        >
+          {language === "pt"
+            ? "Essas são minhas principais tecnologias!"
+            : "These are my main stack!"}
+        </p>
+        <div
+          className={`${theme === "light" ? "text-black/50" : "text-gray-200/50"}`}
+        >
+          <span className="hidden lg:inline">
+            {language === "pt"
+              ? "Passe o cursor para saber mais..."
+              : "Hover the cursor to see more..."}
+          </span>
+          <span className="lg:hidden">
+            {language === "pt"
+              ? "Clique para saber mais..."
+              : "Click to see more..."}
+          </span>
+        </div>
+      </div>
       <div
         ref={ref}
-        className={`mt-2 grid grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-40 p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6 ${
+        className={`mt-2 grid w-[70vw] grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-40 p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6 ${
           theme === "light" ? "bg-[#fdfbff]" : "bg-[#020211]"
         } ${
           inView ? "opacity-100" : "opacity-0"

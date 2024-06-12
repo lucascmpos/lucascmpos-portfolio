@@ -17,7 +17,7 @@ const About = ({ language, theme }) => {
   const [buttonClicked, setButtonClicked] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: -0,
+    threshold: 1,
   });
 
   const isXLScreen = useMediaQuery({ minWidth: 1280 });
@@ -76,14 +76,12 @@ const About = ({ language, theme }) => {
       }`}
     >
       <div
-        className={`relative flex w-96 flex-col items-center gap-2 overflow-hidden transition-opacity duration-1000 ease-in-out md:order-first md:w-4/12 lg:w-4/12 ${
-          inView ? "opacity-100" : "opacity-80"
-        }`}
+        className={`relative flex w-96 flex-col items-center gap-2 overflow-hidden transition-opacity duration-1000 ease-in-out md:order-first md:-mb-36 md:w-7/12 lg:w-6/12 xl:w-6/12 2xl:w-4/12  `}
       >
         <Img src={Photo} alt="Foto de Lucas Campos" className="rounded-lg" />
 
         <div
-          className={`flex w-full gap-2 [&::-webkit-scrollbar]:hidden ${
+          className={` flex w-full gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden ${
             theme === "light" ? "text-black" : "text-gray-300"
           } ${inView ? "opacity-100" : "opacity-80"}`}
         >
@@ -108,9 +106,7 @@ const About = ({ language, theme }) => {
 
       <div ref={firstTextRef}></div>
       <div
-        className={`flex w-full flex-col items-start justify-center gap-5  px-5 transition-opacity duration-1000 ease-in-out md:items-center lg:w-10/12 lg:items-start ${
-          inView ? "opacity-100" : "opacity-0"
-        }`}
+        className={`flex w-full flex-col items-start justify-center gap-5  px-5 transition-opacity duration-1000 ease-in-out md:items-center lg:w-10/12 lg:items-start `}
         ref={ref}
       >
         <h1
