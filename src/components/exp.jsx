@@ -216,14 +216,6 @@ const Experience = ({ language, theme }) => {
                     ? "Tecnologias usadas:"
                     : "Used technologies:"}
                 </span>
-
-                <span
-                  className={`text-center text-xs font-semibold ${theme === "light" ? "text-gray-500/70" : "text-gray-400/50"} lg:hidden`}
-                >
-                  {language === "pt"
-                    ? "Arraste para ver mais"
-                    : "Swipe to see more"}
-                </span>
               </div>
 
               <ChevronsRight className="text-purple-800 lg:hidden" />
