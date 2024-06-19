@@ -5,26 +5,16 @@ import Modal from "react-modal";
 import devFood from "../assets/devfood.png";
 import sharpCut from "../assets/sharpcut.png";
 import periWare from "../assets/periwarestore.png";
-<<<<<<< HEAD
 import chatNow from "../assets/chatnow.png";
 import uploadAi from "../assets/uploadai.jpeg";
 import expertNotes from "../assets/expertnotes.png";
 import natuFlora from "../assets/natuflora.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
-=======
-import uploadAi from "../assets/uploadai.jpeg";
-import expertNotes from "../assets/expertnotes.png";
-import natuFlora from "../assets/natuflora.png";
-import pairBank from "../assets/pairbank.png";
-import weeklyPlanner from "../assets/weeklyplanner.png";
-import monFi from "../assets/monfi.jpeg";
->>>>>>> a78b2c6efeb5f0f649f694122254364e8e4936ea
 import { useSpring, animated } from "react-spring";
 import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CircleChevronUp } from "lucide-react";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
-<<<<<<< HEAD
 import chatNowVideo from "../assets/chatNowVideo.mp4";
 import expertNotesVideo from "../assets/expertnotesvideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
@@ -32,16 +22,6 @@ import natuFloraVideo from "../assets/natufloravideo.mp4";
 import sharpcutVideo from "../assets/sharpcutvideo.mp4";
 import devfoodVideo from "../assets/devfoodvideo.mp4";
 import periwareVideo from "../assets/periwarevideo.mp4";
-=======
-import expertNotesVideo from "../assets/expertnotesvideo.mp4";
-import weeklyVideo from "../assets/weeklyplannervideo.mp4";
-import natuFloraVideo from "../assets/natufloravideo.mp4";
-import pairBankVideo from "../assets/pairbankvideo.mp4";
-import sharpcutVideo from "../assets/sharpcutvideo.mp4";
-import devfoodVideo from "../assets/devfoodvideo.mp4";
-import periwareVideo from "../assets/periwarevideo.mp4";
-import monfiVideo from "../assets/monfivideo.mp4";
->>>>>>> a78b2c6efeb5f0f649f694122254364e8e4936ea
 
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
@@ -220,7 +200,6 @@ const projectsData = [
   },
   {
     id: 4,
-<<<<<<< HEAD
     title: "Chat Now",
     image: chatNow,
     video: chatNowVideo,
@@ -277,8 +256,6 @@ const projectsData = [
   },
   {
     id: 5,
-=======
->>>>>>> a78b2c6efeb5f0f649f694122254364e8e4936ea
     title: "Upload.ai",
     video: uploadAiVideo,
     image: uploadAi,
@@ -337,11 +314,7 @@ const projectsData = [
     ],
   },
   {
-<<<<<<< HEAD
-    id: 6,
-=======
     id: 5,
->>>>>>> a78b2c6efeb5f0f649f694122254364e8e4936ea
     title: "Expert Notes",
     video: expertNotesVideo,
     image: expertNotes,
@@ -394,10 +367,6 @@ const projectsData = [
       "Figma",
     ],
   },
-<<<<<<< HEAD
-  {
-    id: 7,
-=======
 
   {
     id: 6,
@@ -442,34 +411,7 @@ const projectsData = [
   },
 
   {
-    id: 8,
-    title: "Pairbank",
-    video: pairBankVideo,
-    image: pairBank,
-    description: {
-      pt: (
-        <>
-          Esta landing page representa um banco fictício, servindo como uma
-          plataforma de teste para avaliar a qualidade do meu design e
-          responsividade.
-        </>
-      ),
-      en: (
-        <>
-          This landing page represents a fictional bank, serving as a test
-          platform to assess the quality of my design and responsiveness.
-        </>
-      ),
-    },
-    site: "https://pair-bank.vercel.app/",
-    github: "https://github.com/lucascmpos/pair_bank",
-    linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_eai-pessoal-estou-aqui-hoje-para-divulgar-activity-7168397456626454528-668H?utm_source=share&utm_medium=member_desktop",
-    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
-  },
-  {
-    id: 9,
->>>>>>> a78b2c6efeb5f0f649f694122254364e8e4936ea
+    id: 7,
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
@@ -511,94 +453,6 @@ const projectsData = [
       "WeatherAPI",
       "SwaggerAPI",
     ],
-  },
-  {
-<<<<<<< HEAD
-    id: 8,
-    title: "Natu Flora",
-    video: natuFloraVideo,
-    image: natuFlora,
-    description: {
-      pt: (
-        <>
-          Esta landing page estilo vitrine representa uma loja fictícia que
-          também pode ser expandida para um e-commerce caso a loja deseje.
-          <br />
-          <br />
-          Funcionalidades: <br />
-          -Design limpo e responsivo
-          <br />
-          -Animações
-          <br />
-          -Menu lateral para dispositivos mobile
-=======
-    id: 10,
-    title: "MonFi",
-    video: monfiVideo,
-    image: monFi,
-    description: {
-      pt: (
-        <>
-          Consiste em um site onde o usuário pode consultar qualquer filme que
-          quiser, podendo ver sua nota, orçamento, receita, duração e descrição
-          do filme selecionado.
-          <br />
-          Funcionalidades:
-          <br />
-          - Integração com The Movie Database (TMDB)
-          <br />
-          - Pesquisas
-          <br />- Responsividade
->>>>>>> a78b2c6efeb5f0f649f694122254364e8e4936ea
-        </>
-      ),
-      en: (
-        <>
-<<<<<<< HEAD
-          This storefront-style landing page represents a fictional store that
-          It can also be expanded to e-commerce if the store wishes.
-          <br />
-          <br />
-          Features: <br />
-          -Clean and responsive design
-          <br />
-          -Animations
-          <br />
-          -Side menu for mobile devices
-        </>
-      ),
-    },
-    site: "https://natuflora.vercel.app/",
-    github: "https://github.com/lucascmpos/natuflora",
-    linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_react-landingpage-tailwind-activity-7180590037623848960-WLB7?utm_source=share&utm_medium=member_desktop",
-    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
-=======
-          It consists of a website where the user can look up any movie they
-          want, being able to see its rating, budget, revenue, duration, and
-          description of the selected movie.
-          <br />
-          Features:
-          <br />
-          - Integration with The Movie Database (TMDB)
-          <br />
-          - Searches
-          <br />- Responsiveness
-        </>
-      ),
-    },
-    site: "https://monfi.netlify.app/",
-    github: "https://github.com/lucascmpos/MonFi",
-    linkedin: "",
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js",
-      "SASS",
-      "The Movie Database API",
-    ],
->>>>>>> a78b2c6efeb5f0f649f694122254364e8e4936ea
   },
 ];
 const ProjectCard = ({ project, onClick }) => {
