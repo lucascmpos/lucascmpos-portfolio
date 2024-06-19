@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import devFood from "../assets/devfood.png";
 import sharpCut from "../assets/sharpcut.png";
 import periWare from "../assets/periwarestore.png";
+import chatNow from "../assets/chatnow.png";
 import uploadAi from "../assets/uploadai.jpeg";
 import expertNotes from "../assets/expertnotes.png";
 import natuFlora from "../assets/natuflora.png";
@@ -16,6 +17,7 @@ import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CircleChevronUp } from "lucide-react";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
+import chatNowVideo from "../assets/chatNowVideo.mp4";
 import expertNotesVideo from "../assets/expertnotesvideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import natuFloraVideo from "../assets/natufloravideo.mp4";
@@ -202,6 +204,62 @@ const projectsData = [
   },
   {
     id: 4,
+    title: "Chat Now",
+    image: chatNow,
+    video: chatNowVideo,
+    description: {
+      pt: (
+        <>
+          Projeto de um aplicativo de chat onde você pode enviar pedidos de
+          amizade, criar grupos, conversar, remover e sair dos grupos e
+          conversar em tempo real. O usuário pode gerenciar suas conexões e
+          interações de forma eficiente e intuitiva.
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Integração com Clerk e Convex para autenticação
+          <br />
+          - Responsividade
+          <br />- Tema claro e escuro
+        </>
+      ),
+      en: (
+        <>
+          Project of a chat application where you can send friend requests,
+          create groups, chat, remove and leave groups, and chat in real time.
+          Users can manage their connections and interactions efficiently and
+          intuitively.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Integration with Clerk and Convex for authentication
+          <br />
+          - Responsiveness
+          <br />- Light and dark theme
+        </>
+      ),
+    },
+    site: "https://chatsnow.vercel.app/",
+    github: "https://github.com/lucascmpos/chat-now",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
+    tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwindcss",
+      "ShadcnUI",
+      "Convex",
+      "Clerk",
+      "PostgreSQL",
+    ],
+  },
+  {
+    id: 5,
     title: "Upload.ai",
     video: uploadAiVideo,
     image: uploadAi,
@@ -260,7 +318,7 @@ const projectsData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Expert Notes",
     video: expertNotesVideo,
     image: expertNotes,
@@ -313,77 +371,8 @@ const projectsData = [
       "Figma",
     ],
   },
-
   {
-    id: 6,
-    title: "Natu Flora",
-    video: natuFloraVideo,
-    image: natuFlora,
-    description: {
-      pt: (
-        <>
-          Esta landing page estilo vitrine representa uma loja fictícia que
-          também pode ser expandida para um e-commerce caso a loja deseje.
-          <br />
-          <br />
-          Funcionalidades: <br />
-          -Design limpo e responsivo
-          <br />
-          -Animações
-          <br />
-          -Menu lateral para dispositivos mobile
-        </>
-      ),
-      en: (
-        <>
-          This storefront-style landing page represents a fictional store that
-          It can also be expanded to e-commerce if the store wishes.
-          <br />
-          <br />
-          Features: <br />
-          -Clean and responsive design
-          <br />
-          -Animations
-          <br />
-          -Side menu for mobile devices
-        </>
-      ),
-    },
-    site: "https://natuflora.vercel.app/",
-    github: "https://github.com/lucascmpos/natuflora",
-    linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_react-landingpage-tailwind-activity-7180590037623848960-WLB7?utm_source=share&utm_medium=member_desktop",
-    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
-  },
-
-  {
-    id: 8,
-    title: "Pairbank",
-    video: pairBankVideo,
-    image: pairBank,
-    description: {
-      pt: (
-        <>
-          Esta landing page representa um banco fictício, servindo como uma
-          plataforma de teste para avaliar a qualidade do meu design e
-          responsividade.
-        </>
-      ),
-      en: (
-        <>
-          This landing page represents a fictional bank, serving as a test
-          platform to assess the quality of my design and responsiveness.
-        </>
-      ),
-    },
-    site: "https://pair-bank.vercel.app/",
-    github: "https://github.com/lucascmpos/pair_bank",
-    linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_eai-pessoal-estou-aqui-hoje-para-divulgar-activity-7168397456626454528-668H?utm_source=share&utm_medium=member_desktop",
-    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
-  },
-  {
-    id: 9,
+    id: 7,
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
@@ -427,51 +416,45 @@ const projectsData = [
     ],
   },
   {
-    id: 10,
-    title: "MonFi",
-    video: monfiVideo,
-    image: monFi,
+    id: 8,
+    title: "Natu Flora",
+    video: natuFloraVideo,
+    image: natuFlora,
     description: {
       pt: (
         <>
-          Consiste em um site onde o usuário pode consultar qualquer filme que
-          quiser, podendo ver sua nota, orçamento, receita, duração e descrição
-          do filme selecionado.
+          Esta landing page estilo vitrine representa uma loja fictícia que
+          também pode ser expandida para um e-commerce caso a loja deseje.
           <br />
-          Funcionalidades:
           <br />
-          - Integração com The Movie Database (TMDB)
+          Funcionalidades: <br />
+          -Design limpo e responsivo
           <br />
-          - Pesquisas
-          <br />- Responsividade
+          -Animações
+          <br />
+          -Menu lateral para dispositivos mobile
         </>
       ),
       en: (
         <>
-          It consists of a website where the user can look up any movie they
-          want, being able to see its rating, budget, revenue, duration, and
-          description of the selected movie.
+          This storefront-style landing page represents a fictional store that
+          It can also be expanded to e-commerce if the store wishes.
           <br />
-          Features:
           <br />
-          - Integration with The Movie Database (TMDB)
+          Features: <br />
+          -Clean and responsive design
           <br />
-          - Searches
-          <br />- Responsiveness
+          -Animations
+          <br />
+          -Side menu for mobile devices
         </>
       ),
     },
-    site: "https://monfi.netlify.app/",
-    github: "https://github.com/lucascmpos/MonFi",
-    linkedin: "",
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js",
-      "SASS",
-      "The Movie Database API",
-    ],
+    site: "https://natuflora.vercel.app/",
+    github: "https://github.com/lucascmpos/natuflora",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_react-landingpage-tailwind-activity-7180590037623848960-WLB7?utm_source=share&utm_medium=member_desktop",
+    tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
 ];
 const ProjectCard = ({ project, onClick }) => {
