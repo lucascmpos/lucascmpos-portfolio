@@ -173,7 +173,7 @@ const Experience = ({ language, theme }) => {
       >
         {currentExperiences.map((experiencia) => (
           <div
-            className={`group flex w-[80vw] flex-col items-center justify-center gap-4 rounded-lg border-4 border-purple-700  border-opacity-30  py-8 transition-all  hover:border-opacity-80  md:w-[600px] md:px-16 lg:w-[70vw]  xl:w-[55vw] ${theme === "light" ? "bg-white" : "bg-[#01020a]"}`}
+            className={`group flex w-[80vw] flex-col items-center justify-center gap-4 rounded-lg border-4 border-purple-700  border-opacity-30  py-8 transition-all  hover:border-opacity-80  md:w-[600px] md:px-16 lg:w-[70vw]  xl:w-[55vw] ${theme === "light" ? "bg-white" : ""}`}
             key={experiencia.id}
           >
             <div className="flex flex-col items-center justify-center">
