@@ -8,6 +8,7 @@ import periWare from "../assets/periwarestore.png";
 import chatNow from "../assets/chatnow.png";
 import uploadAi from "../assets/uploadai.jpeg";
 import expertNotes from "../assets/expertnotes.png";
+import dashBlue from "../assets/dashblue.png";
 import natuFlora from "../assets/natuflora.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
 import { useSpring, animated } from "react-spring";
@@ -17,6 +18,7 @@ import { CircleChevronUp } from "lucide-react";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import chatNowVideo from "../assets/chatNowVideo.mp4";
 import expertNotesVideo from "../assets/expertnotesvideo.mp4";
+import dashBlueVideo from "../assets/dashbluevideo.mp4";
 import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import natuFloraVideo from "../assets/natufloravideo.mp4";
 import sharpcutVideo from "../assets/sharpcutvideo.mp4";
@@ -298,7 +300,7 @@ const projectsData = [
     site: "https://uploadai.netlify.app/",
     github: "https://github.com/lucascmpos/NLW-IA",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_realtimechat-frontend-nextjs-activity-7211719833627856896-sxYY?utm_source=share&utm_medium=member_desktop",
     tech: [
       "HTML",
       "CSS",
@@ -370,6 +372,60 @@ const projectsData = [
 
   {
     id: 6,
+    title: "Dashboard Blue",
+    video: dashBlueVideo,
+    image: dashBlue,
+    description: {
+      pt: (
+        <>
+          Este projeto consiste em um dashboard para um teste técnico para a
+          Blue Company. Consiste em vários tipos de gráficos, funcionalidades e
+          responsividade.
+          <br />
+          <br />
+          Funcionalidades:
+          <br />
+          - Responsivo
+          <br />
+          - Gráficos com Recharts
+          <br />- Testes unitários
+        </>
+      ),
+      en: (
+        <>
+          This project consists of a dashboard for a technician test for Blue
+          Company. Consist in various types of charts, functionalities and
+          responsivity.
+          <br />
+          <br />
+          Features:
+          <br />
+          - Responsiveness
+          <br />
+          - Charts with Recharts
+          <br />- Unity tests
+        </>
+      ),
+    },
+    site: "https://dashboard-blue-company.vercel.app/",
+    github: "https://github.com/lucascmpos/desafio-front-end",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_dashboard-case-frontend-activity-7210005597247700992-fDCW?utm_source=share&utm_medium=member_desktop",
+    tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
+      "Jest",
+      "Tailwindcss",
+      "MaterialUI",
+      "Recharts",
+      "Figma",
+    ],
+  },
+
+  {
+    id: 7,
     title: "Natu Flora",
     video: natuFloraVideo,
     image: natuFlora,
@@ -411,7 +467,7 @@ const projectsData = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
