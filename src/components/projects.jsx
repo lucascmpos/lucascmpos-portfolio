@@ -297,7 +297,7 @@ const projectsData = [
         </>
       ),
     },
-    site: "https://uploadai.netlify.app/",
+    site: "https://uploadsai.vercel.app/",
     github: "https://github.com/lucascmpos/NLW-IA",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_realtimechat-frontend-nextjs-activity-7211719833627856896-sxYY?utm_source=share&utm_medium=member_desktop",
