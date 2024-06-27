@@ -13,13 +13,17 @@ body.overflow-y-hidden {
 }
 
 .blur-overlay {
-  z-index: 50 !important 
+  z-index: 30 !important 
  
 }
 
 .mobile-menu {
-  z-index: 60 !important;
+  z-index: 40 !important;
  
+}
+
+.modal-class {
+    z-index: 1000; /* Ajuste conforme necessário */
 }
 
 .modal-open {

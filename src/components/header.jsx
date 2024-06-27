@@ -104,7 +104,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             initial={{ x: "100%" }}
             animate={{ x: isOpen ? "0%" : "100%" }}
             transition={{ duration: 0.3 }}
-            className={`mobile-menu fixed right-0 top-0 z-60 h-full w-[65vw] border-l text-gray-300 ${
+            className={`mobile-menu fixed right-0 top-0  h-full w-[65vw] border-l text-gray-300 ${
               theme === "light"
                 ? "bg-secondary-light border-secondary-light"
                 : "bg-secondary-dark border-secondary-dark"
@@ -197,7 +197,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
       <AnimatePresence>
         {!isMenuOpen && (
           <motion.header
-          className={`fixed z-50 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
+          className={`fixed z-10 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
             theme === "light"
               ? "border-gray-200/50 bg-secondary-light text-black"
               : "border-primary-dark bg-secondary-dark text-gray-300"

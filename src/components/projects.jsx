@@ -644,7 +644,7 @@ const Projects = ({ language, theme }) => {
     return (
       <div
       key={project.id}
-      className={`group relative border  rounded-md cursor-pointer w-[90vw] md:w-auto ${theme === "light" ? " bg-primary-light border-secondary-light " : " bg-primary-dark border-secondary-dark  hover:text-white "}`}
+      className={`group relative border rounded-md cursor-pointer w-[90vw] md:w-auto ${theme === "light" ? " bg-primary-light border-secondary-light " : " bg-primary-dark border-secondary-dark  hover:text-white "}`}
       onClick={() => onClick(project)}
       >
       <div>
@@ -782,7 +782,7 @@ const Projects = ({ language, theme }) => {
               transform: modalAnimation.transform,
               opacity: modalAnimation.opacity,
               width: isLargeScreen ? "80%" : "100%",
-              maxWidth: isLargeScreen ? "none" : "95%",
+              maxWidth: isLargeScreen ? "none" : "none",
               height: isLargeScreen ? "85%" : "95%",
               backgroundColor: theme === "light" ? "#ffffff" : "#020211",
               border: theme === "light" ? "2px solid #d4d4d4" : "1px solid #2e2e40",
@@ -790,13 +790,14 @@ const Projects = ({ language, theme }) => {
               transition: "opacity 0.3s, transform 0.3s ",
               justifyContent: "center",
               alignItems: "center",
+              
             },
           }}
           appElement={document.getElementById("root")}
           overlayClassName={{
-            base: "fixed inset-0 overflow-y-auto",
+            base: "fixed inset-0 overflow-y-auto z-20 ",
             afterOpen:
-              "bg-[rgba(0,0,0,0.4)] backdrop-filter flex  items-center justify-center backdrop-blur-md z-20",
+              "bg-[rgba(0,0,0,0.4)] backdrop-filter flex  items-center justify-center backdrop-blur-md  ",
             beforeClose: "",
           }}
         >
