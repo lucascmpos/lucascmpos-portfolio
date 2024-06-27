@@ -136,7 +136,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 >
                  <div className="flex justify-end px-12 w-full"> 
       <h2
-        className={`flex group cursor-pointer text-2xl flex-row items-center gap-2 w-fit ${
+        className={`flex group cursor-pointer font-semibold text-2xl flex-row items-center gap-2 w-fit ${
           theme === "light" ? "text-black" : "text-gray-200"
         }`}
       >
