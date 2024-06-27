@@ -88,9 +88,7 @@ const Tech = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`mt-2 grid w-[70vw] grid-cols-3 gap-8 rounded-lg border-4 border-purple-900 border-opacity-40 p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6 ${
-          theme === "light" ? "bg-[#fdfbff]" : "bg-[#020211]"
-        } ${
+        className={`mt-2 grid w-[70vw] grid-cols-3 gap-8 rounded-lg   p-10 md:w-1/2 md:grid-cols-4 lg:w-1/2 lg:grid-cols-6  ${
           inView ? "opacity-100" : "opacity-0"
         } transition-opacity duration-1000 ease-in-out`}
       >
