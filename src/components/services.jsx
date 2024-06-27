@@ -159,13 +159,13 @@ const Services = ({ language, theme }) => {
 
   return (
     <div
-      className={`flex flex-col items-center   py-24 ${
+      className={`flex flex-col items-center   py-32 lg:pt-72 md:pb-20  ${
         theme === "light" ? "bg-primary-light" : "bg-primary-dark"
       }`}
     >
       <div className="flex items-start">
         <h1
-          className={`text-4xl font-bold ${
+          className={`text-4xl font-bold  ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
@@ -173,7 +173,7 @@ const Services = ({ language, theme }) => {
         </h1>
       </div>
       <div
-        className={`${theme === "light" ? "text-black/50" : "text-gray-300/50"} px text-md mt-10 flex w-full items-center justify-between gap-2 px-5 py-1 text-center font-semibold lg:hidden lg:px-2 `}
+        className={`${theme === "light" ? "text-black/50" : "text-gray-300/50"}   text-md mt-10 md:mt-0 flex w-full items-center justify-between gap-2 px-5 py-1 text-center font-semibold lg:hidden lg:px-2 `}
       >
         {language === "pt" ? "Arraste para ver mais" : "Swipe to see more"}
 
@@ -181,14 +181,14 @@ const Services = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`mt-10 flex max-w-full flex-row gap-10 overflow-x-auto px-2 py-10 transition-all duration-300 md:mt-20 lg:grid lg:grid-cols-3 lg:px-10 [&::-webkit-scrollbar]:hidden ${
+        className={`mt-10 flex max-w-full lg:mt-0 flex-row gap-10 overflow-x-auto px-2 py-10 transition-all duration-300 md:mt-20 lg:grid lg:grid-cols-3 lg:px-10 [&::-webkit-scrollbar]:hidden ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className={`group flex  flex-col justify-center  gap-2 rounded-xl border-4 border-opacity-20 px-8 transition-all duration-200 hover:border-opacity-100  lg:h-auto lg:items-start py-10  xl:items-center ${theme === "light" ? "bg-white" : " bg-[#01020a]"} ${theme === "light" ? "border-purple-700" : "border-purple-900"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
+            className={`group flex  flex-col justify-center  gap-2 rounded-xl border-2 border-opacity-20 px-8 transition-all duration-200 hover:border-opacity-100  lg:h-auto lg:items-start py-8  xl:items-center ${theme === "light" ? "bg-secondary-light" : " bg-secondary-dark"} ${theme === "light" ? "border-purple-700" : "border-purple-700"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
           >
             <div
               className={`mb-10 transition-all duration-200 group-hover:scale-105 lg:mb-auto  ${theme === "light" ? "text-black" : "text-white"}`}

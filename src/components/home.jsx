@@ -62,13 +62,13 @@ const Home = ({ language, theme }) => {
       <div className="flex flex-col items-center justify-center gap-16 pt-72 md:pt-96 ">
         <div className="flex w-auto flex-col items-center justify-center gap-1 lg:w-auto ">
           <h1
-            className={`text-3xl font-extrabold md:text-5xl lg:text-6xl     ${
+            className={`text-3xl font-extrabold md:text-4xl lg:text-5xl     ${
               theme === "light" ? "text-gray-950" : "text-gray-200"
             }`}
           >
             Lucas Campos
             <span
-              className={`text-3xl font-extrabold md:text-5xl lg:text-6xl  ${
+              className={`text-3xl font-extrabold md:text-4xl lg:text-5xl  ${
                 theme === "light" ? "text-purple-600" : "text-purple-900"
               }`}
             >
@@ -76,7 +76,7 @@ const Home = ({ language, theme }) => {
             </span>
           </h1>
           <span
-            className={`w-auto text-center text-3xl font-extrabold md:w-auto md:text-5xl lg:text-6xl   ${
+            className={`w-auto text-center text-3xl font-extrabold md:w-auto md:text-4xl lg:text-5xl   ${
               theme === "light" ? "text-purple-600" : "text-purple-900"
             }`}
           >

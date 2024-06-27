@@ -11,8 +11,8 @@ const Contact = ({ language, theme }) => {
   return (
     <div
       id="contact"
-      className={`flex flex-col items-center  justify-center py-20 ${
-        theme === "light" ? "bg-primary-light" : "bg-primary-dark"
+      className={`flex flex-col items-center  justify-center pb-44 pt-20 ${
+        theme === "light" ? "bg-secondary-light" : "bg-secondary-dark"
       }`}
     >
       <div

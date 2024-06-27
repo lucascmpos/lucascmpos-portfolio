@@ -122,7 +122,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 onClick={() => toggleMenu(false)}
               >
                 <div>
-                  <h2 className="cursor-pointer font-bold text-sm text-purple-800">
+                  <h2 className="cursor-pointer font-bold  text-purple-800">
                     campos
                     <span
                       className={`${

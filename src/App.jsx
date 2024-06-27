@@ -8,7 +8,6 @@ import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Services from "./components/services";
-import Tech from "./components/tech";
 import { ArrowUp } from "lucide-react";
 import { Link } from "react-scroll";
 
@@ -82,7 +81,6 @@ function App() {
       <Home id="home" theme={theme} language={language} />
       <About theme={theme} language={language} />
       <Services theme={theme} language={language} />
-      <Tech theme={theme} language={language} />
       <Experience theme={theme} language={language} />
       <Projects theme={theme} language={language} />
       <Contact theme={theme} language={language} />

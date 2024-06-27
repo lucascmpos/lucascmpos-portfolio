@@ -10,14 +10,12 @@ import uploadAi from "../assets/uploadai.jpeg";
 import expertNotes from "../assets/expertnotes.png";
 import dashBlue from "../assets/dashblue.png";
 import natuFlora from "../assets/natuflora.png";
-import weeklyPlanner from "../assets/weeklyplanner.png";
 import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import chatNowVideo from "../assets/chatNowVideo.mp4";
 import expertNotesVideo from "../assets/expertnotesvideo.mp4";
 import dashBlueVideo from "../assets/dashbluevideo.mp4";
-import weeklyVideo from "../assets/weeklyplannervideo.mp4";
 import natuFloraVideo from "../assets/natufloravideo.mp4";
 import sharpcutVideo from "../assets/sharpcutvideo.mp4";
 import devfoodVideo from "../assets/devfoodvideo.mp4";
@@ -626,70 +624,6 @@ const projectsData = [
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
 
-  {
-    id: 9,
-    title: "Weekly Planner",
-    image: weeklyPlanner,
-    video: weeklyVideo,
-    subdescription: {
-      pt: (
-        <>
-         To-Do-List apresentando funcionalidades de cadastro CRUD, integradas a
-         uma autenticação de usuário validada.
-        </>
-      ),
-      en: (
-        <>
-          To-Do-List featuring CRUD registration functionalities, integrated
-          with validated user authentication.
-        </>
-      ),
-    },
-    description: {
-      pt: (
-        <>
-          To-Do-List apresentando funcionalidades de cadastro CRUD, integradas a
-          uma autenticação de usuário validada. Além disso, incorpora a
-          WeatherAPI para fornecer informações climáticas da cidade
-          correspondente. É relevante mencionar que o projeto foi originalmente
-          construído com o suporte de um banco de dados Compass UOL durante meu
-          estágio, o qual foi excluído posteriormente. No entanto, para oferecer
-          uma visão do funcionamento, disponibilizei um deploy com validação
-          local.
-        </>
-      ),
-      en: (
-        <>
-          To-Do-List featuring CRUD registration functionalities, integrated
-          with validated user authentication. Additionally, it incorporates the
-          WeatherAPI to provide weather information for the corresponding city.
-          It is worth mentioning that the project was originally built with the
-          support of a Compass UOL database during my internship, which was
-          later deleted. However, to provide an insight into the operation, I
-          deployed it with local validation.
-        </>
-      ),
-    },
-    
-    site: "https://weekly-planner-uol.vercel.app",
-    github: "https://github.com/lucascmpos/Projeto-Compass-VIII",
-    linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_react-javascript-html-activity-7024386144108699648-yl2F?utm_source=share&utm_medium=member_desktop",
-    subtech: [
-        "React.js",
-        "Figma",
-        "SwaggerAPI",
-      ],
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js",
-      "Figma",
-      "WeatherAPI",
-      "SwaggerAPI",
-    ],
-  },
 ];
 
 const Projects = ({ language, theme }) => {
@@ -698,12 +632,13 @@ const Projects = ({ language, theme }) => {
     return (
       <div
       key={project.id}
-      className={`group relative border  rounded-md cursor-pointer w-[90vw] md:w-auto ${theme === "light" ? "border-secondary-light bg-primary-light " : "border-secondary-dark bg-primary-dark  hover:text-white "}`}
+      className={`group relative border  rounded-md cursor-pointer w-[90vw] md:w-auto ${theme === "light" ? " bg-primary-light border-secondary-light " : " bg-primary-dark border-secondary-dark  hover:text-white "}`}
       onClick={() => onClick(project)}
       >
       <div>
         <img
           src={project.image}
+          loading="lazy"
           className="w-full h-auto  lg:h-56 object-cover rounded-t-md"
           alt={project.title[language]}
         />
@@ -792,7 +727,7 @@ const Projects = ({ language, theme }) => {
   return (
     <div
       id="projects"
-      className={`py-24 md:p-44 md:py-52 border-b ${
+      className={`py-24 md:p-44 md:py-52   ${
         theme === "light" ? "bg-secondary-light border-secondary-light " : "bg-secondary-dark border-secondary-dark"
       }  `}
     >
