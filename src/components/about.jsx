@@ -24,9 +24,14 @@ const About = ({ language, theme }) => {
       }`}
     >
       <div
-        className={`relative flex w-96  rounded-md  flex-col items-center gap-2 overflow-hidden transition-opacity duration-1000 ease-in-out md:order-first md:-mb-36 md:w-7/12 lg:w-6/12 xl:w-6/12 2xl:w-4/12 `}
+        className={`relative flex w-96  flex-col  items-center gap-2 overflow-hidden rounded-md transition-opacity duration-1000 ease-in-out md:order-first md:-mb-36 md:w-7/12 lg:w-6/12 xl:w-6/12 2xl:w-4/12 `}
       >
-        <Img src={Photo} alt="Foto de Lucas Campos" loading="lazy" className="rounded-xl w-80 md:w-auto md:px-0" />
+        <Img
+          src={Photo}
+          alt="Foto de Lucas Campos"
+          loading="lazy"
+          className="w-80 rounded-xl md:w-auto md:px-0"
+        />
 
         <div
           className={` flex w-full gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden ${
@@ -57,29 +62,63 @@ const About = ({ language, theme }) => {
         ref={ref}
       >
         <h1
-          className={` flex mt-5  text-4xl font-extrabold ${
+          className={` mt-5 flex  text-4xl font-extrabold ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
           {language === "pt" ? "Sobre" : "About"}
         </h1>
-        <span className={` flex    font-bold ${
+        <span
+          className={` flex    font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
-          }`}>{language === "pt" ? "Olá, meu nome é Lucas!" : "Hi, im Lucas!"}
+          }`}
+        >
+          {language === "pt" ? "Olá, meu nome é Lucas!" : "Hi, im Lucas!"}
         </span>
         <p
-          className={`text-md w-full text-left font-medium transition-opacity duration-500 ease-in-out md:text-lg  lg:w-[70vw] xl:w-[40vw]  lg:p-0 lg:text-start ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
-        
+          className={`text-md w-full text-left font-medium transition-opacity duration-500 ease-in-out md:text-lg  lg:w-[70vw] lg:p-0  lg:text-start xl:w-[40vw] ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
         >
-          {language === "pt"
-            ? <span>
-                <span style={{ color: "#7B1FA2", fontWeight:'600' }}>Desenvolvedor Frontend</span>, graduado em <span style={{ color: "#7B1FA2" , fontWeight:'600' }}>Segurança da Informação</span> e técnico em <span style={{ color: "#7B1FA2" , fontWeight:'600' }}>Informática para a Internet</span>. <br/>Minha ambição por desenvolvimento começou quando consegui juntar programação e experiência do usuário, com isso, consigo formar ótimas experiências em forma de aplicações. De forma resumida, essas são as tecnologias que uso diariamente:<br /> JavaScript, TypeScript, CSS, React, Next, Node.js e SQL.
+          {language === "pt" ? (
+            <span>
+              <span style={{ color: "#7B1FA2", fontWeight: "600" }}>
+                Desenvolvedor Frontend
               </span>
-            : <span>
-                <span style={{ color: "#7B1FA2" , fontWeight:'600' }}>Frontend Developer</span>,  graduate in <span style={{ color: "#7B1FA2" , fontWeight:'600' }}>Information Security</span> and technician in <span style={{ color: "#7B1FA2" , fontWeight:'600' }}>Computing for Internet</span>. <br/> My passion for development began when I managed to combine programming and user experience, with this, I was able to create great experiences in the form of applications. In short, these are the technologies I use daily:<br />  JavaScript, TypeScript, CSS, React, Next, Node.js and SQL.
-              </span>}
+              , graduado em{" "}
+              <span style={{ color: "#7B1FA2", fontWeight: "600" }}>
+                Segurança da Informação
+              </span>{" "}
+              e técnico em{" "}
+              <span style={{ color: "#7B1FA2", fontWeight: "600" }}>
+                Informática para a Internet
+              </span>
+              . <br />
+              Minha ambição por desenvolvimento começou quando consegui juntar
+              programação e experiência do usuário, com isso, consigo formar
+              ótimas experiências em forma de aplicações. De forma resumida,
+              essas são as tecnologias que uso diariamente:
+              <br /> JavaScript, TypeScript, CSS, React, Next, Node.js e SQL.
+            </span>
+          ) : (
+            <span>
+              <span style={{ color: "#7B1FA2", fontWeight: "600" }}>
+                Frontend Developer
+              </span>
+              , graduate in{" "}
+              <span style={{ color: "#7B1FA2", fontWeight: "600" }}>
+                Information Security
+              </span>{" "}
+              and technician in{" "}
+              <span style={{ color: "#7B1FA2", fontWeight: "600" }}>
+                Computing for Internet
+              </span>
+              . <br /> My passion for development began when I managed to
+              combine programming and user experience, with this, I was able to
+              create great experiences in the form of applications. In short,
+              these are the technologies I use daily:
+              <br /> JavaScript, TypeScript, CSS, React, Next, Node.js and SQL.
+            </span>
+          )}
         </p>
-        
       </div>
     </div>
   );

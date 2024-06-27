@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { CalendarDays } from "lucide-react";
-import compassLogo from '../assets/compass-logo.png';
-import webbyLogo from '../assets/webby-logo.png';
-import myLogo from '../assets/my-logo.png';
+import compassLogo from "../assets/compass-logo.png";
+import webbyLogo from "../assets/webby-logo.png";
+import myLogo from "../assets/my-logo.png";
 import htmlIcon from "../assets/icons/html.svg";
 import cssIcon from "../assets/icons/css.svg";
 import gitIcon from "../assets/icons/git.svg";
@@ -96,10 +96,16 @@ const Experience = ({ language, theme }) => {
         subtitulo: "Analista de Help Desk",
         descricao: (
           <span>
-            Ofereci suporte personalizado aos clientes através de canais de texto e voz, monitorando perfis de clientes através de sistemas ERP. <br />
-            Entendi as necessidades do público, propondo soluções em conformidade com as normas da empresa. <br />
-            Gerenciei arquivos e documentos, aplicando senso analítico e interpessoal. <br />
-            Configurei redes de internet e resolvi problemas de infraestrutura de hardware e rede, utilizando praticas das habilidades de comunicação, flexibilidade e trabalho em equipe.
+            Ofereci suporte personalizado aos clientes através de canais de
+            texto e voz, monitorando perfis de clientes através de sistemas ERP.{" "}
+            <br />
+            Entendi as necessidades do público, propondo soluções em
+            conformidade com as normas da empresa. <br />
+            Gerenciei arquivos e documentos, aplicando senso analítico e
+            interpessoal. <br />
+            Configurei redes de internet e resolvi problemas de infraestrutura
+            de hardware e rede, utilizando praticas das habilidades de
+            comunicação, flexibilidade e trabalho em equipe.
           </span>
         ),
         tech: [
@@ -177,10 +183,15 @@ const Experience = ({ language, theme }) => {
         subtitulo: "Help Desk Analyst",
         descricao: (
           <span>
-            Provided personalized support to clients through text and voice channels, monitoring customer profiles through ERP systems. <br />
-            Understood the needs of the audience, proposing solutions in accordance with company standards. <br />
-            Managed files and documents, applying analytical and interpersonal skills. <br />
-            Configured internet networks and solved hardware and network infrastructure problems, using communication, flexibility, and teamwork skills.
+            Provided personalized support to clients through text and voice
+            channels, monitoring customer profiles through ERP systems. <br />
+            Understood the needs of the audience, proposing solutions in
+            accordance with company standards. <br />
+            Managed files and documents, applying analytical and interpersonal
+            skills. <br />
+            Configured internet networks and solved hardware and network
+            infrastructure problems, using communication, flexibility, and
+            teamwork skills.
           </span>
         ),
         tech: [
@@ -221,16 +232,22 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={` flex flex-col md:flex-row  items-center justify-center  border-b py-20  md:py-28 ${
-        theme === "light" ? "bg-primary-light border-secondary-light" : "bg-primary-dark border-secondary-dark"
+      className={` flex flex-col items-center  justify-center border-b  py-20 md:flex-row  md:py-28 ${
+        theme === "light"
+          ? "border-secondary-light bg-primary-light"
+          : "border-secondary-dark bg-primary-dark"
       }`}
     >
-      <div className="flex flex-col px-4 items-center xl:ml-52 justify-center"> <h1
-          className={` font-bold mb-3 text-center text-2xl lg:text-4xl ${
+      <div className="flex flex-col items-center justify-center px-4 xl:ml-52">
+        {" "}
+        <h1
+          className={` mb-3 text-center text-2xl font-bold lg:text-4xl ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
-          {language === "pt" ? "Experiências & Tecnologias" : "Work history and stacks"}
+          {language === "pt"
+            ? "Experiências & Tecnologias"
+            : "Work history and stacks"}
         </h1>
         <div
           className={` font-medium ${theme === "light" ? "text-black/70" : "text-gray-200/70"}`}
@@ -246,84 +263,107 @@ const Experience = ({ language, theme }) => {
               : "Click to see more..."}
           </span>
         </div>
-      <div className={`  w-[80vw] md:w-[25vw] lg:w-[25vw] xl:w-[25vw] gap-2   grid grid-cols-6 md:grid-cols-4 xl:grid-cols-5     
-        transition-opacity duration-1000 ease-in-out`}>
-          
-      {icons.map((item, index) => (
-          <div
-            key={index}
-            className="group relative mt-3 transition-all hover:scale-110"
-          >
-            <img
-              src={item.icon}
-              alt={`icon-${index}`}
-              className="h-full w-full cursor-pointer rounded-xl"
-            />
+        <div
+          className={`  grid w-[80vw] grid-cols-6 gap-2 transition-opacity   duration-1000 ease-in-out md:w-[25vw] md:grid-cols-4     
+        lg:w-[25vw] xl:w-[25vw] xl:grid-cols-5`}
+        >
+          {icons.map((item, index) => (
             <div
-              className={`pointer-events-none absolute -top-9 left-1/2 mb-2 -translate-x-1/2 transform rounded-md border-none px-2 py-1 text-center font-bold   opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${theme === "light" ? "bg-black text-white " : "bg-white text-black"}`}
+              key={index}
+              className="group relative mt-3 transition-all hover:scale-110"
             >
-              <span className="relative ">
-                {item.name}
-                <p
-                  className={`absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 translate-y-4 border-4   border-x-transparent border-b-transparent  ${theme === "light" ? "border-black" : "border-white"}`}
-                />
-              </span>
-            </div>
-          </div>
-        ))}
-        </div>
-        </div>
-      <div className="flex flex-col ">
-      <div className="mb-10 flex w-full flex-col items-center justify-center   text-center">
-        
-      </div>
-      <div
-        ref={ref}
-        className={`flex flex-col mt-4 items-center xl:ml-20 justify-center gap-6 px-2 transition-opacity duration-1000 ease-in-out ${
-          inView ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        
-        {currentExperiences.map((experiencia) => (
-          <div key={experiencia.id} className="flex h-full px-2 w-[90vw] gap-3 md:w-[50vw] lg:w-[40vw] flex-row">
-
-            <div className={`flex space-y-px flex-col justify-center items-center ${theme === "light" ? "text-black" : "text-gray-200"}`}>
-              <img className="w-auto h-auto max-h-14 max-w-20 rounded-full" src={experiencia.icon} alt="Icon" /> 
-              <div className={`h-full w-px px-px ${theme === "light" ? "bg-gray-200" : "bg-white/10"}`} />
-            </div>
-
-            <div className="space-y-1">
-              <div>
-                <h1 className="font-black text-lg md:text-md text-purple-800">{experiencia.titulo}</h1>
-                <h2 className={`font-bold text-xl  md:text-lg ${theme === "light" ? "text-black" : "text-gray-300"}`}>{experiencia.subtitulo}</h2>
-              </div>
-
-              <div className={`flex font-semibold gap-1 flex-row md:text-sm ${theme === "light" ? "text-black/90" : "text-gray-400"}`}>
-                <CalendarDays  size={20} />
-                <h3>{experiencia.data}</h3>
-              </div>
-
-              <div className="w-full ">
-                <p className={` mb-3 font-medium text-sm ${theme === "light" ? "text-black/80" : "text-gray-400/85"}`}>{experiencia.descricao}</p>
-              </div>
-
-              <div className="w-full ">
-                <div className="flex flex-row flex-wrap gap-2">
-                {experiencia.tech &&
-                experiencia.tech.map((technology, index) => (
-                  <TechnologyCard
-                    key={index}
-                    technology={technology}
-                    style={{ width: "auto", height: "25px", backgroundColor: "#6810a3" }}
+              <img
+                src={item.icon}
+                alt={`icon-${index}`}
+                className="h-full w-full cursor-pointer rounded-xl"
+              />
+              <div
+                className={`pointer-events-none absolute -top-9 left-1/2 mb-2 -translate-x-1/2 transform rounded-md border-none px-2 py-1 text-center font-bold   opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${theme === "light" ? "bg-black text-white " : "bg-white text-black"}`}
+              >
+                <span className="relative ">
+                  {item.name}
+                  <p
+                    className={`absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 translate-y-4 border-4   border-x-transparent border-b-transparent  ${theme === "light" ? "border-black" : "border-white"}`}
                   />
-                ))}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col ">
+        <div className="mb-10 flex w-full flex-col items-center justify-center   text-center"></div>
+        <div
+          ref={ref}
+          className={`mt-4 flex flex-col items-center justify-center gap-6 px-2 transition-opacity duration-1000 ease-in-out xl:ml-20 ${
+            inView ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {currentExperiences.map((experiencia) => (
+            <div
+              key={experiencia.id}
+              className="flex h-full w-[90vw] flex-row gap-3 px-2 md:w-[50vw] lg:w-[40vw]"
+            >
+              <div
+                className={`flex flex-col items-center justify-center space-y-px ${theme === "light" ? "text-black" : "text-gray-200"}`}
+              >
+                <img
+                  className="h-auto max-h-14 w-auto max-w-20 rounded-full"
+                  src={experiencia.icon}
+                  alt="Icon"
+                />
+                <div
+                  className={`h-full w-px px-px ${theme === "light" ? "bg-gray-200" : "bg-white/10"}`}
+                />
+              </div>
+
+              <div className="space-y-1">
+                <div>
+                  <h1 className="md:text-md text-lg font-black text-purple-800">
+                    {experiencia.titulo}
+                  </h1>
+                  <h2
+                    className={`text-xl font-bold  md:text-lg ${theme === "light" ? "text-black" : "text-gray-300"}`}
+                  >
+                    {experiencia.subtitulo}
+                  </h2>
+                </div>
+
+                <div
+                  className={`flex flex-row gap-1 font-semibold md:text-sm ${theme === "light" ? "text-black/90" : "text-gray-400"}`}
+                >
+                  <CalendarDays size={20} />
+                  <h3>{experiencia.data}</h3>
+                </div>
+
+                <div className="w-full ">
+                  <p
+                    className={` mb-3 text-sm font-medium ${theme === "light" ? "text-black/80" : "text-gray-400/85"}`}
+                  >
+                    {experiencia.descricao}
+                  </p>
+                </div>
+
+                <div className="w-full ">
+                  <div className="flex flex-row flex-wrap gap-2">
+                    {experiencia.tech &&
+                      experiencia.tech.map((technology, index) => (
+                        <TechnologyCard
+                          key={index}
+                          technology={technology}
+                          style={{
+                            width: "auto",
+                            height: "25px",
+                            backgroundColor: "#6810a3",
+                          }}
+                        />
+                      ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </div>
   );

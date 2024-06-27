@@ -106,13 +106,13 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             transition={{ duration: 0.3 }}
             className={`mobile-menu fixed right-0 top-0  h-full w-[65vw] border-l text-gray-300 ${
               theme === "light"
-                ? "bg-secondary-light border-secondary-light"
-                : "bg-secondary-dark border-secondary-dark"
+                ? "border-secondary-light bg-secondary-light"
+                : "border-secondary-dark bg-secondary-dark"
             }`}
           >
-            <div className="flex justify-between items-center p-4 px-10">
-            <h2
-                className={` font-extrabold text-lg ${
+            <div className="flex items-center justify-between p-4 px-10">
+              <h2
+                className={` text-lg font-extrabold ${
                   theme === "light" ? "text-purple-600" : "text-purple-800"
                 }`}
               >
@@ -128,14 +128,16 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
               </h2>
               <button
                 onClick={toggleMenu}
-                className={`group flex flex-row items-center p-2 border rounded-lg text-sm justify-center gap-3 font-bold transition-all duration-300  ${
-                  theme === "light" ? "text-black bg-primary-light border-secondary-light hover:bg-gray-100" : "text-gray-300 bg-[#040417] border-secondary-dark/60 hover:bg-[#080826]"
+                className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
+                  theme === "light"
+                    ? "border-secondary-light bg-primary-light text-black hover:bg-gray-100"
+                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080826]"
                 } `}
               >
                 <X size={30} />
               </button>
             </div>
-            <div className="flex flex-col  w-full gap-10 pt-6 px-10 text-2xl">
+            <div className="flex w-full  flex-col gap-10 px-10 pt-6 text-2xl">
               <Link
                 to="home"
                 smooth={true}
@@ -149,26 +151,29 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   smooth={true}
                   onClick={() => toggleMenu(false)}
                 >
-                 <div className={`flex   w-full justify-start  rounded-lg border-b ${theme === "light" ? "bg-secondary-light border-secondary-light" : "bg-[#040417] border-secondary-dark/60"}  `}> 
-      <h2
-        className={`flex group cursor-pointer w-full p-2 justify-start gap-5  font-semibold text-2xl flex-row items-center  ${
-          theme === "light" ? "text-black bg-secondary-light border-secondary-light hover:bg-primary-light" : "text-gray-300 bg-[#040417] border-secondary-dark/60 hover:bg-[#080821]"
-        }`}
-      >
-        <div >
-          {item.icon}
-        </div>
-        {language === "pt" ? item.text_pt : item.text_en}
-        
-      </h2>
-    </div>
-  </Link>
+                  <div
+                    className={`flex   w-full justify-start  rounded-lg border-b ${theme === "light" ? "border-secondary-light bg-secondary-light" : "border-secondary-dark/60 bg-[#040417]"}  `}
+                  >
+                    <h2
+                      className={`group flex w-full cursor-pointer flex-row items-center justify-start  gap-5 p-2 text-2xl font-semibold  ${
+                        theme === "light"
+                          ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
+                          : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                      }`}
+                    >
+                      <div>{item.icon}</div>
+                      {language === "pt" ? item.text_pt : item.text_en}
+                    </h2>
+                  </div>
+                </Link>
               ))}
             </div>
             <div className="absolute bottom-10 right-10">
               <button
-                className={`group flex flex-row items-center p-2 border rounded-lg text-sm justify-center gap-3 font-bold transition-all duration-300  ${
-                  theme === "light" ? "text-black bg-primary-light border-secondary-light hover:bg-gray-100" : "text-gray-300 bg-[#040417] border-secondary-dark/60 hover:bg-[#080821]"
+                className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
+                  theme === "light"
+                    ? "border-secondary-light bg-primary-light text-black hover:bg-gray-100"
+                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
                 } `}
                 onClick={toggleLanguage}
               >
@@ -190,17 +195,17 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
         toggleMenu();
       }
     };
-  
+
     return (
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="blur-overlay fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-50"
+            className="blur-overlay fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            onClick={handleClick} 
+            onClick={handleClick}
           ></motion.div>
         )}
       </AnimatePresence>
@@ -213,86 +218,86 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
       <AnimatePresence>
         {!isMenuOpen && (
           <motion.header
-          className={`fixed z-10 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
-            theme === "light"
-              ? "border-gray-200/50 bg-secondary-light text-black"
-              : "border-primary-dark bg-secondary-dark text-gray-300"
-          } ${visible ? "" : "hidden"}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: visible ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Link to="home" smooth={true} duration={500}>
-            <div>
-              <h2
-                className={`cursor-pointer font-extrabold text-sm ${
-                  theme === "light" ? "text-purple-600" : "text-purple-800"
-                }`}
-              >
-                campos
-                <span
-                  className={`${
-                    theme === "light" ? "text-black" : "text-gray-200"
+            className={`fixed z-10 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
+              theme === "light"
+                ? "border-gray-200/50 bg-secondary-light text-black"
+                : "border-primary-dark bg-secondary-dark text-gray-300"
+            } ${visible ? "" : "hidden"}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: visible ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Link to="home" smooth={true} duration={500}>
+              <div>
+                <h2
+                  className={`cursor-pointer text-sm font-extrabold ${
+                    theme === "light" ? "text-purple-600" : "text-purple-800"
                   }`}
                 >
-                  .
-                </span>
-                dev
-              </h2>
-            </div>
-          </Link>
-  
-          <div className="hidden flex-row gap-10 text-sm md:flex">
-            {menuItems.map((item) => (
-              <Link key={item.id} to={item.id} smooth={true} duration={500}>
-                <h2 className="group flex cursor-pointer flex-row items-center justify-center gap-2">
-                  <div className="transition-all duration-200 group-hover:-translate-y-1 group-hover:text-purple-800">
-                    {item.icon}
-                  </div>
-                  {language === "pt" ? item.text_pt : item.text_en}
+                  campos
+                  <span
+                    className={`${
+                      theme === "light" ? "text-black" : "text-gray-200"
+                    }`}
+                  >
+                    .
+                  </span>
+                  dev
                 </h2>
-              </Link>
-            ))}
-          </div>
-  
-          <div className="flex gap-10">
-            <button
-              className="flex flex-row items-center justify-center gap-3 transition-all duration-300 hover:scale-110 p-px rounded-md"
-              onClick={toggleTheme}
-            >
-              {theme === "light" ? (
-                <>
-                  <Moon size={23} />
-                </>
-              ) : (
-                <>
-                  <Sun size={23} />
-                </>
-              )}
-            </button>
-  
-            <button
-              onClick={toggleMenu}
-              className={`text-sm transition-all hover:scale-105 focus:outline-none md:hidden ${
-                theme === "light" ? "text-black" : "text-gray-300"
-              }`}
-            >
-              <AlignRight size={25} />
-            </button>
-  
-            {!isMobile && (
+              </div>
+            </Link>
+
+            <div className="hidden flex-row gap-10 text-sm md:flex">
+              {menuItems.map((item) => (
+                <Link key={item.id} to={item.id} smooth={true} duration={500}>
+                  <h2 className="group flex cursor-pointer flex-row items-center justify-center gap-2">
+                    <div className="transition-all duration-200 group-hover:-translate-y-1 group-hover:text-purple-800">
+                      {item.icon}
+                    </div>
+                    {language === "pt" ? item.text_pt : item.text_en}
+                  </h2>
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex gap-10">
               <button
-                className="group flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300   "
-                onClick={toggleLanguage}
+                className="flex flex-row items-center justify-center gap-3 rounded-md p-px transition-all duration-300 hover:scale-110"
+                onClick={toggleTheme}
               >
-                {language === "pt" ? "EN" : "PTBR"}
-                <div className="group-hover:-translate-y-1 group-hover:text-purple-700">
-                  <Languages size={23} />
-                </div>
+                {theme === "light" ? (
+                  <>
+                    <Moon size={23} />
+                  </>
+                ) : (
+                  <>
+                    <Sun size={23} />
+                  </>
+                )}
               </button>
-            )}
-          </div>
-        </motion.header>
+
+              <button
+                onClick={toggleMenu}
+                className={`text-sm transition-all hover:scale-105 focus:outline-none md:hidden ${
+                  theme === "light" ? "text-black" : "text-gray-300"
+                }`}
+              >
+                <AlignRight size={25} />
+              </button>
+
+              {!isMobile && (
+                <button
+                  className="group flex flex-row items-center justify-center gap-3 text-sm font-bold transition-all duration-300   "
+                  onClick={toggleLanguage}
+                >
+                  {language === "pt" ? "EN" : "PTBR"}
+                  <div className="group-hover:-translate-y-1 group-hover:text-purple-700">
+                    <Languages size={23} />
+                  </div>
+                </button>
+              )}
+            </div>
+          </motion.header>
         )}
       </AnimatePresence>
 

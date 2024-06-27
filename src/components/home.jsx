@@ -55,8 +55,10 @@ const Home = ({ language, theme }) => {
   return (
     <main
       id="home"
-      className={`flex flex-col items-center border-b justify-center gap-20 ${
-        theme === "light" ? "bg-secondary-light border-secondary-light" : "bg-secondary-dark border-secondary-dark"
+      className={`flex flex-col items-center justify-center gap-20 border-b ${
+        theme === "light"
+          ? "border-secondary-light bg-secondary-light"
+          : "border-secondary-dark bg-secondary-dark"
       }`}
     >
       <div className="flex flex-col items-center justify-center gap-16 pt-72 md:pt-96 ">

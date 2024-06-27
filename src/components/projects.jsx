@@ -10,7 +10,7 @@ import uploadAi from "../assets/uploadai.jpeg";
 import expertNotes from "../assets/expertnotes.png";
 import dashBlue from "../assets/dashblue.png";
 import natuFlora from "../assets/natuflora.png";
-import {  FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import chatNowVideo from "../assets/chatNowVideo.mp4";
@@ -35,16 +35,16 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-         Plataforma de delivery de comida, onde o
-          usuario loga com o Google, faz pedidos, favorita restaurantes,
-          consulta seus pedidos e pode pesquisar por restaurantes.
+          Plataforma de delivery de comida, onde o usuario loga com o Google,
+          faz pedidos, favorita restaurantes, consulta seus pedidos e pode
+          pesquisar por restaurantes.
         </>
       ),
       en: (
         <>
-          Food delivery platform, where the user logs
-          in with Google, places orders, favorites restaurants, check your
-          orders and search for restaurants.
+          Food delivery platform, where the user logs in with Google, places
+          orders, favorites restaurants, check your orders and search for
+          restaurants.
         </>
       ),
     },
@@ -84,12 +84,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/dev-food/",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_next-react-food-activity-7193210446579908608-yjws?utm_source=share&utm_medium=member_desktop",
-      subtech: [
-        "Next.js",
-        "TypeScript",
-        "Figma",
-        "Prisma",
-      ],
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
     tech: [
       "HTML",
       "CSS",
@@ -111,16 +106,14 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-          Aplicação feita para ter diversas
-          barbearias, onde o usuário pode logar com o Google e agendar um
-          serviço da barbearia desejada.
+          Aplicação feita para ter diversas barbearias, onde o usuário pode
+          logar com o Google e agendar um serviço da barbearia desejada.
         </>
       ),
       en: (
         <>
-          Application made for multiple barbershops,
-          where the user can log in with Google and schedule a service from the
-          desired barbershop.
+          Application made for multiple barbershops, where the user can log in
+          with Google and schedule a service from the desired barbershop.
         </>
       ),
     },
@@ -162,12 +155,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/SharpCut-Barbers",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-AsNe?utm_source=share&utm_medium=member_desktop",
-      subtech: [
-        "Next.js",
-        "TypeScript",
-        "Figma",
-        "Prisma",
-      ],
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
     tech: [
       "HTML",
       "CSS",
@@ -189,14 +177,14 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-        Loja fictícia de periféricos, onde é
-         vendido teclados, mouses, monitores, fones e etc.
+          Loja fictícia de periféricos, onde é vendido teclados, mouses,
+          monitores, fones e etc.
         </>
       ),
       en: (
         <>
-          Peripherals store, where
-          keyboards, mice, monitors, headphones, etc. are sold.
+          Peripherals store, where keyboards, mice, monitors, headphones, etc.
+          are sold.
         </>
       ),
     },
@@ -228,7 +216,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Features</span>:
-
           <br />
           - Google login
           <br />
@@ -243,12 +230,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/PeriWare-Store",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
-      subtech: [
-        "Next.js",
-        "TypeScript",
-        "Figma",
-        "Prisma",
-      ],
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
     tech: [
       "HTML",
       "CSS",
@@ -270,15 +252,15 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-         Aplicativo de chat onde você pode enviar pedidos de
-          amizade, criar grupos, conversar, remover e sair dos grupos e
-          conversar em tempo real.
+          Aplicativo de chat onde você pode enviar pedidos de amizade, criar
+          grupos, conversar, remover e sair dos grupos e conversar em tempo
+          real.
         </>
       ),
       en: (
         <>
-           Chat application where you can send friend requests,
-          create groups, chat, remove and leave groups, and chat in real time.
+          Chat application where you can send friend requests, create groups,
+          chat, remove and leave groups, and chat in real time.
         </>
       ),
     },
@@ -292,7 +274,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Funcionalidades</span>:
-
           <br />
           - Integração com Clerk e Convex para autenticação
           <br />
@@ -309,7 +290,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Features</span>:
-
           <br />
           - Integration with Clerk and Convex for authentication
           <br />
@@ -322,12 +302,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/chat-now",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
-      subtech: [
-        "Next.js",
-        "TypeScript",
-        "Convex",
-        "Clerk",
-      ],
+    subtech: ["Next.js", "TypeScript", "Convex", "Clerk"],
     tech: [
       "HTML",
       "CSS",
@@ -349,14 +324,14 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-        Integrações de vídeos com inteligência artificial para
-         melhorar conteúdo e ajudar usuários.
+          Integrações de vídeos com inteligência artificial para melhorar
+          conteúdo e ajudar usuários.
         </>
       ),
       en: (
         <>
-          Integrations with artificial intelligence to improve
-          content and help users
+          Integrations with artificial intelligence to improve content and help
+          users
         </>
       ),
     },
@@ -371,7 +346,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Funcionalidades</span>:
-
           <br />
           - Integração com ChatGPT 3.5
           <br />
@@ -389,7 +363,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Features</span>:
-
           <br />
           - Integration with ChatGPT 3.5
           <br />
@@ -402,12 +375,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/NLW-IA",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_realtimechat-frontend-nextjs-activity-7211719833627856896-sxYY?utm_source=share&utm_medium=member_desktop",
-      subtech: [
-        "React.js",
-        "TypeScript",
-        "AI API",
-        "Node.js",
-      ],
+    subtech: ["React.js", "TypeScript", "AI API", "Node.js"],
     tech: [
       "HTML",
       "CSS",
@@ -430,14 +398,14 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-        Notas, onde o o usuário pode
-         adicionar novas notas falando por microfone, ou digitando.
+          Notas, onde o o usuário pode adicionar novas notas falando por
+          microfone, ou digitando.
         </>
       ),
       en: (
         <>
-          Notes website, where the user can add
-          new notes by speaking into the microphone, or writing.
+          Notes website, where the user can add new notes by speaking into the
+          microphone, or writing.
         </>
       ),
     },
@@ -451,7 +419,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Funcionalidades</span>:
-
           <br />
           - Integração com a Speech Recognition API
           <br />
@@ -468,7 +435,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Features</span>:
-
           <br />
           - Integration with Speech Recognition API
           <br />
@@ -481,12 +447,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/expert-notes",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_react-typescript-radixui-activity-7200820537319641088-VDBa?utm_source=share&utm_medium=member_desktop",
-      subtech: [
-        "React.js",
-        "TypeScript",
-        "Speech API",
-        "Figma",
-      ],
+    subtech: ["React.js", "TypeScript", "Speech API", "Figma"],
     tech: [
       "HTML",
       "CSS",
@@ -507,16 +468,14 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-        Dashboard para um teste técnico para a
-          Blue Company. Consiste em vários tipos de gráficos, funcionalidades e
-          responsividade.
+          Dashboard para um teste técnico para a Blue Company. Consiste em
+          vários tipos de gráficos, funcionalidades e responsividade.
         </>
       ),
       en: (
         <>
-          Dashboard for a technician test for Blue
-          Company. Consist in various types of charts, functionalities and
-          responsivity.
+          Dashboard for a technician test for Blue Company. Consist in various
+          types of charts, functionalities and responsivity.
         </>
       ),
     },
@@ -529,7 +488,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Funcionalidades</span>:
-
           <br />
           - Responsivo
           <br />
@@ -545,7 +503,6 @@ const projectsData = [
           <br />
           <br />
           <span className="text-purple-700">Features</span>:
-
           <br />
           - Responsiveness
           <br />
@@ -558,12 +515,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/desafio-front-end",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_dashboard-case-frontend-activity-7210005597247700992-fDCW?utm_source=share&utm_medium=member_desktop",
-    subtech: [
-        "React.js",
-        "TypeScript",
-        "Jest",
-        "Recharts",
-      ],
+    subtech: ["React.js", "TypeScript", "Jest", "Recharts"],
     tech: [
       "HTML",
       "CSS",
@@ -585,8 +537,8 @@ const projectsData = [
     subdescription: {
       pt: (
         <>
-         Esta landing page estilo vitrine representa uma loja fictícia que
-         também pode ser expandida para um e-commerce caso a loja deseje.
+          Esta landing page estilo vitrine representa uma loja fictícia que
+          também pode ser expandida para um e-commerce caso a loja deseje.
         </>
       ),
       en: (
@@ -635,51 +587,62 @@ const projectsData = [
     subtech: ["React.js", "Tailwindcss", "Figma"],
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
-
 ];
 
 const Projects = ({ language, theme }) => {
-
   const ProjectCard = ({ project, onClick }) => {
     return (
       <div
-      key={project.id}
-      className={`group relative border rounded-md cursor-pointer w-[90vw] md:w-auto ${theme === "light" ? " bg-primary-light border-secondary-light " : " bg-primary-dark border-secondary-dark  hover:text-white "}`}
-      onClick={() => onClick(project)}
+        key={project.id}
+        className={`group relative w-[90vw] cursor-pointer rounded-md border md:w-auto ${theme === "light" ? " border-secondary-light bg-primary-light " : " border-secondary-dark bg-primary-dark  hover:text-white "}`}
+        onClick={() => onClick(project)}
       >
-      <div>
-        <img
-          src={project.image}
-          loading="lazy"
-          className="w-full h-auto z-10  lg:h-56 object-cover rounded-t-md"
-          alt={project.title[language]}
-        />
-      </div>
-
-      <div className={`px-4  pt-px   rounded-b-md ${theme === "light" ? "group-hover:bg-[#ebebeb]/40" : "group-hover:bg-[#2e2e40]/30"}`}>
-        <div className="flex flex-row flex-wrap gap-1 mt-2">
-        {project.subtech &&
-          project.subtech.map((technology, index) => (
-          <TechnologyCard
-            key={index}
-            technology={technology}
-            style={{
-            width: "auto",
-            height: "20px",
-            fontSize: "12px",
-            color: theme === "dark" ? "#ffffff" : "#000000",
-            fontWeight: "600",
-            border: theme === "light" ? "1px solid #ebebeb" : "1px solid #2e2e40",
-            }}
+        <div>
+          <img
+            src={project.image}
+            loading="lazy"
+            className="z-10 h-auto w-full  rounded-t-md object-cover lg:h-56"
+            alt={project.title[language]}
           />
-          ))}
         </div>
 
-        <div className=" flex py-3   flex-col">
-        <h1 className={`font-semibold text-xl mb-2 ${theme === "light" ? "text-black" : "text-gray-300"}`}>{project.title}</h1>
-        <p className={`text-sm font-medium h-18 md:h-24 ${theme === "light" ? "text-black" : "text-gray-300/70"}`}>{project.subdescription[language]} </p>
+        <div
+          className={`rounded-b-md  px-4   pt-px ${theme === "light" ? "group-hover:bg-[#ebebeb]/40" : "group-hover:bg-[#2e2e40]/30"}`}
+        >
+          <div className="mt-2 flex flex-row flex-wrap gap-1">
+            {project.subtech &&
+              project.subtech.map((technology, index) => (
+                <TechnologyCard
+                  key={index}
+                  technology={technology}
+                  style={{
+                    width: "auto",
+                    height: "20px",
+                    fontSize: "12px",
+                    color: theme === "dark" ? "#ffffff" : "#000000",
+                    fontWeight: "600",
+                    border:
+                      theme === "light"
+                        ? "1px solid #ebebeb"
+                        : "1px solid #2e2e40",
+                  }}
+                />
+              ))}
+          </div>
+
+          <div className=" flex flex-col   py-3">
+            <h1
+              className={`mb-2 text-xl font-semibold ${theme === "light" ? "text-black" : "text-gray-300"}`}
+            >
+              {project.title}
+            </h1>
+            <p
+              className={`h-18 text-sm font-medium md:h-24 ${theme === "light" ? "text-black" : "text-gray-300/70"}`}
+            >
+              {project.subdescription[language]}{" "}
+            </p>
+          </div>
         </div>
-      </div>
       </div>
     );
   };
@@ -688,12 +651,11 @@ const Projects = ({ language, theme }) => {
 
   useEffect(() => {
     if (modalIsOpen) {
-      document.body.classList.add('overflow-y-hidden');
+      document.body.classList.add("overflow-y-hidden");
     } else {
-      document.body.classList.remove('overflow-y-hidden');
+      document.body.classList.remove("overflow-y-hidden");
     }
   }, [modalIsOpen]);
-
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -735,7 +697,9 @@ const Projects = ({ language, theme }) => {
     <div
       id="projects"
       className={`py-24 md:p-44 md:py-52   ${
-        theme === "light" ? "bg-secondary-light border-secondary-light " : "bg-secondary-dark border-secondary-dark"
+        theme === "light"
+          ? "border-secondary-light bg-secondary-light "
+          : "border-secondary-dark bg-secondary-dark"
       }  `}
     >
       <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
@@ -746,7 +710,6 @@ const Projects = ({ language, theme }) => {
         >
           {language === "pt" ? "Projetos em destaque" : "Highlighted projects"}
         </h1>
-       
       </div>
       <div
         ref={ref}
@@ -785,12 +748,12 @@ const Projects = ({ language, theme }) => {
               maxWidth: isLargeScreen ? "none" : "none",
               height: isLargeScreen ? "85%" : "95%",
               backgroundColor: theme === "light" ? "#ffffff" : "#020211",
-              border: theme === "light" ? "2px solid #d4d4d4" : "1px solid #2e2e40",
+              border:
+                theme === "light" ? "2px solid #d4d4d4" : "1px solid #2e2e40",
               borderRadius: isLargeScreen ? "20px" : "20px",
               transition: "opacity 0.3s, transform 0.3s ",
               justifyContent: "center",
               alignItems: "center",
-              
             },
           }}
           appElement={document.getElementById("root")}
@@ -801,8 +764,6 @@ const Projects = ({ language, theme }) => {
             beforeClose: "",
           }}
         >
-
-
           {selectedProject && (
             <div className="flex flex-col items-center justify-center gap-5 overscroll-y-none ">
               <div className="flex flex-col items-center justify-center">
@@ -826,7 +787,7 @@ const Projects = ({ language, theme }) => {
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="my-4 h-[160px] z-10  rounded-md object-contain"
+                    className="z-10 my-4 h-[160px]  rounded-md object-contain"
                   />
                 )}
                 <p
@@ -841,33 +802,38 @@ const Projects = ({ language, theme }) => {
                     isLargeScreen ? "" : "text-sm"
                   }`}
                 >
-                <hr className={`my-4 w-full border ${theme === "light" ? "border-secondary-light" : "border-secondary-dark"}`} />
+                  <hr
+                    className={`my-4 w-full border ${theme === "light" ? "border-secondary-light" : "border-secondary-dark"}`}
+                  />
                   {selectedProject.tech &&
                     selectedProject.tech.map((technology, index) => (
                       <TechnologyCard
-            key={index}
-            technology={technology}
-            style={{
-            width: "auto",
-            height: "25px",
-            fontSize: "13px",
-            color: theme === "dark" ? "#ffffff" : "#000000",
-            fontWeight: "600",
-            border: theme === "light" ? "1px solid #d4d4d4" : "1px solid #2e2e40",
-            }}
-          />
+                        key={index}
+                        technology={technology}
+                        style={{
+                          width: "auto",
+                          height: "25px",
+                          fontSize: "13px",
+                          color: theme === "dark" ? "#ffffff" : "#000000",
+                          fontWeight: "600",
+                          border:
+                            theme === "light"
+                              ? "1px solid #d4d4d4"
+                              : "1px solid #2e2e40",
+                        }}
+                      />
                     ))}
                 </div>
               </div>
-              
-              <div className="my-4  flex l items-center justify-center gap-3  ">
+
+              <div className="l  my-4 flex items-center justify-center gap-3  ">
                 {selectedProject.site && (
                   <button
-                  className={`group flex cursor-pointer flex-row w-12 h-12   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
-                    theme === "light"
-                      ? "bg-primary-dark text-gray-200 hover:bg-[#2e2e40]"
-                      : "bg-primary-light text-black hover:bg-[#ebebeb]  "
-                  }`}
+                    className={`group flex h-12 w-12 cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
+                      theme === "light"
+                        ? "bg-primary-dark text-gray-200 hover:bg-[#2e2e40]"
+                        : "bg-primary-light text-black hover:bg-[#ebebeb]  "
+                    }`}
                     onClick={() => window.open(selectedProject.site, "_blank")}
                   >
                     <FaExternalLinkAlt
@@ -877,7 +843,7 @@ const Projects = ({ language, theme }) => {
                   </button>
                 )}
                 <button
-                  className={`group flex cursor-pointer flex-row w-12 h-12   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
+                  className={`group flex h-12 w-12 cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
                     theme === "light"
                       ? "bg-primary-dark text-gray-200 hover:bg-[#2e2e40]"
                       : "bg-primary-light text-black hover:bg-[#ebebeb]  "
@@ -891,7 +857,7 @@ const Projects = ({ language, theme }) => {
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className={`group flex cursor-pointer flex-row w-12 h-12   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
+                    className={`group flex h-12 w-12 cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
                       theme === "light"
                         ? "bg-primary-dark text-gray-200 hover:bg-[#2e2e40]"
                         : "bg-primary-light text-black hover:bg-[#ebebeb]  "

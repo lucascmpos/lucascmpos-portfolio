@@ -5,7 +5,6 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   scrollbar-color: #000007;
-  
 }
 
 body.overflow-y-hidden {
@@ -13,17 +12,15 @@ body.overflow-y-hidden {
 }
 
 .blur-overlay {
-  z-index: 30 !important 
- 
+  z-index: 30 !important;
 }
 
 .mobile-menu {
   z-index: 40 !important;
- 
 }
 
 .modal-class {
-    z-index: 1000; 
+  z-index: 1000;
 }
 
 .modal-open {
@@ -46,12 +43,12 @@ body.overflow-y-hidden {
   background-color: #01020a;
 }
 
-
-
 .arrow-up {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .arrow-up.show {
