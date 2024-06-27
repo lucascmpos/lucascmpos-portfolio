@@ -782,12 +782,14 @@ const Projects = ({ language, theme }) => {
               transform: modalAnimation.transform,
               opacity: modalAnimation.opacity,
               width: isLargeScreen ? "80%" : "100%",
-              maxWidth: isLargeScreen ? "none" : "100%",
-              height: isLargeScreen ? "85%" : "100%",
+              maxWidth: isLargeScreen ? "none" : "95%",
+              height: isLargeScreen ? "85%" : "95%",
               backgroundColor: theme === "light" ? "#ffffff" : "#020211",
               border: theme === "light" ? "2px solid #d4d4d4" : "1px solid #2e2e40",
-              borderRadius: isLargeScreen ? "20px" : "0px",
+              borderRadius: isLargeScreen ? "20px" : "20px",
               transition: "opacity 0.3s, transform 0.3s ",
+              justifyContent: "center",
+              alignItems: "center",
             },
           }}
           appElement={document.getElementById("root")}
