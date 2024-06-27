@@ -114,7 +114,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 <X size={30} />
               </button>
             </div>
-            <div className="flex flex-col items-center gap-16 pt-20 text-2xl">
+            <div className="flex flex-col items-center gap-16 pt-6 text-2xl">
               <Link
                 to="home"
                 smooth={true}
