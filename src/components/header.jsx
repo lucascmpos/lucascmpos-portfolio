@@ -114,7 +114,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 <X size={30} />
               </button>
             </div>
-            <div className="flex flex-col items-center gap-16 pt-6 text-2xl">
+            <div className="flex flex-col items-center  gap-16 pt-6 text-2xl">
               <Link
                 to="home"
                 smooth={true}
@@ -122,7 +122,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 onClick={() => toggleMenu(false)}
               >
                 <div>
-                  <h2 className="cursor-pointer font-bold  text-purple-800">
+                  <h2 className="cursor-pointer font-bold text-md  text-purple-800">
                     campos
                     <span
                       className={`${
@@ -143,11 +143,11 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   onClick={() => toggleMenu(false)}
                 >
                   <h2
-                    className={`flex   cursor-pointer flex-row items-center justify-center gap-5  ${
+                    className={`flex group  cursor-pointer flex-row text-md items-center justify-center gap-5  ${
                       theme === "light" ? "text-black" : "text-gray-200"
                     }`}
                   >
-                    <div className="hover:-translate-y-1  hover:text-purple-800">
+                    <div className="hover:-translate-y-1 group-hover:text-purple-700  ">
                       {item.icon}
                     </div>
                     {language === "pt" ? item.text_pt : item.text_en}
@@ -237,7 +237,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
           <button
             onClick={toggleMenu}
-            className={`text-sm transition-all hover:text-purple-700 focus:outline-none  md:hidden ${
+            className={`text-sm transition-all hover:scale-105 focus:outline-none  md:hidden ${
               theme === "light" ? "text-black" : "text-gray-300"
             }`}
           >
