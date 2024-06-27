@@ -57,18 +57,18 @@ const About = ({ language, theme }) => {
         ref={ref}
       >
         <h1
-          className={` flex mt-5  text-4xl font-bold ${
+          className={` flex mt-5  text-4xl font-extrabold ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
           {language === "pt" ? "Sobre" : "About"}
         </h1>
-        <span className={` flex    font-semibold ${
+        <span className={` flex    font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}>{language === "pt" ? "Olá, meu nome é Lucas!" : "Hi, im Lucas!"}
         </span>
         <p
-          className={`text-md w-full text-left font-normal transition-opacity duration-500 ease-in-out md:text-lg  lg:w-[70vw] xl:w-[40vw]  lg:p-0 lg:text-start ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
+          className={`text-md w-full text-left font-medium transition-opacity duration-500 ease-in-out md:text-lg  lg:w-[70vw] xl:w-[40vw]  lg:p-0 lg:text-start ${theme === "light" ? "text-gray-800" : "text-gray-200"}`}
         
         >
           {language === "pt"
