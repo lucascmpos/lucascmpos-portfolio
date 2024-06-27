@@ -130,7 +130,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   onClick={() => toggleMenu(false)}
                 >
                   <h2
-                    className={`flex group cursor-pointer text-xl px-2 flex-row text-md items-center justify-end gap-2 ${
+                    className={`flex group cursor-pointer text-xl px-2 flex-row  items-center justify-end gap-2 ${
                       theme === "light" ? "text-black" : "text-gray-200"
                     }`}
                   >
