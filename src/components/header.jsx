@@ -128,7 +128,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
               </h2>
               <button
                 onClick={toggleMenu}
-                className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
+                className={` items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
                     ? "border-secondary-light bg-primary-light text-black hover:bg-gray-100"
                     : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080826]"

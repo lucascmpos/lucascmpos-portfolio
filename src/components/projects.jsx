@@ -750,7 +750,7 @@ const Projects = ({ language, theme }) => {
               backgroundColor: theme === "light" ? "#ffffff" : "#020211",
               border:
                 theme === "light" ? "2px solid #d4d4d4" : "1px solid #2e2e40",
-              borderRadius: isLargeScreen ? "20px" : "20px",
+              borderRadius: isLargeScreen ? "10px" : "10px",
               transition: "opacity 0.3s, transform 0.3s ",
               justifyContent: "center",
               alignItems: "center",
@@ -875,7 +875,7 @@ const Projects = ({ language, theme }) => {
               </div>
               <button
                 onClick={closeModal}
-                className={`absolute right-0 top-0 cursor-pointer p-4 text-purple-700 ${theme === "light" ? "hover:text-black" : "hover:text-gray-200 "}`}
+                className={`absolute right-0 top-0 mr-2 mt-2 cursor-pointer rounded-md border p-2 ${theme === "light" ? "border-secondary-light text-black hover:bg-gray-100 " : " border-secondary-dark/60 text-gray-300 hover:bg-[#080826] "}`}
               >
                 <X size={25} />
               </button>
