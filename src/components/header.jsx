@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LuInfo } from "react-icons/lu";
@@ -6,7 +7,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { GoProjectRoadmap } from "react-icons/go";
 import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
-import { Moon, Sun, Languages, AlignJustify, X, AlignRight } from "lucide-react";
+import { Moon, Sun, Languages,  X, AlignRight } from "lucide-react";
 
 const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
