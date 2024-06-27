@@ -7,7 +7,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { GoProjectRoadmap } from "react-icons/go";
 import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
-import { Moon, Sun, Languages,  X, AlignRight } from "lucide-react";
+import { Moon, Sun, Languages, X, AlignRight } from "lucide-react";
 
 const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -33,6 +33,11 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   };
 
   const toggleLanguage = () => {
@@ -99,7 +104,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             initial={{ x: "100%" }}
             animate={{ x: isOpen ? "0%" : "100%" }}
             transition={{ duration: 0.3 }}
-            className={`header fixed right-0 top-0 z-60 h-full w-[60vw] border-l text-gray-300 ${
+            className={`mobile-menu fixed right-0 top-0 z-60 h-full w-[60vw] border-l text-gray-300 ${
               theme === "light"
                 ? "bg-secondary-light border-secondary-light"
                 : "bg-secondary-dark border-secondary-dark"
@@ -115,7 +120,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 <X size={30} />
               </button>
             </div>
-            <div className="flex flex-col justify-end w-[50vw]  gap-16 pt-6 text-2xl">
+            <div className="flex flex-col justify-end w-[50vw] gap-16 pt-6 text-2xl">
               <Link
                 to="home"
                 smooth={true}
@@ -130,28 +135,30 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   onClick={() => toggleMenu(false)}
                 >
                   <h2
-                    className={`flex group cursor-pointer text-xl px-2 flex-row  items-center justify-end gap-2 ${
+                    className={`flex group cursor-pointer text-xl px-2 flex-row items-center justify-end gap-2 ${
                       theme === "light" ? "text-black" : "text-gray-200"
                     }`}
                   >
-                    
                     {language === "pt" ? item.text_pt : item.text_en}
                     <div className="group-hover:text-purple-700 group-hover:-translate-y-1 ">
-                    {item.icon}
+                      {item.icon}
                     </div>
-
                   </h2>
                 </Link>
               ))}
             </div>
             <div className="absolute bottom-10 right-10">
-            <button
-              className={`group flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300  ${theme === "light" ? "text-black" : "text-gray-300"} `}
-              onClick={toggleLanguage}
-            >
-              {language === "pt" ? "EN" : "PTBR"}
-              <div className="group-hover:-translate-y-1 group-hover:text-purple-700"><Languages size={23} /></div>
-            </button>
+              <button
+                className={`group flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300  ${
+                  theme === "light" ? "text-black" : "text-gray-300"
+                } `}
+                onClick={toggleLanguage}
+              >
+                {language === "pt" ? "EN" : "PTBR"}
+                <div className="group-hover:-translate-y-1 group-hover:text-purple-700">
+                  <Languages size={23} />
+                </div>
+              </button>
             </div>
           </motion.div>
         )}
@@ -164,7 +171,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-50"
+            className="blur-overlay fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -177,10 +184,10 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
   return (
     <>
-        <BlurOverlay className="blur-overlay" isOpen={isMenuOpen} />
+      <BlurOverlay isOpen={isMenuOpen} />
 
       <motion.header
-        className={`fixed z-60 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity mobile-menu duration-300 md:justify-around ${
+        className={`fixed z-60 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
           theme === "light"
             ? "border-gray-200/50 bg-secondary-light text-black"
             : "border-primary-dark bg-secondary-dark text-gray-300"
@@ -253,21 +260,21 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
               onClick={toggleLanguage}
             >
               {language === "pt" ? "EN" : "PTBR"}
-              <div className="group-hover:-translate-y-1 group-hover:text-purple-700"><Languages size={23} /></div>
+              <div className="group-hover:-translate-y-1 group-hover:text-purple-700">
+                <Languages size={23} />
+              </div>
             </button>
           )}
         </div>
-
-        <MobileMenu
-          isOpen={isMenuOpen}
-          toggleMenu={toggleMenu}
-          toggleTheme={toggleTheme}
-          menuItems={menuItems}
-          language={language}
-          toggleLanguage={toggleLanguage}
-        />
-
       </motion.header>
+
+      <MobileMenu
+        isOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+        menuItems={menuItems}
+        language={language}
+        toggleLanguage={toggleLanguage}
+      />
     </>
   );
 };

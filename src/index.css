@@ -13,8 +13,8 @@ body.overflow-y-hidden {
 }
 
 .blur-overlay {
-  z-index: 50 !important /* Menor que o z-index do MobileMenu */
-  /* Outros estilos */
+  z-index: 50 !important 
+ 
 }
 
 .mobile-menu {
