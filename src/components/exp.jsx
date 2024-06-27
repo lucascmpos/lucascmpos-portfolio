@@ -232,7 +232,7 @@ const Experience = ({ language, theme }) => {
                   <TechnologyCard
                     key={index}
                     technology={technology}
-                    style={{ width: "auto", height: "25px" }}
+                    style={{ width: "auto", height: "25px", backgroundColor: "#6810a3" }}
                   />
                 ))}
                 </div>

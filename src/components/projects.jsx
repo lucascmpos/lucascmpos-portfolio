@@ -11,10 +11,8 @@ import expertNotes from "../assets/expertnotes.png";
 import dashBlue from "../assets/dashblue.png";
 import natuFlora from "../assets/natuflora.png";
 import weeklyPlanner from "../assets/weeklyplanner.png";
-import { useSpring, animated } from "react-spring";
 import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { CircleChevronUp } from "lucide-react";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import chatNowVideo from "../assets/chatNowVideo.mp4";
 import expertNotesVideo from "../assets/expertnotesvideo.mp4";
@@ -35,6 +33,22 @@ const projectsData = [
     title: "Dev Food",
     image: devFood,
     video: devfoodVideo,
+    subdescription: {
+      pt: (
+        <>
+         Plataforma de delivery de comida, onde o
+          usuario loga com o Google, faz pedidos, favorita restaurantes,
+          consulta seus pedidos e pode pesquisar por restaurantes.
+        </>
+      ),
+      en: (
+        <>
+          Food delivery platform, where the user logs
+          in with Google, places orders, favorites restaurants, check your
+          orders and search for restaurants.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -71,6 +85,12 @@ const projectsData = [
     github: "https://github.com/lucascmpos/dev-food/",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_next-react-food-activity-7193210446579908608-yjws?utm_source=share&utm_medium=member_desktop",
+      subtech: [
+        "Next.js",
+        "TypeScript",
+        "Figma",
+        "Prisma",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -89,6 +109,22 @@ const projectsData = [
     title: "SharpCut Barbers",
     image: sharpCut,
     video: sharpcutVideo,
+    subdescription: {
+      pt: (
+        <>
+          Aplicação feita para ter diversas
+          barbearias, onde o usuário pode logar com o Google e agendar um
+          serviço da barbearia desejada.
+        </>
+      ),
+      en: (
+        <>
+          Application made for multiple barbershops,
+          where the user can log in with Google and schedule a service from the
+          desired barbershop.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -127,6 +163,12 @@ const projectsData = [
     github: "https://github.com/lucascmpos/SharpCut-Barbers",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-AsNe?utm_source=share&utm_medium=member_desktop",
+      subtech: [
+        "Next.js",
+        "TypeScript",
+        "Figma",
+        "Prisma",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -145,6 +187,20 @@ const projectsData = [
     title: "Periware Store",
     video: periwareVideo,
     image: periWare,
+    subdescription: {
+      pt: (
+        <>
+        Loja fictícia de periféricos, onde é
+         vendido teclados, mouses, monitores, fones e etc.
+        </>
+      ),
+      en: (
+        <>
+          Peripherals store, where
+          keyboards, mice, monitors, headphones, etc. are sold.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -187,6 +243,12 @@ const projectsData = [
     github: "https://github.com/lucascmpos/PeriWare-Store",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
+      subtech: [
+        "Next.js",
+        "TypeScript",
+        "Figma",
+        "Prisma",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -205,6 +267,21 @@ const projectsData = [
     title: "Chat Now",
     image: chatNow,
     video: chatNowVideo,
+    subdescription: {
+      pt: (
+        <>
+         Aplicativo de chat onde você pode enviar pedidos de
+          amizade, criar grupos, conversar, remover e sair dos grupos e
+          conversar em tempo real.
+        </>
+      ),
+      en: (
+        <>
+           Chat application where you can send friend requests,
+          create groups, chat, remove and leave groups, and chat in real time.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -243,6 +320,12 @@ const projectsData = [
     github: "https://github.com/lucascmpos/chat-now",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_nextlevelweek-nlwia-rocketseat-activity-7108112147938746368-ttOM?utm_source=share&utm_medium=member_desktop",
+      subtech: [
+        "Next.js",
+        "TypeScript",
+        "Convex",
+        "Clerk",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -261,6 +344,20 @@ const projectsData = [
     title: "Upload.ai",
     video: uploadAiVideo,
     image: uploadAi,
+    subdescription: {
+      pt: (
+        <>
+        Integrações de vídeos com inteligência artificial para
+         melhorar conteúdo e ajudar usuários.
+        </>
+      ),
+      en: (
+        <>
+          Integrations with artificial intelligence to improve
+          content and help users
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -301,6 +398,12 @@ const projectsData = [
     github: "https://github.com/lucascmpos/NLW-IA",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_realtimechat-frontend-nextjs-activity-7211719833627856896-sxYY?utm_source=share&utm_medium=member_desktop",
+      subtech: [
+        "React.js",
+        "TypeScript",
+        "AI API",
+        "Node.js",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -316,10 +419,24 @@ const projectsData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Expert Notes",
     video: expertNotesVideo,
     image: expertNotes,
+    subdescription: {
+      pt: (
+        <>
+        Notas, onde o o usuário pode
+         adicionar novas notas falando por microfone, ou digitando.
+        </>
+      ),
+      en: (
+        <>
+          Notes website, where the user can add
+          new notes by speaking into the microphone, or writing.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -358,6 +475,12 @@ const projectsData = [
     github: "https://github.com/lucascmpos/expert-notes",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_react-typescript-radixui-activity-7200820537319641088-VDBa?utm_source=share&utm_medium=member_desktop",
+      subtech: [
+        "React.js",
+        "TypeScript",
+        "Speech API",
+        "Figma",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -371,10 +494,26 @@ const projectsData = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Dashboard Blue",
     video: dashBlueVideo,
     image: dashBlue,
+    subdescription: {
+      pt: (
+        <>
+        Dashboard para um teste técnico para a
+          Blue Company. Consiste em vários tipos de gráficos, funcionalidades e
+          responsividade.
+        </>
+      ),
+      en: (
+        <>
+          Dashboard for a technician test for Blue
+          Company. Consist in various types of charts, functionalities and
+          responsivity.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -411,6 +550,12 @@ const projectsData = [
     github: "https://github.com/lucascmpos/desafio-front-end",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_dashboard-case-frontend-activity-7210005597247700992-fDCW?utm_source=share&utm_medium=member_desktop",
+    subtech: [
+        "React.js",
+        "TypeScript",
+        "Jest",
+        "Recharts",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -425,10 +570,24 @@ const projectsData = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Natu Flora",
     video: natuFloraVideo,
     image: natuFlora,
+    subdescription: {
+      pt: (
+        <>
+         Esta landing page estilo vitrine representa uma loja fictícia que
+         também pode ser expandida para um e-commerce caso a loja deseje.
+        </>
+      ),
+      en: (
+        <>
+          This storefront-style landing page represents a fictional store that
+          It can also be expanded to e-commerce if the store wishes.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -463,14 +622,29 @@ const projectsData = [
     github: "https://github.com/lucascmpos/natuflora",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_react-landingpage-tailwind-activity-7180590037623848960-WLB7?utm_source=share&utm_medium=member_desktop",
+    subtech: ["React.js", "Tailwindcss", "Figma"],
     tech: ["HTML", "CSS", "JavaScript", "React.js", "Tailwindcss", "Figma"],
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Weekly Planner",
     image: weeklyPlanner,
     video: weeklyVideo,
+    subdescription: {
+      pt: (
+        <>
+         To-Do-List apresentando funcionalidades de cadastro CRUD, integradas a
+         uma autenticação de usuário validada.
+        </>
+      ),
+      en: (
+        <>
+          To-Do-List featuring CRUD registration functionalities, integrated
+          with validated user authentication.
+        </>
+      ),
+    },
     description: {
       pt: (
         <>
@@ -496,10 +670,16 @@ const projectsData = [
         </>
       ),
     },
+    
     site: "https://weekly-planner-uol.vercel.app",
     github: "https://github.com/lucascmpos/Projeto-Compass-VIII",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_react-javascript-html-activity-7024386144108699648-yl2F?utm_source=share&utm_medium=member_desktop",
+    subtech: [
+        "React.js",
+        "Figma",
+        "SwaggerAPI",
+      ],
     tech: [
       "HTML",
       "CSS",
@@ -511,97 +691,51 @@ const projectsData = [
     ],
   },
 ];
-const ProjectCard = ({ project, onClick }) => {
-  const [hovered, setHovered] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 1024);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const titleSpring = useSpring({
-    opacity: hovered ? 0 : 1,
-    config: { tension: 400, friction: 30, duration: 0 },
-  });
-
-  const overlaySpring = useSpring({
-    opacity: hovered ? 0 : 0.7,
-  });
-
-  return (
-    <div
-      key={project.id}
-      className="group relative cursor-pointer"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onClick={() => onClick(project)}
-    >
-      <div
-        className={`relative   border-b-4 border-purple-800 ${
-          isLargeScreen ? " " : ""
-        }`}
-      >
-        <img
-          src={project.image}
-          alt={project.title}
-          className={`w-full transform rounded-t-md  object-cover duration-100  group-hover:scale-105 ${
-            isLargeScreen ? "h-56" : "h-60"
-          }`}
-        />
-        <animated.div
-          style={{
-            ...overlaySpring,
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            textAlign: "center",
-          }}
-          className="absolute left-0  top-0 h-full w-full rounded-t-md   bg-[#01020a] duration-100 group-hover:scale-105"
-        ></animated.div>
-        <animated.div
-          style={{
-            ...titleSpring,
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            padding: "8px",
-          }}
-          className={`text-xl font-bold text-gray-300 ${
-            isLargeScreen ? "bottom-1" : "bottom-4"
-          }`}
-        >
-          {project.title}
-        </animated.div>
-        <animated.div
-          style={{
-            opacity: titleSpring.opacity.to((opacity) => 1 - opacity),
-          }}
-          className={`absolute right-[50%] flex items-center justify-center text-xl font-semibold  ${
-            isLargeScreen ? "bottom-[-5px]" : "bottom-[-5.7px]"
-          } group left-0 w-full transform cursor-pointer  rounded-sm bg-purple-900 p-2 text-center text-gray-300 transition-all duration-200 hover:bg-purple-950 group-hover:scale-105`}
-        >
-          <CircleChevronUp
-            className=" hover: transition-all hover:scale-110"
-            size={26}
-          />
-        </animated.div>
-      </div>
-    </div>
-  );
-};
 
 const Projects = ({ language, theme }) => {
+
+  const ProjectCard = ({ project, onClick }) => {
+    return (
+      <div
+      key={project.id}
+      className={`group relative border  rounded-md cursor-pointer ${theme === "light" ? "border-gray-300/70 bg-white " : "border-[#040424] bg-[#01020a]  hover:text-white "}`}
+      onClick={() => onClick(project)}
+      >
+      <div>
+        <img
+          src={project.image}
+          className="w-full h-52 object-cover rounded-t-md"
+          alt={project.title[language]}
+        />
+      </div>
+
+      <div className={`px-4  pt-px  border-black/20 rounded-b-md ${theme === "light" ? "group-hover:bg-gray-100/70" : "group-hover:bg-[#040424]/30"}`}>
+        <div className="flex flex-row flex-wrap gap-1 mt-2">
+        {project.subtech &&
+          project.subtech.map((technology, index) => (
+          <TechnologyCard
+            key={index}
+            technology={technology}
+            style={{
+            width: "auto",
+            height: "20px",
+            fontSize: "12px",
+            color: theme === "dark" ? "#ffffff" : "#000000",
+            fontWeight: "500",
+            border: theme === "light" ? "1px solid #d1d5db" : "1px solid #1a0a38",
+            }}
+          />
+          ))}
+        </div>
+
+        <div className=" flex py-3   flex-col">
+        <h1 className={`font-semibold text-xl mb-2 ${theme === "light" ? "text-black" : "text-gray-300"}`}>{project.title}</h1>
+        <p className={`text-sm font-medium h-16 md:h-24 ${theme === "light" ? "text-black" : "text-gray-300/70"}`}>{project.subdescription[language]} </p>
+        </div>
+      </div>
+      </div>
+    );
+  };
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -659,7 +793,7 @@ const Projects = ({ language, theme }) => {
     <div
       id="projects"
       className={`py-24 md:p-44 md:py-52 ${
-        theme === "light" ? "bg-white" : "bg-[#01020a]"
+        theme === "light" ? "bg-[#fdfbff] " : "bg-[#020211]"
       }  `}
     >
       <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
@@ -668,21 +802,9 @@ const Projects = ({ language, theme }) => {
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
-          {language === "pt" ? "Projetos" : "Projects"}
+          {language === "pt" ? "Projetos em destaque" : "Highlighted projects"}
         </h1>
-        <p
-          className={` mt-5 w-[80vw] text-center text-lg md:w-auto lg:mt-10 lg:text-start ${
-            theme === "light" ? "text-black" : "text-gray-300"
-          }`}
-        >
-          <span
-            className={`${theme === "light" ? "text-black/50" : "text-gray-300/50"}  font-semibold`}
-          >
-            {language === "pt"
-              ? "Meus maiores projetos! clique em qual desejar para saber mais..."
-              : "My biggest projects! click on which one you want to find out more..."}
-          </span>
-        </p>
+       
       </div>
       <div
         ref={ref}
@@ -692,7 +814,7 @@ const Projects = ({ language, theme }) => {
       >
         <div
           className={`grid ${
-            isLargeScreen ? "grid-cols-3" : "flex-col"
+            isLargeScreen ? "grid-cols-2 " : "flex-col"
           }  flex items-center justify-center gap-10 p-3`}
         >
           {projectsData.map((project) => (
@@ -734,6 +856,8 @@ const Projects = ({ language, theme }) => {
             beforeClose: "",
           }}
         >
+
+
           {selectedProject && (
             <div className="flex flex-col items-center justify-center gap-5 overscroll-y-none ">
               <div className="flex flex-col items-center justify-center">
@@ -774,7 +898,7 @@ const Projects = ({ language, theme }) => {
                 >
                   {selectedProject.tech &&
                     selectedProject.tech.map((technology, index) => (
-                      <TechnologyCard key={index} technology={technology} />
+                      <TechnologyCard key={index} technology={technology} style={{backgroundColor: "#6810a3"}} />
                     ))}
                 </div>
               </div>

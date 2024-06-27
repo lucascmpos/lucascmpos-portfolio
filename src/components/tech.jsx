@@ -48,8 +48,8 @@ const Tech = ({ language, theme }) => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-5 px-5 py-10 md:py-28 lg:px-0 ${
-        theme === "light" ? "bg-white" : "bg-[#01020a]"
+      className={`flex flex-col border-y items-center justify-center gap-5 px-5 py-10 md:py-28 lg:px-0 ${
+        theme === "light" ? "bg-white border-gray-100" : "bg-[#01020a] border-[#020211]"
       }`}
     >
       <h1

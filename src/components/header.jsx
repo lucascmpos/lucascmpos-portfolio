@@ -157,7 +157,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             </div>
             <div className="absolute bottom-10 right-10">
               <button
-                className={`flex flex-row items-center justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800 ${
+                className={`flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800 ${
                   theme === "light" ? "text-black" : "text-gray-200"
                 }`}
                 onClick={toggleLanguage}
@@ -205,7 +205,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
           </div>
         </Link>
 
-        <div className="hidden flex-row gap-10 text-lg md:flex">
+        <div className="hidden flex-row gap-10 text-sm md:flex">
           {menuItems.map((item) => (
             <Link key={item.id} to={item.id} smooth={true} duration={500}>
               <h2 className="group flex cursor-pointer flex-row items-center justify-center gap-2">
@@ -236,7 +236,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
           <button
             onClick={toggleMenu}
-            className={`text-2xl transition-all hover:text-purple-700 focus:outline-none  md:hidden ${
+            className={`text-sm transition-all hover:text-purple-700 focus:outline-none  md:hidden ${
               theme === "light" ? "text-black" : "text-gray-300"
             }`}
           >
@@ -245,7 +245,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
           {!isMobile && (
             <button
-              className="flex flex-row items-center justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800"
+              className="flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800"
               onClick={toggleLanguage}
             >
               {language === "pt" ? "EN" : "PTBR"}
