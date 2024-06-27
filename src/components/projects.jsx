@@ -730,7 +730,7 @@ const Projects = ({ language, theme }) => {
 
         <div className=" flex py-3   flex-col">
         <h1 className={`font-semibold text-xl mb-2 ${theme === "light" ? "text-black" : "text-gray-300"}`}>{project.title}</h1>
-        <p className={`text-sm font-medium h-16 md:h-24 ${theme === "light" ? "text-black" : "text-gray-300/70"}`}>{project.subdescription[language]} </p>
+        <p className={`text-sm font-medium h-18 md:h-24 ${theme === "light" ? "text-black" : "text-gray-300/70"}`}>{project.subdescription[language]} </p>
         </div>
       </div>
       </div>

@@ -198,7 +198,7 @@ const Experience = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`flex flex-col items-center justify-center gap-16 px-2 transition-opacity duration-1000 ease-in-out ${
+        className={`flex flex-col mt-4 items-center justify-center gap-16 px-2 transition-opacity duration-1000 ease-in-out ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >

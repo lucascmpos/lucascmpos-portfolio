@@ -64,13 +64,7 @@ const Tech = ({ language, theme }) => {
           theme === "light" ? "text-black" : "text-gray-200"
         }`}
       >
-        <p
-          className={`${theme === "light" ? "text-black/80" : "text-gray-200/80"}`}
-        >
-          {language === "pt"
-            ? "Essas são minhas principais tecnologias!"
-            : "These are my main stack!"}
-        </p>
+        
         <div
           className={`${theme === "light" ? "text-black/50" : "text-gray-200/50"}`}
         >
