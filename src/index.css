@@ -18,7 +18,7 @@ body.overflow-y-hidden {
 }
 
 .mobile-menu {
-  z-index: 200 !important;
+  z-index: 60 !important;
  
 }
 
