@@ -668,7 +668,7 @@ const Projects = ({ language, theme }) => {
             height: "20px",
             fontSize: "12px",
             color: theme === "dark" ? "#ffffff" : "#000000",
-            fontWeight: "500",
+            fontWeight: "600",
             border: theme === "light" ? "1px solid #ebebeb" : "1px solid #2e2e40",
             }}
           />
@@ -827,7 +827,7 @@ const Projects = ({ language, theme }) => {
                   />
                 )}
                 <p
-                  className={` font-semibold ${
+                  className={` font-medium ${
                     isLargeScreen ? "" : "text-sm"
                   } ${theme === "light" ? "text-gray-700" : "text-gray-300"} mt-2`}
                 >
@@ -849,7 +849,7 @@ const Projects = ({ language, theme }) => {
             height: "25px",
             fontSize: "13px",
             color: theme === "dark" ? "#ffffff" : "#000000",
-            fontWeight: "500",
+            fontWeight: "600",
             border: theme === "light" ? "1px solid #d4d4d4" : "1px solid #2e2e40",
             }}
           />
