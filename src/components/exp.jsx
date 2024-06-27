@@ -225,7 +225,7 @@ const Experience = ({ language, theme }) => {
         theme === "light" ? "bg-primary-light border-secondary-light" : "bg-primary-dark border-secondary-dark"
       }`}
     >
-      <div className="flex flex-col px-4 items-center justify-center"> <h1
+      <div className="flex flex-col px-4 items-center xl:ml-52 justify-center"> <h1
           className={` font-bold mb-3 text-center text-2xl lg:text-4xl ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
@@ -279,13 +279,13 @@ const Experience = ({ language, theme }) => {
       </div>
       <div
         ref={ref}
-        className={`flex flex-col mt-4 items-center justify-center gap-6 px-2 transition-opacity duration-1000 ease-in-out ${
+        className={`flex flex-col mt-4 items-center xl:ml-20 justify-center gap-6 px-2 transition-opacity duration-1000 ease-in-out ${
           inView ? "opacity-100" : "opacity-0"
         }`}
       >
         
         {currentExperiences.map((experiencia) => (
-          <div key={experiencia.id} className="flex h-full px-2 w-[90vw] gap-3 md:w-[50vw] lg:w-[50vw] flex-row">
+          <div key={experiencia.id} className="flex h-full px-2 w-[90vw] gap-3 md:w-[50vw] lg:w-[40vw] flex-row">
 
             <div className={`flex space-y-px flex-col justify-center items-center ${theme === "light" ? "text-black" : "text-gray-200"}`}>
               <img className="w-auto h-auto max-h-14 max-w-20 rounded-full" src={experiencia.icon} alt="Icon" /> 

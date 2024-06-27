@@ -10,7 +10,8 @@ export default {
         'primary-dark': '#020211',
         'secondary-dark': '#030317',
         'primary-light': '#ffffff',
-        'secondary-light': '#fcfcfc',
+        'secondary-light': '#f5f5f5',
+        'button-dark:': '#070729',
       },
       borderColor: {
         'primary-dark': '#020211',

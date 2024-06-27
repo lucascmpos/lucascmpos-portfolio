@@ -23,7 +23,7 @@ body.overflow-y-hidden {
 }
 
 .modal-class {
-    z-index: 1000; /* Ajuste conforme necessário */
+    z-index: 1000; 
 }
 
 .modal-open {

@@ -110,17 +110,32 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 : "bg-secondary-dark border-secondary-dark"
             }`}
           >
-            <div className="flex justify-end p-4">
+            <div className="flex justify-between items-center p-4 px-10">
+            <h2
+                className={` font-extrabold text-lg ${
+                  theme === "light" ? "text-purple-600" : "text-purple-800"
+                }`}
+              >
+                campos
+                <span
+                  className={`${
+                    theme === "light" ? "text-black" : "text-gray-200"
+                  }`}
+                >
+                  .
+                </span>
+                dev
+              </h2>
               <button
                 onClick={toggleMenu}
-                className={`mr-3 mt-1 text-3xl transition-all hover:text-purple-700 focus:outline-none ${
-                  theme === "light" ? "text-black" : "text-gray-300"
-                }`}
+                className={`group flex flex-row items-center p-2 border rounded-lg text-sm justify-center gap-3 font-bold transition-all duration-300  ${
+                  theme === "light" ? "text-black bg-primary-light border-secondary-light hover:bg-gray-100" : "text-gray-300 bg-[#040417] border-secondary-dark/60 hover:bg-[#080826]"
+                } `}
               >
                 <X size={30} />
               </button>
             </div>
-            <div className="flex flex-col  w-full gap-16 pt-6 text-2xl">
+            <div className="flex flex-col  w-full gap-10 pt-6 px-10 text-2xl">
               <Link
                 to="home"
                 smooth={true}
@@ -134,16 +149,17 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   smooth={true}
                   onClick={() => toggleMenu(false)}
                 >
-                 <div className="flex justify-end px-12 w-full"> 
+                 <div className={`flex   w-full justify-start  rounded-lg border-b ${theme === "light" ? "bg-secondary-light border-secondary-light" : "bg-[#040417] border-secondary-dark/60"}  `}> 
       <h2
-        className={`flex group cursor-pointer font-semibold text-2xl flex-row items-center gap-2 w-fit ${
-          theme === "light" ? "text-black" : "text-gray-200"
+        className={`flex group cursor-pointer w-full p-2 justify-start gap-5  font-semibold text-2xl flex-row items-center  ${
+          theme === "light" ? "text-black bg-secondary-light border-secondary-light hover:bg-primary-light" : "text-gray-300 bg-[#040417] border-secondary-dark/60 hover:bg-[#080821]"
         }`}
       >
-        {language === "pt" ? item.text_pt : item.text_en}
-        <div className="group-hover:text-purple-700 group-hover:-translate-y-1 ">
+        <div >
           {item.icon}
         </div>
+        {language === "pt" ? item.text_pt : item.text_en}
+        
       </h2>
     </div>
   </Link>
@@ -151,13 +167,13 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             </div>
             <div className="absolute bottom-10 right-10">
               <button
-                className={`group flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300  ${
-                  theme === "light" ? "text-black" : "text-gray-300"
+                className={`group flex flex-row items-center p-2 border rounded-lg text-sm justify-center gap-3 font-bold transition-all duration-300  ${
+                  theme === "light" ? "text-black bg-primary-light border-secondary-light hover:bg-gray-100" : "text-gray-300 bg-[#040417] border-secondary-dark/60 hover:bg-[#080821]"
                 } `}
                 onClick={toggleLanguage}
               >
                 {language === "pt" ? "EN" : "PTBR"}
-                <div className="group-hover:-translate-y-1 group-hover:text-purple-700">
+                <div className=" ">
                   <Languages size={23} />
                 </div>
               </button>
