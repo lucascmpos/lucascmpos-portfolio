@@ -10,7 +10,7 @@ import uploadAi from "../assets/uploadai.jpeg";
 import expertNotes from "../assets/expertnotes.png";
 import dashBlue from "../assets/dashblue.png";
 import natuFlora from "../assets/natuflora.png";
-import { FaRegWindowClose, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import {  FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import uploadAiVideo from "../assets/uploadaivideo.mp4";
 import chatNowVideo from "../assets/chatNowVideo.mp4";
@@ -24,6 +24,7 @@ import periwareVideo from "../assets/periwarevideo.mp4";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
 import TechnologyCard from "./tech-tag";
+import { X } from "lucide-react";
 
 const projectsData = [
   {
@@ -55,7 +56,7 @@ const projectsData = [
           consulta seus pedidos e pode pesquisar por restaurantes.
           <br />
           <br />
-          Funcionalidades:
+          <span className="text-purple-700">Funcionalidades</span>:
           <br />
           - Login com o Google
           <br />
@@ -70,7 +71,7 @@ const projectsData = [
           orders and search for restaurants.
           <br />
           <br />
-          Features:
+          <span className="text-purple-700">Features</span>:
           <br />
           - Google login
           <br />
@@ -132,7 +133,7 @@ const projectsData = [
           ver seus serviços agendados futuros e anteriores.
           <br />
           <br />
-          Funcionalidades:
+          <span className="text-purple-700">Funcionalidades</span>:
           <br />
           - Login com o Google
           <br />
@@ -148,7 +149,7 @@ const projectsData = [
           scheduled services in the future and past.
           <br />
           <br />
-          Features:
+          <span className="text-purple-700">Features</span>:
           <br />
           - Google login
           <br />
@@ -208,7 +209,7 @@ const projectsData = [
           descontos
           <br />
           <br />
-          Funcionalidades:
+          <span className="text-purple-700">Funcionalidades</span>:
           <br />
           - Login com o Google
           <br />
@@ -226,7 +227,8 @@ const projectsData = [
           discounts.
           <br />
           <br />
-          Features:
+          <span className="text-purple-700">Features</span>:
+
           <br />
           - Google login
           <br />
@@ -289,7 +291,8 @@ const projectsData = [
           interações de forma eficiente e intuitiva.
           <br />
           <br />
-          Funcionalidades:
+          <span className="text-purple-700">Funcionalidades</span>:
+
           <br />
           - Integração com Clerk e Convex para autenticação
           <br />
@@ -305,7 +308,8 @@ const projectsData = [
           intuitively.
           <br />
           <br />
-          Features:
+          <span className="text-purple-700">Features</span>:
+
           <br />
           - Integration with Clerk and Convex for authentication
           <br />
@@ -366,7 +370,8 @@ const projectsData = [
           o aúdio do vídeo, podendo gerar diversos resultados.
           <br />
           <br />
-          Funcionalidades:
+          <span className="text-purple-700">Funcionalidades</span>:
+
           <br />
           - Integração com ChatGPT 3.5
           <br />
@@ -383,7 +388,8 @@ const projectsData = [
           audio, being able to generate various results.
           <br />
           <br />
-          Features:
+          <span className="text-purple-700">Features</span>:
+
           <br />
           - Integration with ChatGPT 3.5
           <br />
@@ -444,7 +450,8 @@ const projectsData = [
           salvas no seu navegador. Design limpo e responsivo.
           <br />
           <br />
-          Funcionalidades:
+          <span className="text-purple-700">Funcionalidades</span>:
+
           <br />
           - Integração com a Speech Recognition API
           <br />
@@ -460,7 +467,8 @@ const projectsData = [
           browser. Clean and responsive design.
           <br />
           <br />
-          Features:
+          <span className="text-purple-700">Features</span>:
+
           <br />
           - Integration with Speech Recognition API
           <br />
@@ -520,7 +528,8 @@ const projectsData = [
           responsividade.
           <br />
           <br />
-          Funcionalidades:
+          <span className="text-purple-700">Funcionalidades</span>:
+
           <br />
           - Responsivo
           <br />
@@ -535,7 +544,8 @@ const projectsData = [
           responsivity.
           <br />
           <br />
-          Features:
+          <span className="text-purple-700">Features</span>:
+
           <br />
           - Responsiveness
           <br />
@@ -593,7 +603,8 @@ const projectsData = [
           também pode ser expandida para um e-commerce caso a loja deseje.
           <br />
           <br />
-          Funcionalidades: <br />
+          <span className="text-purple-700">Funcionalidades</span>:
+          <br />
           -Design limpo e responsivo
           <br />
           -Animações
@@ -607,7 +618,8 @@ const projectsData = [
           It can also be expanded to e-commerce if the store wishes.
           <br />
           <br />
-          Features: <br />
+          <span className="text-purple-700">Features</span>:
+          <br />
           -Clean and responsive design
           <br />
           -Animations
@@ -675,18 +687,13 @@ const Projects = ({ language, theme }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
-    document.body.classList.toggle("modal-open", modalIsOpen);
-
     if (modalIsOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add('overflow-y-hidden');
     } else {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove('overflow-y-hidden');
     }
-
-    return () => {
-      document.body.classList.remove("modal-open");
-    };
   }, [modalIsOpen]);
+
 
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -778,7 +785,7 @@ const Projects = ({ language, theme }) => {
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "85%" : "100%",
               backgroundColor: theme === "light" ? "#ffffff" : "#020211",
-              border: "none",
+              border: theme === "light" ? "2px solid #d4d4d4" : "1px solid #2e2e40",
               borderRadius: isLargeScreen ? "20px" : "0px",
               transition: "opacity 0.3s, transform 0.3s ",
             },
@@ -816,7 +823,7 @@ const Projects = ({ language, theme }) => {
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="my-4 h-[200px]  rounded-md object-contain"
+                    className="my-4 h-[160px]  rounded-md object-contain"
                   />
                 )}
                 <p
@@ -831,12 +838,25 @@ const Projects = ({ language, theme }) => {
                     isLargeScreen ? "" : "text-sm"
                   }`}
                 >
+                <hr className={`my-4 w-full border ${theme === "light" ? "border-secondary-light" : "border-secondary-dark"}`} />
                   {selectedProject.tech &&
                     selectedProject.tech.map((technology, index) => (
-                      <TechnologyCard key={index} technology={technology} style={{backgroundColor: "#6810a3"}} />
+                      <TechnologyCard
+            key={index}
+            technology={technology}
+            style={{
+            width: "auto",
+            height: "25px",
+            fontSize: "13px",
+            color: theme === "dark" ? "#ffffff" : "#000000",
+            fontWeight: "500",
+            border: theme === "light" ? "1px solid #d4d4d4" : "1px solid #2e2e40",
+            }}
+          />
                     ))}
                 </div>
               </div>
+              
               <div className="my-4  flex l items-center justify-center gap-3  ">
                 {selectedProject.site && (
                   <button
@@ -886,9 +906,9 @@ const Projects = ({ language, theme }) => {
               </div>
               <button
                 onClick={closeModal}
-                className={`absolute right-0 top-0 cursor-pointer p-4 text-purple-900 ${theme === "light" ? "hover:text-black" : "hover:text-gray-200 "}`}
+                className={`absolute right-0 top-0 cursor-pointer p-4 text-purple-700 ${theme === "light" ? "hover:text-black" : "hover:text-gray-200 "}`}
               >
-                <FaRegWindowClose size={25} />
+                <X size={25} />
               </button>
             </div>
           )}

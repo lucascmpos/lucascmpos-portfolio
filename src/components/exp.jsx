@@ -246,7 +246,7 @@ const Experience = ({ language, theme }) => {
               : "Click to see more..."}
           </span>
         </div>
-      <div className={`  w-[80vw] md:w-[25vw] lg:w-[20vw] xl:w-[15vw] gap-2   grid grid-cols-6 md:grid-cols-3     
+      <div className={`  w-[80vw] md:w-[25vw] lg:w-[25vw] xl:w-[25vw] gap-2   grid grid-cols-6 md:grid-cols-4 xl:grid-cols-5     
         transition-opacity duration-1000 ease-in-out`}>
           
       {icons.map((item, index) => (

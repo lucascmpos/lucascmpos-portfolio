@@ -5,7 +5,11 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   scrollbar-color: #000007;
+  
+}
 
+body.overflow-y-hidden {
+  overflow-y: hidden !important;
 }
 
 .modal-open {
