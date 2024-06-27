@@ -651,7 +651,7 @@ const Projects = ({ language, theme }) => {
         <img
           src={project.image}
           loading="lazy"
-          className="w-full h-auto  lg:h-56 object-cover rounded-t-md"
+          className="w-full h-auto z-10  lg:h-56 object-cover rounded-t-md"
           alt={project.title[language]}
         />
       </div>
@@ -825,7 +825,7 @@ const Projects = ({ language, theme }) => {
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="my-4 h-[160px]  rounded-md object-contain"
+                    className="my-4 h-[160px] z-10  rounded-md object-contain"
                   />
                 )}
                 <p

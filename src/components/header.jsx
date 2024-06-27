@@ -194,9 +194,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   return (
     <>
       <BlurOverlay isOpen={isMenuOpen} />
-
       <motion.header
-        className={`fixed z-60 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
+        className={`fixed z-50 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
           theme === "light"
             ? "border-gray-200/50 bg-secondary-light text-black"
             : "border-primary-dark bg-secondary-dark text-gray-300"
