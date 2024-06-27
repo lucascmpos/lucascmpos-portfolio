@@ -24,7 +24,7 @@ const Contact = ({ language, theme }) => {
         <div className="mb-36 flex flex-col items-center justify-center gap-5">
           <h1
             className={` text-4xl font-bold ${
-              theme === "light" ? "text-black" : "text-purple-900"
+              theme === "light" ? "text-black" : "text-gray-300"
             }`}
           >
             {" "}
