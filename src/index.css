@@ -12,6 +12,16 @@ body.overflow-y-hidden {
   overflow-y: hidden !important;
 }
 
+.blur-overlay {
+  z-index: 50 !important /* Menor que o z-index do MobileMenu */
+  /* Outros estilos */
+}
+
+.mobile-menu {
+  z-index: 60 !important;
+ 
+}
+
 .modal-open {
   overflow: hidden;
 }
