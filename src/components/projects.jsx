@@ -698,18 +698,18 @@ const Projects = ({ language, theme }) => {
     return (
       <div
       key={project.id}
-      className={`group relative border  rounded-md cursor-pointer ${theme === "light" ? "border-gray-300/70 bg-white " : "border-[#040424] bg-[#01020a]  hover:text-white "}`}
+      className={`group relative border  rounded-md cursor-pointer w-[90vw] md:w-auto ${theme === "light" ? "border-secondary-light bg-primary-light " : "border-secondary-dark bg-primary-dark  hover:text-white "}`}
       onClick={() => onClick(project)}
       >
       <div>
         <img
           src={project.image}
-          className="w-full h-52 object-cover rounded-t-md"
+          className="w-full h-auto  lg:h-56 object-cover rounded-t-md"
           alt={project.title[language]}
         />
       </div>
 
-      <div className={`px-4  pt-px  border-black/20 rounded-b-md ${theme === "light" ? "group-hover:bg-gray-100/70" : "group-hover:bg-[#040424]/30"}`}>
+      <div className={`px-4  pt-px   rounded-b-md ${theme === "light" ? "group-hover:bg-[#ebebeb]/40" : "group-hover:bg-[#2e2e40]/30"}`}>
         <div className="flex flex-row flex-wrap gap-1 mt-2">
         {project.subtech &&
           project.subtech.map((technology, index) => (
@@ -722,7 +722,7 @@ const Projects = ({ language, theme }) => {
             fontSize: "12px",
             color: theme === "dark" ? "#ffffff" : "#000000",
             fontWeight: "500",
-            border: theme === "light" ? "1px solid #d1d5db" : "1px solid #1a0a38",
+            border: theme === "light" ? "1px solid #ebebeb" : "1px solid #2e2e40",
             }}
           />
           ))}
@@ -792,8 +792,8 @@ const Projects = ({ language, theme }) => {
   return (
     <div
       id="projects"
-      className={`py-24 md:p-44 md:py-52 ${
-        theme === "light" ? "bg-[#fdfbff] " : "bg-[#020211]"
+      className={`py-24 md:p-44 md:py-52 border-b ${
+        theme === "light" ? "bg-secondary-light border-secondary-light " : "bg-secondary-dark border-secondary-dark"
       }  `}
     >
       <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
@@ -842,7 +842,7 @@ const Projects = ({ language, theme }) => {
               width: isLargeScreen ? "80%" : "100%",
               maxWidth: isLargeScreen ? "none" : "100%",
               height: isLargeScreen ? "85%" : "100%",
-              backgroundColor: theme === "light" ? "#fdfbff" : "#01020a",
+              backgroundColor: theme === "light" ? "#ffffff" : "#020211",
               border: "none",
               borderRadius: isLargeScreen ? "20px" : "0px",
               transition: "opacity 0.3s, transform 0.3s ",
@@ -902,51 +902,48 @@ const Projects = ({ language, theme }) => {
                     ))}
                 </div>
               </div>
-              <div className="my-4  flex flex-col items-center justify-center gap-3 md:flex-row ">
+              <div className="my-4  flex l items-center justify-center gap-3  ">
                 {selectedProject.site && (
                   <button
-                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
-                      theme === "light"
-                        ? "bg-black text-gray-200 hover:bg-purple-700 "
-                        : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
-                    }`}
+                  className={`group flex cursor-pointer flex-row w-12 h-12   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
+                    theme === "light"
+                      ? "bg-primary-dark text-gray-200 hover:bg-[#2e2e40]"
+                      : "bg-primary-light text-black hover:bg-[#ebebeb]  "
+                  }`}
                     onClick={() => window.open(selectedProject.site, "_blank")}
                   >
-                    {language === "pt" ? "Acessar" : "Access"}
                     <FaExternalLinkAlt
-                      className="transition-all group-hover:scale-125"
+                      className="transition-all group-hover:scale-110"
                       size={15}
                     />
                   </button>
                 )}
                 <button
-                  className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                  className={`group flex cursor-pointer flex-row w-12 h-12   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
                     theme === "light"
-                      ? "bg-black text-gray-200 hover:bg-purple-700 "
-                      : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+                      ? "bg-primary-dark text-gray-200 hover:bg-[#2e2e40]"
+                      : "bg-primary-light text-black hover:bg-[#ebebeb]  "
                   }`}
                   onClick={() => window.open(selectedProject.github, "_blank")}
                 >
-                  GitHub
                   <FaGithub
-                    className="transition-all group-hover:scale-125"
+                    className="transition-all group-hover:scale-110"
                     size={20}
                   />
                 </button>
                 {selectedProject.linkedin && (
                   <button
-                    className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
+                    className={`group flex cursor-pointer flex-row w-12 h-12   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black ${
                       theme === "light"
-                        ? "bg-black text-gray-200 hover:bg-purple-700 "
-                        : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+                        ? "bg-primary-dark text-gray-200 hover:bg-[#2e2e40]"
+                        : "bg-primary-light text-black hover:bg-[#ebebeb]  "
                     }`}
                     onClick={() =>
                       window.open(selectedProject.linkedin, "_blank")
                     }
                   >
-                    {language === "pt" ? "Publicação do" : "LinkedIn post"}
                     <FaLinkedinIn
-                      className="transition-all group-hover:scale-125"
+                      className=" group-hover:scale-110"
                       size={18}
                     />
                   </button>

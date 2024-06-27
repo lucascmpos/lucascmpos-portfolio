@@ -160,7 +160,7 @@ const Services = ({ language, theme }) => {
   return (
     <div
       className={`flex flex-col items-center   py-24 ${
-        theme === "light" ? "bg-[#fdfbff]" : "bg-[#01020a]"
+        theme === "light" ? "bg-primary-light" : "bg-primary-dark"
       }`}
     >
       <div className="flex items-start">

@@ -72,7 +72,7 @@ const About = ({ language, theme }) => {
     <div
       id="about"
       className={`flex flex-col items-center  justify-center gap-10 py-10 md:gap-32 md:px-20 md:py-20 xl:flex-row ${
-        theme === "light" ? "bg-[#fdfbff]" : "bg-[#01020a]"
+        theme === "light" ? "bg-primary-light" : "bg-primary-dark"
       }`}
     >
       <div

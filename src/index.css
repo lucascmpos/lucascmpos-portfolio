@@ -5,6 +5,7 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   scrollbar-color: #000007;
+
 }
 
 .modal-open {
@@ -26,6 +27,7 @@ body {
 ::-webkit-scrollbar-track {
   background-color: #01020a;
 }
+
 
 
 .arrow-up {

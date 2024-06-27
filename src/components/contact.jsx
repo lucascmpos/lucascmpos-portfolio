@@ -12,7 +12,7 @@ const Contact = ({ language, theme }) => {
     <div
       id="contact"
       className={`flex flex-col items-center  justify-center py-20 ${
-        theme === "light" ? "bg-white" : "bg-[#01020a]"
+        theme === "light" ? "bg-primary-light" : "bg-primary-dark"
       }`}
     >
       <div

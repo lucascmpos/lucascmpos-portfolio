@@ -101,7 +101,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             animate={{ x: isOpen ? "0%" : "100%" }}
             transition={{ duration: 0.3 }}
             className={`header fixed right-0 top-0 z-20  h-full w-full text-gray-300 ${
-              theme === "light" ? "bg-white" : "bg-[#020211]"
+              theme === "light" ? "bg-secondary-light" : "bg-secondary-dark"
             }`}
           >
             <div className="flex justify-end p-4">
@@ -122,7 +122,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 onClick={() => toggleMenu(false)}
               >
                 <div>
-                  <h2 className="cursor-pointer font-bold text-purple-800">
+                  <h2 className="cursor-pointer font-bold text-sm text-purple-800">
                     campos
                     <span
                       className={`${
@@ -178,8 +178,8 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
       <motion.header
         className={`fixed z-10 flex w-full flex-row items-center justify-between  border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
           theme === "light"
-            ? "border-gray-200/50 bg-white text-black"
-            : "border-purple-950/30 bg-[#020211] text-gray-300"
+            ? "border-gray-200/50 bg-secondary-light text-black"
+            : "border-primary-dark bg-secondary-dark text-gray-300"
         } ${visible ? "" : "hidden"}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: visible ? 1 : 0 }}
@@ -188,7 +188,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
         <Link to="home" smooth={true} duration={500}>
           <div>
             <h2
-              className={`cursor-pointer font-bold ${
+              className={`cursor-pointer font-extrabold text-sm ${
                 theme === "light" ? "text-purple-600" : "text-purple-800"
               } `}
             >
@@ -220,11 +220,12 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
         <div className="flex gap-10">
           <button
-            className="flex flex-row items-center justify-center gap-3 transition-all duration-300 hover:scale-105 hover:text-purple-800"
+            className="flex flex-row items-center justify-center gap-3 transition-all duration-300 hover:scale-110  p-px rounded-md"
             onClick={toggleTheme}
           >
             {theme === "light" ? (
               <>
+              
                 <Moon size={23} />
               </>
             ) : (
@@ -245,7 +246,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
           {!isMobile && (
             <button
-              className="flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300 hover:scale-105 hover:text-purple-800"
+              className="flex flex-row items-center text-sm justify-center gap-3 font-bold transition-all duration-300 hover:scale-110 "
               onClick={toggleLanguage}
             >
               {language === "pt" ? "EN" : "PTBR"}

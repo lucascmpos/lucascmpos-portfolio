@@ -5,9 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'primary-dark': '#020211',
+        'secondary-dark': '#030317',
+        'primary-light': '#ffffff',
+        'secondary-light': '#fcfcfc',
+      },
+      borderColor: {
+        'primary-dark': '#020211',
+        'secondary-dark': '#2e2e40',
+        'primary-light': '#ffffff',
+        'secondary-light': '#ebebeb',
+      },
+    },
   },
-  plugins: [
-    
-  ],
+  plugins: [],
 }

@@ -183,8 +183,8 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={` flex flex-col items-center justify-center px-3 pb-28 pt-20 md:pt-28 ${
-        theme === "light" ? "bg-[#fdfbff]" : "bg-[#020211]"
+      className={` flex flex-col items-center justify-center px-3 border-t pb-28 pt-20 md:pt-28 ${
+        theme === "light" ? "bg-secondary-light border-secondary-light" : "bg-secondary-dark border-secondary-dark"
       }`}
     >
       <div className="mb-10 flex w-full flex-col items-center justify-center   text-center">
