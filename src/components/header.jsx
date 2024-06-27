@@ -104,7 +104,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             initial={{ x: "100%" }}
             animate={{ x: isOpen ? "0%" : "100%" }}
             transition={{ duration: 0.3 }}
-            className={`mobile-menu fixed right-0 top-0 z-60 h-full w-[60vw] border-l text-gray-300 ${
+            className={`mobile-menu fixed right-0 top-0 z-60 h-full w-[65vw] border-l text-gray-300 ${
               theme === "light"
                 ? "bg-secondary-light border-secondary-light"
                 : "bg-secondary-dark border-secondary-dark"
@@ -120,13 +120,13 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 <X size={30} />
               </button>
             </div>
-            <div className="flex flex-col justify-end w-[50vw] gap-16 pt-6 text-2xl">
+            <div className="flex flex-col  w-full gap-16 pt-6 text-2xl">
               <Link
                 to="home"
                 smooth={true}
                 duration={500}
                 onClick={() => toggleMenu(false)}
-              ></Link>
+              />
               {menuItems.map((item) => (
                 <Link
                   key={item.id}
@@ -134,17 +134,19 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   smooth={true}
                   onClick={() => toggleMenu(false)}
                 >
-                  <h2
-                    className={`flex group cursor-pointer text-xl px-2 flex-row items-center justify-end gap-2 ${
-                      theme === "light" ? "text-black" : "text-gray-200"
-                    }`}
-                  >
-                    {language === "pt" ? item.text_pt : item.text_en}
-                    <div className="group-hover:text-purple-700 group-hover:-translate-y-1 ">
-                      {item.icon}
-                    </div>
-                  </h2>
-                </Link>
+                 <div className="flex justify-end px-12 w-full"> 
+      <h2
+        className={`flex group cursor-pointer text-2xl flex-row items-center gap-2 w-fit ${
+          theme === "light" ? "text-black" : "text-gray-200"
+        }`}
+      >
+        {language === "pt" ? item.text_pt : item.text_en}
+        <div className="group-hover:text-purple-700 group-hover:-translate-y-1 ">
+          {item.icon}
+        </div>
+      </h2>
+    </div>
+  </Link>
               ))}
             </div>
             <div className="absolute bottom-10 right-10">
@@ -166,7 +168,13 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
     );
   };
 
-  const BlurOverlay = ({ isOpen }) => {
+  const BlurOverlay = ({ isOpen, toggleMenu }) => {
+    const handleClick = () => {
+      if (isOpen) {
+        toggleMenu();
+      }
+    };
+  
     return (
       <AnimatePresence>
         {isOpen && (
@@ -176,6 +184,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
+            onClick={handleClick} 
           ></motion.div>
         )}
       </AnimatePresence>
