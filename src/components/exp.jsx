@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { MdWorkOutline } from "react-icons/md";
 import { CalendarDays } from "lucide-react";
 import compassLogo from '../assets/compass-logo.png';
 import webbyLogo from '../assets/webby-logo.png';
+import myLogo from '../assets/my-logo.png';
 import htmlIcon from "../assets/icons/html.svg";
 import cssIcon from "../assets/icons/css.svg";
 import gitIcon from "../assets/icons/git.svg";
@@ -36,7 +36,7 @@ const Experience = ({ language, theme }) => {
       {
         id: 1,
         titulo: "Freelancer",
-        icon: <MdWorkOutline size={60} />,
+        icon: myLogo,
         subtitulo: "Desenvolvedor Fullstack",
         descricao: (
           <span>
@@ -117,7 +117,7 @@ const Experience = ({ language, theme }) => {
       {
         id: 1,
         titulo: "Self employed",
-        icon: <MdWorkOutline size={60} />,
+        icon: myLogo,
         subtitulo: "Fullstack Developer",
         descricao: (
           <span>
@@ -288,7 +288,7 @@ const Experience = ({ language, theme }) => {
           <div key={experiencia.id} className="flex h-full px-2 w-[90vw] gap-3 md:w-[50vw] lg:w-[50vw] flex-row">
 
             <div className={`flex space-y-px flex-col justify-center items-center ${theme === "light" ? "text-black" : "text-gray-200"}`}>
-              {typeof experiencia.icon === 'string' ? <img className="w-auto h-auto max-h-14 max-w-20 rounded-full" src={experiencia.icon} alt="Icon" /> : experiencia.icon}
+              <img className="w-auto h-auto max-h-14 max-w-20 rounded-full" src={experiencia.icon} alt="Icon" /> 
               <div className={`h-full w-px px-px ${theme === "light" ? "bg-gray-200" : "bg-white/10"}`} />
             </div>
 
