@@ -233,7 +233,7 @@ const Experience = ({ language, theme }) => {
           {language === "pt" ? "Experiências & Tecnologias" : "Work history and stacks"}
         </h1>
         <div
-          className={`${theme === "light" ? "text-black/50" : "text-gray-200/50"}`}
+          className={` font-medium ${theme === "light" ? "text-black/70" : "text-gray-200/70"}`}
         >
           <span className="hidden lg:inline">
             {language === "pt"
@@ -304,7 +304,7 @@ const Experience = ({ language, theme }) => {
               </div>
 
               <div className="w-full ">
-                <p className={` mb-3 text-sm ${theme === "light" ? "text-black/80" : "text-gray-400/85"}`}>{experiencia.descricao}</p>
+                <p className={` mb-3 font-medium text-sm ${theme === "light" ? "text-black/80" : "text-gray-400/85"}`}>{experiencia.descricao}</p>
               </div>
 
               <div className="w-full ">
