@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
-import { MdOutlineWorkOutline } from "react-icons/md";
-import { ChevronsRight } from "lucide-react";
+import { MdWorkOutline } from "react-icons/md";
+import { CalendarDays } from "lucide-react";
+import compassLogo from '../assets/compass-logo.png';
+import webbyLogo from '../assets/webby-logo.png';
 
 import { useInView } from "react-intersection-observer";
 import TechnologyCard from "./tech-tag";
@@ -15,7 +17,8 @@ const Experience = ({ language, theme }) => {
     pt: [
       {
         id: 1,
-        titulo: "Autônomo",
+        titulo: "Freelancer",
+        icon: <MdWorkOutline size={60} />,
         subtitulo: "Desenvolvedor Fullstack",
         descricao: (
           <span>
@@ -26,22 +29,15 @@ const Experience = ({ language, theme }) => {
             para o cliente final, utilizando linguagens fortes no mercado,
             sempre atualizado e a nível de exigência internacional, trabalhando
             com metodologias ágeis.
-            <br />
-            <br />
           </span>
         ),
-        data: "09/2023 - Presente ",
+        data: "09/2023 - atualmente ",
         tech: [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
           "React.js",
-          "React Native",
           "Next.js",
           "Node.js",
-          "Express",
-          "Tailwind",
+          "TypeScript",
+          "Tailwindcss",
           "Figma",
           "Sass",
         ],
@@ -50,6 +46,7 @@ const Experience = ({ language, theme }) => {
       {
         id: 2,
         titulo: "Compass.UOL",
+        icon: compassLogo,
         subtitulo: "Desenvolvedor Frontend",
         descricao: (
           <span>
@@ -61,22 +58,40 @@ const Experience = ({ language, theme }) => {
             desenvolvimento de software, metodologias ágeis e AWS Cloud. <br />
             Essa experiência ampliou minhas habilidades e consolidou meu
             comprometimento com a excelência no desenvolvimento de software.
-            <br />
-            <br />
           </span>
         ),
         tech: [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
           "React.js",
           "React Native",
           "Sass",
+          "TypeScript",
           "Figma",
           "Storybook",
         ],
         data: "11/2022 - 09/2023 ",
+        link: "https://compass.uol/pt/home/",
+      },
+      {
+        id: 3,
+        titulo: "Webby Internet",
+        icon: webbyLogo,
+        subtitulo: "Analista de Help Desk",
+        descricao: (
+          <span>
+            Ofereci suporte personalizado aos clientes através de canais de texto e voz, monitorando perfis de clientes através de sistemas ERP. <br />
+            Entendi as necessidades do público, propondo soluções em conformidade com as normas da empresa. <br />
+            Gerenciei arquivos e documentos, aplicando senso analítico e interpessoal. <br />
+            Configurei redes de internet e resolvi problemas de infraestrutura de hardware e rede, utilizando praticas das habilidades de comunicação, flexibilidade e trabalho em equipe.
+          </span>
+        ),
+        tech: [
+          "Microsoft Office/365",
+          "AnyDesk",
+          "Voz sobre IP",
+          "Sistemas ERP",
+          "Configuração de Modem/Router",
+        ],
+        data: "06/2021 - 01/2022 ",
         link: "https://compass.uol/pt/home/",
       },
     ],
@@ -84,6 +99,7 @@ const Experience = ({ language, theme }) => {
       {
         id: 1,
         titulo: "Self employed",
+        icon: <MdWorkOutline size={60} />,
         subtitulo: "Fullstack Developer",
         descricao: (
           <span>
@@ -93,22 +109,15 @@ const Experience = ({ language, theme }) => {
             to presentation to the final client, using strong market languages,
             always updated and at an international level of requirement, working
             with agile methodologies.
-            <br />
-            <br />
           </span>
         ),
-        data: "09/2023 - Present ",
+        data: "09/2023 - currently ",
         tech: [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
           "React.js",
-          "React Native",
           "Next.js",
           "Node.js",
-          "Express",
-          "Tailwind",
+          "TypeScript",
+          "Tailwindcss",
           "Figma",
           "Sass",
         ],
@@ -117,6 +126,7 @@ const Experience = ({ language, theme }) => {
       {
         id: 2,
         titulo: "Compass.UOL",
+        icon: compassLogo,
         subtitulo: "Frontend Developer",
         descricao: (
           <span>
@@ -132,14 +142,35 @@ const Experience = ({ language, theme }) => {
           </span>
         ),
         tech: [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
           "React.js",
           "React Native",
+          "TypeScript",
           "Sass",
+          "Figma",
           "Storybook",
+        ],
+        data: "11/2022 - 09/2023 ",
+        link: "https://compass.uol/pt/home/",
+      },
+      {
+        id: 3,
+        titulo: "Webby Internet",
+        icon: webbyLogo,
+        subtitulo: "Help Desk Analyst",
+        descricao: (
+          <span>
+            Provided personalized support to clients through text and voice channels, monitoring customer profiles through ERP systems. <br />
+            Understood the needs of the audience, proposing solutions in accordance with company standards. <br />
+            Managed files and documents, applying analytical and interpersonal skills. <br />
+            Configured internet networks and solved hardware and network infrastructure problems, using communication, flexibility, and teamwork skills.
+          </span>
+        ),
+        tech: [
+          "Microsoft Office/365",
+          "AnyDesk",
+          "Voice over IP",
+          "ERP Systems",
+          "Modem/Router configuration",
         ],
         data: "11/2022 - 09/2023 ",
         link: "https://compass.uol/pt/home/",
@@ -156,7 +187,7 @@ const Experience = ({ language, theme }) => {
         theme === "light" ? "bg-[#fdfbff]" : "bg-[#020211]"
       }`}
     >
-      <div className="mb-10 flex w-full flex-col items-center justify-center  text-center">
+      <div className="mb-10 flex w-full flex-col items-center justify-center   text-center">
         <h1
           className={`text-4xl font-bold ${
             theme === "light" ? "text-black" : "text-gray-200"
@@ -172,64 +203,40 @@ const Experience = ({ language, theme }) => {
         }`}
       >
         {currentExperiences.map((experiencia) => (
-          <div
-            className={`group flex w-[80vw] flex-col items-center justify-center gap-4 rounded-lg border-4 border-purple-700  border-opacity-30  py-8 transition-all  hover:border-opacity-80  md:w-[600px] md:px-16 lg:w-[70vw]  xl:w-[55vw] ${theme === "light" ? "bg-white" : ""}`}
-            key={experiencia.id}
-          >
-            <div className="flex flex-col items-center justify-center">
-              <h2
-                className={`w-26  flex flex-col items-center justify-center  gap-2 text-xl font-bold md:w-auto md:text-2xl xl:w-auto ${
-                  theme === "light" ? "text-gray-800" : "text-gray-300"
-                } `}
-              >
-                <MdOutlineWorkOutline className=" h-12 w-12 text-purple-700 transition-all    group-hover:scale-125" />
+          <div key={experiencia.id} className="flex h-full px-2 w-[90vw] gap-3 lg:w-[70vw] flex-row">
 
-                {experiencia.titulo}
-              </h2>
+            <div className={`flex space-y-px flex-col justify-center items-center ${theme === "light" ? "text-black" : "text-gray-200"}`}>
+              {typeof experiencia.icon === 'string' ? <img className="w-auto h-auto max-h-14 max-w-20 rounded-full" src={experiencia.icon} alt="Icon" /> : experiencia.icon}
+              <div className={`h-full w-px px-px ${theme === "light" ? "bg-gray-200" : "bg-white/10"}`} />
+            </div>
 
-              <h3 className="font-semibold text-gray-500">
-                {experiencia.data}
-              </h3>
-            </div>
-            <div className="flex w-full flex-col  justify-start ">
-              <div className="flex flex-col px-5  pb-2 md:w-auto  ">
-                <h3
-                  className={`text-nowrap text-left text-lg   font-bold text-purple-700 transition-all md:text-3xl`}
-                >
-                  {experiencia.subtitulo}
-                </h3>
-              </div>
-              <p
-                className={`w-full px-5 text-start text-sm font-semibold  md:text-lg lg:w-10/12   2xl:w-full ${
-                  theme === "light" ? "text-black" : "text-gray-400"
-                }`}
-              >
-                {experiencia.descricao}
-              </p>
-            </div>
-            <div className="flex w-full flex-row justify-between px-5">
-              <div className="space-x-3">
-                <span
-                  className={`text-center font-semibold ${theme === "light" ? "text-gray-500" : "text-gray-400/80"}`}
-                >
-                  {language === "pt"
-                    ? "Tecnologias usadas:"
-                    : "Used technologies:"}
-                </span>
+            <div className="space-y-1">
+              <div>
+                <h1 className="font-black text-lg text-purple-800">{experiencia.titulo}</h1>
+                <h2 className={`font-bold text-xl ${theme === "light" ? "text-black" : "text-gray-300"}`}>{experiencia.subtitulo}</h2>
               </div>
 
-              <ChevronsRight className="text-purple-800 lg:hidden" />
-            </div>
+              <div className={`flex font-semibold gap-1 flex-row ${theme === "light" ? "text-black/90" : "text-gray-400"}`}>
+                <CalendarDays  size={20} />
+                <h3>{experiencia.data}</h3>
+              </div>
 
-            <div className="flex w-[90vw] max-w-full flex-row gap-2 overflow-x-auto text-nowrap px-2 text-center   md:gap-4 lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
-              {experiencia.tech &&
+              <div className="w-full ">
+                <p className={` mb-3 ${theme === "light" ? "text-black/80" : "text-gray-400/85"}`}>{experiencia.descricao}</p>
+              </div>
+
+              <div className="w-full ">
+                <div className="flex flex-row flex-wrap gap-2">
+                {experiencia.tech &&
                 experiencia.tech.map((technology, index) => (
                   <TechnologyCard
                     key={index}
                     technology={technology}
-                    style={{ width: "140px", height: "auto" }}
+                    style={{ width: "auto", height: "25px" }}
                   />
                 ))}
+                </div>
+              </div>
             </div>
           </div>
         ))}
