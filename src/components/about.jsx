@@ -26,7 +26,7 @@ const About = ({ language, theme }) => {
       <div
         className={`relative flex w-96  rounded-md  flex-col items-center gap-2 overflow-hidden transition-opacity duration-1000 ease-in-out md:order-first md:-mb-36 md:w-7/12 lg:w-6/12 xl:w-6/12 2xl:w-4/12 `}
       >
-        <Img src={Photo} alt="Foto de Lucas Campos" loading="lazy" className="rounded-lg px-8 md:px-0" />
+        <Img src={Photo} alt="Foto de Lucas Campos" loading="lazy" className="rounded-xl w-80 md:w-auto md:px-0" />
 
         <div
           className={` flex w-full gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden ${
