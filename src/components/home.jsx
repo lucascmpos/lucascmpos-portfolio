@@ -25,7 +25,7 @@ const Home = ({ language, theme }) => {
       icon: (
         <PiLinkedinLogoBold
           size={40}
-          className=" transition-all duration-300 hover:text-purple-800"
+          className=" transition-all duration-300 hover:text-purple-700"
         />
       ),
       href: "https://www.linkedin.com/in/lucas-campos81/",
@@ -35,7 +35,7 @@ const Home = ({ language, theme }) => {
       icon: (
         <Github
           size={40}
-          className=" transition-all duration-300 hover:text-purple-800"
+          className=" transition-all duration-300 hover:text-purple-700"
         />
       ),
       href: "https://github.com/lucascmpos",
@@ -45,7 +45,7 @@ const Home = ({ language, theme }) => {
       icon: (
         <TbBrandWhatsapp
           size={40}
-          className=" transition-all duration-300 hover:text-purple-800"
+          className=" transition-all duration-300 hover:text-purple-700"
         />
       ),
       href: "https://wa.me/5514998718530",
@@ -70,17 +70,13 @@ const Home = ({ language, theme }) => {
           >
             Lucas Campos
             <span
-              className={`text-3xl font-extrabold md:text-4xl lg:text-5xl  ${
-                theme === "light" ? "text-purple-600" : "text-purple-900"
-              }`}
+              className={`text-3xl font-extrabold text-purple-700 md:text-4xl  lg:text-5xl`}
             >
               .
             </span>
           </h1>
           <span
-            className={`w-auto text-center text-3xl font-extrabold md:w-auto md:text-4xl lg:text-5xl   ${
-              theme === "light" ? "text-purple-600" : "text-purple-900"
-            }`}
+            className={`w-auto text-center text-3xl font-extrabold text-purple-700 md:w-auto md:text-4xl   lg:text-5xl`}
           >
             {typeEffect}
             <Cursor />
@@ -90,15 +86,15 @@ const Home = ({ language, theme }) => {
           className={`group flex cursor-pointer flex-row   items-center justify-center gap-3 rounded-lg p-2 font-bold text-black transition-all duration-300 ${
             theme === "light"
               ? "bg-black text-gray-200 hover:bg-purple-700 "
-              : "bg-white text-black hover:bg-zinc-950  hover:text-gray-200"
+              : "bg-white text-black hover:bg-purple-700  hover:text-gray-300"
           }`}
           href={language === "pt" ? curriculo : resume}
           target="_blank"
         >
           {language === "pt" ? "Download do currículo" : "Download resume"}
           <MdOutlineSimCardDownload
-            className={`transition-all  duration-300 group-hover:scale-125 ${
-              theme === "light" ? "" : "group-hover:text-gray-200"
+            className={`   group-hover:scale-125 ${
+              theme === "light" ? "" : "group-hover:text-gray-300"
             }`}
             size={25}
           />

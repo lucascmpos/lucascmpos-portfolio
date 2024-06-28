@@ -15,7 +15,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const menuRef = useRef(null); // Reference to the menu
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,24 +129,15 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 ? "border-secondary-light bg-secondary-light"
                 : "border-secondary-dark bg-secondary-dark"
             }`}
-            ref={menuRef} // Attach the ref to the menu
+            ref={menuRef}
           >
             <div className="flex items-center justify-between p-4 ">
-              <h2
-                className={` text-lg font-extrabold ${
-                  theme === "light" ? "text-purple-600" : "text-purple-800"
-                }`}
-              >
-                campos
-                <span
-                  className={`${
-                    theme === "light" ? "text-black" : "text-gray-200"
-                  }`}
-                >
-                  .
-                </span>
-                dev
-              </h2>
+              <img
+                src="/src/assets/web-logo.svg"
+                alt="campos.dev"
+                className="h-8 w-8 cursor-pointer"
+              />
+
               <button
                 onClick={toggleMenu}
                 className={` items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
@@ -193,7 +184,25 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 </Link>
               ))}
             </div>
-            <div className="absolute bottom-10 right-10">
+            <div className="absolute bottom-10 flex  w-full justify-between px-4">
+              <button
+                className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
+                  theme === "light"
+                    ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
+                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                } `}
+                onClick={toggleTheme}
+              >
+                {theme === "light" ? (
+                  <>
+                    <Moon className="text-black" size={23} />
+                  </>
+                ) : (
+                  <>
+                    <Sun size={23} />
+                  </>
+                )}
+              </button>
               <button
                 className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
@@ -252,11 +261,14 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             transition={{ duration: 0.3 }}
           >
             <Link to="home" smooth={true} duration={500}>
-              <div>
+              <div className="flex flex-row items-center gap-2">
+                <img
+                  src="/src/assets/web-logo.svg"
+                  alt="campos.dev"
+                  className="h-8 w-8 cursor-pointer"
+                />
                 <h2
-                  className={`cursor-pointer text-sm font-extrabold ${
-                    theme === "light" ? "text-purple-600" : "text-purple-800"
-                  }`}
+                  className={`hidden cursor-pointer text-sm font-extrabold text-purple-700 lg:block `}
                 >
                   campos
                   <span
