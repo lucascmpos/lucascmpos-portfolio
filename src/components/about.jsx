@@ -24,13 +24,13 @@ const About = ({ language, theme }) => {
       }`}
     >
       <div
-        className={`relative flex w-96  flex-col  items-center gap-2 overflow-hidden rounded-md transition-opacity duration-1000 ease-in-out md:order-first md:-mb-36 md:w-7/12 lg:w-6/12 xl:w-6/12 2xl:w-4/12 `}
+        className={` flex  w-96  flex-col items-center gap-2 overflow-hidden rounded-md transition-opacity duration-1000 ease-in-out md:order-first md:-mb-36 md:w-7/12 lg:w-6/12 xl:w-6/12 2xl:w-4/12 `}
       >
         <Img
           src={Photo}
           alt="Foto de Lucas Campos"
           loading="lazy"
-          className="w-80 rounded-xl md:w-auto md:px-0"
+          className="w-80 rounded-xl  md:w-auto md:px-0"
         />
 
         <div

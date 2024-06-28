@@ -232,7 +232,7 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={` flex flex-col items-center  justify-center border-b  py-20 md:flex-row  md:py-28 ${
+      className={` flex flex-col items-center  justify-center border-b  py-20 md:flex-row  md:py-36 ${
         theme === "light"
           ? "border-secondary-light bg-primary-light"
           : "border-secondary-dark bg-primary-dark"
@@ -295,14 +295,14 @@ const Experience = ({ language, theme }) => {
         <div className="mb-10 flex w-full flex-col items-center justify-center   text-center"></div>
         <div
           ref={ref}
-          className={`mt-4 flex flex-col items-center justify-center gap-6 px-2 transition-opacity duration-1000 ease-in-out xl:ml-20 ${
+          className={`mt-4 flex flex-col items-center justify-center gap-12 px-2 transition-opacity duration-1000 ease-in-out  md:gap-8 xl:ml-20 ${
             inView ? "opacity-100" : "opacity-0"
           }`}
         >
           {currentExperiences.map((experiencia) => (
             <div
               key={experiencia.id}
-              className="flex h-full w-[90vw] flex-row gap-3 px-2 md:w-[50vw] lg:w-[40vw]"
+              className="flex h-full w-[90vw] flex-row gap-5 px-2 md:w-[50vw] lg:w-[40vw]"
             >
               <div
                 className={`flex flex-col items-center justify-center space-y-px ${theme === "light" ? "text-black" : "text-gray-200"}`}
@@ -353,7 +353,8 @@ const Experience = ({ language, theme }) => {
                           technology={technology}
                           style={{
                             width: "auto",
-                            height: "25px",
+                            height: "1.3rem",
+                            fontSize: "0.75rem",
                             backgroundColor: "#6810a3",
                           }}
                         />
