@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LuInfo } from "react-icons/lu";
 import { FaRegCircleUser } from "react-icons/fa6";
@@ -15,6 +15,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const menuRef = useRef(null); // Reference to the menu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +31,25 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+        document.body.style.overflow = "unset";
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -109,8 +129,9 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 ? "border-secondary-light bg-secondary-light"
                 : "border-secondary-dark bg-secondary-dark"
             }`}
+            ref={menuRef} // Attach the ref to the menu
           >
-            <div className="flex items-center justify-between p-4 px-10">
+            <div className="flex items-center justify-between p-4 ">
               <h2
                 className={` text-lg font-extrabold ${
                   theme === "light" ? "text-purple-600" : "text-purple-800"
@@ -130,7 +151,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 onClick={toggleMenu}
                 className={` items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
-                    ? "border-secondary-light bg-primary-light text-black hover:bg-gray-100"
+                    ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
                     : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080826]"
                 } `}
               >
@@ -152,12 +173,16 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   onClick={() => toggleMenu(false)}
                 >
                   <div
-                    className={`flex   w-full justify-start  rounded-lg border-b ${theme === "light" ? "border-secondary-light bg-secondary-light" : "border-secondary-dark/60 bg-[#040417]"}  `}
+                    className={`flex   w-full justify-start  rounded-lg border-b ${
+                      theme === "light"
+                        ? "border-secondary-light bg-secondary-light"
+                        : "border-secondary-dark/60 bg-[#040417]"
+                    }  `}
                   >
                     <h2
-                      className={`group flex w-full cursor-pointer flex-row items-center justify-start  gap-5 p-2 text-2xl font-semibold  ${
+                      className={`group flex w-full cursor-pointer flex-row items-center justify-start gap-5 rounded-md p-2  text-2xl font-semibold transition-all duration-300  ${
                         theme === "light"
-                          ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
+                          ? "border-secondary-light  bg-secondary-light text-black hover:bg-primary-light"
                           : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
                       }`}
                     >
@@ -172,7 +197,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
               <button
                 className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
-                    ? "border-secondary-light bg-primary-light text-black hover:bg-gray-100"
+                    ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
                     : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
                 } `}
                 onClick={toggleLanguage}
@@ -188,7 +213,6 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
       </AnimatePresence>
     );
   };
-
   const BlurOverlay = ({ isOpen, toggleMenu }) => {
     const handleClick = () => {
       if (isOpen) {

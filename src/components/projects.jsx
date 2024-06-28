@@ -746,7 +746,7 @@ const Projects = ({ language, theme }) => {
               opacity: modalAnimation.opacity,
               width: isLargeScreen ? "80%" : "100%",
               maxWidth: isLargeScreen ? "none" : "none",
-              height: isLargeScreen ? "85%" : "95%",
+              height: isLargeScreen ? "85%" : "100%",
               backgroundColor: theme === "light" ? "#ffffff" : "#020211",
               border:
                 theme === "light" ? "2px solid #d4d4d4" : "1px solid #2e2e40",
