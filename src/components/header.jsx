@@ -9,6 +9,8 @@ import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
 import { Moon, Sun, Languages, X, AlignRight } from "lucide-react";
 
+import myLogo from "../assets/web-logo.svg";
+
 const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [language, setLanguage] = useState("pt");
@@ -133,7 +135,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
           >
             <div className="flex items-center justify-between p-4 ">
               <img
-                src="/src/assets/web-logo.svg"
+                src={myLogo}
                 alt="campos.dev"
                 className="h-8 w-8 cursor-pointer"
               />
@@ -263,7 +265,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
             <Link to="home" smooth={true} duration={500}>
               <div className="flex flex-row items-center gap-2">
                 <img
-                  src="/src/assets/web-logo.svg"
+                  src={myLogo}
                   alt="campos.dev"
                   className="h-8 w-8 cursor-pointer"
                 />
