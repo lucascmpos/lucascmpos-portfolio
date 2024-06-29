@@ -8,7 +8,7 @@ export default {
     extend: {
       backgroundColor: {
         'primary-dark': '#020211',
-        'secondary-dark': '#06101a',
+        'secondary-dark': '#060917',
         'primary-light': '#ffffff',
         'secondary-light': '#f5f5f5',
         'button-dark:': '#070729',
