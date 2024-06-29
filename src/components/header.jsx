@@ -145,7 +145,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 className={` items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
                     ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
-                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080826]"
+                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#1c2038]"
                 } `}
               >
                 <X size={23} />
@@ -176,7 +176,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                       className={`group flex w-full cursor-pointer flex-row items-center justify-start gap-5 rounded-md p-2  text-2xl font-semibold transition-all duration-300  ${
                         theme === "light"
                           ? "border-secondary-light  bg-secondary-light text-black hover:bg-primary-light"
-                          : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                          : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#1c2038]"
                       }`}
                     >
                       <div>{item.icon}</div>
@@ -191,7 +191,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
                     ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
-                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#1c2038]"
                 } `}
                 onClick={toggleTheme}
               >
@@ -209,7 +209,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 className={`group flex flex-row items-center justify-center gap-3 rounded-lg border p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
                     ? "border-secondary-light bg-secondary-light text-black hover:bg-primary-light"
-                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                    : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#1c2038]"
                 } `}
                 onClick={toggleLanguage}
               >
@@ -303,7 +303,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                 className={`group flex flex-row items-center justify-center gap-3 rounded-lg  p-2 text-sm font-bold transition-all duration-300  ${
                   theme === "light"
                     ? " bg-secondary-light text-black hover:bg-primary-light"
-                    : " bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                    : " bg-[#040417] text-gray-300 hover:bg-[#1c2038]"
                 } `}
                 onClick={toggleTheme}
               >
@@ -332,7 +332,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                   className={`group flex flex-row items-center justify-center gap-3 rounded-lg  p-2 text-sm font-bold transition-all duration-300  ${
                     theme === "light"
                       ? " bg-secondary-light text-black hover:bg-primary-light"
-                      : " bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                      : " bg-[#040417] text-gray-300 hover:bg-[#1c2038]"
                   } `}
                   onClick={toggleLanguage}
                 >

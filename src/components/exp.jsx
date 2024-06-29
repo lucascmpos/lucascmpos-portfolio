@@ -2,7 +2,6 @@
 import { CalendarDays } from "lucide-react";
 import compassLogo from "../assets/compass-logo.png";
 import webbyLogo from "../assets/webby-logo.png";
-import myLogo from "../assets/my-logo.png";
 import htmlIcon from "../assets/icons/html.svg";
 import cssIcon from "../assets/icons/css.svg";
 import gitIcon from "../assets/icons/git.svg";
@@ -21,6 +20,8 @@ import mysqlIcon from "../assets/icons/mysql.svg";
 import postgresqlIcon from "../assets/icons/postgresql.svg";
 import prismaIcon from "../assets/icons/prisma.svg";
 import dockerIcon from "../assets/icons/docker.svg";
+import myLogo from "../assets/web-logo.svg";
+
 import { useInView } from "react-intersection-observer";
 
 import TechnologyCard from "./tech-tag";

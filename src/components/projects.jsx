@@ -697,9 +697,7 @@ const Projects = ({ language, theme }) => {
     <div
       id="projects"
       className={`py-24 md:p-44 md:py-52   ${
-        theme === "light"
-          ? "border-secondary-light bg-secondary-light "
-          : "border-secondary-dark bg-secondary-dark"
+        theme === "light" ? " bg-secondary-light " : " bg-secondary-dark"
       }  `}
     >
       <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
