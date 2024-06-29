@@ -39,14 +39,14 @@ const Contact = ({ language, theme }) => {
 
         <div className="flex flex-col gap-32  lg:flex-row">
           <a href="mailto:lucasoliveiracampos81@gmail.com" target="_blank">
-            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-110">
               <Mail
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${
+                className={`rounded-xl  p-3 text-purple-700 ${
                   theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-purple-900">
+              <h2 className="mt-2 text-xl font-semibold text-purple-700">
                 Email
               </h2>
               <p className="font-semibold text-gray-500">
@@ -55,14 +55,14 @@ const Contact = ({ language, theme }) => {
             </div>
           </a>
           <a href="https://wa.me/5514998718530" target="_blank">
-            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-110">
               <Smartphone
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${
+                className={`rounded-xl  p-3 text-purple-700 ${
                   theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-purple-900">
+              <h2 className="mt-2 text-xl font-semibold text-purple-700">
                 {language === "pt" ? "Telefone" : "Phone"}
               </h2>
               <p className="font-semibold text-gray-500">
@@ -71,28 +71,28 @@ const Contact = ({ language, theme }) => {
             </div>
           </a>
           <a href="https://www.linkedin.com/in/lucas-campos81/" target="_blank">
-            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-110">
               <Linkedin
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${
+                className={`rounded-xl  p-3 text-purple-700 ${
                   theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-purple-900">
+              <h2 className="mt-2 text-xl font-semibold text-purple-700">
                 LinkedIn
               </h2>
               <p className="font-semibold text-gray-500">in/lucas-campos81</p>
             </div>
           </a>
           <a href="https://github.com/lucascmpos" target="_blank">
-            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-125">
+            <div className="flex cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 hover:scale-110">
               <Github
                 size={70}
-                className={`rounded-xl  p-3 text-purple-900 ${
+                className={`rounded-xl  p-3 text-purple-700 ${
                   theme === "light" ? "bg-[#fdfbff]" : "bg-gray-300"
                 }`}
               />
-              <h2 className="mt-2 text-xl font-semibold text-purple-900">
+              <h2 className="mt-2 text-xl font-semibold text-purple-700">
                 GitHub
               </h2>
               <p className="font-semibold text-gray-500">@lucascmpos</p>

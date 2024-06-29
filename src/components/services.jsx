@@ -177,7 +177,7 @@ const Services = ({ language, theme }) => {
       >
         {language === "pt" ? "Arraste para ver mais" : "Swipe to see more"}
 
-        <ChevronsRight className="text-purple-800" size={40} />
+        <ChevronsRight className="text-purple-700" size={40} />
       </div>
       <div
         ref={ref}
@@ -188,7 +188,7 @@ const Services = ({ language, theme }) => {
         {servicesData.map((service) => (
           <div
             key={service.id}
-            className={`group flex  flex-col justify-center  gap-2 rounded-xl border-2 border-opacity-20 px-8 py-8 transition-all duration-200  hover:border-opacity-100 lg:h-auto lg:items-start  xl:items-center ${theme === "light" ? "bg-secondary-light" : " bg-secondary-dark"} ${theme === "light" ? "border-purple-700" : "border-purple-700"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
+            className={`group pointer-events-auto flex  flex-col justify-center  gap-2 rounded-xl border-2 border-opacity-20 px-8 py-8 transition-all duration-200  hover:border-opacity-100 lg:h-auto lg:items-start  xl:items-center ${theme === "light" ? "bg-secondary-light" : " bg-secondary-dark"} ${theme === "light" ? "border-purple-700" : "border-purple-700"} ${theme === "light" ? "border-opacity-50" : "border-opacity-40"}`}
           >
             <div
               className={`mb-10 transition-all duration-200 group-hover:scale-105 lg:mb-auto  ${theme === "light" ? "text-black" : "text-white"}`}
@@ -196,12 +196,12 @@ const Services = ({ language, theme }) => {
               {service.img}
             </div>
             <h2
-              className={`text-nowrap text-lg font-bold lg:text-wrap ${theme === "light" ? "text-black" : "text-white"}`}
+              className={`pointer-events-none text-nowrap text-lg font-bold lg:text-wrap ${theme === "light" ? "text-black" : "text-white"}`}
             >
               {service.title[language]}
             </h2>
             <p
-              className={`w-[50vw] font-semibold md:w-[35vw] lg:w-[20vw] ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+              className={`pointer-events-none w-[50vw] font-semibold md:w-[35vw] lg:w-[20vw] ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
             >
               {service.description[language]}
             </p>

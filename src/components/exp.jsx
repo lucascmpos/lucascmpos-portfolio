@@ -232,7 +232,7 @@ const Experience = ({ language, theme }) => {
   return (
     <div
       id="exp"
-      className={` flex flex-col items-center  justify-center border-b  py-20 md:flex-row  md:py-36 ${
+      className={`flex flex-col items-center  justify-center border-b  py-20 md:flex-row  md:py-36 ${
         theme === "light"
           ? "border-secondary-light bg-primary-light"
           : "border-secondary-dark bg-primary-dark"
@@ -319,7 +319,7 @@ const Experience = ({ language, theme }) => {
 
               <div className="space-y-1">
                 <div>
-                  <h1 className="md:text-md text-lg font-black text-purple-800">
+                  <h1 className="md:text-md text-lg font-black text-purple-700">
                     {experiencia.titulo}
                   </h1>
                   <h2

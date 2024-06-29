@@ -148,7 +148,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
                     : "border-secondary-dark/60 bg-[#040417] text-gray-300 hover:bg-[#080826]"
                 } `}
               >
-                <X size={30} />
+                <X size={23} />
               </button>
             </div>
             <div className="flex w-full  flex-col gap-10 px-10 pt-6 text-2xl">
@@ -253,10 +253,10 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
       <AnimatePresence>
         {!isMenuOpen && (
           <motion.header
-            className={`fixed z-10 flex w-full flex-row items-center justify-between border-b p-5 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
+            className={`fixed z-10 flex w-full flex-row items-center justify-between border-b p-4 text-lg font-semibold transition-opacity duration-300 md:justify-around ${
               theme === "light"
-                ? "border-gray-200/50 bg-secondary-light text-black"
-                : "border-primary-dark bg-secondary-dark text-gray-300"
+                ? "border-secondary-light bg-secondary-light text-black"
+                : "border-secondary-dark bg-secondary-dark text-gray-300"
             } ${visible ? "" : "hidden"}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: visible ? 1 : 0 }}
@@ -289,7 +289,7 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
               {menuItems.map((item) => (
                 <Link key={item.id} to={item.id} smooth={true} duration={500}>
                   <h2 className="group flex cursor-pointer flex-row items-center justify-center gap-2">
-                    <div className="transition-all duration-200 group-hover:-translate-y-1 group-hover:text-purple-800">
+                    <div className="transition-all duration-200 group-hover:-translate-y-1 group-hover:text-purple-700">
                       {item.icon}
                     </div>
                     {language === "pt" ? item.text_pt : item.text_en}
@@ -300,7 +300,11 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
             <div className="flex gap-10">
               <button
-                className="flex flex-row items-center justify-center gap-3 rounded-md p-px transition-all duration-300 hover:scale-110"
+                className={`group flex flex-row items-center justify-center gap-3 rounded-lg  p-2 text-sm font-bold transition-all duration-300  ${
+                  theme === "light"
+                    ? " bg-secondary-light text-black hover:bg-primary-light"
+                    : " bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                } `}
                 onClick={toggleTheme}
               >
                 {theme === "light" ? (
@@ -325,11 +329,15 @@ const Header = ({ onChangeLanguage, onChangeTheme, theme }) => {
 
               {!isMobile && (
                 <button
-                  className="group flex flex-row items-center justify-center gap-3 text-sm font-bold transition-all duration-300   "
+                  className={`group flex flex-row items-center justify-center gap-3 rounded-lg  p-2 text-sm font-bold transition-all duration-300  ${
+                    theme === "light"
+                      ? " bg-secondary-light text-black hover:bg-primary-light"
+                      : " bg-[#040417] text-gray-300 hover:bg-[#080821]"
+                  } `}
                   onClick={toggleLanguage}
                 >
                   {language === "pt" ? "EN" : "PTBR"}
-                  <div className="group-hover:-translate-y-1 group-hover:text-purple-700">
+                  <div>
                     <Languages size={23} />
                   </div>
                 </button>

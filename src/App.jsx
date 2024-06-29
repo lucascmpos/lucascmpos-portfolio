@@ -92,7 +92,7 @@ function App() {
             showArrowUp
               ? "translate-y-0 opacity-100"
               : "pointer-events-none translate-y-4 opacity-0"
-          } ${theme === "light" ? "bg-black text-gray-300 hover:bg-purple-700" : "bg-gray-300 text-black hover:bg-purple-700"}`}
+          } ${theme === "light" ? "bg-black text-gray-300 hover:bg-primary-light hover:text-black" : "bg-gray-300 text-black hover:bg-primary-dark hover:text-gray-300"}`}
         />
       </Link>
     </div>
