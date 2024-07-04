@@ -20,7 +20,7 @@ import tripcoVideo from "../assets/tripcovideo.mp4";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
 import TechnologyCard from "./tech-tag";
-import { X } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 
 const projectsData = [
   {
@@ -569,18 +569,27 @@ const Projects = ({ language, theme }) => {
   return (
     <div
       id="projects"
-      className={`py-24 md:p-44 md:py-52   ${
+      className={` py-24 md:p-12 md:py-52   ${
         theme === "light" ? " bg-secondary-light " : " bg-secondary-dark"
       }  `}
     >
-      <div className="flex flex-col items-center justify-center px-2 pb-20 md:items-start">
+      <div className="flex items-center justify-between  p-5 pb-20 ">
         <h1
-          className={` text-center text-4xl font-bold ${
+          className={` text-center text-2xl font-bold md:text-4xl ${
             theme === "light" ? "text-black" : "text-gray-200"
           }`}
         >
-          {language === "pt" ? "Projetos em destaque" : "Highlighted projects"}
+          {language === "pt" ? "Projetos" : "Projects"}
         </h1>
+
+        <a
+          href="https://github.com/lucascmpos?tab=repositories"
+          target="_blank"
+          className={` flex items-center gap-1 text-center text-sm font-semibold text-purple-700 hover:underline `}
+        >
+          Ver todos projetos
+          <ArrowRight size={18} />
+        </a>
       </div>
       <div
         ref={ref}
