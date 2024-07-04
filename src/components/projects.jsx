@@ -25,31 +25,30 @@ import { ArrowRight, X } from "lucide-react";
 const projectsData = [
   {
     id: 1,
-    title: "dev food",
-    image: devFood,
-    video: devfoodVideo,
+    title: "Tekly Store",
+    video: periwareVideo,
+    image: periWare,
     subdescription: {
       pt: (
         <>
-          Plataforma de delivery de comida, onde o usuario loga com o Google,
-          faz pedidos, favorita restaurantes, consulta seus pedidos e pode
-          pesquisar por restaurantes.
+          Loja fictícia de periféricos, onde é vendido teclados, mouses,
+          monitores, fones e etc.
         </>
       ),
       en: (
         <>
-          Food delivery platform, where the user logs in with Google, places
-          orders, favorites restaurants, check your orders and search for
-          restaurants.
+          Peripherals store, where keyboards, mice, monitors, headphones, etc.
+          are sold.
         </>
       ),
     },
     description: {
       pt: (
         <>
-          Este projeto consiste em uma plataforma de delivery de comida, onde o
-          usuario loga com o Google, faz pedidos, favorita restaurantes,
-          consulta seus pedidos e pode pesquisar por restaurantes.
+          Este projeto consiste em uma loja fictícia de periféricos, onde é
+          vendido teclados, mouses, monitores, fones e etc. O usuário pode
+          adicionar e retirar produtos do carrinho, filtrar por categorias e
+          descontos
           <br />
           <br />
           <span className="text-purple-700">Funcionalidades</span>:
@@ -57,14 +56,17 @@ const projectsData = [
           - Login com o Google
           <br />
           - Responsividade
-          <br />- Integração com banco de dados SQL.
+          <br />
+          - Integração com banco de dados SQL.
+          <br />- Pagamentos com Stripe
         </>
       ),
       en: (
         <>
-          This project consists of a food delivery platform, where the user logs
-          in with Google, places orders, favorites restaurants, check your
-          orders and search for restaurants.
+          This project consists of a fictional peripherals store, where
+          keyboards, mice, monitors, headphones, etc. are sold. The user can add
+          and remove products from the shopping cart, filter by categories and
+          discounts.
           <br />
           <br />
           <span className="text-purple-700">Features</span>:
@@ -72,14 +74,16 @@ const projectsData = [
           - Google login
           <br />
           - Responsiveness
-          <br />- Integration with SQL database.
+          <br />
+          - Integration with SQL database.
+          <br />- Stripe payments
         </>
       ),
     },
-    site: "https://devfoods.vercel.app/",
-    github: "https://github.com/lucascmpos/dev-food/",
+    site: "https://tekly-store.vercel.app/",
+    github: "https://github.com/lucascmpos/Tekly-Store",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_next-react-food-activity-7193210446579908608-yjws?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
     subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
     tech: [
       "HTML",
@@ -167,30 +171,31 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Tekly Store",
-    video: periwareVideo,
-    image: periWare,
+    title: "dev food",
+    image: devFood,
+    video: devfoodVideo,
     subdescription: {
       pt: (
         <>
-          Loja fictícia de periféricos, onde é vendido teclados, mouses,
-          monitores, fones e etc.
+          Plataforma de delivery de comida, onde o usuario loga com o Google,
+          faz pedidos, favorita restaurantes, consulta seus pedidos e pode
+          pesquisar por restaurantes.
         </>
       ),
       en: (
         <>
-          Peripherals store, where keyboards, mice, monitors, headphones, etc.
-          are sold.
+          Food delivery platform, where the user logs in with Google, places
+          orders, favorites restaurants, check your orders and search for
+          restaurants.
         </>
       ),
     },
     description: {
       pt: (
         <>
-          Este projeto consiste em uma loja fictícia de periféricos, onde é
-          vendido teclados, mouses, monitores, fones e etc. O usuário pode
-          adicionar e retirar produtos do carrinho, filtrar por categorias e
-          descontos
+          Este projeto consiste em uma plataforma de delivery de comida, onde o
+          usuario loga com o Google, faz pedidos, favorita restaurantes,
+          consulta seus pedidos e pode pesquisar por restaurantes.
           <br />
           <br />
           <span className="text-purple-700">Funcionalidades</span>:
@@ -198,17 +203,14 @@ const projectsData = [
           - Login com o Google
           <br />
           - Responsividade
-          <br />
-          - Integração com banco de dados SQL.
-          <br />- Pagamentos com Stripe
+          <br />- Integração com banco de dados SQL.
         </>
       ),
       en: (
         <>
-          This project consists of a fictional peripherals store, where
-          keyboards, mice, monitors, headphones, etc. are sold. The user can add
-          and remove products from the shopping cart, filter by categories and
-          discounts.
+          This project consists of a food delivery platform, where the user logs
+          in with Google, places orders, favorites restaurants, check your
+          orders and search for restaurants.
           <br />
           <br />
           <span className="text-purple-700">Features</span>:
@@ -216,16 +218,14 @@ const projectsData = [
           - Google login
           <br />
           - Responsiveness
-          <br />
-          - Integration with SQL database.
-          <br />- Stripe payments
+          <br />- Integration with SQL database.
         </>
       ),
     },
-    site: "https://tekly-store.vercel.app/",
-    github: "https://github.com/lucascmpos/Tekly-Store",
+    site: "https://devfoods.vercel.app/",
+    github: "https://github.com/lucascmpos/dev-food/",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_next-react-food-activity-7193210446579908608-yjws?utm_source=share&utm_medium=member_desktop",
     subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
     tech: [
       "HTML",
@@ -240,6 +240,7 @@ const projectsData = [
       "PostgreSQL",
     ],
   },
+
   {
     id: 3,
     title: "trips.co",
