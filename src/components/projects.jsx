@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import devFood from "../assets/devfood.png";
 import sharpCut from "../assets/sharpcut.png";
+import trips from "../assets/tripco.png";
 import periWare from "../assets/periwarestore.png";
 import chatNow from "../assets/chatnow.png";
 import uploadAi from "../assets/uploadai.jpeg";
@@ -20,6 +21,7 @@ import natuFloraVideo from "../assets/natufloravideo.mp4";
 import sharpcutVideo from "../assets/sharpcutvideo.mp4";
 import devfoodVideo from "../assets/devfoodvideo.mp4";
 import periwareVideo from "../assets/periwarevideo.mp4";
+import tripcoVideo from "../assets/tripcovideo.mp4";
 
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
@@ -29,7 +31,7 @@ import { X } from "lucide-react";
 const projectsData = [
   {
     id: 1,
-    title: "Dev Food",
+    title: "dev food",
     image: devFood,
     video: devfoodVideo,
     subdescription: {
@@ -100,7 +102,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "SharpCut Barbers",
+    title: "Sharpcutz",
     image: sharpCut,
     video: sharpcutVideo,
     subdescription: {
@@ -151,8 +153,8 @@ const projectsData = [
         </>
       ),
     },
-    site: "https://sharpcut-barbers.vercel.app/",
-    github: "https://github.com/lucascmpos/SharpCut-Barbers",
+    site: "https://sharpcutz.vercel.app/",
+    github: "https://github.com/lucascmpos/Sharpcutz",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-AsNe?utm_source=share&utm_medium=member_desktop",
     subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
@@ -171,7 +173,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Periware Store",
+    title: "Tekly Store",
     video: periwareVideo,
     image: periWare,
     subdescription: {
@@ -226,8 +228,8 @@ const projectsData = [
         </>
       ),
     },
-    site: "https://periware-store.vercel.app/",
-    github: "https://github.com/lucascmpos/PeriWare-Store",
+    site: "https://tekly-store.vercel.app/",
+    github: "https://github.com/lucascmpos/Tekly-Store",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
     subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
@@ -245,7 +247,81 @@ const projectsData = [
     ],
   },
   {
-    id: 4,
+    id: 3,
+    title: "trips.co",
+    video: tripcoVideo,
+    image: trips,
+    subdescription: {
+      pt: (
+        <>
+          Consiste numa plataforma de reservas de viagens, onde o utilizador
+          pode pesquisar viagens, reservar e cancelar viagens.
+        </>
+      ),
+      en: (
+        <>
+          It consists of a travel booking platform, where the user can search
+          for trips, book and cancel trips.
+        </>
+      ),
+    },
+    description: {
+      pt: (
+        <>
+          Consiste numa plataforma de reservas de viagens, onde o utilizador
+          pode pesquisar viagens, reservar e cancelar viagens. O usuário efetua
+          pagamentos de reservas através do Stripe.
+          <br />
+          <br />
+          <span className="text-purple-700">Funcionalidades</span>:
+          <br />
+          - Login com o Google e GitHub
+          <br />
+          - Responsividade
+          <br />
+          - Tema claro e escuro
+          <br />- Pagamentos com Stripe
+        </>
+      ),
+      en: (
+        <>
+          It consists of a travel booking platform, where the user can search
+          for trips, book and cancel trips. The user makes payments for
+          reservations through Stripe.
+          <br />
+          <br />
+          <span className="text-purple-700">Features</span>:
+          <br />
+          - Google and GitHub login
+          <br />
+          - Responsiveness
+          <br />
+          - Light and dark theme
+          <br />- Stripe payments
+        </>
+      ),
+    },
+    site: "https://trips-co.vercel.app/",
+    github: "https://github.com/lucascmpos/trips-co",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
+    tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwindcss",
+      "ShadcnUI",
+      "Figma",
+      "Prisma",
+      "Stripe",
+      "PostgreSQL",
+    ],
+  },
+  {
+    id: 5,
     title: "Chat Now",
     image: chatNow,
     video: chatNowVideo,
@@ -317,8 +393,8 @@ const projectsData = [
     ],
   },
   {
-    id: 5,
-    title: "Upload.ai",
+    id: 6,
+    title: "upload.ai",
     video: uploadAiVideo,
     image: uploadAi,
     subdescription: {
@@ -391,8 +467,8 @@ const projectsData = [
     ],
   },
   {
-    id: 6,
-    title: "Expert Notes",
+    id: 7,
+    title: "expert notes",
     video: expertNotesVideo,
     image: expertNotes,
     subdescription: {
@@ -461,8 +537,8 @@ const projectsData = [
   },
 
   {
-    id: 7,
-    title: "Dashboard Blue",
+    id: 8,
+    title: "Blue Dashboard",
     video: dashBlueVideo,
     image: dashBlue,
     subdescription: {
@@ -530,7 +606,7 @@ const projectsData = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Natu Flora",
     video: natuFloraVideo,
     image: natuFlora,
