@@ -84,7 +84,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/Tekly-Store",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
-    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma", "Stripe"],
     tech: [
       "HTML",
       "CSS",
@@ -98,79 +98,9 @@ const projectsData = [
       "PostgreSQL",
     ],
   },
+
   {
     id: 2,
-    title: "Sharpcutz",
-    image: sharpCut,
-    video: sharpcutVideo,
-    subdescription: {
-      pt: (
-        <>
-          Aplicação feita para ter diversas barbearias, onde o usuário pode
-          logar com o Google e agendar um serviço da barbearia desejada.
-        </>
-      ),
-      en: (
-        <>
-          Application made for multiple barbershops, where the user can log in
-          with Google and schedule a service from the desired barbershop.
-        </>
-      ),
-    },
-    description: {
-      pt: (
-        <>
-          Este projeto consiste em uma aplicação feita para ter diversas
-          barbearias, onde o usuário pode logar com o Google e agendar um
-          serviço da barbearia desejada, assim como cancelar um serviço e também
-          ver seus serviços agendados futuros e anteriores.
-          <br />
-          <br />
-          <span className="text-purple-700">Funcionalidades</span>:
-          <br />
-          - Login com o Google
-          <br />
-          - Responsividade
-          <br />- Integração com banco de dados SQL.
-        </>
-      ),
-      en: (
-        <>
-          This project consists of an application made for multiple barbershops,
-          where the user can log in with Google and schedule a service from the
-          desired barbershop, as well as cancel a service and also view their
-          scheduled services in the future and past.
-          <br />
-          <br />
-          <span className="text-purple-700">Features</span>:
-          <br />
-          - Google login
-          <br />
-          - Responsiveness
-          <br />- Integration with SQL database.
-        </>
-      ),
-    },
-    site: "https://sharpcutz.vercel.app/",
-    github: "https://github.com/lucascmpos/Sharpcutz",
-    linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-AsNe?utm_source=share&utm_medium=member_desktop",
-    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
-    tech: [
-      "HTML",
-      "CSS",
-      "TypeScript",
-      "React.js",
-      "Next.js",
-      "Tailwindcss",
-      "ShadcnUI",
-      "Figma",
-      "Prisma",
-      "PostgreSQL",
-    ],
-  },
-  {
-    id: 3,
     title: "dev food",
     image: devFood,
     video: devfoodVideo,
@@ -226,7 +156,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/dev-food/",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_next-react-food-activity-7193210446579908608-yjws?utm_source=share&utm_medium=member_desktop",
-    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma", "SQL"],
     tech: [
       "HTML",
       "CSS",
@@ -300,7 +230,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/trips-co",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_opa-rede-vim-aqui-divulgar-mais-um-projeto-activity-7214953709242351616-73bS?utm_source=share&utm_medium=member_desktop",
-    subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma", "Stripe"],
     tech: [
       "HTML",
       "CSS",
@@ -312,6 +242,77 @@ const projectsData = [
       "Figma",
       "Prisma",
       "Stripe",
+      "PostgreSQL",
+    ],
+  },
+  {
+    id: 4,
+    title: "Sharpcutz",
+    image: sharpCut,
+    video: sharpcutVideo,
+    subdescription: {
+      pt: (
+        <>
+          Aplicação feita para ter diversas barbearias, onde o usuário pode
+          logar com o Google e agendar um serviço da barbearia desejada.
+        </>
+      ),
+      en: (
+        <>
+          Application made for multiple barbershops, where the user can log in
+          with Google and schedule a service from the desired barbershop.
+        </>
+      ),
+    },
+    description: {
+      pt: (
+        <>
+          Este projeto consiste em uma aplicação feita para ter diversas
+          barbearias, onde o usuário pode logar com o Google e agendar um
+          serviço da barbearia desejada, assim como cancelar um serviço e também
+          ver seus serviços agendados futuros e anteriores.
+          <br />
+          <br />
+          <span className="text-purple-700">Funcionalidades</span>:
+          <br />
+          - Login com o Google
+          <br />
+          - Responsividade
+          <br />- Integração com banco de dados SQL.
+        </>
+      ),
+      en: (
+        <>
+          This project consists of an application made for multiple barbershops,
+          where the user can log in with Google and schedule a service from the
+          desired barbershop, as well as cancel a service and also view their
+          scheduled services in the future and past.
+          <br />
+          <br />
+          <span className="text-purple-700">Features</span>:
+          <br />
+          - Google login
+          <br />
+          - Responsiveness
+          <br />- Integration with SQL database.
+        </>
+      ),
+    },
+    site: "https://sharpcutz.vercel.app/",
+    github: "https://github.com/lucascmpos/Sharpcutz",
+    linkedin:
+      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-divulgar-activity-7159584098699653120-AsNe?utm_source=share&utm_medium=member_desktop",
+    subtech: ["Next.js", "TypeScript", "Figma", "Prisma", "SQL"],
+    tech: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwindcss",
+      "ShadcnUI",
+      "Figma",
+      "Prisma",
       "PostgreSQL",
     ],
   },
@@ -446,7 +447,7 @@ const projectsData = [
     github: "https://github.com/lucascmpos/NLW-IA",
     linkedin:
       "https://www.linkedin.com/posts/lucas-campos81_realtimechat-frontend-nextjs-activity-7211719833627856896-sxYY?utm_source=share&utm_medium=member_desktop",
-    subtech: ["React.js", "TypeScript", "AI API", "Node.js"],
+    subtech: ["React.js", "TypeScript", "Open AI API", "Node.js"],
     tech: [
       "HTML",
       "CSS",
@@ -492,7 +493,7 @@ const Projects = ({ language, theme }) => {
                   style={{
                     width: "auto",
                     height: "20px",
-                    fontSize: "12px",
+                    fontSize: "11px",
                     color: theme === "dark" ? "#ffffff" : "#000000",
                     fontWeight: "600",
                     border:
