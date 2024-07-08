@@ -299,7 +299,7 @@ const projectsData = [
     site: "https://trips-co.vercel.app/",
     github: "https://github.com/lucascmpos/trips-co",
     linkedin:
-      "https://www.linkedin.com/posts/lucas-campos81_boa-tarde-rede-estou-aqui-hoje-para-activity-7126616417642176512-naC_?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/posts/lucas-campos81_opa-rede-vim-aqui-divulgar-mais-um-projeto-activity-7214953709242351616-73bS?utm_source=share&utm_medium=member_desktop",
     subtech: ["Next.js", "TypeScript", "Figma", "Prisma"],
     tech: [
       "HTML",
