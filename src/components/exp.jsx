@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
-import { CalendarDays } from "lucide-react";
+import {
+  CalendarDays,
+  SquareArrowOutUpRight,
+  SquareArrowUpRight,
+} from "lucide-react";
 import compassLogo from "../assets/compass-logo.png";
-import webbyLogo from "../assets/webby-logo.png";
+import AlaresLogo from "../assets/alares-logo.jpg";
 import htmlIcon from "../assets/icons/html.svg";
 import cssIcon from "../assets/icons/css.svg";
 import gitIcon from "../assets/icons/git.svg";
@@ -21,6 +25,8 @@ import postgresqlIcon from "../assets/icons/postgresql.svg";
 import prismaIcon from "../assets/icons/prisma.svg";
 import dockerIcon from "../assets/icons/docker.svg";
 import myLogo from "../assets/web-logo.svg";
+import weHelpLogo from "../assets/wehelp-logo.jpg";
+import anaugerLogo from "../assets/anauger_logo.jpg";
 
 import { useInView } from "react-intersection-observer";
 
@@ -36,34 +42,53 @@ const Experience = ({ language, theme }) => {
     pt: [
       {
         id: 1,
-        titulo: "Freelancer",
-        icon: myLogo,
-        subtitulo: "Desenvolvedor Fullstack",
+        titulo: "WeHelp NPS",
+        icon: weHelpLogo,
+        subtitulo: "Desenvolvedor Frontend",
         descricao: (
           <span>
-            De forma independente, atuo com o desenvolvimento de software de
-            ponta a ponta, desde o levantamento de requisitos com as partes
-            envolvidas no projeto, prototipação, codificação no lado do cliente
-            e servidor, testes, documentação, implementação, até a apresentação
-            para o cliente final, utilizando linguagens fortes no mercado,
-            sempre atualizado e a nível de exigência internacional, trabalhando
-            com metodologias ágeis.
+            Construção, implementação e manutenção de todo o novo sistema da
+            empresa, WeHelp Software NPS usando Next.js, React, React Native,
+            TypeScript e Tailwind CSS. Prototipação via Figma, codificação
+            client-side e server-side, testes e documentação.Utilização de
+            metodologias como Mobile First, SSR, UI/UX para construção do
+            sistema e aplicação.- Integração de APIs RESTful de forma eficiente
+            e segura ao Frontend, garantindo comunicação fluida em 70%entre as
+            camadas da aplicação
           </span>
         ),
-        data: "09/2023 - atualmente ",
-        tech: [
-          "React.js",
-          "Next.js",
-          "Node.js",
-          "TypeScript",
-          "Tailwindcss",
-          "Figma",
-          "Sass",
-        ],
-        link: "",
+        data: "07/2024 - atualmente ",
+        tech: ["React.js", "Next.js", "TypeScript", "Tailwindcss", "Figma"],
+        link: "https://www.wehelpsoftware.com/pt-BR",
       },
       {
         id: 2,
+        titulo: "Anauger",
+        icon: anaugerLogo,
+        subtitulo: "Desenvolvedor Frontend",
+        descricao: (
+          <span>
+            Construção de um aplicativo para Android e iOS, conseguindo abrangir
+            2 sistemas ao mesmo tempo através de protótipo do Figma utilizando
+            tecnologias como React Native, CSS, Figma e Styled Components.
+            Integração com Backend em Java via REST API para calculo de bombas
+            d'agua, diminuindo em 20% o tempo de resposta para retorno dos
+            dados. Implementação da aplicação via Play Store e Apple Store,
+            aumentando em 40% a rapidez para o cliente baixar a aplicação.
+          </span>
+        ),
+        data: "02/2024 - 04/2024 ",
+        tech: [
+          "React.js",
+          "React Native",
+          "TypeScript",
+          "Figma",
+          "Styled Components",
+        ],
+        link: "https://play.google.com/store/apps/details?id=com.anauger.br",
+      },
+      {
+        id: 3,
         titulo: "Compass.UOL",
         icon: compassLogo,
         subtitulo: "Desenvolvedor Frontend",
@@ -91,9 +116,9 @@ const Experience = ({ language, theme }) => {
         link: "https://compass.uol/pt/home/",
       },
       {
-        id: 3,
-        titulo: "Webby Internet",
-        icon: webbyLogo,
+        id: 4,
+        titulo: "Alares Internet",
+        icon: AlaresLogo,
         subtitulo: "Analista de Help Desk",
         descricao: (
           <span>
@@ -117,39 +142,60 @@ const Experience = ({ language, theme }) => {
           "Configuração de Modem/Router",
         ],
         data: "06/2021 - 01/2022 ",
-        link: "https://compass.uol/pt/home/",
+        link: "https://www.alaresinternet.com.br/",
       },
     ],
     en: [
       {
         id: 1,
-        titulo: "Self employed",
-        icon: myLogo,
-        subtitulo: "Fullstack Developer",
+        titulo: "WeHelp NPS",
+        icon: weHelpLogo,
+        subtitulo: "Frontend Developer",
         descricao: (
           <span>
-            Independently, I work with end-to-end software development, from
-            requirements gathering with stakeholders, prototyping, coding on
-            both client and server side, testing, documentation, implementation,
-            to presentation to the final client, using strong market languages,
-            always updated and at an international level of requirement, working
-            with agile methodologies.
+            Building, implementing and maintaining the company's new entire
+            system, WeHelp Software NPS using Next.js, React, React Native,
+            TypeScript and Tailwind CSS.Prototyping via Figma, client-side and
+            server-side coding, testing, and documentation. Use of methodologies
+            such as Mobile First, SSR, UI/UX to build the system and
+            application.Integration of RESTful APIs efficiently and securely to
+            the Frontend, ensuring fluid communication in 70% between the
+            application layers.Organization with agile methodologies such as
+            Scrum and Kanban, optimizing application construction time by 30%.
           </span>
         ),
-        data: "09/2023 - currently ",
-        tech: [
-          "React.js",
-          "Next.js",
-          "Node.js",
-          "TypeScript",
-          "Tailwindcss",
-          "Figma",
-          "Sass",
-        ],
-        link: "https://www.linkedin.com/in/lucas-campos81/",
+        data: "07/2024 - currently ",
+        tech: ["React.js", "Next.js", "TypeScript", "Tailwindcss", "Figma"],
+        link: "https://www.wehelpsoftware.com/pt-BR",
       },
       {
         id: 2,
+        titulo: "Anauger",
+        icon: anaugerLogo,
+        subtitulo: "Frontend Developer",
+        descricao: (
+          <span>
+            Construction of an application for Android and iOS, managing to
+            cover 2 systems at the same time through a Figma prototype using
+            technologies such as React Native, CSS, Figma and Styled Components.
+            Integration with Java Backend via REST API to calculate water pumps,
+            reducing the response time for data return by 20%.Implementation of
+            the application via Play Store and App Store, increasing the speed
+            for customers to download the application by 40%.
+          </span>
+        ),
+        data: "02/2024 - 04/2024 ",
+        tech: [
+          "React.js",
+          "React Native",
+          "TypeScript",
+          "Figma",
+          "Styled Components",
+        ],
+        link: "https://play.google.com/store/apps/details?id=com.anauger.br",
+      },
+      {
+        id: 3,
         titulo: "Compass.UOL",
         icon: compassLogo,
         subtitulo: "Frontend Developer",
@@ -178,9 +224,9 @@ const Experience = ({ language, theme }) => {
         link: "https://compass.uol/pt/home/",
       },
       {
-        id: 3,
-        titulo: "Webby Internet",
-        icon: webbyLogo,
+        id: 4,
+        titulo: "Alares Internet",
+        icon: AlaresLogo,
         subtitulo: "Help Desk Analyst",
         descricao: (
           <span>
@@ -203,7 +249,7 @@ const Experience = ({ language, theme }) => {
           "Modem/Router configuration",
         ],
         data: "11/2022 - 09/2023 ",
-        link: "https://compass.uol/pt/home/",
+        link: "https://www.alaresinternet.com.br/",
       },
     ],
   };
@@ -278,15 +324,14 @@ const Experience = ({ language, theme }) => {
                 alt={`icon-${index}`}
                 className="h-full w-full cursor-pointer rounded-xl"
               />
+
               <div
                 className={`pointer-events-none absolute -top-9 left-1/2 mb-2 -translate-x-1/2 transform rounded-md border-none px-2 py-1 text-center font-bold   opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${theme === "light" ? "bg-black text-white " : "bg-white text-black"}`}
               >
-                <span className="relative ">
-                  {item.name}
-                  <p
-                    className={`absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 translate-y-4 border-4   border-x-transparent border-b-transparent  ${theme === "light" ? "border-black" : "border-white"}`}
-                  />
-                </span>
+                {item.name}
+                <p
+                  className={`absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 translate-y-4 border-4   border-x-transparent border-b-transparent  ${theme === "light" ? "border-black" : "border-white"}`}
+                />
               </div>
             </div>
           ))}
@@ -320,9 +365,15 @@ const Experience = ({ language, theme }) => {
 
               <div className="space-y-1">
                 <div>
-                  <h1 className="md:text-md text-lg font-black text-purple-700">
+                  <a
+                    href={experiencia.link}
+                    className="md:text-md group relative text-lg font-black text-purple-700"
+                  >
                     {experiencia.titulo}
-                  </h1>
+                    <span className="absolute left-full top-1/2 ml-2 -translate-y-1/2 transform opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <SquareArrowOutUpRight size={20} />
+                    </span>
+                  </a>
                   <h2
                     className={`text-xl font-bold  md:text-lg ${theme === "light" ? "text-black" : "text-gray-300"}`}
                   >
